@@ -4,6 +4,8 @@ public class deneme {
         System.out.println("merhaba");
         System.out.println("beyt");
         System.out.println("omer branch acti");
+        System.out.println("omer den data yi aldim");
+
     }
 
 }
