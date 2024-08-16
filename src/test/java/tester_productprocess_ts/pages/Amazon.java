@@ -9,8 +9,8 @@ import java.util.List;
 
 public class Amazon {
 
-    public Amazon(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public Amazon() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
 
@@ -21,7 +21,7 @@ public class Amazon {
     @FindBy(id = "sp-cc-accept")
     public WebElement akzeptieren;
 
-    @FindBy(xpath = "//div[@class='a-section a-spacing-base']")
+    @FindBy(xpath = "//div[@class='a-section aok-relative s-image-square-aspect']")
     public List<WebElement> urunler;
 
     @FindBy(xpath = "(//span[@class='a-price-whole'])[1]")
@@ -30,7 +30,10 @@ public class Amazon {
     public WebElement onucurunFiyat;
     @FindBy(xpath = "(//input[@id='add-to-cart-button'])[1]")
     public WebElement sepeteAt;
-    @FindBy(xpath = "//a[@class='nav-a nav-a-2 nav-progressive-attribute']")
+    @FindBy(xpath = "//*[@id='sw-gtc']/span")
     public WebElement sepet;
-
+    @FindBy(xpath = "//span[@id='desktop-ptc-button-celWidget']")
+    public WebElement kasse;
+    @FindBy(xpath = "//*[@id=\"authportal-main-section\"]/div[2]/div[2]/div[1]/form/div/div/div/h1")
+    public WebElement anmelden;
 }
