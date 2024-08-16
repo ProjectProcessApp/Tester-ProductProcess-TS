@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v1">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_08_2024_12_48_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_08_2024_12_48__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/deneme.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;beyt&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/indeedjobsuchen&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
