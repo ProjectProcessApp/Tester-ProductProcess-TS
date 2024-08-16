@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v2" />
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v2">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/AdminPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Register.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/Register.feature" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,29 +73,15 @@
       <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TS" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: urun arama ve karsilastirma">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="Tester-ProductProcess-TS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: amazon" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: anamenu">
+    <configuration name="Feature: anamenu" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/amazon.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: amazon" />
+      <option name="SUGGESTED_NAME" value="Feature: anamenu" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -95,15 +93,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Register kontrol" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Menu kontrol (Negativ Test) (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^Register kontrol$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Register kontrol$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Register kontrol" />
+      <option name="NAME_FILTER" value="^Menu kontrol \(Negativ Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Menu kontrol \(Negativ Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Menu kontrol (Negativ Test)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -115,16 +113,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: urun arama ve karsilastirma" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Menu kontrol (Negativ Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/amazon.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/Register.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^Menu kontrol \(Negativ Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Menu kontrol \(Negativ Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Menu kontrol (Negativ Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: &quot;Anasayfa&quot; ya girilebilir olmalidir (Negativ Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^urun arama ve karsilastirma$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^urun arama ve karsilastirma$&quot;" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Scenario: urun arama ve karsilastirma" />
+      <option name="NAME_FILTER" value="^\&quot;Anasayfa\&quot; ya girilebilir olmalidir \(Negativ Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^\&quot;Anasayfa\&quot; ya girilebilir olmalidir \(Negativ Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: &quot;Anasayfa&quot; ya girilebilir olmalidir (Negativ Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^\&quot;TALASLI IMALAT AMIRI\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^\&quot;TALASLI IMALAT AMIRI\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -137,18 +174,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Cucumber Java.Scenario: urun arama ve karsilastirma" />
-      <item itemvalue="Cucumber Java.Feature: amazon" />
-      <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
+      <item itemvalue="Cucumber Java.Feature: anamenu" />
+      <item itemvalue="Cucumber Java.Scenario: &quot;Anasayfa&quot; ya girilebilir olmalidir (Negativ Test)" />
+      <item itemvalue="Cucumber Java.Scenario: &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+      <item itemvalue="Cucumber Java.Scenario: Menu kontrol (Negativ Test)" />
+      <item itemvalue="Cucumber Java.Scenario: Menu kontrol (Negativ Test) (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: urun arama ve karsilastirma" />
-        <item itemvalue="Cucumber Java.Feature: amazon" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
-        <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
+        <item itemvalue="Cucumber Java.Feature: anamenu" />
+        <item itemvalue="Cucumber Java.Scenario: &quot;Anasayfa&quot; ya girilebilir olmalidir (Negativ Test)" />
+        <item itemvalue="Cucumber Java.Scenario: &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+        <item itemvalue="Cucumber Java.Scenario: Menu kontrol (Negativ Test) (1)" />
+        <item itemvalue="Cucumber Java.Scenario: Menu kontrol (Negativ Test)" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +212,7 @@
       <workItem from="1723754182534" duration="96000" />
       <workItem from="1723754308483" duration="428000" />
       <workItem from="1723754754391" duration="2447000" />
+      <workItem from="1723836426008" duration="1965000" />
     </task>
     <task id="LOCAL-00001" summary="branch aactim">
       <option name="closed" value="true" />
@@ -226,7 +265,8 @@
     <MESSAGE value="branch aactim" />
     <MESSAGE value="v1" />
     <MESSAGE value="v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+    <MESSAGE value="fertig" />
+    <option name="LAST_COMMIT_MESSAGE" value="fertig" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
