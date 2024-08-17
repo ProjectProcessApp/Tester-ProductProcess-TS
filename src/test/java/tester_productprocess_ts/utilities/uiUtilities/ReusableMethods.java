@@ -44,6 +44,7 @@ public class ReusableMethods {
     //DropDown VisibleText
    /*
        Select select2 = new Select(gun);
+       Select select2 = new Select(gun);
        select2.selectByVisibleText("7");
        //ddmVisibleText(gun,"7"); --> Yukarıdaki kullanım yerine sadece method ile handle edebilirim
     */
@@ -247,5 +248,41 @@ public class ReusableMethods {
     public static void InvisibleWait(WebElement element, int sayi) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(sayi));
         wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+    public static String getTextWithJavaScriptXpath(String xpath) {
+        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
+
+        // JavaScriptExecutor kullanarak elementin içeriğini al
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        String text = (String) jsExecutor.executeScript("return arguments[0].textContent;", element);
+        return text;
+    }
+
+    /**
+     * İşlem yapılacak olan webelementin arkaplanını renklendirir
+     * @param element etrafi cizilecek element
+     * @param driver driver
+     */
+    public static void flash(WebElement element,WebDriver driver){
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        String elementColor=element.getCssValue("backgroundColor"); //locate alinan yerin  arka plan rengini alir
+        for (int i = 0; i < 10; i++) {
+            changeColor("rgb(0,0,0)", element, driver); //elemente siyah renk verir rgb kizmi rengi belirtir
+            //changeColor("rgb(255,0,0)", element, driver); //kirmizi renk
+            //changeColor("rgb(0,255,0)", element, driver); //yesil renk
+            changeColor(elementColor, element, driver);
+        }
+    }
+
+    public static void changeColor(String color, WebElement element, WebDriver driver){
+        JavascriptExecutor js= (JavascriptExecutor) driver; //javascript kodlarini calistirir
+        js.executeScript("arguments[0].style.backgroundColor='"+color+"'", element); //elementin renginin degismesini sağlar
+
+        try{
+            Thread.sleep(20);
+        }catch (Exception e){
+
+        }
     }
 }
