@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v3" />
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Amazon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Amazon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,25 +47,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;beyt&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/indeedjobsuchen&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging master",
+    "last_opened_file_path": "C:/Users/cetin/Desktop/java/indeedjobsuchen",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TS" />
@@ -144,11 +154,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: urun arama ve karsilastirma" />
         <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
         <item itemvalue="Cucumber Java.Feature: amazon" />
-        <item itemvalue="Cucumber Java.Scenario: urun arama ve karsilastirma" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Cucumber Java.Scenario: urun arama ve karsilastirma" />
+        <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +184,7 @@
       <workItem from="1723754182534" duration="96000" />
       <workItem from="1723754308483" duration="428000" />
       <workItem from="1723754754391" duration="2447000" />
+      <workItem from="1723836426008" duration="1965000" />
     </task>
     <task id="LOCAL-00001" summary="branch aactim">
       <option name="closed" value="true" />
@@ -226,7 +237,7 @@
     <MESSAGE value="branch aactim" />
     <MESSAGE value="v1" />
     <MESSAGE value="v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
