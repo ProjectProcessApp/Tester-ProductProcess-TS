@@ -43,10 +43,10 @@ public class Anamenu {
     @FindBy(xpath ="//div[contains(text(),'KALITE KONTROL AMIRI')]" )
     public WebElement kaliteKontrolAmiri;
 
-    @FindBy(xpath ="//div[contains(text(),'ÜRETIM PLANLAMA')]" )
+    @FindBy(xpath ="(//div[@class='menuDiv'])[7]" )
     public WebElement uretimPlanlama;
 
-    @FindBy(xpath ="//div[contains(text(),'YÖNETIM')]" )
+    @FindBy(xpath ="(//div[@class='menuDiv'])[8]" )
     public WebElement yonetim;
 
     @FindBy(xpath ="//h1[@class='page-header']" )
