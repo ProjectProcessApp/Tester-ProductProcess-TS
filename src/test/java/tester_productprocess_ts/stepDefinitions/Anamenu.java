@@ -1,5 +1,7 @@
 package tester_productprocess_ts.stepDefinitions;
 
+
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -50,23 +52,164 @@ public class Anamenu {
     public void sifre_kutucuguna_gecerli_bir_data_girilir() {
 
     }
-
-    @Then("Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
-    public void sifre_gizleme_butonunun_sifreyi_gizledigi_kontrol_edllir() {
-
-    }
-    @Then("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
-    public void sifre_gizleme_butonunun_sifreyi_tekrar_gorunur_hale_getirdigi_kontrol_edllir() {
-
-    }
     @Then("Giris yap butonuna tiklanir")
     public void giris_yap_butonuna_tiklanir() {
 
     }
 
-    @Then("Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir")
-    public void kullanicinin_kendi_sorumluluk_sayfasina_gectigi_dogrulanir() {
-
+    @And("talasli imalat amiri butonuna tiklanir")
+    public void talasliImalatAmiriButonunaTiklanir() {
     }
 
+    @Then("sifre ekraninda olundugu dogrulanir")
+    public void sifreEkranindaOlunduguDogrulanir() {
+    }
+
+    @And("sifre kutucu bos birakilir")
+    public void sifreKutucuBosBirakilir() {
+    }
+
+    @And("giris yap butonuna tiklanir")
+    public void girisYapButonunaTiklanir() {
+    }
+
+    @Then("Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir")
+    public void kullanicininKendiSorumlulukSayfasinaGecemedigiDogrulanir() {
+    }
+
+    @And("sifre kutucuna gecersiz bir data girilir")
+    public void sifreKutucunaGecersizBirDataGirilir() {
+    }
+
+    @Then("Polisaj amiri butonunun gorunur oldugu dogrulanir")
+    public void polisajAmiriButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("Polisaj amiri butonuna tiklanir")
+    public void polisajAmiriButonunaTiklanir() {
+    }
+
+    @And("sifre kutucugu bos birakilir")
+    public void sifreKutucuguBosBirakilir() {
+    }
+
+    @And("sifre kutucuguna gecersiz bir data girillir")
+    public void sifreKutucugunaGecersizBirDataGirillir() {
+    }
+
+    @Then("Lift montaj amiri butonunun gorunur oldugu dogrulanir")
+    public void liftMontajAmiriButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("Lift montaj amiri butonuna tiklanir")
+    public void liftMontajAmiriButonunaTiklanir() {
+    }
+
+    @Then("Lift Montaj Amiributonunun gorunur oldugu dogrulanir")
+    public void liftMontajAmiributonununGorunurOlduguDogrulanir() {
+    }
+
+   @And("Lift Montaj Amiri butonuna tiklanir")
+    public void liftMontajAmiriButonunaTiklanir() {
+    }
+
+    @And("sifre kutucuguna gecersiz bir data girilir")
+    public void sifreKutucugunaGecersizBirDataGirilir() {
+    }
+
+    @Then("Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir")
+    public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("Bloklift Montaj Amiri butonuna tiklanir")
+    public void blokliftMontajAmiriButonunaTiklanir() {
+    }
+
+    @Then("Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir")
+    public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("Boyama ve Paketleme Amiri butonuna tiklanir")
+    public void boyamaVePaketlemeAmiriButonunaTiklanir() {
+    }
+
+    @And("BBoyama ve Paketleme Amiri butonuna tiklanir")
+    public void bboyamaVePaketlemeAmiriButonunaTiklanir() {
+    }
+
+    @Then("Kalite Kontrol butonunun gorunur oldugu dogrulanir")
+    public void kaliteKontrolButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("BKalite Kontrol butonuna tiklanir")
+    public void bkaliteKontrolButonunaTiklanir() {
+    }
+
+    @And("Kalite Kontrol butonuna tiklanir")
+    public void kaliteKontrolButonunaTiklanir() {
+    }
+
+    @Then("Kalite Kontrol  butonunun gorunur oldugu dogrulanir")
+    public void kaliteKontrolButonununGorunurOlduguDogrulanir() {
+    }
+
+
+    @Then("Uterim Planlama butonunun gorunur oldugu dogrulanir")
+    public void uterimPlanlamaButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("Uterim Planlama butonuna tiklanir")
+    public void uterimPlanlamaButonunaTiklanir() {
+    }
+
+    @Then("Uretim Planlama butonunun gorunur oldugu dogrulanir")
+    public void uretimPlanlamaButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("Uretim Planlama butonuna tiklanir")
+    public void uretimPlanlamaButonunaTiklanir() {
+    }
+
+    @Then("Uretim Planlama  butonunun gorunur oldugu dogrulanir")
+    public void uretimPlanlamaButonununGorunurOlduguDogrulanir() {
+    }
+
+    @Then("Yonetim butonunun gorunur oldugu dogrulanir")
+    public void yonetimButonununGorunurOlduguDogrulanir() {
+    }
+
+    @And("Yonetim Planlama butonuna tiklanir")
+    public void yonetimPlanlamaButonunaTiklanir() {
+    }
+
+    @And("Yonetim  butonuna tiklanir")
+    public void yonetimButonunaTiklanir() {
+
+    }
+    @And("Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
+    public void sifreGizlemeButonununSifreyiGizledigiKontrolEdllir() {
+    }
+    @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
+    public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() {
+    }
+
+    @Then("Kullanicinin kendi sorumluluk sayfasina gectiigi dogrulanir")
+    public void kullanicininKendiSorumlulukSayfasinaGectiigiDogrulanir() {
+    }
+
+    @Then("Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir")
+    public void kullanicininKendiSorumlulukSayfasinaGectigiDogrulanir() {
+    }
+
+    @And("Lift Montaj Amiri butonuna tiklanir")
+    public void liftMontajAmiriButonunaTiklanir() {
+    }
+
+    @Then("Kalite Kontrol  butonunun gorunur oldugu dogrulanir")
+    public void kaliteKontrolButonununGorunurOlduguDogrulanir() {
+    }
+
+    @Then("Uretim Planlama  butonunun gorunur oldugu dogrulanir")
+    public void uretimPlanlamaButonununGorunurOlduguDogrulanir() {
+    }
 }
