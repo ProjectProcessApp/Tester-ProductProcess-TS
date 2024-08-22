@@ -11,6 +11,8 @@ import tester_productprocess_ts.utilities.uiUtilities.Driver;
 public class Anamenu {
 
     String header = "ANA SAYFA";
+
+    String yoneticiGirisHeader = "YÖNETİCİ GİRİŞ SAYFASI";
     tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();
     String title="Gasan Üretim Yönetim Sistemi";
     String girisUrl = "https://10daabbc-c0d4-4ba0-a253-f147f6b9d61e-00-35cytuuj5k6x.janeway.replit.dev/login";
@@ -48,118 +50,138 @@ public class Anamenu {
         String sifreTextresult=anamenu.sifreText.getText();
         Assert.assertEquals(sifreTextresult,sifreTextActual);
     }
-    @Then("sifre kutucuguna gecerli bir data girilir")
-    public void sifre_kutucuguna_gecerli_bir_data_girilir() {
 
-    }
-    @Then("Giris yap butonuna tiklanir")
-    public void giris_yap_butonuna_tiklanir() {
 
+    @And("sifre kutucuguna gecerli bir data girilir")
+    public void sifreKutucugunaGecerliBirDataGirilir() {
     }
 
-    @And("talasli imalat amiri butonuna tiklanir")
-    public void talasliImalatAmiriButonunaTiklanir() {
+    @And("Giris yap butonuna tiklanir")
+    public void girisYapButonunaTiklanir() {
+        anamenu.girisButonu.click();
     }
 
-    @Then("sifre ekraninda olundugu dogrulanir")
-    public void sifreEkranindaOlunduguDogrulanir() {
+    @And("Talasli imalat amiri sifre kutucuguna gecerli bir {string} girilir")
+    public void talasliImalatAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
     }
+
+    @And("Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
+    public void sifreGizlemeButonununSifreyiGizledigiKontrolEdllir() {
+        anamenu.goz.click();
+    }
+
+    @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
+    public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() {
+        anamenu.goz.click();
+    }
+
+    @Then("Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir")
+    public void kullanicininKendiSorumlulukSayfasinaGectigiDogrulanir() {
+    }
+
 
     @And("sifre kutucu bos birakilir")
     public void sifreKutucuBosBirakilir() {
-    }
-
-    @And("giris yap butonuna tiklanir")
-    public void girisYapButonunaTiklanir() {
     }
 
     @Then("Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir")
     public void kullanicininKendiSorumlulukSayfasinaGecemedigiDogrulanir() {
     }
 
-    @And("sifre kutucuna gecersiz bir data girilir")
-    public void sifreKutucunaGecersizBirDataGirilir() {
+    @And("sifre kutucuguna gecersiz bir <data> girilir")
+    public void sifreKutucugunaGecersizBirDataGirilir() {
     }
 
     @Then("Polisaj amiri butonunun gorunur oldugu dogrulanir")
     public void polisajAmiriButonununGorunurOlduguDogrulanir() {
+        anamenu.menulinkleri.get(1).isDisplayed();
     }
 
     @And("Polisaj amiri butonuna tiklanir")
     public void polisajAmiriButonunaTiklanir() {
+        anamenu.menulinkleri.get(1).click();
+    }
+
+    @And("Polisaj amiri sifre kutucuguna gecerli bir data girilir")
+    public void polisajAmiriSifreKutucugunaGecerliBirDataGirilir() {
     }
 
     @And("sifre kutucugu bos birakilir")
     public void sifreKutucuguBosBirakilir() {
     }
 
-    @And("sifre kutucuguna gecersiz bir data girillir")
-    public void sifreKutucugunaGecersizBirDataGirillir() {
-    }
-
     @Then("Lift montaj amiri butonunun gorunur oldugu dogrulanir")
     public void liftMontajAmiriButonununGorunurOlduguDogrulanir() {
+        anamenu.menulinkleri.get(2).isDisplayed();
     }
 
     @And("Lift montaj amiri butonuna tiklanir")
     public void liftMontajAmiriButonunaTiklanir() {
+        anamenu.menulinkleri.get(2).click();
+    }
+
+    @And("Lift montaj amiri sifre kutucuguna gecerli bir {string} girilir")
+    public void liftMontajAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
     }
 
     @Then("Lift Montaj Amiributonunun gorunur oldugu dogrulanir")
     public void liftMontajAmiributonununGorunurOlduguDogrulanir() {
     }
 
-   @And("Lift Montaj Amiri butonuna tiklanir")
-    public void liftMontajAmiriButonunaTiklanir() {
-    }
-
-    @And("sifre kutucuguna gecersiz bir data girilir")
-    public void sifreKutucugunaGecersizBirDataGirilir() {
-    }
-
     @Then("Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir")
     public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() {
+        anamenu.menulinkleri.get(3).isDisplayed();
     }
 
     @And("Bloklift Montaj Amiri butonuna tiklanir")
     public void blokliftMontajAmiriButonunaTiklanir() {
+        anamenu.menulinkleri.get(3).click();
+    }
+
+    @And("Bloklift Montaj Amiri sifre kutucuguna gecerli bir {string} girilir")
+    public void blokliftMontajAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
     }
 
     @Then("Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir")
     public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() {
+        anamenu.menulinkleri.get(4).isDisplayed();
     }
 
     @And("Boyama ve Paketleme Amiri butonuna tiklanir")
     public void boyamaVePaketlemeAmiriButonunaTiklanir() {
+        anamenu.menulinkleri.get(4).click();
     }
 
-    @And("BBoyama ve Paketleme Amiri butonuna tiklanir")
-    public void bboyamaVePaketlemeAmiriButonunaTiklanir() {
+    @And("Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir {string} girilir")
+    public void boyamaVePaketlemeAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
     }
 
     @Then("Kalite Kontrol butonunun gorunur oldugu dogrulanir")
     public void kaliteKontrolButonununGorunurOlduguDogrulanir() {
-    }
-
-    @And("BKalite Kontrol butonuna tiklanir")
-    public void bkaliteKontrolButonunaTiklanir() {
+        anamenu.menulinkleri.get(5).isDisplayed();
     }
 
     @And("Kalite Kontrol butonuna tiklanir")
     public void kaliteKontrolButonunaTiklanir() {
+        anamenu.menulinkleri.get(5).click();
     }
 
-    @Then("Kalite Kontrol  butonunun gorunur oldugu dogrulanir")
-    public void kaliteKontrolButonununGorunurOlduguDogrulanir() {
+    @And("Kalite Kontrol sifre kutucuguna gecerli bir {string} girilir")
+    public void kaliteKontrolSifreKutucugunaGecerliBirGirilir(String arg0) {
     }
-
 
     @Then("Uterim Planlama butonunun gorunur oldugu dogrulanir")
     public void uterimPlanlamaButonununGorunurOlduguDogrulanir() {
+        anamenu.menulinkleri.get(6).isDisplayed();
     }
 
     @And("Uterim Planlama butonuna tiklanir")
     public void uterimPlanlamaButonunaTiklanir() {
+        anamenu.menulinkleri.get(6).click();
+    }
+
+    @And("Uretim Planlama sifre kutucuguna gecerli bir {string} girilir")
+    public void uretimPlanlamaSifreKutucugunaGecerliBirGirilir(String arg0) {
     }
 
     @Then("Uretim Planlama butonunun gorunur oldugu dogrulanir")
@@ -169,47 +191,62 @@ public class Anamenu {
     @And("Uretim Planlama butonuna tiklanir")
     public void uretimPlanlamaButonunaTiklanir() {
     }
-
-    @Then("Uretim Planlama  butonunun gorunur oldugu dogrulanir")
-    public void uretimPlanlamaButonununGorunurOlduguDogrulanir() {
-    }
-
     @Then("Yonetim butonunun gorunur oldugu dogrulanir")
     public void yonetimButonununGorunurOlduguDogrulanir() {
+        anamenu.menulinkleri.get(7).isDisplayed();
     }
 
-    @And("Yonetim Planlama butonuna tiklanir")
-    public void yonetimPlanlamaButonunaTiklanir() {
-    }
-
-    @And("Yonetim  butonuna tiklanir")
+    @And("Yonetim butonuna tiklanir")
     public void yonetimButonunaTiklanir() {
+        anamenu.menulinkleri.get(7).click();
 
     }
-    @And("Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
-    public void sifreGizlemeButonununSifreyiGizledigiKontrolEdllir() {
-    }
-    @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
-    public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() {
+
+    @And("gecerli bir email adresi {string} girilir")
+    public void gecerliBirEmailAdresiGirilir(String arg0) {
     }
 
-    @Then("Kullanicinin kendi sorumluluk sayfasina gectiigi dogrulanir")
-    public void kullanicininKendiSorumlulukSayfasinaGectiigiDogrulanir() {
+    @And("sifre kutucuguna gecerli bir {string} girilir")
+    public void sifreKutucugunaGecerliBirGirilir(String arg0) {
     }
 
-    @Then("Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir")
-    public void kullanicininKendiSorumlulukSayfasinaGectigiDogrulanir() {
+    @And("yonetim Giris yap butonuna tiklanir")
+    public void yonetimGirisYapButonunaTiklanir() {
     }
 
-    @And("Lift Montaj Amiri butonuna tiklanir")
-    public void liftMontajAmiriButonunaTiklanir() {
+
+    @And("yonetim sifre kutucugu bos birakilir")
+    public void yonetimSifreKutucuguBosBirakilir() {
     }
 
-    @Then("Kalite Kontrol  butonunun gorunur oldugu dogrulanir")
-    public void kaliteKontrolButonununGorunurOlduguDogrulanir() {
+    @And("email kutucugu bos birakilir")
+    public void emailKutucuguBosBirakilir() {
     }
 
-    @Then("Uretim Planlama  butonunun gorunur oldugu dogrulanir")
-    public void uretimPlanlamaButonununGorunurOlduguDogrulanir() {
+    @And("yonetim sifre kutucuguna gecerli bir {string} girilir")
+    public void yonetimSifreKutucugunaGecerliBirGirilir(String arg0) {
     }
+    @Then("Yonetim butonunun gorunur olmadigi dogrulanir")
+    public void yonetimButonununGorunurOlmadigiDogrulanir() {
+
+    }
+
+    @And("Yonetim butonunun tiklanir olmadigi dogrulanir")
+    public void yonetimButonununTiklanirOlmadigiDogrulanir() {
+    }
+    @Then("Yonetim Sifre ekraninda oldugu dogrulanir")
+    public void yonetimSifreEkranindaOlduguDogrulanir() {
+        String anasayfa =anamenu.yoneticiGirisSayfasiHeader.getText();
+        Assert.assertEquals(yoneticiGirisHeader,anasayfa);
+    }
+    @And("email kutucuguna gecersiz bir <Dataemail> yazilir")
+    public void emailKutucugunaGecersizBirDataemailYazilir() {
+        
+    }
+
+    @And("sifre kutucuguna gecersiz bir <Datasifre> girilir")
+    public void sifreKutucugunaGecersizBirDatasifreGirilir() {
+    }
+
+
 }

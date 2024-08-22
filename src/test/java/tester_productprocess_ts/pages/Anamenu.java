@@ -61,5 +61,10 @@ public class Anamenu {
     @FindBy(xpath ="//body/div[3]" )
     public WebElement girisSayfasiHerhangiBirYer;
 
+    @FindBy(xpath ="//span[@class='input-group-text']" )
+    public WebElement goz;
+
+    @FindBy(xpath="//h1[@class='page-header']")
+    public WebElement yoneticiGirisSayfasiHeader;
 
 }
