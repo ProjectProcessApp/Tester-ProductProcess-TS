@@ -24,6 +24,7 @@ public class Anamenu {
     @FindBy(xpath="//label[@class='text-start w-100 fs-4 form-label']")
     public WebElement sifreText;
 
+
     @FindBy(xpath ="//div[contains(text(),'TALASLI IMALAT AMIRI')]" )
     public WebElement talasliImalatAmiri;
 
@@ -59,4 +60,6 @@ public class Anamenu {
     public WebElement girisButonu;
     @FindBy(xpath ="//body/div[3]" )
     public WebElement girisSayfasiHerhangiBirYer;
+
+
 }

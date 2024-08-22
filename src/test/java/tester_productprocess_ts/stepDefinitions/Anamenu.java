@@ -1,5 +1,6 @@
 package tester_productprocess_ts.stepDefinitions;
 
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -191,8 +192,6 @@ public class Anamenu {
     @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
     public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() {
     }
-
-
 
     @Then("Kullanicinin kendi sorumluluk sayfasina gectiigi dogrulanir")
     public void kullanicininKendiSorumlulukSayfasinaGectiigiDogrulanir() {
