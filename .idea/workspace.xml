@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_08_2024_19_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_08_2024_19_07__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_09_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_09_22__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_08_2024_09_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_08_2024_09_22__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_08_2024_19_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_08_2024_19_06__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_13_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_13_16__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" afterDir="false" />
     </list>
@@ -180,10 +176,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: anamenu" />
-        <item itemvalue="Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
-        <item itemvalue="Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
         <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
         <item itemvalue="Cucumber Java.Feature: amazon" />
+        <item itemvalue="Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+        <item itemvalue="Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
       </list>
     </recent_temporary>
   </component>
@@ -251,15 +247,7 @@
       <option name="project" value="LOCAL" />
       <updated>1723757188546</updated>
     </task>
-    <task id="LOCAL-00006" summary="v5">
-      <option name="closed" value="true" />
-      <created>1724325225191</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1724325225191</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,8 +258,7 @@
     <MESSAGE value="branch aactim" />
     <MESSAGE value="v1" />
     <MESSAGE value="v2" />
-    <MESSAGE value="v5" />
-    <option name="LAST_COMMIT_MESSAGE" value="v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -56,11 +56,12 @@ public class Anamenu {
     public WebElement sifreYazisi;
     @FindBy(xpath ="//input[@id='password']" )
     public WebElement sifreKutusu;
-    @FindBy(xpath ="//div[@class='d-flex justify-content-center']" )
+    @FindBy(xpath ="//button[@class='btn btn-primary']" )
     public WebElement girisButonu;
     @FindBy(xpath ="//body/div[3]" )
     public WebElement girisSayfasiHerhangiBirYer;
-
+    @FindBy(xpath ="//div[@class='d-flex justify-content-center']" )
+    public WebElement yonetimGirisButonu;
     @FindBy(xpath ="//span[@class='input-group-text']" )
     public WebElement goz;
 
