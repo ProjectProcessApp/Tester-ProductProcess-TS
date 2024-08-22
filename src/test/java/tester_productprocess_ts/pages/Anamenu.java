@@ -25,4 +25,41 @@ public class Anamenu {
     public WebElement sifreText;
 
 
+    @FindBy(xpath ="//div[contains(text(),'TALASLI IMALAT AMIRI')]" )
+    public WebElement talasliImalatAmiri;
+
+    @FindBy(xpath ="//div[contains(text(),'POLISAJ AMIRI')]" )
+    public WebElement polisajAmiri;
+
+    @FindBy(xpath ="//div[@class='menuDiv'][normalize-space()='LIFT MONTAJ AMIRI']" )
+    public WebElement liftmontajAmiri;
+
+    @FindBy(xpath ="//div[contains(text(),'BLOKLIFT MONTAJ AMIRI')]" )
+    public WebElement blokliftMontajAmiri;
+
+    @FindBy(xpath ="//div[contains(text(),'BOYAMA VE PAKETLEME AMIRI')]" )
+    public WebElement boyamaVePaketlemeAmiri;
+
+    @FindBy(xpath ="//div[contains(text(),'KALITE KONTROL AMIRI')]" )
+    public WebElement kaliteKontrolAmiri;
+
+    @FindBy(xpath ="//div[contains(text(),'ÜRETIM PLANLAMA')]" )
+    public WebElement uretimPlanlama;
+
+    @FindBy(xpath ="//div[contains(text(),'YÖNETIM')]" )
+    public WebElement yonetim;
+
+    @FindBy(xpath ="//h1[@class='page-header']" )
+    public WebElement girisAnabaslik;
+
+    @FindBy(xpath ="//label[@for='password']" )
+    public WebElement sifreYazisi;
+    @FindBy(xpath ="//input[@id='password']" )
+    public WebElement sifreKutusu;
+    @FindBy(xpath ="//div[@class='d-flex justify-content-center']" )
+    public WebElement girisButonu;
+    @FindBy(xpath ="//body/div[3]" )
+    public WebElement girisSayfasiHerhangiBirYer;
+
+
 }
