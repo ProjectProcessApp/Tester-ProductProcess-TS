@@ -19,7 +19,7 @@ public class Anamenu {
     String title="Gasan Üretim Yönetim Sistemi";
     String girisUrl = "https://10daabbc-c0d4-4ba0-a253-f147f6b9d61e-00-35cytuuj5k6x.janeway.replit.dev/login";
     public  void scroll(WebElement element) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1300);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
@@ -245,10 +245,9 @@ public class Anamenu {
     @And("yonetim Giris yap butonuna tiklanir")
     public void yonetimGirisYapButonunaTiklanir() throws InterruptedException {
 
-        scroll(anamenu.girisButonu);
-        anamenu.girisButonu.click();
+        scroll(anamenu.yonetimGirisButonu);
+        anamenu.yonetimGirisButonu.click();
     }
-
 
     @And("yonetim sifre kutucugu bos birakilir")
     public void yonetimSifreKutucuguBosBirakilir() {
