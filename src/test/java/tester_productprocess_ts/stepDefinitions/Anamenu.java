@@ -50,8 +50,22 @@ public class Anamenu {
     public void sifre_kutucuguna_gecerli_bir_data_girilir() {
 
     }
+
+    @Then("Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
+    public void sifre_gizleme_butonunun_sifreyi_gizledigi_kontrol_edllir() {
+
+    }
+    @Then("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
+    public void sifre_gizleme_butonunun_sifreyi_tekrar_gorunur_hale_getirdigi_kontrol_edllir() {
+
+    }
     @Then("Giris yap butonuna tiklanir")
     public void giris_yap_butonuna_tiklanir() {
+
+    }
+
+    @Then("Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir")
+    public void kullanicinin_kendi_sorumluluk_sayfasina_gectigi_dogrulanir() {
 
     }
 
