@@ -5,6 +5,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import tester_productprocess_ts.utilities.uiUtilities.ConfigReader;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
@@ -16,6 +18,11 @@ public class Anamenu {
     tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();
     String title="Gasan Üretim Yönetim Sistemi";
     String girisUrl = "https://10daabbc-c0d4-4ba0-a253-f147f6b9d61e-00-35cytuuj5k6x.janeway.replit.dev/login";
+    public  void scroll(WebElement element) throws InterruptedException {
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
     @When("Anasayfaya gidilir")
     public void anasayfaya_gidilir() {
        Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -57,7 +64,8 @@ public class Anamenu {
     }
 
     @And("Giris yap butonuna tiklanir")
-    public void girisYapButonunaTiklanir() {
+    public void girisYapButonunaTiklanir() throws InterruptedException {
+        scroll(anamenu.girisButonu);
         anamenu.girisButonu.click();
     }
 
@@ -93,13 +101,15 @@ public class Anamenu {
     }
 
     @Then("Polisaj amiri butonunun gorunur oldugu dogrulanir")
-    public void polisajAmiriButonununGorunurOlduguDogrulanir() {
-        anamenu.menulinkleri.get(1).isDisplayed();
+    public void polisajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+        scroll(anamenu.polisajAmiri);
+        anamenu.polisajAmiri.isDisplayed();
     }
 
     @And("Polisaj amiri butonuna tiklanir")
-    public void polisajAmiriButonunaTiklanir() {
-        anamenu.menulinkleri.get(1).click();
+    public void polisajAmiriButonunaTiklanir() throws InterruptedException {
+        scroll(anamenu.polisajAmiri);
+        anamenu.polisajAmiri.click();
     }
 
     @And("Polisaj amiri sifre kutucuguna gecerli bir data girilir")
@@ -111,13 +121,16 @@ public class Anamenu {
     }
 
     @Then("Lift montaj amiri butonunun gorunur oldugu dogrulanir")
-    public void liftMontajAmiriButonununGorunurOlduguDogrulanir() {
-        anamenu.menulinkleri.get(2).isDisplayed();
+    public void liftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+        scroll(anamenu.liftmontajAmiri);
+        anamenu.liftmontajAmiri.isDisplayed();
     }
 
     @And("Lift montaj amiri butonuna tiklanir")
-    public void liftMontajAmiriButonunaTiklanir() {
-        anamenu.menulinkleri.get(2).click();
+    public void liftMontajAmiriButonunaTiklanir() throws InterruptedException {
+
+        scroll(anamenu.liftmontajAmiri);
+        anamenu.liftmontajAmiri.click();
     }
 
     @And("Lift montaj amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -129,13 +142,17 @@ public class Anamenu {
     }
 
     @Then("Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir")
-    public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() {
-        anamenu.menulinkleri.get(3).isDisplayed();
+    public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+
+        scroll(anamenu.blokliftMontajAmiri);
+        anamenu.blokliftMontajAmiri.isDisplayed();
     }
 
     @And("Bloklift Montaj Amiri butonuna tiklanir")
-    public void blokliftMontajAmiriButonunaTiklanir() {
-        anamenu.menulinkleri.get(3).click();
+    public void blokliftMontajAmiriButonunaTiklanir() throws InterruptedException {
+
+        scroll(anamenu.blokliftMontajAmiri);
+        anamenu.blokliftMontajAmiri.click();
     }
 
     @And("Bloklift Montaj Amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -143,13 +160,17 @@ public class Anamenu {
     }
 
     @Then("Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir")
-    public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() {
-        anamenu.menulinkleri.get(4).isDisplayed();
+    public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+
+        scroll(anamenu.boyamaVePaketlemeAmiri);
+        anamenu.boyamaVePaketlemeAmiri.isDisplayed();
     }
 
     @And("Boyama ve Paketleme Amiri butonuna tiklanir")
-    public void boyamaVePaketlemeAmiriButonunaTiklanir() {
-        anamenu.menulinkleri.get(4).click();
+    public void boyamaVePaketlemeAmiriButonunaTiklanir() throws InterruptedException {
+
+        scroll(anamenu.boyamaVePaketlemeAmiri);
+        anamenu.boyamaVePaketlemeAmiri.click();
     }
 
     @And("Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -157,13 +178,17 @@ public class Anamenu {
     }
 
     @Then("Kalite Kontrol butonunun gorunur oldugu dogrulanir")
-    public void kaliteKontrolButonununGorunurOlduguDogrulanir() {
-        anamenu.menulinkleri.get(5).isDisplayed();
+    public void kaliteKontrolButonununGorunurOlduguDogrulanir() throws InterruptedException {
+
+        scroll(anamenu.kaliteKontrolAmiri);
+        anamenu.kaliteKontrolAmiri.isDisplayed();
     }
 
     @And("Kalite Kontrol butonuna tiklanir")
-    public void kaliteKontrolButonunaTiklanir() {
-        anamenu.menulinkleri.get(5).click();
+    public void kaliteKontrolButonunaTiklanir() throws InterruptedException {
+
+        scroll(anamenu.kaliteKontrolAmiri);
+        anamenu.kaliteKontrolAmiri.click();
     }
 
     @And("Kalite Kontrol sifre kutucuguna gecerli bir {string} girilir")
@@ -171,13 +196,16 @@ public class Anamenu {
     }
 
     @Then("Uterim Planlama butonunun gorunur oldugu dogrulanir")
-    public void uterimPlanlamaButonununGorunurOlduguDogrulanir() {
-        anamenu.menulinkleri.get(6).isDisplayed();
+    public void uterimPlanlamaButonununGorunurOlduguDogrulanir() throws InterruptedException {
+
+        scroll(anamenu.uretimPlanlama);
+        anamenu.uretimPlanlama.isDisplayed();
     }
 
     @And("Uterim Planlama butonuna tiklanir")
-    public void uterimPlanlamaButonunaTiklanir() {
-        anamenu.menulinkleri.get(6).click();
+    public void uterimPlanlamaButonunaTiklanir() throws InterruptedException {
+        scroll(anamenu.uretimPlanlama);
+        anamenu.uretimPlanlama.click();
     }
 
     @And("Uretim Planlama sifre kutucuguna gecerli bir {string} girilir")
@@ -192,13 +220,17 @@ public class Anamenu {
     public void uretimPlanlamaButonunaTiklanir() {
     }
     @Then("Yonetim butonunun gorunur oldugu dogrulanir")
-    public void yonetimButonununGorunurOlduguDogrulanir() {
-        anamenu.menulinkleri.get(7).isDisplayed();
+    public void yonetimButonununGorunurOlduguDogrulanir() throws InterruptedException {
+
+        scroll(anamenu.yonetim);
+        anamenu.yonetim.isDisplayed();
     }
 
     @And("Yonetim butonuna tiklanir")
-    public void yonetimButonunaTiklanir() {
-        anamenu.menulinkleri.get(7).click();
+    public void yonetimButonunaTiklanir() throws InterruptedException {
+
+        scroll(anamenu.yonetim);
+        anamenu.yonetim.click();
 
     }
 
@@ -211,7 +243,10 @@ public class Anamenu {
     }
 
     @And("yonetim Giris yap butonuna tiklanir")
-    public void yonetimGirisYapButonunaTiklanir() {
+    public void yonetimGirisYapButonunaTiklanir() throws InterruptedException {
+
+        scroll(anamenu.girisButonu);
+        anamenu.girisButonu.click();
     }
 
 
