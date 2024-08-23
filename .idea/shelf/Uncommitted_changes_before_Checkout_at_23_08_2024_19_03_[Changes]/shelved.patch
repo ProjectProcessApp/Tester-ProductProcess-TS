@@ -1,0 +1,1062 @@
+Index: src/test/java/tester_productprocess_ts/pages/Anamenu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tester_productprocess_ts.pages;\r\n\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.support.FindBy;\r\nimport org.openqa.selenium.support.PageFactory;\r\nimport tester_productprocess_ts.utilities.uiUtilities.Driver;\r\n\r\nimport java.util.List;\r\n\r\npublic class Anamenu {\r\n    public Anamenu(){\r\n        PageFactory.initElements(Driver.getDriver(),this);\r\n    }\r\n\r\n    @FindBy(xpath=\"//div[@class='menuDiv']\")\r\n    public List<WebElement> menulinkleri;\r\n\r\n    @FindBy(xpath=\"//h1[@class='page-header']\")\r\n    public WebElement AnasayfaHeader;\r\n\r\n    @FindBy(xpath=\"//div[@style='height:50px']\")\r\n    public WebElement herhangibiryer;\r\n\r\n    @FindBy(xpath=\"//label[@class='text-start w-100 fs-4 form-label']\")\r\n    public WebElement sifreText;\r\n\r\n\r\n    @FindBy(xpath =\"//div[contains(text(),'TALASLI IMALAT AMIRI')]\" )\r\n    public WebElement talasliImalatAmiri;\r\n\r\n    @FindBy(xpath =\"//div[contains(text(),'POLISAJ AMIRI')]\" )\r\n    public WebElement polisajAmiri;\r\n\r\n    @FindBy(xpath =\"//div[contains(text(),'LIFT MONTAJ AMIRI')]\" )\r\n    public WebElement liftmontajAmiri;\r\n\r\n    @FindBy(xpath =\"//div[contains(text(),'BLOKLIFT MONTAJ AMIRI')]\" )\r\n    public WebElement blokliftMontajAmiri;\r\n\r\n    @FindBy(xpath =\"//div[contains(text(),'BOYAMA VE PAKETLEME AMIRI')]\" )\r\n    public WebElement boyamaVePaketlemeAmiri;\r\n\r\n    @FindBy(xpath =\"//div[contains(text(),'KALITE KONTROL AMIRI')]\" )\r\n    public WebElement kaliteKontrolAmiri;\r\n\r\n    @FindBy(xpath =\"(//div[@class='menuDiv'])[7]\" )\r\n    public WebElement uretimPlanlama;\r\n\r\n    @FindBy(xpath =\"(//div[@class='menuDiv'])[8]\" )\r\n    public WebElement yonetim;\r\n\r\n    @FindBy(xpath =\"//h1[@class='page-header']\" )\r\n    public WebElement girisAnabaslik;\r\n\r\n    @FindBy(xpath =\"//label[text()='Şifre']\" )\r\n    public WebElement sifreYazisi;\r\n    @FindBy(xpath =\"//input[@id='password']\" )\r\n    public WebElement sifreKutusu;\r\n    @FindBy(xpath =\"//button[@class='btn btn-primary']\" )\r\n    public WebElement girisButonu;\r\n    @FindBy(xpath =\"//body/div[3]\" )\r\n    public WebElement girisSayfasiHerhangiBirYer;\r\n\r\n\r\n    @FindBy(xpath = \"//div[text()='Giriş']\")\r\n    public WebElement yonetimGirisButonu;\r\n\r\n    @FindBy(xpath =\"//span[@id='password']\" )\r\n    public WebElement goz;\r\n\r\n    @FindBy(xpath=\"//h1[@class='page-header']\")\r\n    public WebElement yoneticiGirisSayfasiHeader;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/tester_productprocess_ts/pages/Anamenu.java b/src/test/java/tester_productprocess_ts/pages/Anamenu.java
+--- a/src/test/java/tester_productprocess_ts/pages/Anamenu.java	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ b/src/test/java/tester_productprocess_ts/pages/Anamenu.java	(date 1724430314201)
+@@ -24,7 +24,6 @@
+     @FindBy(xpath="//label[@class='text-start w-100 fs-4 form-label']")
+     public WebElement sifreText;
+ 
+-
+     @FindBy(xpath ="//div[contains(text(),'TALASLI IMALAT AMIRI')]" )
+     public WebElement talasliImalatAmiri;
+ 
+@@ -43,10 +42,10 @@
+     @FindBy(xpath ="//div[contains(text(),'KALITE KONTROL AMIRI')]" )
+     public WebElement kaliteKontrolAmiri;
+ 
+-    @FindBy(xpath ="(//div[@class='menuDiv'])[7]" )
++    @FindBy(xpath ="//div[text()='ÜRETIM PLANLAMA']" )
+     public WebElement uretimPlanlama;
+ 
+-    @FindBy(xpath ="(//div[@class='menuDiv'])[8]" )
++    @FindBy(xpath ="//div[text()='YÖNETIM']" )
+     public WebElement yonetim;
+ 
+     @FindBy(xpath ="//h1[@class='page-header']" )
+@@ -68,6 +67,9 @@
+     @FindBy(xpath ="//span[@id='password']" )
+     public WebElement goz;
+ 
++    @FindBy(xpath ="//span[@class='input-group-text']" )
++    public WebElement yoneticiGoz;
++
+     @FindBy(xpath="//h1[@class='page-header']")
+     public WebElement yoneticiGirisSayfasiHeader;
+ 
+Index: src/test/resources/features/ui_features/anamenu.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nFeature: US1\r\n\r\n  Background:  Anasayfa ve dogrulama\r\n          When Anasayfaya gidilir\r\n          Then Anasayfada oldugu dogrulanir\r\n\r\n    Scenario:TC_02 \"Anasayfa\" ya girilebilir olmalidir (Negativ Test)\r\n        When Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir\r\n\r\n    Scenario:TC_03 \"TALASLI IMALAT AMIRI\"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n          Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir\r\n          And Talasli Imalat Amiri Butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And Talasli imalat amiri sifre kutucuguna gecerli bir \"data\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n      Scenario: TC_05 manuel olarak test edilecegi icin buraya yazilmadi\r\n\r\n     Scenario Outline: TC_06 \"TALASLI IMALAT AMIRI\"  gecersiz sifre denemesi. (Negatif Test)\r\n\r\n          Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir\r\n          And Talasli Imalat Amiri Butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n      Examples:\r\n        | data |\r\n        |      |\r\n       |Techpro|\r\n       |123456 |\r\n       |?.¿0p9 |\r\n\r\n     Scenario: TC_07 \"Polisaj amiri\"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n          Then Polisaj amiri butonunun gorunur oldugu dogrulanir\r\n          And Polisaj amiri butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And Polisaj amiri sifre kutucuguna gecerli bir data girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n      Scenario: TC_08 Manuel test\r\n\r\n      Scenario Outline: TC_10 \"Polisaj Amiri\"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\r\n          Then Polisaj amiri butonunun gorunur oldugu dogrulanir\r\n          And Polisaj amiri butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n        And sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n        Examples:\r\n          | data |\r\n          |      |\r\n          |Techpro|\r\n          |123456 |\r\n          |?.¿0p9 |\r\n\r\n     Scenario: TC_11 \"Lift montaj amiri\"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n          Then Lift montaj amiri butonunun gorunur oldugu dogrulanir\r\n          And Lift montaj amiri butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And Lift montaj amiri sifre kutucuguna gecerli bir \"data\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n       Scenario: TC_12 Manuel Test\r\n\r\n       Scenario Outline: TC_14\" LIFT MONTAJ  AMIRI\"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)\r\n\r\n          Then Lift Montaj Amiributonunun gorunur oldugu dogrulanir\r\n          And Lift montaj amiri butonuna tiklanir\r\n         Then Sifre ekraninda oldugu dogrulanir\r\n         And sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n         Examples:\r\n           | data |\r\n           |      |\r\n           |Techpro|\r\n           |123456 |\r\n           |?.¿0p9 |\r\n\r\n      Scenario: TC_15 \"Bloklift Montaj Amiri\"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n\r\n          Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir\r\n          And Bloklift Montaj Amiri butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And Bloklift Montaj Amiri sifre kutucuguna gecerli bir \"data\" girilir\r\n          And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n      Scenario:TC_16 \"Bloklift Montaj Amiri\"butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\r\n      //Manuel Test\r\n\r\n      Scenario Outline:TC_18 \" Bloklift Montaj Amiri\" butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test)\r\n\r\n          Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir\r\n          And Bloklift Montaj Amiri butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n        And sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n        Examples:\r\n          | data |\r\n          |      |\r\n          |Techpro|\r\n          |123456 |\r\n          |?.¿0p9 |\r\n\r\n      Scenario: TC_19 \"Boyama ve Paketleme Amiri\"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n\r\n          Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir\r\n          And Boyama ve Paketleme Amiri butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir \"data\" girilir\r\n          And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n\r\n      Scenario: TC_20 Manuel Test\r\n\r\n      Scenario Outline: TC_22 \"Boyama ve Paketleme Amiri\"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\r\n\r\n          Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir\r\n          And Boyama ve Paketleme Amiri butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n        Examples:\r\n          | data |\r\n          |      |\r\n          |Techpro|\r\n          |123456 |\r\n          |?.¿0p9 |\r\n\r\n       Scenario: TC_23 \"Kalite Kontrol\" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n\r\n          Then Kalite Kontrol butonunun gorunur oldugu dogrulanir\r\n          And Kalite Kontrol butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And Kalite Kontrol sifre kutucuguna gecerli bir \"data\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n        Scenario: TC_24 \"Kalite Kontrol\"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\r\n        //Manuel Test\r\n\r\n        Scenario Outline: TC_26 \"Kalite Kontrol\"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\r\n\r\n          Then Kalite Kontrol butonunun gorunur oldugu dogrulanir\r\n          And Kalite Kontrol butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n          Examples:\r\n            | data |\r\n            |      |\r\n            |Techpro|\r\n            |123456 |\r\n            |?.¿0p9 |\r\n\r\n        Scenario: TC_27  \"Uretim Planlama \" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n\r\n          Then Uretim Planlama butonunun gorunur oldugu dogrulanir\r\n          And Uretim Planlama butonuna tiklanir\r\n          Then Sifre ekraninda oldugu dogrulanir\r\n          And Uretim Planlama sifre kutucuguna gecerli bir \"data\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n\r\n        Scenario: TC_28 \"Uretim Planlama\"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)\r\n        //Manuel Test\r\n\r\n        Scenario Outline: TC_30 \"Uretim Planlama\"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\r\n\r\n          Then Uretim Planlama butonunun gorunur oldugu dogrulanir\r\n          And Uretim Planlama butonuna tiklanir\r\n          Then Yonetim Sifre ekraninda oldugu dogrulanir\r\n          And sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And Giris yap butonuna tiklanir\r\n          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n          Examples:\r\n            | data |\r\n            |      |\r\n            |Techpro|\r\n            |123456 |\r\n            |?.¿0p9 |\r\n\r\n\r\n        Scenario: TC_31 \"Yonetim\"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\r\n\r\n          Then Yonetim butonunun gorunur oldugu dogrulanir\r\n          And Yonetim butonuna tiklanir\r\n         Then Yonetim Sifre ekraninda oldugu dogrulanir\r\n          And yonetici sifre kutucuguna gecerli bir \"data\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And yonetim Giris yap butonuna tiklanir\r\n          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\r\n\r\n         Scenario: TC_32 \"YONETIM\"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)\r\n          //Manuel Test\r\n\r\n        Scenario Outline: TC_36 \"Yonetim\" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\r\n          Then Yonetim butonunun gorunur oldugu dogrulanir\r\n          And Yonetim butonuna tiklanir\r\n          Then Yonetim Sifre ekraninda oldugu dogrulanir\r\n          And yonetici sifre kutucuguna gecersiz bir \"<data>\" girilir\r\n          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\r\n          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\r\n          And yonetim Giris yap butonuna tiklanir\r\n          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\r\n          Examples:\r\n            | data |\r\n            |      |\r\n            |Techpro|\r\n            |123456 |\r\n            |?.¿0p9 |\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/features/ui_features/anamenu.feature b/src/test/resources/features/ui_features/anamenu.feature
+--- a/src/test/resources/features/ui_features/anamenu.feature	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ b/src/test/resources/features/ui_features/anamenu.feature	(date 1724430779236)
+@@ -5,10 +5,10 @@
+           When Anasayfaya gidilir
+           Then Anasayfada oldugu dogrulanir
+ 
+-    Scenario:TC_02 "Anasayfa" ya girilebilir olmalidir (Negativ Test)
++    Scenario:TC_01 "Anasayfa" ya girilebilir olmalidir (Negativ Test)
+         When Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir
+ 
+-    Scenario:TC_03 "TALASLI IMALAT AMIRI"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++    Scenario:TC_02 "TALASLI IMALAT AMIRI"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+           Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
+           And Talasli Imalat Amiri Butonuna tiklanir
+           Then Sifre ekraninda oldugu dogrulanir
+@@ -18,9 +18,9 @@
+           And Giris yap butonuna tiklanir
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+-      Scenario: TC_05 manuel olarak test edilecegi icin buraya yazilmadi
++      Scenario: TC_03 manuel olarak test edilecegi icin buraya yazilmadi
+ 
+-     Scenario Outline: TC_06 "TALASLI IMALAT AMIRI"  gecersiz sifre denemesi. (Negatif Test)
++     Scenario Outline: TC_04 "TALASLI IMALAT AMIRI"  gecersiz sifre denemesi. (Negatif Test)
+ 
+           Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
+           And Talasli Imalat Amiri Butonuna tiklanir
+@@ -37,7 +37,7 @@
+        |123456 |
+        |?.¿0p9 |
+ 
+-     Scenario: TC_07 "Polisaj amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++     Scenario: TC_05 "Polisaj amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+           Then Polisaj amiri butonunun gorunur oldugu dogrulanir
+           And Polisaj amiri butonuna tiklanir
+           Then Sifre ekraninda oldugu dogrulanir
+@@ -47,13 +47,13 @@
+           And Giris yap butonuna tiklanir
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+-      Scenario: TC_08 Manuel test
++      Scenario: TC_06 Manuel test
+ 
+-      Scenario Outline: TC_10 "Polisaj Amiri"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
++      Scenario Outline: TC_7 "Polisaj Amiri"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+           Then Polisaj amiri butonunun gorunur oldugu dogrulanir
+           And Polisaj amiri butonuna tiklanir
+           Then Sifre ekraninda oldugu dogrulanir
+-        And sifre kutucuguna gecersiz bir "<data>" girilir
++          And sifre kutucuguna gecersiz bir "<data>" girilir
+           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+           And Giris yap butonuna tiklanir
+@@ -65,7 +65,7 @@
+           |123456 |
+           |?.¿0p9 |
+ 
+-     Scenario: TC_11 "Lift montaj amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++     Scenario: TC_8 "Lift montaj amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+           Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
+           And Lift montaj amiri butonuna tiklanir
+           Then Sifre ekraninda oldugu dogrulanir
+@@ -75,11 +75,11 @@
+           And Giris yap butonuna tiklanir
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+-       Scenario: TC_12 Manuel Test
++       Scenario: TC_9 Manuel Test
+ 
+-       Scenario Outline: TC_14" LIFT MONTAJ  AMIRI"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
++       Scenario Outline: TC_10" LIFT MONTAJ  AMIRI"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
+ 
+-          Then Lift Montaj Amiributonunun gorunur oldugu dogrulanir
++         Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
+           And Lift montaj amiri butonuna tiklanir
+          Then Sifre ekraninda oldugu dogrulanir
+          And sifre kutucuguna gecersiz bir "<data>" girilir
+@@ -94,7 +94,7 @@
+            |123456 |
+            |?.¿0p9 |
+ 
+-      Scenario: TC_15 "Bloklift Montaj Amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++      Scenario: TC_11 "Bloklift Montaj Amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+ 
+           Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
+           And Bloklift Montaj Amiri butonuna tiklanir
+@@ -105,15 +105,15 @@
+           And Giris yap butonuna tiklanir
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+-      Scenario:TC_16 "Bloklift Montaj Amiri"butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
++      Scenario:TC_12 "Bloklift Montaj Amiri"butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+       //Manuel Test
+ 
+-      Scenario Outline:TC_18 " Bloklift Montaj Amiri" butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test)
++      Scenario Outline:TC_13 "Bloklift Montaj Amiri" butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test)
+ 
+           Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
+           And Bloklift Montaj Amiri butonuna tiklanir
+           Then Sifre ekraninda oldugu dogrulanir
+-        And sifre kutucuguna gecersiz bir "<data>" girilir
++           And sifre kutucuguna gecersiz bir "<data>" girilir
+           And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+           And Giris yap butonuna tiklanir
+@@ -125,7 +125,7 @@
+           |123456 |
+           |?.¿0p9 |
+ 
+-      Scenario: TC_19 "Boyama ve Paketleme Amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++      Scenario: TC_14 "Boyama ve Paketleme Amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+ 
+           Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
+           And Boyama ve Paketleme Amiri butonuna tiklanir
+@@ -137,9 +137,9 @@
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+ 
+-      Scenario: TC_20 Manuel Test
++      Scenario: TC_15 Manuel Test
+ 
+-      Scenario Outline: TC_22 "Boyama ve Paketleme Amiri"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
++      Scenario Outline: TC_16 "Boyama ve Paketleme Amiri"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+ 
+           Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
+           And Boyama ve Paketleme Amiri butonuna tiklanir
+@@ -156,7 +156,7 @@
+           |123456 |
+           |?.¿0p9 |
+ 
+-       Scenario: TC_23 "Kalite Kontrol" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++       Scenario: TC_17 "Kalite Kontrol" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+ 
+           Then Kalite Kontrol butonunun gorunur oldugu dogrulanir
+           And Kalite Kontrol butonuna tiklanir
+@@ -167,10 +167,10 @@
+           And Giris yap butonuna tiklanir
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+-        Scenario: TC_24 "Kalite Kontrol"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
++        Scenario: TC_18 "Kalite Kontrol"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+         //Manuel Test
+ 
+-        Scenario Outline: TC_26 "Kalite Kontrol"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
++        Scenario Outline: TC_19 "Kalite Kontrol"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+ 
+           Then Kalite Kontrol butonunun gorunur oldugu dogrulanir
+           And Kalite Kontrol butonuna tiklanir
+@@ -187,7 +187,7 @@
+             |123456 |
+             |?.¿0p9 |
+ 
+-        Scenario: TC_27  "Uretim Planlama " butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++        Scenario: TC_20  "Uretim Planlama " butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+ 
+           Then Uretim Planlama butonunun gorunur oldugu dogrulanir
+           And Uretim Planlama butonuna tiklanir
+@@ -199,10 +199,10 @@
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+ 
+-        Scenario: TC_28 "Uretim Planlama"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
++        Scenario: TC_21 "Uretim Planlama"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
+         //Manuel Test
+ 
+-        Scenario Outline: TC_30 "Uretim Planlama"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
++        Scenario Outline: TC_22 "Uretim Planlama"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+ 
+           Then Uretim Planlama butonunun gorunur oldugu dogrulanir
+           And Uretim Planlama butonuna tiklanir
+@@ -219,28 +219,27 @@
+             |123456 |
+             |?.¿0p9 |
+ 
+-
+-        Scenario: TC_31 "Yonetim"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
++        Scenario: TC_23 "Yonetim"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+ 
+           Then Yonetim butonunun gorunur oldugu dogrulanir
+           And Yonetim butonuna tiklanir
+          Then Yonetim Sifre ekraninda oldugu dogrulanir
+           And yonetici sifre kutucuguna gecerli bir "data" girilir
+-          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+-          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
++          And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
++          And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+           And yonetim Giris yap butonuna tiklanir
+           Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+ 
+-         Scenario: TC_32 "YONETIM"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
++         Scenario: TC_24 "YONETIM"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
+           //Manuel Test
+ 
+-        Scenario Outline: TC_36 "Yonetim" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
++        Scenario Outline: TC_25 "Yonetim" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+           Then Yonetim butonunun gorunur oldugu dogrulanir
+           And Yonetim butonuna tiklanir
+           Then Yonetim Sifre ekraninda oldugu dogrulanir
+           And yonetici sifre kutucuguna gecersiz bir "<data>" girilir
+-          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+-          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
++          And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
++          And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+           And yonetim Giris yap butonuna tiklanir
+           And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+           Examples:
+Index: src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tester_productprocess_ts.stepDefinitions;\r\n\r\n\r\nimport io.cucumber.java.en.And;\r\nimport io.cucumber.java.en.Then;\r\nimport io.cucumber.java.en.When;\r\nimport org.junit.Assert;\r\nimport org.openqa.selenium.JavascriptExecutor;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.interactions.Actions;\r\nimport tester_productprocess_ts.utilities.uiUtilities.ConfigReader;\r\nimport tester_productprocess_ts.utilities.uiUtilities.Driver;\r\n\r\nimport javax.swing.*;\r\n\r\npublic class Anamenu {\r\n\r\n    String header = \"ANA SAYFA\";\r\n    String yoneticiGirisHeader = \"YÖNETİCİ GİRİŞ SAYFASI\";\r\n    tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();\r\n    String title=\"Gasan Üretim Yönetim Sistemi\";\r\n    String girisUrl = \"https://10daabbc-c0d4-4ba0-a253-f147f6b9d61e-00-35cytuuj5k6x.janeway.replit.dev/login\";\r\n\r\n    @When(\"Anasayfaya gidilir\")\r\n    public void anasayfaya_gidilir() {\r\n       Driver.getDriver().get(ConfigReader.getProperty(\"url\"));\r\n    }\r\n    @Then(\"Anasayfada oldugu dogrulanir\")\r\n    public void anasayfada_oldugu_dogrulanir() {\r\n        String anasayfa =anamenu.AnasayfaHeader.getText();\r\n        Assert.assertEquals(header,anasayfa);\r\n    }\r\n    @When(\"Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir\")\r\n    public void ana_giris_ekraninda_hicbir_kullanici_unvanina_tiklamadan_sifre_giris_ekranina_erisememelidir() throws InterruptedException {\r\n        anamenu.AnasayfaHeader.click();\r\n        Thread.sleep(500);\r\n        Assert.assertEquals(\"Gasan Üretim Yönetim Sistemi\",Driver.getDriver().getTitle());\r\n\r\n        anamenu.herhangibiryer.click();\r\n        Thread.sleep(500);\r\n        Assert.assertEquals(\"Gasan Üretim Yönetim Sistemi\",Driver.getDriver().getTitle());\r\n    }\r\n\r\n    @Then(\"Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir\")\r\n    public void talasli_imalat_amiri_butonu_gorunur_oldugu_dogrulanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action=new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.talasliImalatAmiri);\r\n        action.perform();\r\n        anamenu.talasliImalatAmiri.isDisplayed();\r\n    }\r\n    @Then(\"Talasli Imalat Amiri Butonuna tiklanir\")\r\n    public void talasli_imalat_amiri_butonuna_tiklanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.talasliImalatAmiri);\r\n        action.click(anamenu.talasliImalatAmiri);\r\n        action.perform();\r\n    }\r\n    @Then(\"Sifre ekraninda oldugu dogrulanir\")\r\n    public void sifre_ekraninda_oldugu_dogrulanir() {\r\n        String sifreTextActual =\"Şifre\";\r\n        String sifreTextresult=anamenu.sifreYazisi.getText();\r\n        Assert.assertEquals(sifreTextresult,sifreTextActual);\r\n    }\r\n\r\n    @And(\"Giris yap butonuna tiklanir\")\r\n    public void girisYapButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(500);\r\n       Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.girisButonu);\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Talasli imalat amiri sifre kutucuguna gecerli bir {string} girilir\")\r\n    public void talasliImalatAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {\r\n        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty(\"TalasliImalatAmiri\"));\r\n    }\r\n\r\n    @And(\"Sifre gizleme butonunun sifreyi gizledigi kontrol edllir\")\r\n    public void sifreGizlemeButonununSifreyiGizledigiKontrolEdllir() {\r\n        anamenu.goz.click();\r\n    }\r\n\r\n    @And(\"Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir\")\r\n    public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() throws InterruptedException {\r\n        Thread.sleep(1500);\r\n        anamenu.goz.click();\r\n    }\r\n\r\n    @Then(\"Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir\")\r\n    public void kullanicininKendiSorumlulukSayfasinaGectigiDogrulanir() {\r\n    }\r\n\r\n    @Then(\"Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir\")\r\n    public void kullanicininKendiSorumlulukSayfasinaGecemedigiDogrulanir() {\r\n    }\r\n\r\n    @And(\"sifre kutucuguna gecersiz bir {string} girilir\")\r\n    public void sifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {\r\n        Thread.sleep(500);\r\n        anamenu.sifreKutusu.sendKeys(arg0);\r\n    }\r\n\r\n    @Then(\"Polisaj amiri butonunun gorunur oldugu dogrulanir\")\r\n    public void polisajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action=new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.polisajAmiri);\r\n        action.perform();\r\n        anamenu.polisajAmiri.isDisplayed();\r\n    }\r\n\r\n    @And(\"Polisaj amiri butonuna tiklanir\")\r\n    public void polisajAmiriButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n       Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.polisajAmiri);\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Polisaj amiri sifre kutucuguna gecerli bir data girilir\")\r\n    public void polisajAmiriSifreKutucugunaGecerliBirDataGirilir() {\r\n        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty(\"PolisajAmiri\"));\r\n    }\r\n\r\n    @And(\"sifre kutucugu bos birakilir\")\r\n    public void sifreKutucuguBosBirakilir() {\r\n        anamenu.sifreKutusu.sendKeys(\"\");\r\n    }\r\n\r\n    @Then(\"Lift montaj amiri butonunun gorunur oldugu dogrulanir\")\r\n    public void liftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.liftmontajAmiri);\r\n        anamenu.liftmontajAmiri.isDisplayed();\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Lift montaj amiri butonuna tiklanir\")\r\n    public void liftMontajAmiriButonunaTiklanir() throws InterruptedException {\r\n\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.liftmontajAmiri);\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Lift montaj amiri sifre kutucuguna gecerli bir {string} girilir\")\r\n    public void liftMontajAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {\r\n        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty(\"LiftMontajAmiri\"));\r\n    }\r\n    @Then(\"Lift Montaj Amiributonunun gorunur oldugu dogrulanir\")\r\n    public void liftMontajAmiributonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.liftmontajAmiri);\r\n        action.perform();\r\n        anamenu.liftmontajAmiri.isDisplayed();\r\n    }\r\n\r\n    @Then(\"Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir\")\r\n    public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.blokliftMontajAmiri);\r\n        anamenu.blokliftMontajAmiri.isDisplayed();\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Bloklift Montaj Amiri butonuna tiklanir\")\r\n    public void blokliftMontajAmiriButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.blokliftMontajAmiri);\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Bloklift Montaj Amiri sifre kutucuguna gecerli bir {string} girilir\")\r\n    public void blokliftMontajAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {\r\n        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty(\"BlMontajAmiri\"));\r\n    }\r\n\r\n    @Then(\"Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir\")\r\n    public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.boyamaVePaketlemeAmiri);\r\n        anamenu.boyamaVePaketlemeAmiri.isDisplayed();\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Boyama ve Paketleme Amiri butonuna tiklanir\")\r\n    public void boyamaVePaketlemeAmiriButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(1000);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.boyamaVePaketlemeAmiri);\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir {string} girilir\")\r\n    public void boyamaVePaketlemeAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {\r\n        anamenu.sifreKutusu.sendKeys(\"BoyamaPaketlemeAmiri\");\r\n    }\r\n\r\n    @Then(\"Kalite Kontrol butonunun gorunur oldugu dogrulanir\")\r\n    public void kaliteKontrolButonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.kaliteKontrolAmiri);\r\n        anamenu.kaliteKontrolAmiri.isDisplayed();\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Kalite Kontrol butonuna tiklanir\")\r\n    public void kaliteKontrolButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.kaliteKontrolAmiri);\r\n        action.perform();\r\n    }\r\n\r\n    @And(\"Kalite Kontrol sifre kutucuguna gecerli bir {string} girilir\")\r\n    public void kaliteKontrolSifreKutucugunaGecerliBirGirilir(String arg0) {\r\n        anamenu.sifreKutusu.sendKeys(\"KaliteKontrol\");\r\n    }\r\n\r\n    @And(\"Uretim Planlama sifre kutucuguna gecerli bir {string} girilir\")\r\n    public void uretimPlanlamaSifreKutucugunaGecerliBirGirilir(String arg0) {\r\n        anamenu.sifreKutusu.sendKeys(\"UretimPlanlama\");\r\n    }\r\n\r\n    @Then(\"Uretim Planlama butonunun gorunur oldugu dogrulanir\")\r\n    public void uretimPlanlamaButonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(500);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.uretimPlanlama);\r\n        action.perform();\r\n        anamenu.uretimPlanlama.isDisplayed();\r\n    }\r\n\r\n\r\n    @And(\"Uretim Planlama butonuna tiklanir\")\r\n    public void uretimPlanlamaButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(1000);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.uretimPlanlama);\r\n        action.perform();\r\n    }\r\n\r\n    @Then(\"Yonetim butonunun gorunur oldugu dogrulanir\")\r\n    public void yonetimButonununGorunurOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.scrollToElement(anamenu.yonetim);\r\n        action.perform();\r\n        anamenu.yonetim.isDisplayed();\r\n    }\r\n\r\n    @And(\"Yonetim butonuna tiklanir\")\r\n    public void yonetimButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(1000);\r\n        Actions action= new Actions(Driver.getDriver());\r\n        action.click(anamenu.yonetim);\r\n        action.perform();\r\n    }\r\n    @Then(\"Yonetim Sifre ekraninda oldugu dogrulanir\")\r\n    public void yonetimSifreEkranindaOlduguDogrulanir() throws InterruptedException {\r\n        Thread.sleep(1000);\r\n        String yoneticiAnasayfa =anamenu.yoneticiGirisSayfasiHeader.getText();\r\n        Assert.assertEquals(yoneticiGirisHeader,yoneticiAnasayfa);\r\n    }\r\n\r\n    @And(\"yonetim Giris yap butonuna tiklanir\")\r\n    public void yonetimGirisYapButonunaTiklanir() throws InterruptedException {\r\n        Thread.sleep(300);\r\n        Actions action = new Actions(Driver.getDriver());\r\n        action.click(anamenu.yonetimGirisButonu);\r\n        action.perform();\r\n    }\r\n    @And(\"yonetici sifre kutucuguna gecerli bir {string} girilir\")\r\n    public void yoneticiSifreKutucugunaGecerliBirGirilir(String arg0) {\r\n        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty(\"yonetici\"));\r\n    }\r\n\r\n\r\n    @And(\"yonetici sifre kutucuguna gecersiz bir {string} girilir\")\r\n    public void yoneticiSifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {\r\n        Thread.sleep(500);\r\n        anamenu.sifreKutusu.sendKeys(arg0);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java b/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java
+--- a/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ b/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java	(date 1724431336236)
+@@ -4,6 +4,7 @@
+ import io.cucumber.java.en.And;
+ import io.cucumber.java.en.Then;
+ import io.cucumber.java.en.When;
++import org.apache.poi.ss.formula.functions.T;
+ import org.junit.Assert;
+ import org.openqa.selenium.JavascriptExecutor;
+ import org.openqa.selenium.WebElement;
+@@ -11,52 +12,63 @@
+ import tester_productprocess_ts.utilities.uiUtilities.ConfigReader;
+ import tester_productprocess_ts.utilities.uiUtilities.Driver;
+ 
+-import javax.swing.*;
+-
+ public class Anamenu {
+ 
+     String header = "ANA SAYFA";
+-    String yoneticiGirisHeader = "YÖNETİCİ GİRİŞ SAYFASI";
++    String yoneticiGirisHeader = "ANA SAYFA";
+     tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();
+     String title="Gasan Üretim Yönetim Sistemi";
+     String girisUrl = "https://10daabbc-c0d4-4ba0-a253-f147f6b9d61e-00-35cytuuj5k6x.janeway.replit.dev/login";
+ 
++    public void scroll(WebElement element) {
++        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
++        js.executeScript("arguments[0].scrollIntoView(true);", element);
++    }
++
++    public static void scrollclick(WebElement element) {
++        try {
++            element.click();
++        } catch (Exception e) {
++            JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
++            js.executeScript("arguments[0].click();", element);
++        }
++    }
++
+     @When("Anasayfaya gidilir")
+     public void anasayfaya_gidilir() {
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+     }
++
+     @Then("Anasayfada oldugu dogrulanir")
+     public void anasayfada_oldugu_dogrulanir() {
+         String anasayfa =anamenu.AnasayfaHeader.getText();
+         Assert.assertEquals(header,anasayfa);
+     }
++
+     @When("Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir")
+     public void ana_giris_ekraninda_hicbir_kullanici_unvanina_tiklamadan_sifre_giris_ekranina_erisememelidir() throws InterruptedException {
+         anamenu.AnasayfaHeader.click();
+-        Thread.sleep(500);
+         Assert.assertEquals("Gasan Üretim Yönetim Sistemi",Driver.getDriver().getTitle());
+-
+         anamenu.herhangibiryer.click();
+-        Thread.sleep(500);
+         Assert.assertEquals("Gasan Üretim Yönetim Sistemi",Driver.getDriver().getTitle());
+     }
+ 
+     @Then("Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir")
+     public void talasli_imalat_amiri_butonu_gorunur_oldugu_dogrulanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action=new Actions(Driver.getDriver());
+         action.scrollToElement(anamenu.talasliImalatAmiri);
+         action.perform();
+         anamenu.talasliImalatAmiri.isDisplayed();
+     }
++
+     @Then("Talasli Imalat Amiri Butonuna tiklanir")
+     public void talasli_imalat_amiri_butonuna_tiklanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.scrollToElement(anamenu.talasliImalatAmiri);
+         action.click(anamenu.talasliImalatAmiri);
+         action.perform();
+     }
++
+     @Then("Sifre ekraninda oldugu dogrulanir")
+     public void sifre_ekraninda_oldugu_dogrulanir() {
+         String sifreTextActual ="Şifre";
+@@ -66,8 +78,7 @@
+ 
+     @And("Giris yap butonuna tiklanir")
+     public void girisYapButonunaTiklanir() throws InterruptedException {
+-        Thread.sleep(500);
+-       Actions action= new Actions(Driver.getDriver());
++        Actions action= new Actions(Driver.getDriver());
+         action.click(anamenu.girisButonu);
+         action.perform();
+     }
+@@ -84,7 +95,7 @@
+ 
+     @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
+     public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() throws InterruptedException {
+-        Thread.sleep(1500);
++        Thread.sleep(1000);
+         anamenu.goz.click();
+     }
+ 
+@@ -92,19 +103,19 @@
+     public void kullanicininKendiSorumlulukSayfasinaGectigiDogrulanir() {
+     }
+ 
+-    @Then("Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir")
+-    public void kullanicininKendiSorumlulukSayfasinaGecemedigiDogrulanir() {
+-    }
+-
+     @And("sifre kutucuguna gecersiz bir {string} girilir")
+     public void sifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
+         Thread.sleep(500);
+         anamenu.sifreKutusu.sendKeys(arg0);
+     }
+ 
++    @And("Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir")
++    public void kullanicininKendiSorumlulukSayfasinaGecemedigiDogrulanir() {
++
++    }
++
+     @Then("Polisaj amiri butonunun gorunur oldugu dogrulanir")
+     public void polisajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action=new Actions(Driver.getDriver());
+         action.scrollToElement(anamenu.polisajAmiri);
+         action.perform();
+@@ -113,8 +124,7 @@
+ 
+     @And("Polisaj amiri butonuna tiklanir")
+     public void polisajAmiriButonunaTiklanir() throws InterruptedException {
+-        Thread.sleep(300);
+-       Actions action= new Actions(Driver.getDriver());
++        Actions action= new Actions(Driver.getDriver());
+         action.click(anamenu.polisajAmiri);
+         action.perform();
+     }
+@@ -131,7 +141,6 @@
+ 
+     @Then("Lift montaj amiri butonunun gorunur oldugu dogrulanir")
+     public void liftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.scrollToElement(anamenu.liftmontajAmiri);
+         anamenu.liftmontajAmiri.isDisplayed();
+@@ -140,8 +149,6 @@
+ 
+     @And("Lift montaj amiri butonuna tiklanir")
+     public void liftMontajAmiriButonunaTiklanir() throws InterruptedException {
+-
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.click(anamenu.liftmontajAmiri);
+         action.perform();
+@@ -151,19 +158,9 @@
+     public void liftMontajAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
+         anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("LiftMontajAmiri"));
+     }
+-    @Then("Lift Montaj Amiributonunun gorunur oldugu dogrulanir")
+-    public void liftMontajAmiributonununGorunurOlduguDogrulanir() throws InterruptedException {
+-        Thread.sleep(300);
+-        Actions action= new Actions(Driver.getDriver());
+-        action.scrollToElement(anamenu.liftmontajAmiri);
+-        action.perform();
+-        anamenu.liftmontajAmiri.isDisplayed();
+-    }
+ 
+     @Then("Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir")
+     public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+-
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.scrollToElement(anamenu.blokliftMontajAmiri);
+         anamenu.blokliftMontajAmiri.isDisplayed();
+@@ -172,7 +169,6 @@
+ 
+     @And("Bloklift Montaj Amiri butonuna tiklanir")
+     public void blokliftMontajAmiriButonunaTiklanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.click(anamenu.blokliftMontajAmiri);
+         action.perform();
+@@ -185,7 +181,6 @@
+ 
+     @Then("Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir")
+     public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.scrollToElement(anamenu.boyamaVePaketlemeAmiri);
+         anamenu.boyamaVePaketlemeAmiri.isDisplayed();
+@@ -194,7 +189,6 @@
+ 
+     @And("Boyama ve Paketleme Amiri butonuna tiklanir")
+     public void boyamaVePaketlemeAmiriButonunaTiklanir() throws InterruptedException {
+-        Thread.sleep(1000);
+         Actions action= new Actions(Driver.getDriver());
+         action.click(anamenu.boyamaVePaketlemeAmiri);
+         action.perform();
+@@ -202,12 +196,11 @@
+ 
+     @And("Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir {string} girilir")
+     public void boyamaVePaketlemeAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
+-        anamenu.sifreKutusu.sendKeys("BoyamaPaketlemeAmiri");
++        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("BoyamaPaketlemeAmiri"));
+     }
+ 
+     @Then("Kalite Kontrol butonunun gorunur oldugu dogrulanir")
+     public void kaliteKontrolButonununGorunurOlduguDogrulanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.scrollToElement(anamenu.kaliteKontrolAmiri);
+         anamenu.kaliteKontrolAmiri.isDisplayed();
+@@ -216,7 +209,6 @@
+ 
+     @And("Kalite Kontrol butonuna tiklanir")
+     public void kaliteKontrolButonunaTiklanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+         action.click(anamenu.kaliteKontrolAmiri);
+         action.perform();
+@@ -224,37 +216,32 @@
+ 
+     @And("Kalite Kontrol sifre kutucuguna gecerli bir {string} girilir")
+     public void kaliteKontrolSifreKutucugunaGecerliBirGirilir(String arg0) {
+-        anamenu.sifreKutusu.sendKeys("KaliteKontrol");
+-    }
+-
+-    @And("Uretim Planlama sifre kutucuguna gecerli bir {string} girilir")
+-    public void uretimPlanlamaSifreKutucugunaGecerliBirGirilir(String arg0) {
+-        anamenu.sifreKutusu.sendKeys("UretimPlanlama");
++        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("KaliteKontrol"));
+     }
+ 
+     @Then("Uretim Planlama butonunun gorunur oldugu dogrulanir")
+     public void uretimPlanlamaButonununGorunurOlduguDogrulanir() throws InterruptedException {
+-        Thread.sleep(500);
+         Actions action= new Actions(Driver.getDriver());
+-        action.scrollToElement(anamenu.uretimPlanlama);
++        action.scrollToElement(anamenu.menulinkleri.get(6));
+         action.perform();
+         anamenu.uretimPlanlama.isDisplayed();
+     }
+ 
+-
+     @And("Uretim Planlama butonuna tiklanir")
+     public void uretimPlanlamaButonunaTiklanir() throws InterruptedException {
+         Thread.sleep(1000);
+-        Actions action= new Actions(Driver.getDriver());
+-        action.click(anamenu.uretimPlanlama);
+-        action.perform();
++        scrollclick(anamenu.menulinkleri.get(6));
++    }
++
++    @And("Uretim Planlama sifre kutucuguna gecerli bir {string} girilir")
++    public void uretimPlanlamaSifreKutucugunaGecerliBirGirilir(String arg0) {
++        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("UretimPlanlama"));
+     }
+ 
+     @Then("Yonetim butonunun gorunur oldugu dogrulanir")
+     public void yonetimButonununGorunurOlduguDogrulanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action= new Actions(Driver.getDriver());
+-        action.scrollToElement(anamenu.yonetim);
++        action.scrollToElement(anamenu.menulinkleri.get(7));
+         action.perform();
+         anamenu.yonetim.isDisplayed();
+     }
+@@ -262,33 +249,44 @@
+     @And("Yonetim butonuna tiklanir")
+     public void yonetimButonunaTiklanir() throws InterruptedException {
+         Thread.sleep(1000);
+-        Actions action= new Actions(Driver.getDriver());
+-        action.click(anamenu.yonetim);
+-        action.perform();
++        scrollclick(anamenu.menulinkleri.get(7));
++    }
++
++    @And("yonetici sifre kutucuguna gecerli bir {string} girilir")
++    public void yoneticiSifreKutucugunaGecerliBirGirilir(String arg0) {
++        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("yonetici"));
+     }
+-    @Then("Yonetim Sifre ekraninda oldugu dogrulanir")
+-    public void yonetimSifreEkranindaOlduguDogrulanir() throws InterruptedException {
++
++    @And("Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
++    public void yoneticiSifreGizlemeButonununSifreyiGizledigiKontrolEdllir() throws InterruptedException {
++        Thread.sleep(2000);
++        anamenu.yoneticiGoz.click();
++    }
++
++    @And("Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
++    public void yoneticiSifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() throws InterruptedException {
+         Thread.sleep(1000);
+-        String yoneticiAnasayfa =anamenu.yoneticiGirisSayfasiHeader.getText();
+-        Assert.assertEquals(yoneticiGirisHeader,yoneticiAnasayfa);
++        anamenu.yoneticiGoz.click();
+     }
+ 
+     @And("yonetim Giris yap butonuna tiklanir")
+     public void yonetimGirisYapButonunaTiklanir() throws InterruptedException {
+-        Thread.sleep(300);
+         Actions action = new Actions(Driver.getDriver());
+         action.click(anamenu.yonetimGirisButonu);
+         action.perform();
+     }
+-    @And("yonetici sifre kutucuguna gecerli bir {string} girilir")
+-    public void yoneticiSifreKutucugunaGecerliBirGirilir(String arg0) {
+-        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("yonetici"));
+-    }
+ 
++    @Then("Yonetim Sifre ekraninda oldugu dogrulanir")
++    public void yonetimSifreEkranindaOlduguDogrulanir() throws InterruptedException {
++        String yoneticiAnasayfa =anamenu.yoneticiGirisSayfasiHeader.getText();
++        Assert.assertEquals(yoneticiGirisHeader,yoneticiAnasayfa);
++    }
+ 
+     @And("yonetici sifre kutucuguna gecersiz bir {string} girilir")
+     public void yoneticiSifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
+-        Thread.sleep(500);
+         anamenu.sifreKutusu.sendKeys(arg0);
++        Thread.sleep(1000);
+     }
++
++
+ }
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]/shelved.patch	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ /dev/null	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
+@@ -1,167 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9ef528b4-b89c-4a52-82fb-4cf778920377\" name=\"Changes\" comment=\"v1\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hooks.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/configuration.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/configuration.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hook.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/deneme.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2kK2Y3Vvcc4csYwog2fOWVBsh1b\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/indeedjobsuchen&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\cetin\\Desktop\\java\\Tester-ProductProcess-TS\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Scenario: Register kontrol\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"NAME_FILTER\" value=\"^Register kontrol$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Register kontrol$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: Register kontrol\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Cucumber Java.Scenario: Register kontrol\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9ef528b4-b89c-4a52-82fb-4cf778920377\" name=\"Changes\" comment=\"\" />\r\n      <created>1723017991962</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1723017991962</updated>\r\n      <workItem from=\"1723027882028\" duration=\"1200000\" />\r\n      <workItem from=\"1723097670953\" duration=\"59000\" />\r\n      <workItem from=\"1723097841908\" duration=\"1020000\" />\r\n      <workItem from=\"1723099197747\" duration=\"1226000\" />\r\n      <workItem from=\"1723101602607\" duration=\"62000\" />\r\n      <workItem from=\"1723101732836\" duration=\"23000\" />\r\n      <workItem from=\"1723101780135\" duration=\"431000\" />\r\n      <workItem from=\"1723102282733\" duration=\"437000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723028002257</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723028002257</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723028088217</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723028088217</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723099272287</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723099272287</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"v1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723099543642</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723099543642</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"tekrar merhaba\" />\r\n    <MESSAGE value=\"branch aactim\" />\r\n    <MESSAGE value=\"v1\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"v1\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 53dc41271c0f0930a34b2f64a3754215596273d1)
+-+++ b/.idea/workspace.xml	(date 1723825578185)
+-@@ -4,15 +4,7 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v1">
+--      <change afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hooks.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hook.java" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/deneme.java" beforeDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature" afterDir="false" />
+--    </list>
+-+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v2" />
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-@@ -33,6 +25,9 @@
+-     </option>
+-     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-   </component>
+-+  <component name="ProblemsViewState">
+-+    <option name="selectedTabId" value="ProjectErrors" />
+-+  </component>
+-   <component name="ProjectColorInfo">{
+-   &quot;associatedIndex&quot;: 8
+- }</component>
+-@@ -47,6 +42,7 @@
+-     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-     &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/indeedjobsuchen&quot;,
+-@@ -65,7 +61,40 @@
+-       <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TS" />
+-     </key>
+-   </component>
+--  <component name="RunManager">
+-+  <component name="RunManager" selected="Cucumber Java.Scenario: urun arama ve karsilastirma">
+-+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+-+      <module name="Tester-ProductProcess-TS" />
+-+      <extension name="coverage">
+-+        <pattern>
+-+          <option name="PATTERN" value="org.example.*" />
+-+          <option name="ENABLED" value="true" />
+-+        </pattern>
+-+      </extension>
+-+      <method v="2">
+-+        <option name="Make" enabled="true" />
+-+      </method>
+-+    </configuration>
+-+    <configuration name="Feature: amazon" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+-+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+-+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/amazon.feature" />
+-+      <option name="GLUE" value="tester_productprocess_ts.hooks" />
+-+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+-+      <module name="Tester-ProductProcess-TS" />
+-+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+-+      <shortenClasspath name="NONE" />
+-+      <option name="SUGGESTED_NAME" value="Feature: amazon" />
+-+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+-+      <extension name="coverage">
+-+        <pattern>
+-+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+-+          <option name="ENABLED" value="true" />
+-+        </pattern>
+-+      </extension>
+-+      <method v="2">
+-+        <option name="Make" enabled="true" />
+-+      </method>
+-+    </configuration>
+-     <configuration name="Scenario: Register kontrol" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+-       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature" />
+-@@ -86,8 +115,39 @@
+-         <option name="Make" enabled="true" />
+-       </method>
+-     </configuration>
+-+    <configuration name="Scenario: urun arama ve karsilastirma" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+-+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+-+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/amazon.feature" />
+-+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+-+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+-+      <module name="Tester-ProductProcess-TS" />
+-+      <option name="NAME_FILTER" value="^urun arama ve karsilastirma$" />
+-+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^urun arama ve karsilastirma$&quot;" />
+-+      <shortenClasspath name="NONE" />
+-+      <option name="SUGGESTED_NAME" value="Scenario: urun arama ve karsilastirma" />
+-+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+-+      <extension name="coverage">
+-+        <pattern>
+-+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+-+          <option name="ENABLED" value="true" />
+-+        </pattern>
+-+      </extension>
+-+      <method v="2">
+-+        <option name="Make" enabled="true" />
+-+      </method>
+-+    </configuration>
+-+    <list>
+-+      <item itemvalue="Application.Main" />
+-+      <item itemvalue="Cucumber Java.Scenario: urun arama ve karsilastirma" />
+-+      <item itemvalue="Cucumber Java.Feature: amazon" />
+-+      <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
+-+    </list>
+-     <recent_temporary>
+-       <list>
+-+        <item itemvalue="Cucumber Java.Scenario: urun arama ve karsilastirma" />
+-+        <item itemvalue="Cucumber Java.Feature: amazon" />
+-+        <item itemvalue="Application.Main" />
+-+        <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
+-         <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
+-       </list>
+-     </recent_temporary>
+-@@ -108,6 +168,12 @@
+-       <workItem from="1723101732836" duration="23000" />
+-       <workItem from="1723101780135" duration="431000" />
+-       <workItem from="1723102282733" duration="437000" />
+-+      <workItem from="1723449642470" duration="9700000" />
+-+      <workItem from="1723714105758" duration="6443000" />
+-+      <workItem from="1723746934400" duration="6898000" />
+-+      <workItem from="1723754182534" duration="96000" />
+-+      <workItem from="1723754308483" duration="428000" />
+-+      <workItem from="1723754754391" duration="2447000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="branch aactim">
+-       <option name="closed" value="true" />
+-@@ -141,7 +207,15 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1723099543642</updated>
+-     </task>
+--    <option name="localTasksCounter" value="5" />
+-+    <task id="LOCAL-00005" summary="v2">
+-+      <option name="closed" value="true" />
+-+      <created>1723757188546</created>
+-+      <option name="number" value="00005" />
+-+      <option name="presentableId" value="LOCAL-00005" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1723757188546</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="6" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -151,7 +225,8 @@
+-     <MESSAGE value="tekrar merhaba" />
+-     <MESSAGE value="branch aactim" />
+-     <MESSAGE value="v1" />
+--    <option name="LAST_COMMIT_MESSAGE" value="v1" />
+-+    <MESSAGE value="v2" />
+-+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+-   </component>
+-   <component name="XSLT-Support.FileAssociations.UIState">
+-     <expand />
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1/shelved.patch	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ /dev/null	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
+@@ -1,57 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9ef528b4-b89c-4a52-82fb-4cf778920377\" name=\"Changes\" comment=\"v2\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"ProjectErrors\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2kK2Y3Vvcc4csYwog2fOWVBsh1b\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/indeedjobsuchen&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\cetin\\Desktop\\java\\Tester-ProductProcess-TS\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Cucumber Java.Scenario: urun arama ve karsilastirma\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.example.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Feature: amazon\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/amazon.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter\" />\r\n      <shortenClasspath name=\"NONE\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Feature: amazon\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: Register kontrol\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"NAME_FILTER\" value=\"^Register kontrol$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Register kontrol$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: Register kontrol\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: urun arama ve karsilastirma\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/amazon.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"NAME_FILTER\" value=\"^urun arama ve karsilastirma$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^urun arama ve karsilastirma$&quot;\" />\r\n      <shortenClasspath name=\"NONE\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: urun arama ve karsilastirma\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.Main\" />\r\n      <item itemvalue=\"Cucumber Java.Scenario: urun arama ve karsilastirma\" />\r\n      <item itemvalue=\"Cucumber Java.Feature: amazon\" />\r\n      <item itemvalue=\"Cucumber Java.Scenario: Register kontrol\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Cucumber Java.Scenario: urun arama ve karsilastirma\" />\r\n        <item itemvalue=\"Cucumber Java.Feature: amazon\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: Register kontrol\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: Register kontrol\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9ef528b4-b89c-4a52-82fb-4cf778920377\" name=\"Changes\" comment=\"\" />\r\n      <created>1723017991962</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1723017991962</updated>\r\n      <workItem from=\"1723027882028\" duration=\"1200000\" />\r\n      <workItem from=\"1723097670953\" duration=\"59000\" />\r\n      <workItem from=\"1723097841908\" duration=\"1020000\" />\r\n      <workItem from=\"1723099197747\" duration=\"1226000\" />\r\n      <workItem from=\"1723101602607\" duration=\"62000\" />\r\n      <workItem from=\"1723101732836\" duration=\"23000\" />\r\n      <workItem from=\"1723101780135\" duration=\"431000\" />\r\n      <workItem from=\"1723102282733\" duration=\"437000\" />\r\n      <workItem from=\"1723449642470\" duration=\"9700000\" />\r\n      <workItem from=\"1723714105758\" duration=\"6443000\" />\r\n      <workItem from=\"1723746934400\" duration=\"6898000\" />\r\n      <workItem from=\"1723754182534\" duration=\"96000\" />\r\n      <workItem from=\"1723754308483\" duration=\"428000\" />\r\n      <workItem from=\"1723754754391\" duration=\"2447000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723028002257</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723028002257</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723028088217</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723028088217</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723099272287</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723099272287</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"v1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723099543642</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723099543642</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"v2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723757188546</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723757188546</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"tekrar merhaba\" />\r\n    <MESSAGE value=\"branch aactim\" />\r\n    <MESSAGE value=\"v1\" />\r\n    <MESSAGE value=\"v2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"v2\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	
+-+++ b/.idea/workspace.xml	
+-@@ -4,7 +4,10 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v2" />
+-+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v2">
+-+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java" afterDir="false" />
+-+    </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-@@ -173,7 +176,8 @@
+-       <workItem from="1723746934400" duration="6898000" />
+-       <workItem from="1723754182534" duration="96000" />
+-       <workItem from="1723754308483" duration="428000" />
+--      <workItem from="1723754754391" duration="2447000" />
+-+      <workItem from="1723754754391" duration="8499000" />
+-+      <workItem from="1723796388302" duration="304000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="branch aactim">
+-       <option name="closed" value="true" />
+-@@ -215,7 +219,23 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1723757188546</updated>
+-     </task>
+--    <option name="localTasksCounter" value="6" />
+-+    <task id="LOCAL-00006" summary="v2">
+-+      <option name="closed" value="true" />
+-+      <created>1723757245378</created>
+-+      <option name="number" value="00006" />
+-+      <option name="presentableId" value="LOCAL-00006" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1723757245378</updated>
+-+    </task>
+-+    <task id="LOCAL-00007" summary="v2">
+-+      <option name="closed" value="true" />
+-+      <created>1723757299218</created>
+-+      <option name="number" value="00007" />
+-+      <option name="presentableId" value="LOCAL-00007" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1723757299218</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="8" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27__Changes_.xml	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ /dev/null	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]" date="1723825635479" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 16.08.2024 18:27 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26__Changes_1.xml	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ /dev/null	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1" date="1723825591440" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 16.08.2024 18:26 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tester_productprocess_ts.stepDefinitions;\r\n\r\nimport io.cucumber.java.en.Then;\r\nimport io.cucumber.java.en.When;\r\nimport net.bytebuddy.asm.Advice;\r\nimport org.junit.Assert;\r\nimport org.openqa.selenium.JavascriptExecutor;\r\nimport org.openqa.selenium.Keys;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WindowType;\r\nimport org.openqa.selenium.interactions.Actions;\r\nimport org.openqa.selenium.support.ui.Select;\r\nimport tester_productprocess_ts.utilities.uiUtilities.ConfigReader;\r\nimport tester_productprocess_ts.utilities.uiUtilities.Driver;\r\n\r\n\r\nimport static org.openqa.selenium.Keys.ENTER;\r\n\r\npublic class Amazon {\r\n\r\n    tester_productprocess_ts.pages.Amazon amazonpage = new tester_productprocess_ts.pages.Amazon();\r\n    Double onikinciurunFiyat;\r\n    Double onucuncuurunFiyat;\r\n    Actions action;\r\n    Select select;\r\n\r\n    @When(\"amazon.com sitesine git -search box'a thermos gir\")\r\n    public void amazon_com_sitesine_git_search_box_a_thermos_gir() throws InterruptedException {\r\n        Driver.getDriver().get(ConfigReader.getProperty(\"url1\"));\r\n        amazonpage.akzeptieren.click();\r\n        Thread.sleep(1000);\r\n    }\r\n    @When(\"search box'un sol tarafindaki kategoriden Sports & Outdoor sec\")\r\n    public void search_box_un_sol_tarafindaki_kategoriden_sports_outdoor_sec() throws InterruptedException {\r\n        select = new Select(amazonpage.dropdownmenu);\r\n        select.selectByValue(\"search-alias=sports\");\r\n        Thread.sleep(1000);\r\n        amazonpage.searchbox.sendKeys(\"stanley thermoskanne\",ENTER);\r\n    }\r\n    @When(\"karsina cikan urunlerden soldan itibaren sayarak {int}. urune tikla -urunun fiyatini  al\")\r\n    public void karsina_cikan_urunlerden_soldan_itibaren_sayarak_urune_tikla_urunun_fiyatini_al(Integer int1) throws InterruptedException {\r\n        amazonpage.urunler.get(12).click();\r\n        Thread.sleep(1000);\r\n        onikinciurunFiyat = Double.parseDouble(amazonpage.onikiurunFiyat.getText());\r\n        Thread.sleep(1000);\r\n        System.out.println(onikinciurunFiyat);\r\n\r\n    }\r\n    @When(\"bir onceki sayfaya geri don {int}. urune tikla  urun fiyatini al\")\r\n    public void bir_onceki_sayfaya_geri_don_urune_tikla_urun_fiyatini_al(Integer int1) throws InterruptedException {\r\n        Driver.getDriver().navigate().back();\r\n        amazonpage.urunler.get(13).click();\r\n        Thread.sleep(1000);\r\n        onucuncuurunFiyat = Double.parseDouble(amazonpage.onucurunFiyat.getText());\r\n        Thread.sleep(1000);\r\n        System.out.println(onucuncuurunFiyat);\r\n        Driver.getDriver().navigate().back();\r\n    }\r\n    @When(\"{int}. ve {int}. urunlerin fiyatlarini karsilastir. ucuz olan urunu sepete at\")\r\n    public void ve_urunlerin_fiyatlarini_karsilastir_ucuz_olan_urunu_sepete_at(Integer int1, Integer int2) throws InterruptedException {\r\n        if (onikinciurunFiyat>onucuncuurunFiyat){\r\n            amazonpage.urunler.get(13).click();\r\n            Thread.sleep(1000);\r\n            amazonpage.sepeteAt.click();\r\n        }else {\r\n            amazonpage.urunler.get(12).click();\r\n            Thread.sleep(1000);\r\n            amazonpage.sepeteAt.click();\r\n        }\r\n    }\r\n    @When(\"sepeti yeni sekmede ac\")\r\n    public void sepeti_yeni_sekmede_ac() throws InterruptedException {\r\n        Thread.sleep(1000);\r\n        amazonpage.sepet.click();\r\n        String url=  Driver.getDriver().getCurrentUrl();\r\n        Driver.getDriver().switchTo().newWindow(WindowType.TAB);\r\n        Driver.getDriver().get(url);\r\n    }\r\n    @Then(\"proceed to check out tikla ve sign in sayfasina yonlendirildigini dogrula\")\r\n    public void proceed_to_check_out_tikla_ve_sign_in_sayfasina_yonlendirildigini_dogrula() {\r\n        amazonpage.kasse.click();\r\n        String a=\"Anmelden\";\r\n       String anmelden= amazonpage.anmelden.getText();\r\n       Assert.assertEquals(a,anmelden);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java b/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java
+--- a/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ b/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java	(date 1724424151492)
+@@ -1,5 +1,6 @@
+ package tester_productprocess_ts.stepDefinitions;
+ 
++import io.cucumber.java.en.And;
+ import io.cucumber.java.en.Then;
+ import io.cucumber.java.en.When;
+ import net.bytebuddy.asm.Advice;
+@@ -83,4 +84,5 @@
+        String anmelden= amazonpage.anmelden.getText();
+        Assert.assertEquals(a,anmelden);
+     }
++
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9ef528b4-b89c-4a52-82fb-4cf778920377\" name=\"Changes\" comment=\"v8\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"ProjectErrors\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2kK2Y3Vvcc4csYwog2fOWVBsh1b\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/indeedjobsuchen&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\cetin\\Desktop\\java\\Tester-ProductProcess-TS\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Cucumber Java.Feature: anamenu\">\r\n    <configuration name=\"Feature: anamenu\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Feature: anamenu\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: Register kontrol\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"NAME_FILTER\" value=\"^Register kontrol$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Register kontrol$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: Register kontrol\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC_01 \\&quot;TALASLI IMALAT AMIRI\\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\\. \\(Positif Test\\)$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_01 \\&quot;TALASLI IMALAT AMIRI\\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\\. \\(Positif Test\\)$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC_11 \\&quot;Lift montaj amiri\\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\\. \\(Positif Test\\)$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_11 \\&quot;Lift montaj amiri\\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\\. \\(Positif Test\\)$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"5\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature\" />\r\n      <option name=\"GLUE\" value=\"tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"Tester-ProductProcess-TS\" />\r\n      <option name=\"NAME_FILTER\" value=\"^TC_31 \\&quot;Yonetim\\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\\. \\(Positif Test\\)$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_31 \\&quot;Yonetim\\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\\. \\(Positif Test\\)$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Cucumber Java.Feature: anamenu\" />\r\n      <item itemvalue=\"Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n      <item itemvalue=\"Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n      <item itemvalue=\"Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n      <item itemvalue=\"Cucumber Java.Scenario: Register kontrol\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Cucumber Java.Feature: anamenu\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: Register kontrol\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n        <item itemvalue=\"Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9ef528b4-b89c-4a52-82fb-4cf778920377\" name=\"Changes\" comment=\"\" />\r\n      <created>1723017991962</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1723017991962</updated>\r\n      <workItem from=\"1723027882028\" duration=\"1200000\" />\r\n      <workItem from=\"1723097670953\" duration=\"59000\" />\r\n      <workItem from=\"1723097841908\" duration=\"1020000\" />\r\n      <workItem from=\"1723099197747\" duration=\"1226000\" />\r\n      <workItem from=\"1723101602607\" duration=\"62000\" />\r\n      <workItem from=\"1723101732836\" duration=\"23000\" />\r\n      <workItem from=\"1723101780135\" duration=\"431000\" />\r\n      <workItem from=\"1723102282733\" duration=\"437000\" />\r\n      <workItem from=\"1723449642470\" duration=\"9700000\" />\r\n      <workItem from=\"1723714105758\" duration=\"6443000\" />\r\n      <workItem from=\"1723746934400\" duration=\"6898000\" />\r\n      <workItem from=\"1723754182534\" duration=\"96000\" />\r\n      <workItem from=\"1723754308483\" duration=\"428000\" />\r\n      <workItem from=\"1723754754391\" duration=\"2447000\" />\r\n      <workItem from=\"1723836426008\" duration=\"1965000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723028002257</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723028002257</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723028088217</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723028088217</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"branch aactim\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723099272287</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723099272287</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"v1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723099543642</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723099543642</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"v2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1723757188546</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1723757188546</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"v5\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724325225191</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724325225191</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"tekrar merhaba\" />\r\n    <MESSAGE value=\"branch aactim\" />\r\n    <MESSAGE value=\"v1\" />\r\n    <MESSAGE value=\"v2\" />\r\n    <MESSAGE value=\"v5\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"v5\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 26a03e582abf204558d53387ac7d4e0b5e397449)
++++ b/.idea/workspace.xml	(date 1724432232452)
+@@ -4,10 +4,48 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v8">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03__Changes_.xml" afterDir="false" />
++    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_18_26_[Changes]1/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_22_38_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_08_2024_22_38_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_08_2024_22_39_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_08_2024_22_39_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_08_2024_19_07_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_08_2024_19_07_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_09_22_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_09_22_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_15_39_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_15_39_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_08_2024_18_27_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_20_08_2024_22_40_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_20_08_2024_22_40_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_08_2024_09_22_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_08_2024_09_22_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_08_2024_10_17_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_08_2024_10_17_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_08_2024_19_06_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_08_2024_19_06_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_13_16_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_13_16_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_15_40_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_15_40_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03_[Changes]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/baseUrl/BaseUrl.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hooks.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Amazon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Amazon.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pojos/AdminPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pojos/AdminPojo.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/FailedRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/FailedRunner.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/ParallelRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/ParallelRunner.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Amazon.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/apiUtilities/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/apiUtilities/Authentication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/databaseUtilities/DB_Utilty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/databaseUtilities/DB_Utilty.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/ConfigReader.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/Driver.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/ReusableMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/ReusableMethods.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/cucumber.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cucumber.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/features/amazon.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/amazon.feature" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -50,7 +88,7 @@
+     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/indeedjobsuchen&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Downloads/Tester-ProductProcess-TS-master/Tester-ProductProcess-TS-master&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+@@ -58,7 +96,6 @@
+     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+@@ -87,15 +124,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: Register kontrol" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/ui.feature" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="Tester-ProductProcess-TS" />
+-      <option name="NAME_FILTER" value="^Register kontrol$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Register kontrol$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: Register kontrol" />
++      <option name="NAME_FILTER" value="^TC_01 \&quot;TALASLI IMALAT AMIRI\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_01 \&quot;TALASLI IMALAT AMIRI\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -107,15 +144,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="Tester-ProductProcess-TS" />
+-      <option name="NAME_FILTER" value="^TC_01 \&quot;TALASLI IMALAT AMIRI\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_01 \&quot;TALASLI IMALAT AMIRI\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
++      <option name="NAME_FILTER" value="^TC_11 \&quot;Lift montaj amiri\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_11 \&quot;Lift montaj amiri\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -127,15 +164,15 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++    <configuration name="Scenario: TC_20  &quot;Uretim Planlama &quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+       <option name="CUCUMBER_CORE_VERSION" value="5" />
+       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+       <module name="Tester-ProductProcess-TS" />
+-      <option name="NAME_FILTER" value="^TC_11 \&quot;Lift montaj amiri\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
+-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_11 \&quot;Lift montaj amiri\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
+-      <option name="SUGGESTED_NAME" value="Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
++      <option name="NAME_FILTER" value="^TC_20  \&quot;Uretim Planlama \&quot; butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_20  \&quot;Uretim Planlama \&quot; butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC_20  &quot;Uretim Planlama &quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+       <extension name="coverage">
+         <pattern>
+@@ -163,24 +200,37 @@
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="JetRunConfigurationType">
++      <module name="Tester-ProductProcess-TS-master" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
++      <module name="Tester-ProductProcess-TS-master" />
++      <option name="filePath" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <list>
+-      <item itemvalue="Cucumber Java.Feature: anamenu" />
++      <item itemvalue="Cucumber Java.Scenario: TC_20  &quot;Uretim Planlama &quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+       <item itemvalue="Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+       <item itemvalue="Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+       <item itemvalue="Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+-      <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
++      <item itemvalue="Cucumber Java.Feature: anamenu" />
+     </list>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Cucumber Java.Feature: anamenu" />
+-        <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
++        <item itemvalue="Cucumber Java.Scenario: TC_20  &quot;Uretim Planlama &quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
++        <item itemvalue="Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+         <item itemvalue="Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+         <item itemvalue="Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+-        <item itemvalue="Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -207,6 +257,8 @@
+       <workItem from="1723754308483" duration="428000" />
+       <workItem from="1723754754391" duration="2447000" />
+       <workItem from="1723836426008" duration="1965000" />
++      <workItem from="1724423917821" duration="7648000" />
++      <workItem from="1724431849892" duration="240000" />
+     </task>
+     <task id="LOCAL-00001" summary="branch aactim">
+       <option name="closed" value="true" />

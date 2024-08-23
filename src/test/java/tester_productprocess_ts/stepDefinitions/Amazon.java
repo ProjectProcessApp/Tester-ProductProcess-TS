@@ -1,5 +1,6 @@
 package tester_productprocess_ts.stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.bytebuddy.asm.Advice;
@@ -83,4 +84,5 @@ public class Amazon {
        String anmelden= amazonpage.anmelden.getText();
        Assert.assertEquals(a,anmelden);
     }
+
 }
