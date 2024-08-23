@@ -24,7 +24,6 @@ public class Anamenu {
     @FindBy(xpath="//label[@class='text-start w-100 fs-4 form-label']")
     public WebElement sifreText;
 
-
     @FindBy(xpath ="//div[contains(text(),'TALASLI IMALAT AMIRI')]" )
     public WebElement talasliImalatAmiri;
 
@@ -43,10 +42,10 @@ public class Anamenu {
     @FindBy(xpath ="//div[contains(text(),'KALITE KONTROL AMIRI')]" )
     public WebElement kaliteKontrolAmiri;
 
-    @FindBy(xpath ="(//div[@class='menuDiv'])[7]" )
+    @FindBy(xpath ="//div[text()='ÜRETIM PLANLAMA']" )
     public WebElement uretimPlanlama;
 
-    @FindBy(xpath ="(//div[@class='menuDiv'])[8]" )
+    @FindBy(xpath ="//div[text()='YÖNETIM']" )
     public WebElement yonetim;
 
     @FindBy(xpath ="//h1[@class='page-header']" )
@@ -67,6 +66,9 @@ public class Anamenu {
 
     @FindBy(xpath ="//span[@id='password']" )
     public WebElement goz;
+
+    @FindBy(xpath ="//span[@class='input-group-text']" )
+    public WebElement yoneticiGoz;
 
     @FindBy(xpath="//h1[@class='page-header']")
     public WebElement yoneticiGirisSayfasiHeader;
