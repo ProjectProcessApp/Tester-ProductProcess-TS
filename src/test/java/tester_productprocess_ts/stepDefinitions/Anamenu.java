@@ -70,7 +70,6 @@ public class Anamenu {
        Actions action= new Actions(Driver.getDriver());
         action.click(anamenu.girisButonu);
         action.perform();
-
     }
 
     @And("Talasli imalat amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -91,11 +90,6 @@ public class Anamenu {
 
     @Then("Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void kullanicininKendiSorumlulukSayfasinaGectigiDogrulanir() {
-    }
-
-
-    @And("sifre kutucu bos birakilir")
-    public void sifreKutucuBosBirakilir() {
     }
 
     @Then("Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir")
@@ -123,7 +117,6 @@ public class Anamenu {
        Actions action= new Actions(Driver.getDriver());
         action.click(anamenu.polisajAmiri);
         action.perform();
-
     }
 
     @And("Polisaj amiri sifre kutucuguna gecerli bir data girilir")
@@ -248,6 +241,7 @@ public class Anamenu {
         anamenu.uretimPlanlama.isDisplayed();
     }
 
+
     @And("Uretim Planlama butonuna tiklanir")
     public void uretimPlanlamaButonunaTiklanir() throws InterruptedException {
         Thread.sleep(1000);
@@ -255,6 +249,7 @@ public class Anamenu {
         action.click(anamenu.uretimPlanlama);
         action.perform();
     }
+
     @Then("Yonetim butonunun gorunur oldugu dogrulanir")
     public void yonetimButonununGorunurOlduguDogrulanir() throws InterruptedException {
         Thread.sleep(300);
@@ -271,12 +266,11 @@ public class Anamenu {
         action.click(anamenu.yonetim);
         action.perform();
     }
-    @And("gecerli bir email adresi {string} girilir")
-    public void gecerliBirEmailAdresiGirilir(String arg0) {
-    }
-
-    @And("sifre kutucuguna gecerli bir {string} girilir")
-    public void sifreKutucugunaGecerliBirGirilir(String arg0) {
+    @Then("Yonetim Sifre ekraninda oldugu dogrulanir")
+    public void yonetimSifreEkranindaOlduguDogrulanir() throws InterruptedException {
+        Thread.sleep(1000);
+        String yoneticiAnasayfa =anamenu.yoneticiGirisSayfasiHeader.getText();
+        Assert.assertEquals(yoneticiGirisHeader,yoneticiAnasayfa);
     }
 
     @And("yonetim Giris yap butonuna tiklanir")
@@ -286,41 +280,15 @@ public class Anamenu {
         action.click(anamenu.yonetimGirisButonu);
         action.perform();
     }
-
-    @And("yonetim sifre kutucugu bos birakilir")
-    public void yonetimSifreKutucuguBosBirakilir() {
-    }
-
-    @And("email kutucugu bos birakilir")
-    public void emailKutucuguBosBirakilir() {
-    }
-
-    @And("yonetim sifre kutucuguna gecerli bir {string} girilir")
-    public void yonetimSifreKutucugunaGecerliBirGirilir(String arg0) {
-    }
-    @Then("Yonetim butonunun gorunur olmadigi dogrulanir")
-    public void yonetimButonununGorunurOlmadigiDogrulanir() {
-
-    }
-
-    @And("Yonetim butonunun tiklanir olmadigi dogrulanir")
-    public void yonetimButonununTiklanirOlmadigiDogrulanir() {
-    }
-    @Then("Yonetim Sifre ekraninda oldugu dogrulanir")
-    public void yonetimSifreEkranindaOlduguDogrulanir() throws InterruptedException {
-        Thread.sleep(1000);
-        String yoneticiAnasayfa =anamenu.yoneticiGirisSayfasiHeader.getText();
-        Assert.assertEquals(yoneticiGirisHeader,yoneticiAnasayfa);
-    }
-    @And("email kutucuguna gecersiz bir <Dataemail> yazilir")
-    public void emailKutucugunaGecersizBirDataemailYazilir() {
-        
-    }
-
-    @And("sifre kutucuguna gecersiz bir <Datasifre> girilir")
-    public void sifreKutucugunaGecersizBirDatasifreGirilir() {
+    @And("yonetici sifre kutucuguna gecerli bir {string} girilir")
+    public void yoneticiSifreKutucugunaGecerliBirGirilir(String arg0) {
+        anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("yonetici"));
     }
 
 
-
+    @And("yonetici sifre kutucuguna gecersiz bir {string} girilir")
+    public void yoneticiSifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
+        Thread.sleep(500);
+        anamenu.sifreKutusu.sendKeys(arg0);
+    }
 }

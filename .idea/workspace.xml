@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_15_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_08_2024_15_39__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_15_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_15_40__Changes_.xml" afterDir="false" />
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v8">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_08_2024_17_03__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" afterDir="false" />
     </list>
@@ -61,6 +58,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -170,19 +168,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: anamenu" />
       <item itemvalue="Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
       <item itemvalue="Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
       <item itemvalue="Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
-      <item itemvalue="Cucumber Java.Feature: anamenu" />
       <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: anamenu" />
-        <item itemvalue="Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+        <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
         <item itemvalue="Cucumber Java.Scenario: TC_11 &quot;Lift montaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
         <item itemvalue="Cucumber Java.Scenario: TC_01 &quot;TALASLI IMALAT AMIRI&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
-        <item itemvalue="Cucumber Java.Scenario: Register kontrol" />
+        <item itemvalue="Cucumber Java.Scenario: TC_31 &quot;Yonetim&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
       </list>
     </recent_temporary>
   </component>

@@ -5,11 +5,6 @@ Feature: US1
           When Anasayfaya gidilir
           Then Anasayfada oldugu dogrulanir
 
-     Scenario: TC_01 "TALASLI IMALAT AMIRI"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
-          Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
-          And Talasli Imalat Amiri Butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
-
     Scenario:TC_02 "Anasayfa" ya girilebilir olmalidir (Negativ Test)
         When Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir
 
@@ -230,8 +225,7 @@ Feature: US1
           Then Yonetim butonunun gorunur oldugu dogrulanir
           And Yonetim butonuna tiklanir
          Then Yonetim Sifre ekraninda oldugu dogrulanir
-          And gecerli bir email adresi "data1" girilir
-          And sifre kutucuguna gecerli bir "data2" girilir
+          And yonetici sifre kutucuguna gecerli bir "data" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And yonetim Giris yap butonuna tiklanir
@@ -240,47 +234,21 @@ Feature: US1
          Scenario: TC_32 "YONETIM"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
           //Manuel Test
 
-          Scenario: TC_33  "Yonetim"  butonu Anasayfada gorulemez  veya tiklanamaz olmalidir. (Negatif Test)
-
-            Then Yonetim butonunun gorunur oldugu dogrulanir
-            And Yonetim butonuna tiklanir
-            Then Yonetim Sifre ekraninda oldugu dogrulanir
-            And  gecerli bir email adresi "data" girilir
-            And yonetim sifre kutucugu bos birakilir
-            And yonetim Giris yap butonuna tiklanir
-            And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
-
-        Scenario: TC_34 "Yonetim" butonu Anasayfada gorulemez  veya tiklanamaz olmalidir. (Negatif Test)
-
-            Then Yonetim butonunun gorunur oldugu dogrulanir
-            And Yonetim butonuna tiklanir
-            Then Yonetim Sifre ekraninda oldugu dogrulanir
-            And  email kutucugu bos birakilir
-            And yonetim sifre kutucuguna gecerli bir "data" girilir
-            And yonetim Giris yap butonuna tiklanir
-            And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
-
-        Scenario: TC_35 "Yonetim" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
-
-             Then Yonetim butonunun gorunur oldugu dogrulanir
-              And Yonetim butonuna tiklanir
-              Then Yonetim Sifre ekraninda oldugu dogrulanir
-              And  email kutucugu bos birakilir
-              And yonetim sifre kutucugu bos birakilir
-              And yonetim Giris yap butonuna tiklanir
-              And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
-
         Scenario Outline: TC_36 "Yonetim" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
-                Then Yonetim butonunun gorunur olmadigi dogrulanir
-                And Yonetim butonunun tiklanir olmadigi dogrulanir
-                Then Yonetim Sifre ekraninda oldugu dogrulanir
-                And email kutucuguna gecersiz bir <Dataemail> yazilir
-                And sifre kutucuguna gecersiz bir <Datasifre> girilir
-                And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
-                And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
-                And yonetim Giris yap butonuna tiklanir
-                And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+          Then Yonetim butonunun gorunur oldugu dogrulanir
+          And Yonetim butonuna tiklanir
+          Then Yonetim Sifre ekraninda oldugu dogrulanir
+          And yonetici sifre kutucuguna gecersiz bir "<data>" girilir
+          And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+          And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+          And yonetim Giris yap butonuna tiklanir
+          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
           Examples:
-            | Dataemail | Datasifre |
+            | data |
+            |      |
+            |Techpro|
+            |123456 |
+            |?.¿0p9 |
+
 
 
