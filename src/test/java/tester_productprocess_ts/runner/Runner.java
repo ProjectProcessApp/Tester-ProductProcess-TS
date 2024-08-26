@@ -8,18 +8,18 @@ import org.junit.runner.RunWith;
 @CucumberOptions(//bu notasyon sayesinde hangi scenariolari calistiracagimiz ve hangi raporlari alacağımızı belirtiriz
 
         plugin = {
-                "pretty",//Console da scenariolar ile ilgili ayrintili bilgi almamizi saglar
+                "pretty",//raporlarin daha ikunakli olmasi icin
                 "html:target/default-cucumber-reports.html",
-                "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml",
-                "rerun:TestOutput/failed_scenario.txt"//rerun plugini ile fail olan scenariolari burada belirtmis oludgumuz txt dosyasi icinde tutabiliriz
+                "json:target/json-reports/cucumber.json",  //plugin ekledikten sonra bunu cucumber report için ekle
+                "junit:test-output/htmlReport/cucumber.xml", //xml report için
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "rerun:Failed/failedScenarios.txt" // bu satirdaki kod kosulan testlerden hata verenlerin yeniden ReRunner classi tarafindan kosulmasini saglar
         },
-        features = "src/test/resources/features",
-        glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},
-        tags = "",
-        dryRun = false,  //==> eger true secilirse scanariolari calistirmadan feature file daki
-        // eksik step defeinitonlarin olup olmadigini kontrol eder, ve browser'i calistirmaz
-        monochrome = false
+        monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
+        features = "src/test/resources/features",//features folder path
+        glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},   //stepdefinitions path
+        tags = "@US01",
+        dryRun = false
 )
 public class Runner {
 

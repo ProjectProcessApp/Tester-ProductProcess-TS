@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v8" />
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v10">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestOutput/failed_scenario.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/cucumber.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cucumber.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,27 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/cetin/Desktop/java/indeedjobsuchen",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/java/amazon&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TS" />
@@ -155,6 +162,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tester_productprocess_ts.runner" />
       <option name="MAIN_CLASS_NAME" value="tester_productprocess_ts.runner.Runner" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,6 +208,26 @@
       <workItem from="1723754308483" duration="428000" />
       <workItem from="1723754754391" duration="2447000" />
       <workItem from="1723836426008" duration="1965000" />
+      <workItem from="1724662640909" duration="518000" />
+      <workItem from="1724663214287" duration="18000" />
+      <workItem from="1724663252448" duration="1001000" />
+      <workItem from="1724664410044" duration="53000" />
+      <workItem from="1724664497065" duration="89000" />
+      <workItem from="1724664649548" duration="29000" />
+      <workItem from="1724664729724" duration="295000" />
+      <workItem from="1724665106608" duration="51000" />
+      <workItem from="1724665189783" duration="17000" />
+      <workItem from="1724665220691" duration="10000" />
+      <workItem from="1724665259742" duration="15000" />
+      <workItem from="1724665286259" duration="709000" />
+      <workItem from="1724666016067" duration="477000" />
+      <workItem from="1724666562040" duration="51000" />
+      <workItem from="1724666784637" duration="163000" />
+      <workItem from="1724666980453" duration="1002000" />
+      <workItem from="1724668036345" duration="26000" />
+      <workItem from="1724668496010" duration="2944000" />
+      <workItem from="1724671476156" duration="897000" />
+      <workItem from="1724672709224" duration="2611000" />
     </task>
     <task id="LOCAL-00001" summary="branch aactim">
       <option name="closed" value="true" />
