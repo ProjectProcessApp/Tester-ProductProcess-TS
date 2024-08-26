@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "rerun:TestOutput/failed_scenario.txt"//rerun plugini ile fail olan scenariolari burada belirtmis oludgumuz txt dosyasi icinde tutabiliriz
         },
         features = "src/test/resources/features",
-        glue = {"getlandestate/stepDefinitions","getlandestate/hooks"},
+        glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},
         tags = "",
         dryRun = false,  //==> eger true secilirse scanariolari calistirmadan feature file daki
         // eksik step defeinitonlarin olup olmadigini kontrol eder, ve browser'i calistirmaz
