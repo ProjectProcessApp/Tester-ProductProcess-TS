@@ -8,28 +8,29 @@ Feature: US1
     Scenario:TC_01 "Anasayfa" ya girilebilir olmalidir (Negativ Test)
         When Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir
 
-    Scenario:TC_02 "TALASLI IMALAT AMIRI"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+    Scenario:TC_02 "TALASLI IMALAT AMIRI" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
           Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
           And Talasli Imalat Amiri Butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir
           And Talasli imalat amiri sifre kutucuguna gecerli bir "data" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+          Then Talasli Imalat Amirinin kendi sorumluluk sayfasina gectigi dogrulanir
+          And Kullanici logout yapar
 
-      Scenario: TC_03 manuel olarak test edilecegi icin buraya yazilmadi
 
      Scenario Outline: TC_04 "TALASLI IMALAT AMIRI"  gecersiz sifre denemesi. (Negatif Test)
 
           Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
           And Talasli Imalat Amiri Butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir
           And sifre kutucuguna gecersiz bir "<data>" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+         Then Talasli Imalat Amirinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+
       Examples:
         | data |
         |      |
@@ -40,24 +41,25 @@ Feature: US1
      Scenario: TC_05 "Polisaj amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
           Then Polisaj amiri butonunun gorunur oldugu dogrulanir
           And Polisaj amiri butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
-          And Polisaj amiri sifre kutucuguna gecerli bir data girilir
+          Then Polisaj amiri ekraninda oldugu dogrulanir
+          And Polisaj amiri sifre kutucuguna gecerli bir "data" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+          Then Polisaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir
+          And Kullanici logout yapar
 
       Scenario: TC_06 Manuel test
 
       Scenario Outline: TC_7 "Polisaj Amiri"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
           Then Polisaj amiri butonunun gorunur oldugu dogrulanir
           And Polisaj amiri butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+         Then Polisaj amiri ekraninda oldugu dogrulanir
           And sifre kutucuguna gecersiz bir "<data>" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
-          And Giris yap butonuna tiklanir
-          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+          Then Polisaj amirinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+
         Examples:
           | data |
           |      |
@@ -68,12 +70,13 @@ Feature: US1
      Scenario: TC_8 "Lift montaj amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
           Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
           And Lift montaj amiri butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Lift montaj amiri ekraninda oldugu dogrulanir
           And Lift montaj amiri sifre kutucuguna gecerli bir "data" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+          Then Lift montaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir
+          And Kullanici logout yapar
 
        Scenario: TC_9 Manuel Test
 
@@ -81,12 +84,12 @@ Feature: US1
 
          Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
           And Lift montaj amiri butonuna tiklanir
-         Then Sifre ekraninda oldugu dogrulanir
+         Then Lift montaj amiri ekraninda oldugu dogrulanir
          And sifre kutucuguna gecersiz bir "<data>" girilir
           And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
-          And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+         Then Lift montaj amirinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+
          Examples:
            | data |
            |      |
@@ -98,12 +101,13 @@ Feature: US1
 
           Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
           And Bloklift Montaj Amiri butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Bloklift Montaj Amiri ekraninda oldugu dogrulanir
           And Bloklift Montaj Amiri sifre kutucuguna gecerli bir "data" girilir
           And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+          Then Bloklift Montaj Amirinin kendi sorumluluk sayfasina gectigi dogrulanir
+          And Kullanici logout yapar
 
       Scenario:TC_12 "Bloklift Montaj Amiri"butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
       //Manuel Test
@@ -112,12 +116,13 @@ Feature: US1
 
           Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
           And Bloklift Montaj Amiri butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
-           And sifre kutucuguna gecersiz bir "<data>" girilir
+          Then Bloklift Montaj Amiri ekraninda oldugu dogrulanir
+          And sifre kutucuguna gecersiz bir "<data>" girilir
           And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+          Then Bloklift Montaj Amirinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+
         Examples:
           | data |
           |      |
@@ -129,12 +134,13 @@ Feature: US1
 
           Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
           And Boyama ve Paketleme Amiri butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir
           And Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir "data" girilir
           And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
-          And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+        And Giris yap butonuna tiklanir
+         Then Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gectigi dogrulanir
+         And Kullanici logout yapar
 
 
       Scenario: TC_15 Manuel Test
@@ -143,12 +149,13 @@ Feature: US1
 
           Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
           And Boyama ve Paketleme Amiri butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir
           And sifre kutucuguna gecersiz bir "<data>" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+          Then Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+
         Examples:
           | data |
           |      |
@@ -160,12 +167,13 @@ Feature: US1
 
           Then Kalite Kontrol butonunun gorunur oldugu dogrulanir
           And Kalite Kontrol butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Kalite Kontrol ekraninda oldugu dogrulanir
           And Kalite Kontrol sifre kutucuguna gecerli bir "data" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+          Then Kalite Kontrol sayfasina gectigi dogrulanir
+          And Kullanici logout yapar
 
         Scenario: TC_18 "Kalite Kontrol"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
         //Manuel Test
@@ -174,12 +182,13 @@ Feature: US1
 
           Then Kalite Kontrol butonunun gorunur oldugu dogrulanir
           And Kalite Kontrol butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Kalite Kontrol ekraninda oldugu dogrulanir
           And sifre kutucuguna gecersiz bir "<data>" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+          Then Kalite Kontrol sayfasina gecemedigi dogrulanir
+
           Examples:
             | data |
             |      |
@@ -191,12 +200,13 @@ Feature: US1
 
           Then Uretim Planlama butonunun gorunur oldugu dogrulanir
           And Uretim Planlama butonuna tiklanir
-          Then Sifre ekraninda oldugu dogrulanir
+          Then Uretim Planlama ekraninda oldugu dogrulanir
           And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+          Then Uretim Planlama sayfasina gectigi dogrulanir
+          And Kullanici logout yapar
 
 
         Scenario: TC_21 "Uretim Planlama"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
@@ -206,20 +216,37 @@ Feature: US1
 
           Then Uretim Planlama butonunun gorunur oldugu dogrulanir
           And Uretim Planlama butonuna tiklanir
-          Then Yonetim Sifre ekraninda oldugu dogrulanir
+          Then Uretim Planlama ekraninda oldugu dogrulanir
           And sifre kutucuguna gecersiz bir "<data>" girilir
           And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And Giris yap butonuna tiklanir
-          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
+          Then Uretim Planlama sayfasina gecemedigi dogrulanir
+
           Examples:
             | data |
             |      |
             |Techpro|
             |123456 |
             |?.¿0p9 |
+  Scenario Outline: TC_25 "Yonetim" sayfasina gecemez. (Negatif Test)
+    Then Yonetim butonunun gorunur oldugu dogrulanir
+    And Yonetim butonuna tiklanir
+    Then Yonetim Sifre ekraninda oldugu dogrulanir
+    And yonetici sifre kutucuguna gecersiz bir "<data>" girilir
+    And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+    And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+    And yonetim Giris yap butonuna tiklanir
+    Then yonetim sayfasina gecemedigi dogrulanir
 
-        Scenario: TC_23 "Yonetim"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+    Examples:
+      | data |
+      |      |
+      |Techpro|
+      |123456 |
+      |?.¿0p9 |
+
+        Scenario: TC_23 "Yonetim"  sayfasina gecer. (Positif Test)
 
           Then Yonetim butonunun gorunur oldugu dogrulanir
           And Yonetim butonuna tiklanir
@@ -228,26 +255,25 @@ Feature: US1
           And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
           And yonetim Giris yap butonuna tiklanir
-          Then Kullanicinin kendi sorumluluk sayfasina gectigi dogrulanir
+          Then yonetim sayfasina gectigi dogrulanir
+          And Kullanici logout yapar
 
-         Scenario: TC_24 "YONETIM"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
-          //Manuel Test
+         Scenario: TC_24 "YONETIM" sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)
+           Then Yonetim butonunun gorunur oldugu dogrulanir
+           And Yonetim butonuna tiklanir
+           Then Yonetim Sifre ekraninda oldugu dogrulanir
+           And yonetici sifre kutucuguna gecerli bir "data" girilir
+           And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+           And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+           And yonetim Giris yap butonuna tiklanir
+           Then yonetim sayfasina gectigi dogrulanir
+           And yonetici kullaniciya sifre atama butonuna tiklar
+           And yonetici return back butonuna tiklar
+           And yonetici kullaniciya sifre atama ekranina gectigini dogrular
+           And yonetici kullanici secer ve yeni sifre atar
+           #And yonetici guncelle butonunu tiklar
 
-        Scenario Outline: TC_25 "Yonetim" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
-          Then Yonetim butonunun gorunur oldugu dogrulanir
-          And Yonetim butonuna tiklanir
-          Then Yonetim Sifre ekraninda oldugu dogrulanir
-          And yonetici sifre kutucuguna gecersiz bir "<data>" girilir
-          And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
-          And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
-          And yonetim Giris yap butonuna tiklanir
-          And Kullanicinin kendi sorumluluk sayfasina gecemedigi dogrulanir
-          Examples:
-            | data |
-            |      |
-            |Techpro|
-            |123456 |
-            |?.¿0p9 |
+
 
 
 
