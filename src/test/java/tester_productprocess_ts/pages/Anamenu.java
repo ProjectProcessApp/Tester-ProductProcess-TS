@@ -27,6 +27,11 @@ public class Anamenu {
     @FindBy(xpath="//label[@class='text-start w-100 fs-4 form-label']")
     public WebElement sifreText;
 
+    @FindBy(xpath="//div[text()='Girdiğiniz şifre eksik veya hatalı']")
+    public WebElement ilkGirisHataMesaji;
+
+    @FindBy(xpath="//div[text()='Şifre alanı boş bırakılamaz']")
+    public WebElement ilkGirisHataBosMesaji;
     @FindBy(xpath ="//div[contains(text(),'TALAŞLI İMALAT AMİRİ')]" )
     public WebElement talasliImalatAmiri;
 
@@ -67,7 +72,7 @@ public class Anamenu {
     @FindBy(xpath ="//h1[@class='page-header']" )
     public WebElement amirHeader;
 
-    @FindBy(xpath ="//button[@class='btn btn-primary']" )
+    @FindBy(xpath ="//button[text()='Logout']" )
     public WebElement logout;
     @FindBy(xpath ="//body/div[3]" )
     public WebElement girisSayfasiHerhangiBirYer;
@@ -88,18 +93,24 @@ public class Anamenu {
 
     @FindBy(xpath ="//button[@class='btn btn-secondary']" )
     public WebElement returnback;
-    @FindBy(xpath ="//select[@class='form-control']" )
-    public WebElement sifreAtamaSelectMenu;
+    @FindBy(id ="userSelect" )
+    public WebElement userSelectElement;
 
     @FindBy(xpath ="//select[@id='userSelect']" )
     public List<WebElement> sifreAtamaSelectListMenu;
 
-    @FindBy(xpath ="//input[@placeholder='Yeni Şifreyi Giriniz']" )
-    public WebElement yeniSifreKutusu;
+    @FindBy(id ="password" )
+    public WebElement passwordInput;
 
+    @FindBy(css ="button[type='submit']" )
+    public WebElement guncelle;
     @FindBy(xpath ="(//span[@class='input-group-text'])[1]" )
     public WebElement sifreAtamaEkraniGoz;
 
     @FindBy(xpath ="(//span[@class='input-group-text'])[2]" )
     public WebElement sifreAtamaEkraniTik;
+    @FindBy(xpath ="//h2[@id='swal2-title' and text()='Şifre Güncellendi']" )
+    public WebElement sifreGuncellendiText;
+    @FindBy(xpath ="//button[@class='swal2-confirm swal2-styled' and text()='OK']" )
+    public WebElement guncellemaPopupOk;
 }

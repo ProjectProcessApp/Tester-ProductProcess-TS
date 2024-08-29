@@ -229,28 +229,12 @@ Feature: US1
             |Techpro|
             |123456 |
             |?.¿0p9 |
-  Scenario Outline: TC_25 "Yonetim" sayfasina gecemez. (Negatif Test)
-    Then Yonetim butonunun gorunur oldugu dogrulanir
-    And Yonetim butonuna tiklanir
-    Then Yonetim Sifre ekraninda oldugu dogrulanir
-    And yonetici sifre kutucuguna gecersiz bir "<data>" girilir
-    And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
-    And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
-    And yonetim Giris yap butonuna tiklanir
-    Then yonetim sayfasina gecemedigi dogrulanir
-
-    Examples:
-      | data |
-      |      |
-      |Techpro|
-      |123456 |
-      |?.¿0p9 |
 
         Scenario: TC_23 "Yonetim"  sayfasina gecer. (Positif Test)
 
           Then Yonetim butonunun gorunur oldugu dogrulanir
           And Yonetim butonuna tiklanir
-         Then Yonetim Sifre ekraninda oldugu dogrulanir
+          Then Yonetim Sifre ekraninda oldugu dogrulanir
           And yonetici sifre kutucuguna gecerli bir "data" girilir
           And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
           And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
@@ -258,20 +242,40 @@ Feature: US1
           Then yonetim sayfasina gectigi dogrulanir
           And Kullanici logout yapar
 
-         Scenario: TC_24 "YONETIM" sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)
-           Then Yonetim butonunun gorunur oldugu dogrulanir
-           And Yonetim butonuna tiklanir
-           Then Yonetim Sifre ekraninda oldugu dogrulanir
-           And yonetici sifre kutucuguna gecerli bir "data" girilir
-           And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
-           And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
-           And yonetim Giris yap butonuna tiklanir
-           Then yonetim sayfasina gectigi dogrulanir
-           And yonetici kullaniciya sifre atama butonuna tiklar
-           And yonetici return back butonuna tiklar
-           And yonetici kullaniciya sifre atama ekranina gectigini dogrular
-           And yonetici kullanici secer ve yeni sifre atar
-           #And yonetici guncelle butonunu tiklar
+        Scenario: TC_24 "YONETIM" sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)
+            Then Yonetim butonunun gorunur oldugu dogrulanir
+            And Yonetim butonuna tiklanir
+            Then Yonetim Sifre ekraninda oldugu dogrulanir
+            And yonetici sifre kutucuguna gecerli bir "data" girilir
+            And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+            And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+            And yonetim Giris yap butonuna tiklanir
+            Then yonetim sayfasina gectigi dogrulanir
+            And yonetici kullaniciya sifre atama butonuna tiklar
+            And yonetici return back butonuna tiklar
+            And yonetici kullaniciya sifre atama ekranina gectigini dogrular
+            And yonetici kullanici secer, yeni sifre atar, guncelle butonunu tiklar ve guncellendigini kontrol eder
+            And Kullanici logout yapar
+
+        Scenario Outline: TC_25 "Yonetim" sayfasina gecemez. (Negatif Test)
+          Then Yonetim butonunun gorunur oldugu dogrulanir
+          And Yonetim butonuna tiklanir
+          Then Yonetim Sifre ekraninda oldugu dogrulanir
+          And yonetici sifre kutucuguna gecersiz bir "<data>" girilir
+          And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
+          And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
+          And yonetim Giris yap butonuna tiklanir
+          Then yonetim sayfasina gecemedigi dogrulanir
+          Examples:
+            | data |
+            |      |
+            |Techpro|
+            |123456 |
+            |?.¿0p9 |
+
+
+
+
 
 
 
