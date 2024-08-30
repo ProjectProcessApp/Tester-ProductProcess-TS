@@ -273,12 +273,3 @@ Feature: US1
       | Techpro | Girdiğiniz şifre eksik veya hatalı |
       | 123456  | Girdiğiniz şifre eksik veya hatalı |
       | ?.¿0p9  | Girdiğiniz şifre eksik veya hatalı |
-
-
-
-
-
-
-
-
-

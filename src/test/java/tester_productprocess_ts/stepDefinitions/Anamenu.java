@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.Properties;
 
 import static org.junit.Assert.assertEquals;
+import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.click;
+import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.waitFor;
 
 public class Anamenu {
 
@@ -87,7 +89,7 @@ public class Anamenu {
     @And("Giris yap butonuna tiklanir")
     public void girisYapButonunaTiklanir() throws InterruptedException {
         action = new Actions(Driver.getDriver());
-        Thread.sleep(500);
+        waitFor(500);
         action.click(anamenu.girisButonu);
         action.perform();
     }
@@ -104,7 +106,7 @@ public class Anamenu {
 
     @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
     public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() throws InterruptedException {
-        Thread.sleep(1000);
+        waitFor(1000);
         anamenu.goz.click();
     }
 
@@ -117,7 +119,7 @@ public class Anamenu {
 
     @And("sifre kutucuguna gecersiz bir {string} girilir")
     public void sifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
-        Thread.sleep(500);
+        waitFor(500);
         anamenu.sifreKutusu.sendKeys(arg0);
     }
 
@@ -145,9 +147,9 @@ public class Anamenu {
     @Then("Polisaj amiri ekraninda oldugu dogrulanir")
     public void polisajAmiriEkranindaOlduguDogrulanir() throws InterruptedException {
         String sifreTextActual = "POLİSAJ AMİRİ";
-        Thread.sleep(2000);
+        waitFor(2000);
         String sifreTextresult = anamenu.polisajAmiriSifreEkranText.getText();
-        Thread.sleep(2000);
+        waitFor(2000);
         assertEquals(sifreTextresult, sifreTextActual);
     }
 
@@ -309,8 +311,8 @@ public class Anamenu {
 
     @And("Uretim Planlama butonuna tiklanir")
     public void uretimPlanlamaButonunaTiklanir() throws InterruptedException {
-        Thread.sleep(1000);
-        scrollclick(anamenu.menulinkleri.get(6));
+        waitFor(1000);
+        click(anamenu.menulinkleri.get(6));
     }
 
     @Then("Uretim Planlama ekraninda oldugu dogrulanir")
@@ -342,7 +344,7 @@ public class Anamenu {
 
     @And("Yonetim butonuna tiklanir")
     public void yonetimButonunaTiklanir() throws InterruptedException {
-        Thread.sleep(1000);
+        waitFor(1000);
         scrollclick(anamenu.menulinkleri.get(7));
     }
 
@@ -353,13 +355,13 @@ public class Anamenu {
 
     @And("Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
     public void yoneticiSifreGizlemeButonununSifreyiGizledigiKontrolEdllir() throws InterruptedException {
-        Thread.sleep(1000);
+        waitFor(1000);
         anamenu.yoneticiGoz.click();
     }
 
     @And("Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
     public void yoneticiSifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() throws InterruptedException {
-        Thread.sleep(1000);
+        waitFor(1000);
         anamenu.yoneticiGoz.click();
     }
 
@@ -380,7 +382,7 @@ public class Anamenu {
     @And("yonetici sifre kutucuguna gecersiz bir {string} girilir")
     public void yoneticiSifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
         anamenu.sifreKutusu.sendKeys(arg0);
-        Thread.sleep(1000);
+        waitFor(1000);
     }
 
     @Then("yonetim sayfasina gectigi dogrulanir")
@@ -392,9 +394,9 @@ public class Anamenu {
 
     @And("Kullanici logout yapar")
     public void kullaniciLogoutYapar() throws InterruptedException {
-        Thread.sleep(2000);
+        waitFor(2000);
         anamenu.logout.click();
-        Thread.sleep(1000);
+        waitFor(1000);
     }
 
     @And("yonetici kullaniciya sifre atama butonuna tiklar")
@@ -412,13 +414,13 @@ public class Anamenu {
     @And("yonetici return back butonuna tiklar")
     public void yoneticiReturnBackButonunaTiklar() throws InterruptedException {
         anamenu.returnback.click();
-        Thread.sleep(1000);
+        waitFor(1000);
         anamenu.kullaniciyaSifreAtama.click();
     }
 
     @And("yonetici guncelle butonunu tiklar")
     public void yoneticiGuncelleButonunuTiklar() throws InterruptedException {
-        Thread.sleep(1000);
+        waitFor(1000);
         anamenu.girisButonu.click();
     }
 
@@ -438,28 +440,28 @@ public class Anamenu {
             // Kullanıcıyı seçme
             Select userSelect = new Select(anamenu.userSelectElement);
             userSelect.selectByValue(userKey);
-            Thread.sleep(1500);
+            waitFor(1500);
 
             // Yeni şifreyi girme
             anamenu.passwordInput.clear();
             anamenu.passwordInput.sendKeys(newPassword);
 
             anamenu.sifreAtamaEkraniGoz.click();
-            Thread.sleep(1500);
+            waitFor(1500);
             anamenu.sifreAtamaEkraniGoz.click();
-            Thread.sleep(1500);
+            waitFor(1500);
 
             anamenu.sifreAtamaEkraniTik.isDisplayed();
 
             // "Güncelle" butonuna tıklama
             anamenu.guncelle.click();
-            Thread.sleep(1000);
+            waitFor(1000);
 
             //"guncellendi popup"
             anamenu.sifreGuncellendiText.isDisplayed();
-            Thread.sleep(1000);
+            waitFor(1000);
             anamenu.guncellemaPopupOk.click();
-            Thread.sleep(1000);
+            waitFor(1000);
             anamenu.kullaniciyaSifreAtama.click();
         }
     }
