@@ -2,7 +2,11 @@ package tester_productprocess_ts.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+import tester_productprocess_ts.utilities.uiUtilities.PdfReportGenerator;
+
+import java.io.IOException;
 
 @RunWith(Cucumber.class)//Cucumber ile junit in entegre olmasini saglayan scenario calistirici notasyon
 @CucumberOptions(//bu notasyon sayesinde hangi scenariolari calistiracagimiz ve hangi raporlari alacağımızı belirtiriz
@@ -22,5 +26,13 @@ import org.junit.runner.RunWith;
         dryRun = false
 )
 public class Runner {
+        @AfterClass
+        public static void tearDown() {
+                try {
+                        PdfReportGenerator.generatePdfReport();
+                } catch (IOException e) {
+                        e.printStackTrace();
+                }
+        }
 
 }

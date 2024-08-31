@@ -69,7 +69,7 @@ public class Anamenu {
     @FindBy(xpath = "//h1[@class='page-header']")
     public WebElement amirHeader;
 
-    @FindBy(xpath = "//button[text()='Logout']")
+    @FindBy(xpath = "//button[contains(@class, 'btn-primary') and text()='Logout']")
     public WebElement logout;
     @FindBy(xpath = "//body/div[3]")
     public WebElement girisSayfasiHerhangiBirYer;
