@@ -20,7 +20,7 @@ Feature: US1
     And Kullanici logout yapar
 
 
-  Scenario Outline: TC_04 "TALASLI IMALAT AMIRI"  gecersiz sifre denemesi. (Negatif Test)
+  Scenario Outline: TC_04 "TALASLI IMALAT AMIRI" gecersiz sifre denemesi. (Negatif Test)
 
     Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
     And Talasli Imalat Amiri Butonuna tiklanir
@@ -52,7 +52,7 @@ Feature: US1
 
   Scenario: TC_06 Manuel test
 
-  Scenario Outline: TC_7 "Polisaj Amiri"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+  Scenario Outline: TC_7 "Polisaj Amiri" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
     Then Polisaj amiri butonunun gorunur oldugu dogrulanir
     And Polisaj amiri butonuna tiklanir
     Then Polisaj amiri ekraninda oldugu dogrulanir
@@ -69,7 +69,7 @@ Feature: US1
       | 123456  | Girdiğiniz şifre eksik veya hatalı |
       | ?.¿0p9  | Girdiğiniz şifre eksik veya hatalı |
 
-  Scenario: TC_8 "Lift montaj amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+  Scenario: TC_8 "Lift montaj amiri" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
     Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
     And Lift montaj amiri butonuna tiklanir
     Then Lift montaj amiri ekraninda oldugu dogrulanir
@@ -82,7 +82,7 @@ Feature: US1
 
   Scenario: TC_9 Manuel Test
 
-  Scenario Outline: TC_10" LIFT MONTAJ  AMIRI"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
+  Scenario Outline: TC_10" LIFT MONTAJ  AMIRI" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
 
     Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
     And Lift montaj amiri butonuna tiklanir
@@ -100,7 +100,7 @@ Feature: US1
       | 123456  | Girdiğiniz şifre eksik veya hatalı |
       | ?.¿0p9  | Girdiğiniz şifre eksik veya hatalı |
 
-  Scenario: TC_11 "Bloklift Montaj Amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+  Scenario: TC_11 "Bloklift Montaj Amiri" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
 
     Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
     And Bloklift Montaj Amiri butonuna tiklanir
@@ -133,7 +133,7 @@ Feature: US1
       | 123456  | Girdiğiniz şifre eksik veya hatalı |
       | ?.¿0p9  | Girdiğiniz şifre eksik veya hatalı |
 
-  Scenario: TC_14 "Boyama ve Paketleme Amiri"  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
+  Scenario: TC_14 "Boyama ve Paketleme Amiri" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)
 
     Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
     And Boyama ve Paketleme Amiri butonuna tiklanir
@@ -148,7 +148,7 @@ Feature: US1
 
   Scenario: TC_15 Manuel Test
 
-  Scenario Outline: TC_16 "Boyama ve Paketleme Amiri"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+  Scenario Outline: TC_16 "Boyama ve Paketleme Amiri" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
 
     Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
     And Boyama ve Paketleme Amiri butonuna tiklanir
@@ -213,7 +213,7 @@ Feature: US1
   Scenario: TC_21 "Uretim Planlama"  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)
   //Manuel Test
 
-  Scenario Outline: TC_22 "Uretim Planlama"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+  Scenario Outline: TC_22 "Uretim Planlama" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
 
     Then Uretim Planlama butonunun gorunur oldugu dogrulanir
     And Uretim Planlama butonuna tiklanir
@@ -230,7 +230,7 @@ Feature: US1
       | 123456  | Girdiğiniz şifre eksik veya hatalı |
       | ?.¿0p9  | Girdiğiniz şifre eksik veya hatalı |
 
-  Scenario: TC_23 "Yonetim"  sayfasina gecer. (Positif Test)
+  Scenario: TC_23 "Yonetim" sayfasina gecer. (Positif Test)
 
     Then Yonetim butonunun gorunur oldugu dogrulanir
     And Yonetim butonuna tiklanir

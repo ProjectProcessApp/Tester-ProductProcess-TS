@@ -93,6 +93,7 @@ public class ReusableMethods {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+
     //VisibleElementLocator Wait
     public static WebElement visibleWait(By locator, int sayi) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(sayi));
@@ -143,6 +144,11 @@ public class ReusableMethods {
             js.executeScript("arguments[0].click();", element);
         }
     }
+    public static void clickWithJS(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+    }
+
 
     //JS Scroll
     public static void scroll(WebElement element) {
@@ -183,7 +189,7 @@ public class ReusableMethods {
 
     public static void waitFor(int sec) {
         try {
-            Thread.sleep(sec * 1000);
+            Thread.sleep(sec * 1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
