@@ -85,7 +85,7 @@ public class Anamenu {
     @FindBy(xpath = "//h1[text()='Şıfre Atama Ekranı ']")
     public WebElement sifreAtamaEkraniText;
 
-    @FindBy(xpath = "//button[@class='btn btn-secondary']")
+    @FindBy(css = "div.page-header-container > div > button.btn.btn-primary")
     public WebElement returnback;
     @FindBy(id = "userSelect")
     public WebElement userSelectElement;
