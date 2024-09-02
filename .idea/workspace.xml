@@ -32,15 +32,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2024_19_33__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2024_19_58__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration1.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Failed/failedScenarios.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report/SparkReport/Spark.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extent-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/extent-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extent-report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/extent-report.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/ReusableMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/ReusableMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/htmlReport/cucumber.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="onur" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
