@@ -465,6 +465,7 @@ public class Anamenu {
             anamenu.guncellemaPopupOk.click();
             waitFor(1000);
             anamenu.kullaniciyaSifreAtama.click();
+            Driver.getDriver().close();
         }
     }
 }
