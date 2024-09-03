@@ -405,7 +405,7 @@ public class Anamenu {
 
     @And("yonetici kullaniciya sifre atama ekranina gectigini dogrular")
     public void yoneticiKullaniciyaSifreAtamaEkraninaGectiginiDogrular() throws InterruptedException {
-        String sifreTextActual = "Return backŞIFRE ATAMA EKRANI Logout";
+        String sifreTextActual = "Şıfre Atama Ekranı";
         waitForVisibility(anamenu.sifreAtamaEkraniText,10);
         String sifreTextresult = anamenu.sifreAtamaEkraniText.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -465,6 +465,7 @@ public class Anamenu {
             anamenu.guncellemaPopupOk.click();
             waitFor(1000);
             anamenu.kullaniciyaSifreAtama.click();
+            Driver.getDriver().close();
         }
     }
 }
