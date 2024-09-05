@@ -1,4 +1,4 @@
-@US01
+
 Feature: US1
 
   Background:  Anasayfa ve dogrulama
