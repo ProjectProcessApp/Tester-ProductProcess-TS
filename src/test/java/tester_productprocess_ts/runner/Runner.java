@@ -26,13 +26,6 @@ import java.io.IOException;
         dryRun = false
 )
 public class Runner {
-        @AfterClass
-        public static void tearDown() {
-                try {
-                        PdfReportGenerator.generatePdfReport();
-                } catch (IOException e) {
-                        e.printStackTrace();
-                }
-        }
+
 
 }

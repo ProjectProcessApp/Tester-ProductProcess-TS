@@ -13,26 +13,21 @@ import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
 public class Hooks {
 
-    private static ExtentReports extentReports;
-    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
-
     @Before
-    public void setup(Scenario scenario) {
-        extentTest.set(ExtentCucumberAdapter.getCurrentScenario());
-        extentTest.get().log(Status.INFO, "Starting scenario: " + scenario.getName());
+    public void setup(){
+        System.out.println("Test basladi");
     }
 
     @After
-    public void tearDown(Scenario scenario) {
+    public void tearDown(Scenario scenario){
+
+        //System.out.println("After çalıştı");
+        final byte[] failedScreenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         if (scenario.isFailed()) {
-            extentTest.get().log(Status.FAIL, "Scenario failed: " + scenario.getName());
-        } else {
-            extentTest.get().log(Status.PASS, "Scenario passed: " + scenario.getName());
-        }
-        extentTest.remove();
-        final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-        if (scenario.isFailed()) {
-            scenario.attach(failedScreenshot, "image/png", "failed_screenshot" + scenario.getName());
+            scenario.attach(failedScreenshot, "image/png", "failed_screenshot"+scenario.getName());
+
+            //Driver.closeDriver();
+
         }
     }
 }
