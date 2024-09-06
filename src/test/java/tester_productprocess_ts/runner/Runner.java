@@ -22,7 +22,7 @@ import java.io.IOException;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",//features folder path
         glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},   //stepdefinitions path
-        tags = "@US01",
+        tags = "@US2",
         dryRun = false
 )
 public class Runner {
