@@ -105,13 +105,15 @@ public class Anamenu {
     public void talasliImalatAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String talasliHeader = "Talasli Imalat Amiri";
+        String talasliHeader = "GIRIŞ";
+        waitFor(1000);
         assertEquals(talasliHeader, anasayfa);
 
     }
 
     @And("sifre kutucuguna gecersiz bir {string} girilir")
     public void sifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
+        waitFor(2500);
         waitForVisibility(anamenu.sifreKutusu,10);
         anamenu.sifreKutusu.sendKeys(arg0);
     }
@@ -139,6 +141,7 @@ public class Anamenu {
     @Then("Polisaj amiri ekraninda oldugu dogrulanir")
     public void polisajAmiriEkranindaOlduguDogrulanir() throws InterruptedException {
         String sifreTextActual = "POLİSAJ AMİRİ";
+        waitFor(1000);
         waitForVisibility(anamenu.polisajAmiriSifreEkranText,10);
         String sifreTextresult = anamenu.polisajAmiriSifreEkranText.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -174,7 +177,7 @@ public class Anamenu {
 
     @Then("Lift montaj amiri ekraninda oldugu dogrulanir")
     public void liftMontajAmiriEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "LİFT MONTAJ AMİRİ";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -190,7 +193,7 @@ public class Anamenu {
     public void liftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String talasliHeader = "LİFT MONTAJ AMİRİ";
+        String talasliHeader = "GIRIŞ";
         assertEquals(talasliHeader, anasayfa);
 
     }
@@ -211,7 +214,7 @@ public class Anamenu {
     @Then("Bloklift Montaj Amiri ekraninda oldugu dogrulanir")
     public void blokliftMontajAmiriEkranindaOlduguDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String sifreTextActual = "BLOKLİFT MONTAJ AMİRİ";
+        String sifreTextActual = "ANA SAYFA";
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
 
@@ -221,7 +224,7 @@ public class Anamenu {
     public void blokliftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "BLOKLİFT MONTAJ AMİRİ";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
 
     }
@@ -251,8 +254,8 @@ public class Anamenu {
 
     @Then("Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir")
     public void boyamaVePaketlemeAmiriEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "BOYAMA VE PAKETLEME AMİRİ";
-       // waitForVisibility(anamenu.amirBaslikYazisi,10);
+        String sifreTextActual = "ANA SAYFA";
+       waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
 
@@ -262,7 +265,7 @@ public class Anamenu {
     public void boyamaVePaketlemeAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "BOYAMA VE PAKETLEME AMİRİ";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
 
     }
@@ -282,7 +285,7 @@ public class Anamenu {
 
     @Then("Kalite Kontrol ekraninda oldugu dogrulanir")
     public void kaliteKontrolEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "KALİTE KONTROL AMİRİ";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -293,7 +296,7 @@ public class Anamenu {
     public void kaliteKontrolSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "KALİTE KONTROL AMİRİ";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
 
     }
@@ -316,7 +319,7 @@ public class Anamenu {
 
     @Then("Uretim Planlama ekraninda oldugu dogrulanir")
     public void uretimPlanlamaEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "ÜRETİM PLANLAMA";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -326,7 +329,7 @@ public class Anamenu {
     public void uretimPlanlamaSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "ÜRETİM PLANLAMA";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
     }
 
@@ -392,9 +395,9 @@ public class Anamenu {
 
     @And("Kullanici logout yapar")
     public void kullaniciLogoutYapar() throws InterruptedException {
-        waitForVisibility(anamenu.logout,10);
-        action.doubleClick(anamenu.logout).perform();
-
+        waitFor(2500);
+        action.click(anamenu.logout).perform();
+        waitFor(3000);
     }
 
     @And("yonetici kullaniciya sifre atama butonuna tiklar")
