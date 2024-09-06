@@ -104,4 +104,6 @@ public class Anamenu {
     public WebElement sifreGuncellendiText;
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled' and text()='OK']")
     public WebElement guncellemaPopupOk;
+
+
 }
