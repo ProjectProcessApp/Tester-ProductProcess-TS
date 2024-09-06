@@ -51,13 +51,13 @@ public class Anamenu {
     @FindBy(xpath = "//div[text()='YÖNETİM']")
     public WebElement yonetim;
 
-    @FindBy(xpath = "(//div/label[@class='form-label'])[1]")
+    @FindBy(xpath = "//h1[@class='page-header']")
     public WebElement amirBaslikYazisi;
 
     @FindBy(xpath = "//label[text()='POLİSAJ AMİRİ']")
     public WebElement polisajAmiriSifreEkranText;
 
-    @FindBy(xpath = "(//*[@id='password'])[1]")
+    @FindBy(xpath = "//input[@id='password']")
     public WebElement sifreKutusu;
 
     @FindBy(xpath = "(//*[@id='password'])[2]")
@@ -69,7 +69,7 @@ public class Anamenu {
     @FindBy(xpath = "//h1[@class='page-header']")
     public WebElement amirHeader;
 
-    @FindBy(xpath = "//button[contains(@class, 'btn-primary') and text()='Çıkış']")
+    @FindBy(xpath = "//div[@class='page-header-container']//button[text()='Çıkış']")
     public WebElement logout;
     @FindBy(xpath = "//body/div[3]")
     public WebElement girisSayfasiHerhangiBirYer;
@@ -82,10 +82,10 @@ public class Anamenu {
     @FindBy(xpath = "//a[text()='Kulanıcıya Şifre Atama']")
     public WebElement kullaniciyaSifreAtama;
 
-    @FindBy(xpath = "//h1[text()='Şıfre Atama Ekranı ']")
+    @FindBy(xpath = "//h1[text()='Şıfre Atama Ekranı']")
     public WebElement sifreAtamaEkraniText;
 
-    @FindBy(xpath = "//button[@class='btn btn-secondary']")
+    @FindBy(css = "div.page-header-container > div > button.btn.btn-primary")
     public WebElement returnback;
     @FindBy(id = "userSelect")
     public WebElement userSelectElement;

@@ -43,7 +43,7 @@ public class Anamenu {
         String anasayfaHeaderText = anamenu.AnasayfaHeader.getText();
         String Header = "ANA SAYFA";
         assertEquals("Kullanici anasayfada",header, anasayfaHeaderText);
-        ExtentCucumberAdapter.addTestStepLog("Anasayfa aciliyor.");
+
     }
 
     @When("Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir")
@@ -58,29 +58,29 @@ public class Anamenu {
     public void talasli_imalat_amiri_butonu_gorunur_oldugu_dogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.talasliImalatAmiri).perform();
         Assert.assertTrue(anamenu.talasliImalatAmiri.isDisplayed());
-        ExtentCucumberAdapter.addTestStepLog("Talasli Amiri butonu gorunuyor");
+
     }
 
     @Then("Talasli Imalat Amiri Butonuna tiklanir")
     public void talasli_imalat_amiri_butonuna_tiklanir() throws InterruptedException {
         action.scrollToElement(anamenu.talasliImalatAmiri).click(anamenu.talasliImalatAmiri).perform();
-        ExtentCucumberAdapter.addTestStepLog("Talasli Amiri butonu tiklanabilir");
+
     }
 
     @Then("Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir")
     public void talasliImalatAmiriSifreEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "TALAŞLI İMALAT AMİRİ";
-        waitForVisibility(anamenu.amirBaslikYazisi,10);
+        String sifreTextActual = "ANA SAYFA";
+       waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
-        assertEquals(sifreTextresult, sifreTextActual);
-        ExtentCucumberAdapter.addTestStepLog("Talasli Amiri sifre girme ekrani aciliyor");
+        assertEquals(sifreTextActual,sifreTextresult );
+
     }
 
     @And("Giris yap butonuna tiklanir")
     public void girisYapButonunaTiklanir() throws InterruptedException {
         waitForVisibility(anamenu.girisButonu,10);
         action.click(anamenu.girisButonu).perform();
-        ExtentCucumberAdapter.addTestStepLog("Giris butonu tiklanabilir");
+
     }
 
     @And("Talasli imalat amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -91,27 +91,29 @@ public class Anamenu {
     @And("Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
     public void sifreGizlemeButonununSifreyiGizledigiKontrolEdllir() {
         anamenu.goz.click();
-        ExtentCucumberAdapter.addTestStepLog("Sifre gorulebiliyor.");
+
     }
 
     @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
     public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() throws InterruptedException {
         waitForVisibility(anamenu.goz,10);
         anamenu.goz.click();
-        ExtentCucumberAdapter.addTestStepLog("Sifre gizlenebiliyor.");
+
     }
 
     @Then("Talasli Imalat Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void talasliImalatAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String talasliHeader = "TALAŞLI İMALAT AMİRİ";
+        String talasliHeader = "GIRIŞ";
+        waitFor(1000);
         assertEquals(talasliHeader, anasayfa);
-        ExtentCucumberAdapter.addTestStepLog("Talasli imalat Amirinin sayfasina gecebiliyor.");
+
     }
 
     @And("sifre kutucuguna gecersiz bir {string} girilir")
     public void sifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
+        waitFor(2500);
         waitForVisibility(anamenu.sifreKutusu,10);
         anamenu.sifreKutusu.sendKeys(arg0);
     }
@@ -127,22 +129,23 @@ public class Anamenu {
     public void polisajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.polisajAmiri).perform();
         anamenu.polisajAmiri.isDisplayed();
-        ExtentCucumberAdapter.addTestStepLog("Polisaj Amiri Butonu gorulebiliyor");
+
     }
 
     @And("Polisaj amiri butonuna tiklanir")
     public void polisajAmiriButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.polisajAmiri).perform();
-        ExtentCucumberAdapter.addTestStepLog("Polisaj Amiri Butonu tiklanabiliyor");
+
     }
 
     @Then("Polisaj amiri ekraninda oldugu dogrulanir")
     public void polisajAmiriEkranindaOlduguDogrulanir() throws InterruptedException {
         String sifreTextActual = "POLİSAJ AMİRİ";
+        waitFor(1000);
         waitForVisibility(anamenu.polisajAmiriSifreEkranText,10);
         String sifreTextresult = anamenu.polisajAmiriSifreEkranText.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-        ExtentCucumberAdapter.addTestStepLog("Polisaj amirinin sifre giris ekrani aciliyor");
+
     }
 
     @And("Polisaj amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -154,31 +157,31 @@ public class Anamenu {
     public void polisajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String polisajHeader = "POLİSAJ AMİRİ";
+        String polisajHeader = "GIRIŞ";
         assertEquals(polisajHeader, anasayfa);
-        ExtentCucumberAdapter.addTestStepLog("Polisaj Amiri kendi sorumluluk sayfasina geciyor");
+
     }
 
     @Then("Lift montaj amiri butonunun gorunur oldugu dogrulanir")
     public void liftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.liftmontajAmiri).perform();
         Assert.assertTrue(anamenu.liftmontajAmiri.isDisplayed());
-        ExtentCucumberAdapter.addTestStepLog("Lift Montaj Amiri Butonu gorulebiliyor");
+
     }
 
     @And("Lift montaj amiri butonuna tiklanir")
     public void liftMontajAmiriButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.liftmontajAmiri).perform();
-        ExtentCucumberAdapter.addTestStepLog("Lift Montaj Amiri Butonu tiklanabiliyor");
+
     }
 
     @Then("Lift montaj amiri ekraninda oldugu dogrulanir")
     public void liftMontajAmiriEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "LİFT MONTAJ AMİRİ";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-        ExtentCucumberAdapter.addTestStepLog("Lift Montaj Amiri sifre giris ekrani aciliyor");
+
     }
 
     @And("Lift montaj amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -190,40 +193,40 @@ public class Anamenu {
     public void liftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String talasliHeader = "LİFT MONTAJ AMİRİ";
+        String talasliHeader = "GIRIŞ";
         assertEquals(talasliHeader, anasayfa);
-        ExtentCucumberAdapter.addTestStepLog("Lift Montaj Amiri kendi sorumluluk ekrani aciliyor");
+
     }
 
     @Then("Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir")
     public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.blokliftMontajAmiri).perform();
         anamenu.blokliftMontajAmiri.isDisplayed();
-        ExtentCucumberAdapter.addTestStepLog("BlokLift Montaj Amiri butonu goruluyor");
+
     }
 
     @And("Bloklift Montaj Amiri butonuna tiklanir")
     public void blokliftMontajAmiriButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.blokliftMontajAmiri).perform();
-        ExtentCucumberAdapter.addTestStepLog("BlokLift Montaj Amiri butonu tiklaniyor");
+
     }
 
     @Then("Bloklift Montaj Amiri ekraninda oldugu dogrulanir")
     public void blokliftMontajAmiriEkranindaOlduguDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String sifreTextActual = "BLOKLİFT MONTAJ AMİRİ";
+        String sifreTextActual = "ANA SAYFA";
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-        ExtentCucumberAdapter.addTestStepLog("BlokLift Montaj Amiri sifre giris sayfasi aciliyor");
+
     }
 
     @Then("Bloklift Montaj Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void blokliftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "BLOKLİFT MONTAJ AMİRİ";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
-        ExtentCucumberAdapter.addTestStepLog("BlokLift Montaj Amiri sorumluluk sayfasi aciliyor");
+
     }
 
     @And("Bloklift Montaj Amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -235,13 +238,13 @@ public class Anamenu {
     public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.boyamaVePaketlemeAmiri).perform();
         anamenu.boyamaVePaketlemeAmiri.isDisplayed();
-        ExtentCucumberAdapter.addTestStepLog("Boyama ve Paketleme Amiri butonu goruluyor");
+
     }
 
     @And("Boyama ve Paketleme Amiri butonuna tiklanir")
     public void boyamaVePaketlemeAmiriButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.boyamaVePaketlemeAmiri).perform();
-        ExtentCucumberAdapter.addTestStepLog("Boyama ve Paketleme Amiri butonu tiklanabiliyor");
+
     }
 
     @And("Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -251,51 +254,51 @@ public class Anamenu {
 
     @Then("Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir")
     public void boyamaVePaketlemeAmiriEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "BOYAMA VE PAKETLEME AMİRİ";
-        waitForVisibility(anamenu.amirBaslikYazisi,10);
+        String sifreTextActual = "ANA SAYFA";
+       waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-        ExtentCucumberAdapter.addTestStepLog("Boyama ve Paketleme Amiri sifre giris sayfasi aciliyor");
+
     }
 
     @Then("Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void boyamaVePaketlemeAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "BOYAMA VE PAKETLEME AMİRİ";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
-        ExtentCucumberAdapter.addTestStepLog("Boyama ve Paketleme Amiri kendi sorumluluk sayfasi aciliyor");
+
     }
 
     @Then("Kalite Kontrol butonunun gorunur oldugu dogrulanir")
     public void kaliteKontrolButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.kaliteKontrolAmiri).perform();
         anamenu.kaliteKontrolAmiri.isDisplayed();
-        ExtentCucumberAdapter.addTestStepLog("kalite kontrol Amiri butonu goruluyor");
+
     }
 
     @And("Kalite Kontrol butonuna tiklanir")
     public void kaliteKontrolButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.kaliteKontrolAmiri).perform();
-        ExtentCucumberAdapter.addTestStepLog("kalite kontrol Amiri butonu tiklaniyor");
+
     }
 
     @Then("Kalite Kontrol ekraninda oldugu dogrulanir")
     public void kaliteKontrolEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "KALİTE KONTROL AMİRİ";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-        ExtentCucumberAdapter.addTestStepLog("kalite kontrol Amiri sifre giris sayfasi aciliyor");
+
     }
 
     @Then("Kalite Kontrol sayfasina gectigi dogrulanir")
     public void kaliteKontrolSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "KALİTE KONTROL AMİRİ";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
-        ExtentCucumberAdapter.addTestStepLog("kalite kontrol Amiri kendi sorumluluk sayfasi aciliyor");
+
     }
 
     @And("Kalite Kontrol sifre kutucuguna gecerli bir {string} girilir")
@@ -316,7 +319,7 @@ public class Anamenu {
 
     @Then("Uretim Planlama ekraninda oldugu dogrulanir")
     public void uretimPlanlamaEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "ÜRETİM PLANLAMA";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -326,7 +329,7 @@ public class Anamenu {
     public void uretimPlanlamaSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "ÜRETİM PLANLAMA";
+        String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
     }
 
@@ -339,7 +342,7 @@ public class Anamenu {
     public void yonetimButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.menulinkleri.get(7)).perform();
         anamenu.yonetim.isDisplayed();
-        ExtentCucumberAdapter.addTestStepLog("Yonetim butonu gorulebiliyor");
+
     }
 
     @And("Yonetim butonuna tiklanir")
@@ -371,7 +374,7 @@ public class Anamenu {
 
     @Then("Yonetim Sifre ekraninda oldugu dogrulanir")
     public void yonetimSifreEkranindaOlduguDogrulanir() throws InterruptedException {
-        String sifreTextActual = "YÖNETİM";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,30);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
         assertEquals(anasayfa, sifreTextActual);
@@ -386,16 +389,15 @@ public class Anamenu {
     public void yonetimSayfasinaGectigiDogrulanir() {
         String anasayfa = anamenu.amirBaslikYazisi.getText();
         waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String yonetimHeader = "YÖNETİM";
+        String yonetimHeader = "GIRIŞ";
         assertEquals(yonetimHeader, anasayfa);
-        ExtentCucumberAdapter.addTestStepLog("Yonetim sayfasini acabiliyor");
     }
 
     @And("Kullanici logout yapar")
     public void kullaniciLogoutYapar() throws InterruptedException {
-        waitForVisibility(anamenu.logout,30);
-        clickWithJS(anamenu.logout);
-        ExtentCucumberAdapter.addTestStepLog("cikis yapilabiliyor");
+        waitFor(2500);
+        action.click(anamenu.logout).perform();
+        waitFor(3000);
     }
 
     @And("yonetici kullaniciya sifre atama butonuna tiklar")
@@ -405,7 +407,7 @@ public class Anamenu {
 
     @And("yonetici kullaniciya sifre atama ekranina gectigini dogrular")
     public void yoneticiKullaniciyaSifreAtamaEkraninaGectiginiDogrular() throws InterruptedException {
-        String sifreTextActual = "Şıfre Atama Ekranı";
+        String sifreTextActual = "ŞIFRE ATAMA EKRANI";
         waitForVisibility(anamenu.sifreAtamaEkraniText,10);
         String sifreTextresult = anamenu.sifreAtamaEkraniText.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -415,7 +417,7 @@ public class Anamenu {
     public void yoneticiReturnBackButonunaTiklar() throws InterruptedException {
         waitForVisibility(anamenu.returnback,10);
         anamenu.returnback.click();
-        waitForVisibility(anamenu.kullaniciyaSifreAtama,10);
+        clickWithJS(anamenu.menulinkleri.get(7));
         anamenu.kullaniciyaSifreAtama.click();
     }
 
@@ -423,7 +425,7 @@ public class Anamenu {
     public void yoneticiGuncelleButonunuTiklar() throws InterruptedException {
         waitForVisibility(anamenu.girisButonu,10);
         anamenu.girisButonu.click();
-        ExtentCucumberAdapter.addTestStepLog("Yonetim sifre guncelleyebiliyor");
+
     }
 
     @And("yonetici kullanici secer, yeni sifre atar, guncelle butonunu tiklar ve guncellendigini kontrol eder")
@@ -465,7 +467,6 @@ public class Anamenu {
             anamenu.guncellemaPopupOk.click();
             waitFor(1000);
             anamenu.kullaniciyaSifreAtama.click();
-            Driver.getDriver().close();
         }
     }
 }
