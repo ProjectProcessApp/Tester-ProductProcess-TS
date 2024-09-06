@@ -54,7 +54,7 @@ public class Anamenu {
     @FindBy(xpath = "//h1[@class='page-header']")
     public WebElement amirBaslikYazisi;
 
-    @FindBy(xpath = "//h1[text()='POLİSAJ AMİRİ']")
+    @FindBy(xpath = "//label[text()='POLİSAJ AMİRİ']")
     public WebElement polisajAmiriSifreEkranText;
 
     @FindBy(xpath = "//input[@id='password']")
@@ -69,7 +69,7 @@ public class Anamenu {
     @FindBy(xpath = "//h1[@class='page-header']")
     public WebElement amirHeader;
 
-    @FindBy(xpath = "//button[contains(@class, 'btn btn-primary') and text()='Çıkış']")
+    @FindBy(xpath = "//div[@class='page-header-container']//button[text()='Çıkış']")
     public WebElement logout;
     @FindBy(xpath = "//body/div[3]")
     public WebElement girisSayfasiHerhangiBirYer;
@@ -82,7 +82,7 @@ public class Anamenu {
     @FindBy(xpath = "//a[text()='Kulanıcıya Şifre Atama']")
     public WebElement kullaniciyaSifreAtama;
 
-    @FindBy(xpath = "//h1[text()='Şıfre Atama Ekranı ']")
+    @FindBy(xpath = "//h1[text()='Şıfre Atama Ekranı']")
     public WebElement sifreAtamaEkraniText;
 
     @FindBy(css = "div.page-header-container > div > button.btn.btn-primary")

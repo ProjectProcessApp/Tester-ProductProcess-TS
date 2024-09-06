@@ -1,4 +1,4 @@
-
+@US01
 Feature: US1
 
   Background:  Anasayfa ve dogrulama
@@ -241,7 +241,7 @@ Feature: US1
     And yonetim Giris yap butonuna tiklanir
     Then yonetim sayfasina gectigi dogrulanir
     And Kullanici logout yapar
-  @US01
+
   Scenario: TC_24 "YONETIM" sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)
     Then Yonetim butonunun gorunur oldugu dogrulanir
     And Yonetim butonuna tiklanir

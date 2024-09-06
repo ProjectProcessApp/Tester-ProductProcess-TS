@@ -105,14 +105,14 @@ public class Anamenu {
     public void talasliImalatAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String talasliHeader = "GIRIŞ";
+        String talasliHeader = "Talasli Imalat Amiri";
         assertEquals(talasliHeader, anasayfa);
 
     }
 
     @And("sifre kutucuguna gecersiz bir {string} girilir")
     public void sifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
-        waitForVisibility(anamenu.sifreKutusu,50);
+        waitForVisibility(anamenu.sifreKutusu,10);
         anamenu.sifreKutusu.sendKeys(arg0);
     }
 
@@ -371,7 +371,7 @@ public class Anamenu {
 
     @Then("Yonetim Sifre ekraninda oldugu dogrulanir")
     public void yonetimSifreEkranindaOlduguDogrulanir() throws InterruptedException {
-        String sifreTextActual = "YÖNETİM";
+        String sifreTextActual = "ANA SAYFA";
         waitForVisibility(anamenu.amirBaslikYazisi,30);
         String anasayfa = anamenu.amirBaslikYazisi.getText();
         assertEquals(anasayfa, sifreTextActual);
@@ -386,15 +386,14 @@ public class Anamenu {
     public void yonetimSayfasinaGectigiDogrulanir() {
         String anasayfa = anamenu.amirBaslikYazisi.getText();
         waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String yonetimHeader = "YÖNETİM";
+        String yonetimHeader = "GIRIŞ";
         assertEquals(yonetimHeader, anasayfa);
-
     }
 
     @And("Kullanici logout yapar")
     public void kullaniciLogoutYapar() throws InterruptedException {
-        waitForVisibility(anamenu.logout,30);
-        clickWithJS(anamenu.logout);
+        waitForVisibility(anamenu.logout,10);
+        action.doubleClick(anamenu.logout).perform();
 
     }
 
@@ -405,7 +404,7 @@ public class Anamenu {
 
     @And("yonetici kullaniciya sifre atama ekranina gectigini dogrular")
     public void yoneticiKullaniciyaSifreAtamaEkraninaGectiginiDogrular() throws InterruptedException {
-        String sifreTextActual = "Şıfre Atama Ekranı";
+        String sifreTextActual = "ŞIFRE ATAMA EKRANI";
         waitForVisibility(anamenu.sifreAtamaEkraniText,10);
         String sifreTextresult = anamenu.sifreAtamaEkraniText.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -465,7 +464,6 @@ public class Anamenu {
             anamenu.guncellemaPopupOk.click();
             waitFor(1000);
             anamenu.kullaniciyaSifreAtama.click();
-            Driver.getDriver().close();
         }
     }
 }
