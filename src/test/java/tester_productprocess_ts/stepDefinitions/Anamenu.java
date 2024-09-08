@@ -42,7 +42,7 @@ public class Anamenu {
     public void anasayfada_oldugu_dogrulanir() {
         String anasayfaHeaderText = anamenu.AnasayfaHeader.getText();
         String Header = "ANA SAYFA";
-        assertEquals("Kullanici anasayfada",header, anasayfaHeaderText);
+        assertEquals(header, anasayfaHeaderText);
 
     }
 
@@ -79,6 +79,7 @@ public class Anamenu {
     @And("Giris yap butonuna tiklanir")
     public void girisYapButonunaTiklanir() throws InterruptedException {
         waitForVisibility(anamenu.girisButonu,10);
+        waitFor(1000);
         action.click(anamenu.girisButonu).perform();
 
     }

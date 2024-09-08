@@ -52,7 +52,7 @@ public class DbHelper {
            connection.close();
        }
     }
-    public void update(String query) throws SQLException {
+    public static void update(String query) throws SQLException {
         try{
             connection= DriverManager.getConnection(dbUrl,userName,password);
             statement= connection.createStatement();
@@ -65,7 +65,7 @@ public class DbHelper {
             closeConnection();
         }
     }
-    public void delete(String query) throws SQLException {
+    public static void delete(String query) throws SQLException {
         try{
             connection= DriverManager.getConnection(dbUrl,userName,password);
             statement= connection.createStatement();
@@ -115,7 +115,7 @@ public class DbHelper {
         }
         return rowList;
     }
-    public void closeConnection() {
+    public static void closeConnection() {
         try {
             if (resultSet != null) {
                 resultSet.close();

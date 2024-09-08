@@ -1,5 +1,6 @@
 package tester_productprocess_ts.stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import tester_productprocess_ts.utilities.databaseUtilities.DB_Utilty;
 import tester_productprocess_ts.utilities.uiUtilities.DbHelper;
@@ -14,21 +15,35 @@ public class DatabaseTest {
         DbHelper.connection();
     }
 
-    @Then("{string} siparis sorgusu yapilir")
-    public void siparis_sorgusu_yapilir(String query) throws SQLException {
+    @And("yeni siparis kaydi eklenir")
+    public void yeniSiparisKaydiEklenir() throws SQLException {
+        String query="INSERT INTO t_order (customer_name, delivery_date, gasan_no, order_date, order_number, order_quantity, order_type, ready_mil_count)" +
+                "VALUES ('*', '2024-09-10', '11 AB 987654', '2024-09-08', '963852', -100, 'paslanmaz', -50)";
+        DbHelper.set(query);
+    }
 
-        query ="select * from t_order";
+    @And("butun kayitlar getirilir")
+    public void butunKayitlarGetirilir() throws SQLException {
+       String query ="select * from t_order";
         System.out.println(DbHelper.getColumnNames(query));
         System.out.println(DbHelper.getQueryResultList(query));
     }
 
     @Then("{string} siparis guncellenir")
-    public void siparis_guncellenir(String query) {
-
+    public void siparis_guncellenir(String query) throws SQLException {
+       query= "UPDATE t_order SET customer_name = 'halil', delivery_date = '2024-09-10', gasan_no = '11 AB 987654', "
+               + "order_date = '2024-09-08', order_number = '963852', order_quantity = '100', order_type = 'paslanmaz',"
+               + "ready_mil_count = '50', status_id = '3' WHERE customer_name = '*'";
+        DbHelper.update(query);
     }
 
     @Then("{string} siparis silinebilir")
-    public void siparis_silinebilir(String query) {
-
+    public void siparis_silinebilir(String query) throws SQLException {
+        String deleteQuery = "DELETE FROM t_order WHERE customer_name = 'halil'";
+        DbHelper.delete(deleteQuery);
     }
+
+
+
+
 }
