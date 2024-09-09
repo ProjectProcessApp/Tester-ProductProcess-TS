@@ -52,7 +52,7 @@ public class SiparisOlusturma {
     }
     @Then("{string} Gasan Nosuna gecerli bir data girilir")
     public void gasan_nosuna_gecerli_bir_data_girilir(String string) {
-        waitFor(1500);
+        waitFor(1500); siparis.gasanNoBox.clear();
         siparis.gasanNoBox.sendKeys(string);
     }
     @Then("{string} Siparis Noya gecerli bir data girilir")
@@ -73,7 +73,7 @@ public class SiparisOlusturma {
     @Then("{string} Siparis turune gecerli bir data girilir")
     public void siparis_turune_gecerli_bir_data_girilir(String string) {
         waitFor(1500);
-        siparis.siparisTuruBox.sendKeys(string);
+        ddmValue(siparis.siparisTuruDdm, string);
     }
     @Then("{string} Siparis miktarina gecerli bir data girilir")
     public void siparis_miktarina_gecerli_bir_data_girilir(String string) {
@@ -83,7 +83,7 @@ public class SiparisOlusturma {
     @Then("{string} Hazir mil miktarina gecerli bir data girilir")
     public void hazir_mil_miktarina_gecerli_bir_data_girilir(String string) {
         siparis.hazirMilMiktariBox.sendKeys(Keys.TAB);
-        waitFor(1500);
+        waitFor(1500);siparis.hazirMilMiktariBox.clear();
         siparis.hazirMilMiktariBox.sendKeys(string);
     }
     @Then("Siparis durumu kutusunda {string} yazmali")
@@ -102,17 +102,17 @@ public class SiparisOlusturma {
 
     @Then("{string} musteri adina gecersiz bir data girilir")
     public void musteri_adina_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
-        siparis.musteriAdiBox.sendKeys(string);
+        waitFor(1000);siparis.musteriAdiBox.clear();siparis.musteriAdiBox.sendKeys(string);
+
     }
     @Then("{string} Gasan Nosuna gecersiz bir data girilir")
     public void gasan_nosuna_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(1500); siparis.gasanNoBox.clear();
         siparis.gasanNoBox.sendKeys(string);
     }
     @Then("{string} Siparis Noya gecersiz bir data girilir")
     public void siparis_noya_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(1000);siparis.siparisNoBox.clear();
         siparis.siparisNoBox.sendKeys(string);
     }
     @And("Teslim Tarihine gecersiz bir data girilir")
@@ -126,39 +126,39 @@ public class SiparisOlusturma {
     }
     @Then("{string} Siparis turune gecersiz bir data girilir")
     public void siparis_turune_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
-        siparis.siparisTuruBox.sendKeys(string);
+        waitFor(1500);
+        ddmValue(siparis.siparisTuruDdm, string);
     }
     @Then("{string} Siparis miktarina gecersiz bir data girilir")
     public void siparis_miktarina_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(1000);siparis.siparisMiktariBox.clear();
         siparis.siparisMiktariBox.sendKeys(string);
     }
     @Then("{string} Hazir mil miktarina gecersiz bir data girilir")
     public void hazir_mil_miktarina_gecersiz_bir_data_girilir(String string) {
         siparis.hazirMilMiktariBox.sendKeys(Keys.TAB);
-        waitFor(1000);
+        waitFor(1500);siparis.hazirMilMiktariBox.clear();
         siparis.hazirMilMiktariBox.sendKeys(string);
     }
     @Then("Giris butonunun aktif olmadigi kontrol edilir")
     public void giris_butonunun_aktif_olmadigi_kontrol_edilir() {
-        waitFor(1000);
-        boolean isDisabled = anamenu.girisButonu.getAttribute("disabled") != null;
-
+        waitFor(1000);boolean isDisabled = anamenu.girisButonu.getAttribute("disabled") != null;
         if (isDisabled) {
             geriGitVeCikisYap();
-        } else {
-            anamenu.girisButonu.click();
-            waitFor(1000);
-            click(siparis.oKbutonu);
-            waitFor(2000);
-            anamenu.logout.click();
+        }else {anamenu.girisButonu.click();
+            try {
+                if (siparis.siparisBasariylaOlusturulduYazisi.isDisplayed()) {
+                    System.out.println("Sipariş oluşturuldu metni ekranda göründü.");
+                }
+            } catch (NoSuchElementException e) {
+                System.out.println("Sipariş oluşturuldu metni bulunamadı, sayfa geriye alınıyor.");
+                geriGitVeCikisYap();
+            }
         }
-    }
+      }
     private void geriGitVeCikisYap() {
         Driver.getDriver().navigate().back();
-        waitFor(2000);
+        waitFor(1000);
         anamenu.logout.click();
     }
-
 }

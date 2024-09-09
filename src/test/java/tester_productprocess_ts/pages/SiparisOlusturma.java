@@ -46,7 +46,7 @@ public class SiparisOlusturma {
 
     @FindBy(xpath="//div[@data-nextjs-toast='true']//span[contains(text(), 'error')]")
     public WebElement errorText;
-    @FindBy(xpath="//h2[@id='swal2-title']")
+    @FindBy(xpath="//*[text()='Sipariş oluşturuldu']")
     public WebElement siparisBasariylaOlusturulduYazisi;
 
     @FindBy(xpath="//div[contains(@class, 'swal2-actions')]//button[contains(@class, 'swal2-confirm')]")
@@ -58,8 +58,8 @@ public class SiparisOlusturma {
 
     @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
-
-
+    @FindBy(xpath="//div[text()='Müşteri adı en az 4 karakter olmalı']")
+    public WebElement musteriAdiUyariText;
 
     @FindBy(xpath="//button[@class='btn-link btn btn-danger']//*[name()='svg']")
     public WebElement silButonu;
@@ -73,8 +73,8 @@ public class SiparisOlusturma {
 
     @FindBy(xpath="//button[normalize-space()='Cancel']")
     public WebElement CancelButonu;
-
-
+    @FindBy(xpath="//select[@class='form-select']")
+    public WebElement siparisTuruDdm;
 
     @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaSilindiYazisi;
