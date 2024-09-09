@@ -38,9 +38,9 @@ Feature: US2
     And Uretim Planlama butonuna tiklanir
     Then Uretim Planlama ekraninda oldugu dogrulanir
     And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir
-    And Guncelleme butonuna tiklanir
-    And siparis guncelle yazisinin ekranda gorundugu kontrol edilir
-    And Musteri Adi kutucugundaki data silinir
+    And Giris yap butonuna tiklanir
+    And siparis Olustur butonunun ekranda gorundugu kontrol edilir
+    And Onceden siparis listesi olup olmadigi dogrulanir
     And siparis olustur butonuna tiklanir
     And yeni siparis ekraninin geldigi dogrulanir
     And "<musteri adi>" musteri adina gecersiz bir data girilir
@@ -56,8 +56,6 @@ Feature: US2
     Examples:
       | musteri adi | Gasan No      | Siparis No | Teslim Tarihi | Siparis turu | Siparis miktari  | Hazir mil miktari |
       |             |               |            |               |              |                  |                   |
-      |.            |1111 A 123450  |123450      |30.09.2024     |  paslanmaz   |1000              |100                |
+      |.            |1111 A 123450  |123450     |30.09.2024     |  paslanmaz   |1000              |100                |
       |1            |1112 AB 123450  |123458     |30.09.2024     |  paslanmaz   |1000              |100                |
       |[            |1113 AB 123450  |123459     |30.09.2024     |  paslanmaz   |1000              |100                |
-
-
