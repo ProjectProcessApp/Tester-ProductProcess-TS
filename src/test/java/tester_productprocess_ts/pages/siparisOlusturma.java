@@ -11,7 +11,6 @@ public class siparisOlusturma {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
     @FindBy(xpath ="//a[contains(text(),'Sipariş Oluştur')]")
     public WebElement siparisOlusturButonu;
 
@@ -20,10 +19,6 @@ public class siparisOlusturma {
 
     @FindBy(xpath="//div[@class='card-title h5']")
     public WebElement yeniSiparis;
-
-    @FindBy(xpath = "siparisGuncelle")
-    public WebElement siparisGuncelle;
-
 
     @FindBy(xpath="//input[@id='customerName']")
     public WebElement musteriAdiBox;
@@ -49,8 +44,6 @@ public class siparisOlusturma {
     @FindBy(css="input#orderStatus[value='İşlenmeyi Bekliyor']")
     public WebElement siparisDurumuBox; //Box icindeki yazi dogrulanacak
 
-    @FindBy(xpath="//div[@data-nextjs-toast='true']//span[contains(text(), 'error')]")
-    public WebElement errorText;
     @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaOlusturulduYazisi;
 
@@ -59,6 +52,5 @@ public class siparisOlusturma {
 
     @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
-
 
 }

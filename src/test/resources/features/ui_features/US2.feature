@@ -23,25 +23,20 @@ Feature: US2
     And "<Hazir mil miktari>" Hazir mil miktarina gecerli bir data girilir
     And Siparis durumu kutusunda "İşlenmeyi Bekliyor" yazmali
     And Giris yap butonuna tiklanir
-    And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir
+    And "Sipariş başarıyla oluşturuldu" yazisi dogrulanir ve ok tusuna basilir
     And Kullanici logout yapar
+
     Examples:
       | musteri adi | Gasan No      | Siparis No | Siparis turu | Siparis miktari  | Hazir mil miktari |
-      |omer         |1111 A 123456  |123451      |LIFT          |1500              |100                |
-      |hasan        |1111 AB 123456 |123452      |DAMPER        |1000              |200                |
-      |alican       |1111 ABC 123456|124453      |BLOKLIFT      |1500              |1000               |
-      |ramo         |1111 ABC 123457|123453      |PASLANMAZ     |15000             |10000              |
+      |omer         |1111 A 123456  |123451      |paslanmaz     |1500              |0                  |
+      |hasan        |1111 AB 123456 |123452      |paslanmaz     |1000              |0                  |
+      |ali          |1111 ABC 123456|123453      |paslanmaz     |1500              |0                  |
 
-  @US2
   Scenario Outline: Kullanici yeni siparis olusturur (Negatif Test)
     Then Uretim Planlama butonunun gorunur oldugu dogrulanir
     And Uretim Planlama butonuna tiklanir
     Then Uretim Planlama ekraninda oldugu dogrulanir
     And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir
-    And Guncelleme butonuna tiklanir
-    And siparis guncelle yazisinin ekranda gorundugu kontrol edilir
-    And Musteri Adi kutucugundaki data silinir
-    And M
     And siparis olustur butonuna tiklanir
     And yeni siparis ekraninin geldigi dogrulanir
     And "<musteri adi>" musteri adina gecersiz bir data girilir
@@ -55,11 +50,14 @@ Feature: US2
     Examples:
       | musteri adi | Gasan No      | Siparis No | Teslim Tarihi | Siparis turu | Siparis miktari  | Hazir mil miktari |
       |             |               |            |               |              |                  |                   |
-      |ali          |1111 ABC 123450|123450      |30.09.2024     |LIFT          |1000              |100                |
-      |ramazan      |111 AB 123450  |123458      |30.09.2024     |DAMPER        |1000              |100                |
-      |hakki        |1113 AB 123450 |12345       |30.09.2024     |BLOKLIFT      |1000              |100                |
-      |halil        |1113 AB 199450 |193958      |30.09.2024     |PASLANMAZ     |-1000             |100                |
-      |beytullah    |1113 AB 199459 |193959      |30.09.2024     |PASLANMAZ     |10000             |-100               |
+      |.            |1111 A 123450  |123450      |30.09.2024     |  paslanmaz   |1000              |100                |
+      |1            |1112 AB 123450  |123458     |30.09.2024     |  paslanmaz   |1000              |100                |
+      |[            |1113 AB 123450  |123459     |30.09.2024     |  paslanmaz   |1000              |100                |
+
+
+
+
+
 
 
 
@@ -88,4 +86,3 @@ Feature: US2
     And Siparis durumu kutusunda İşlenmeyi Bekliyor yazmali
     And Giris yap butonuna tiklanir
     And Sipariş başarıyla guncellendi yazisi dogrulanir ve ok tusuna basilir
->>>>>>> master
