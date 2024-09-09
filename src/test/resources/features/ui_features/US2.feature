@@ -41,7 +41,6 @@ Feature: US2
     And Guncelleme butonuna tiklanir
     And siparis guncelle yazisinin ekranda gorundugu kontrol edilir
     And Musteri Adi kutucugundaki data silinir
-    And M
     And siparis olustur butonuna tiklanir
     And yeni siparis ekraninin geldigi dogrulanir
     And "<musteri adi>" musteri adina gecersiz bir data girilir

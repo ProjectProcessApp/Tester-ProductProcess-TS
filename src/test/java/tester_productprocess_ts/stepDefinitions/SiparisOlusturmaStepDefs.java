@@ -157,7 +157,7 @@ public class SiparisOlusturmaStepDefs {
 //-------------------------------------------------
     @And("Guncelleme butonuna tiklanir")
     public void guncellemeButonunaTiklanir() {
-        clickWithJS(siparis.guncelleButonu);
+        clickWithJS(anamenu.girisButonu);
     }
 
     @And("siparis guncelle yazisinin ekranda gorundugu kontrol edilir")
@@ -171,9 +171,6 @@ public class SiparisOlusturmaStepDefs {
         siparis.musteriAdiBox.clear();
     }
 
-    @And("M")
-    public void m() {
-    }
 
     @And("{string} butonuna tiklanir")
     public void butonunaTiklanir(String arg0) {
