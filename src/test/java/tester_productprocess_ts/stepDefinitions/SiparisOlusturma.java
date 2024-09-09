@@ -17,7 +17,7 @@ import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
 
 public class SiparisOlusturma {
 
-    tester_productprocess_ts.pages.SiparisOlusturma siparis = new tester_productprocess_ts.pages.SiparisOlusturma();
+    tester_productprocess_ts.pages.siparisOlusturma siparis = new tester_productprocess_ts.pages.siparisOlusturma();
 
     tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();
     Actions action=new Actions(Driver.getDriver());
