@@ -53,4 +53,3 @@ public class siparisOlusturma {
     @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
 
-}

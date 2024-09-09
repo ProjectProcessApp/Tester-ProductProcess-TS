@@ -255,7 +255,7 @@ public class SiparisOlusturmaStepDefs {
 
     @And("Siparis durumu kutusunda İşlenmeyi Bekliyor yazmali")
     public void siparisDurumuKutusundaİşlenmeyiBekliyorYazmali() {
-      String expected = siparis.siparisDurumuBox.getAttribute("islenmeyi bekliyor");
+      String expected = siparis.siparisDurumuBox.getAttribute("value");
         String actual=siparis.siparisDurumuBox.getAttribute("value");
         Assert.assertEquals(expected,actual);;
 

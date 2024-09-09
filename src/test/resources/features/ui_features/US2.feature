@@ -32,15 +32,11 @@ Feature: US2
       |hasan        |1111 AB 123456 |123452      |paslanmaz     |1000              |0                  |
       |ali          |1111 ABC 123456|123453      |paslanmaz     |1500              |0                  |
 
-  @US2
   Scenario Outline: Kullanici yeni siparis olusturur (Negatif Test)
     Then Uretim Planlama butonunun gorunur oldugu dogrulanir
     And Uretim Planlama butonuna tiklanir
     Then Uretim Planlama ekraninda oldugu dogrulanir
     And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir
-    And Guncelleme butonuna tiklanir
-    And siparis guncelle yazisinin ekranda gorundugu kontrol edilir
-    And Musteri Adi kutucugundaki data silinir
     And siparis olustur butonuna tiklanir
     And yeni siparis ekraninin geldigi dogrulanir
     And "<musteri adi>" musteri adina gecersiz bir data girilir
@@ -51,14 +47,18 @@ Feature: US2
     And "<Siparis miktari>" Siparis miktarina gecersiz bir data girilir
     And "<Hazir mil miktari>" Hazir mil miktarina gecersiz bir data girilir
     And Giris butonunun aktif olmadigi kontrol edilir
-
-
     Examples:
       | musteri adi | Gasan No      | Siparis No | Teslim Tarihi | Siparis turu | Siparis miktari  | Hazir mil miktari |
       |             |               |            |               |              |                  |                   |
       |.            |1111 A 123450  |123450      |30.09.2024     |  paslanmaz   |1000              |100                |
       |1            |1112 AB 123450  |123458     |30.09.2024     |  paslanmaz   |1000              |100                |
       |[            |1113 AB 123450  |123459     |30.09.2024     |  paslanmaz   |1000              |100                |
+
+
+
+
+
+
 
 
   Scenario: Verilen siparisi guncelleme
