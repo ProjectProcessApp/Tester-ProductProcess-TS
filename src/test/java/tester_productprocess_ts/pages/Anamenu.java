@@ -63,7 +63,7 @@ public class Anamenu {
     @FindBy(xpath = "(//*[@id='password'])[2]")
     public WebElement goz;
 
-    @FindBy(xpath = "//div[@class='d-flex justify-content-center']")
+    @FindBy(css = "button[type='submit']")
     public WebElement girisButonu;
 
     @FindBy(xpath = "//h1[@class='page-header']")
