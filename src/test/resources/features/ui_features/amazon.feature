@@ -10,3 +10,5 @@ Feature: Amazon test
   And 12. ve 13. urunlerin fiyatlarini karsilastir. ucuz olan urunu sepete at
   And sepeti yeni sekmede ac
   Then proceed to check out tikla ve sign in sayfasina yonlendirildigini dogrula
+
+    Then Bilgisayar kontrolu
