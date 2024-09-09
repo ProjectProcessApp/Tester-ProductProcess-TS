@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="v14">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" beforeDir="false" />
-    </list>
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="09.09.2024//" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -350,7 +347,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725865543849</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="09.09.2024//">
+      <option name="closed" value="true" />
+      <created>1725914582187</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725914582187</updated>
+    </task>
+    <task id="LOCAL-00015" summary="09.09.2024//">
+      <option name="closed" value="true" />
+      <created>1725914901509</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725914901509</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +387,8 @@
     <MESSAGE value="v2" />
     <MESSAGE value="v5" />
     <MESSAGE value="v14" />
-    <option name="LAST_COMMIT_MESSAGE" value="v14" />
+    <MESSAGE value="09.09.2024//" />
+    <option name="LAST_COMMIT_MESSAGE" value="09.09.2024//" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
