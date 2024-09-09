@@ -5,19 +5,13 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import tester_productprocess_ts.pages.Anamenu;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
-import tester_productprocess_ts.utilities.uiUtilities.ReusableMethods;
-
-import java.time.Duration;
 
 import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
 
-public class SiparisOlusturma {
+public class SiparisOlusturmaStepDefs {
 
-    tester_productprocess_ts.pages.SiparisOlusturma siparis = new tester_productprocess_ts.pages.SiparisOlusturma();
+    tester_productprocess_ts.pages.siparisOlusturma siparis = new tester_productprocess_ts.pages.siparisOlusturma();
 
     tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();
     Actions action=new Actions(Driver.getDriver());
@@ -52,7 +46,7 @@ public class SiparisOlusturma {
     }
     @Then("{string} Gasan Nosuna gecerli bir data girilir")
     public void gasan_nosuna_gecerli_bir_data_girilir(String string) {
-        waitFor(1500); siparis.gasanNoBox.clear();
+        waitFor(1500);
         siparis.gasanNoBox.sendKeys(string);
     }
     @Then("{string} Siparis Noya gecerli bir data girilir")
@@ -73,7 +67,7 @@ public class SiparisOlusturma {
     @Then("{string} Siparis turune gecerli bir data girilir")
     public void siparis_turune_gecerli_bir_data_girilir(String string) {
         waitFor(1500);
-        ddmValue(siparis.siparisTuruDdm, string);
+        siparis.siparisTuruBox.sendKeys(string);
     }
     @Then("{string} Siparis miktarina gecerli bir data girilir")
     public void siparis_miktarina_gecerli_bir_data_girilir(String string) {
@@ -83,7 +77,7 @@ public class SiparisOlusturma {
     @Then("{string} Hazir mil miktarina gecerli bir data girilir")
     public void hazir_mil_miktarina_gecerli_bir_data_girilir(String string) {
         siparis.hazirMilMiktariBox.sendKeys(Keys.TAB);
-        waitFor(1500);siparis.hazirMilMiktariBox.clear();
+        waitFor(1500);
         siparis.hazirMilMiktariBox.sendKeys(string);
     }
     @Then("Siparis durumu kutusunda {string} yazmali")
@@ -102,17 +96,17 @@ public class SiparisOlusturma {
 
     @Then("{string} musteri adina gecersiz bir data girilir")
     public void musteri_adina_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);siparis.musteriAdiBox.clear();siparis.musteriAdiBox.sendKeys(string);
-
+        waitFor(1000);
+        siparis.musteriAdiBox.sendKeys(string);
     }
     @Then("{string} Gasan Nosuna gecersiz bir data girilir")
     public void gasan_nosuna_gecersiz_bir_data_girilir(String string) {
-        waitFor(1500); siparis.gasanNoBox.clear();
+        waitFor(1000);
         siparis.gasanNoBox.sendKeys(string);
     }
     @Then("{string} Siparis Noya gecersiz bir data girilir")
     public void siparis_noya_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);siparis.siparisNoBox.clear();
+        waitFor(1000);
         siparis.siparisNoBox.sendKeys(string);
     }
     @And("Teslim Tarihine gecersiz bir data girilir")
@@ -126,39 +120,155 @@ public class SiparisOlusturma {
     }
     @Then("{string} Siparis turune gecersiz bir data girilir")
     public void siparis_turune_gecersiz_bir_data_girilir(String string) {
-        waitFor(1500);
-        ddmValue(siparis.siparisTuruDdm, string);
+        waitFor(1000);
+        siparis.siparisTuruBox.sendKeys(string);
     }
     @Then("{string} Siparis miktarina gecersiz bir data girilir")
     public void siparis_miktarina_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);siparis.siparisMiktariBox.clear();
+        waitFor(1000);
         siparis.siparisMiktariBox.sendKeys(string);
     }
     @Then("{string} Hazir mil miktarina gecersiz bir data girilir")
     public void hazir_mil_miktarina_gecersiz_bir_data_girilir(String string) {
         siparis.hazirMilMiktariBox.sendKeys(Keys.TAB);
-        waitFor(1500);siparis.hazirMilMiktariBox.clear();
+        waitFor(1000);
         siparis.hazirMilMiktariBox.sendKeys(string);
     }
     @Then("Giris butonunun aktif olmadigi kontrol edilir")
     public void giris_butonunun_aktif_olmadigi_kontrol_edilir() {
-        waitFor(1000);boolean isDisabled = anamenu.girisButonu.getAttribute("disabled") != null;
+        waitFor(1000);
+        boolean isDisabled = anamenu.girisButonu.getAttribute("disabled") != null;
+
         if (isDisabled) {
             geriGitVeCikisYap();
-        }else {anamenu.girisButonu.click();
-            try {
-                if (siparis.siparisBasariylaOlusturulduYazisi.isDisplayed()) {
-                    System.out.println("Sipariş oluşturuldu metni ekranda göründü.");
-                }
-            } catch (NoSuchElementException e) {
-                System.out.println("Sipariş oluşturuldu metni bulunamadı, sayfa geriye alınıyor.");
-                geriGitVeCikisYap();
-            }
+        } else {
+            anamenu.girisButonu.click();
+            waitFor(1000);
+            click(siparis.oKbutonu);
+            waitFor(2000);
+            anamenu.logout.click();
         }
-      }
+    }
     private void geriGitVeCikisYap() {
         Driver.getDriver().navigate().back();
-        waitFor(1000);
+        waitFor(2000);
         anamenu.logout.click();
+    }
+//-------------------------------------------------
+    @And("Guncelleme butonuna tiklanir")
+    public void guncellemeButonunaTiklanir() {
+        clickWithJS(siparis.guncelleButonu);
+    }
+
+    @And("siparis guncelle yazisinin ekranda gorundugu kontrol edilir")
+    public void siparisGuncelleYazisininEkrandaGorunduguKontrolEdilir() {
+
+        Assert.assertTrue(siparis.siparisGuncelle.isDisplayed());
+    }
+
+    @And("Musteri Adi kutucugundaki data silinir")
+    public void musteriAdiKutucugundakiDataSilinir1() {
+        siparis.musteriAdiBox.clear();
+    }
+
+    @And("M")
+    public void m() {
+    }
+
+    @And("{string} butonuna tiklanir")
+    public void butonunaTiklanir(String arg0) {
+    }
+
+    @And("{string} ekranininda oldugu dogrulanir")
+    public void ekraninindaOlduguDogrulanir(String arg0) {
+    }
+
+    @And("Musteri Adi Kutucugundaki data silinir")
+    public void musteriAdiKutucugundakiDataSilinir() {
+
+        siparis.musteriAdiBox.clear();
+    }
+
+    @And("{string} kutucugundaki data silinir")
+    public void kutucugundakiDataSilinir(String arg0) {
+    }
+
+    @And("musteri adi musteri adina gecerli bir data girilir")
+    public void musteriAdiMusteriAdinaGecerliBirDataGirilir() {
+
+        siparis.musteriAdiBox.sendKeys("Mercedes");
+    }
+
+    @And("Gasan No kutucugundaki data silinir")
+    public void gasanNoKutucugundakiDataSilinir() {
+        siparis.gasanNoBox.clear();
+    }
+
+    @And("Gasan No Gasan Nosuna gecerli bir data girilir")
+    public void gasanNoGasanNosunaGecerliBirDataGirilir() {
+
+        siparis.gasanNoBox.sendKeys("1122 AB 112233");
+    }
+
+    @And("Soparis No kutucugundaki data silinir")
+    public void soparisNoKutucugundakiDataSilinir() {
+
+        siparis.siparisNoBox.clear();
+    }
+
+    @And("<Siparis No Siparis Noya gecerli bir data girilir")
+    public void siparisNoSiparisNoyaGecerliBirDataGirilir() {
+
+        siparis.siparisNoBox.sendKeys("998877");
+    }
+
+    @And("Siparis Turu kutucugundaki data silinir")
+    public void siparisTuruKutucugundakiDataSilinir() {
+
+        siparis.siparisTuruBox.clear();
+    }
+
+    @And("Siparis turu Siparis turune gecerli bir data girilir")
+    public void siparisTuruSiparisTuruneGecerliBirDataGirilir() {
+
+        siparis.siparisTuruBox.sendKeys("Lift");
+    }
+
+    @And("siparis Miktari kutucugundaki data silinir")
+    public void siparisMiktariKutucugundakiDataSilinir() {
+
+        siparis.siparisMiktariBox.clear();
+    }
+
+    @And("Siparis miktari Siparis miktarina gecerli bir data girilir")
+    public void siparisMiktariSiparisMiktarinaGecerliBirDataGirilir() {
+        siparis.siparisMiktariBox.sendKeys("100");
+    }
+
+    @And("Hazir Mil Miktari kutucugundaki data silinir")
+    public void hazirMilMiktariKutucugundakiDataSilinir() {
+
+        siparis.hazirMilMiktariBox.clear();
+    }
+
+    @And("Hazir mil miktari Hazir mil miktarina gecerli bir data girilir")
+    public void hazirMilMiktariHazirMilMiktarinaGecerliBirDataGirilir() {
+        siparis.hazirMilMiktariBox.sendKeys("0");
+    }
+
+    @And("Siparis durumu kutusunda İşlenmeyi Bekliyor yazmali")
+    public void siparisDurumuKutusundaİşlenmeyiBekliyorYazmali() {
+      String expected = siparis.siparisDurumuBox.getAttribute("islenmeyi bekliyor");
+        String actual=siparis.siparisDurumuBox.getAttribute("value");
+        Assert.assertEquals(expected,actual);;
+
+
+    }
+    @And("Sipariş başarıyla guncellendi yazisi dogrulanir ve ok tusuna basilir")
+    public void siparişBaşarıylaGuncellendiYazisiDogrulanirVeOkTusunaBasilir() {
+
+        click(siparis.oKbutonu);
+        assert siparis.siparisBasariylaOlusturulduYazisi.isDisplayed();
+        click(siparis.oKbutonu);
     }
 }

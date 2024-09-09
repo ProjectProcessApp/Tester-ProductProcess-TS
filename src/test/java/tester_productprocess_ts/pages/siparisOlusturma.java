@@ -5,11 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
-public class SiparisOlusturma {
+public class siparisOlusturma {
 
-    public SiparisOlusturma() {
+    public siparisOlusturma() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     @FindBy(xpath ="//a[contains(text(),'Sipariş Oluştur')]")
     public WebElement siparisOlusturButonu;
@@ -19,6 +20,10 @@ public class SiparisOlusturma {
 
     @FindBy(xpath="//div[@class='card-title h5']")
     public WebElement yeniSiparis;
+
+    @FindBy(xpath = "siparisGuncelle")
+    public WebElement siparisGuncelle;
+
 
     @FindBy(xpath="//input[@id='customerName']")
     public WebElement musteriAdiBox;
@@ -46,40 +51,14 @@ public class SiparisOlusturma {
 
     @FindBy(xpath="//div[@data-nextjs-toast='true']//span[contains(text(), 'error')]")
     public WebElement errorText;
-    @FindBy(xpath="//*[text()='Sipariş oluşturuldu']")
+    @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaOlusturulduYazisi;
 
     @FindBy(xpath="//div[contains(@class, 'swal2-actions')]//button[contains(@class, 'swal2-confirm')]")
     public WebElement oKbutonu;
 
-
-    @FindBy(xpath="//*[name()='path' and contains(@d,'M15.529 2.')]")
-    public WebElement guncelleButonu;
-
     @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
-    @FindBy(xpath="//div[text()='Müşteri adı en az 4 karakter olmalı']")
-    public WebElement musteriAdiUyariText;
-
-    @FindBy(xpath="//button[@class='btn-link btn btn-danger']//*[name()='svg']")
-    public WebElement silButonu;
-
-    @FindBy(xpath="//h2[@id='swal2-title']")
-    public WebElement siparisiSilmekIstedigindenEminMisinizYazisi;
-
-
-    @FindBy(xpath="//button[normalize-space()='Yes']")
-    public WebElement YESButonu;
-
-    @FindBy(xpath="//button[normalize-space()='Cancel']")
-    public WebElement CancelButonu;
-    @FindBy(xpath="//select[@class='form-select']")
-    public WebElement siparisTuruDdm;
-
-    @FindBy(xpath="//h2[@id='swal2-title']")
-    public WebElement siparisBasariylaSilindiYazisi;
-
-
 
 
 }
