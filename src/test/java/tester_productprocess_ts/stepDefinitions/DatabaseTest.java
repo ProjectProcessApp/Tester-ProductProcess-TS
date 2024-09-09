@@ -39,7 +39,7 @@ public class DatabaseTest {
 
     @Then("{string} siparis silinebilir")
     public void siparis_silinebilir(String query) throws SQLException {
-        String deleteQuery = "DELETE FROM t_order WHERE customer_name = 'halil'";
+        String deleteQuery = "DELETE FROM t_order WHERE gasan_no = '11 AB 987654'";
         DbHelper.delete(deleteQuery);
     }
 

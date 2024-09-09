@@ -22,6 +22,10 @@ public class siparisOlusturma {
     @FindBy(xpath="//div[@class='card-title h5']")
     public WebElement yeniSiparis;
 
+    @FindBy(xpath = "siparisGuncelle")
+    public WebElement siparisGuncelle;
+
+
     @FindBy(xpath="//input[@id='customerName']")
     public WebElement musteriAdiBox;
 
