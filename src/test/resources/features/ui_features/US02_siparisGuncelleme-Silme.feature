@@ -32,3 +32,4 @@ Feature:US02_Siparis Guncelleme-Silme
     And Siparis durumu kutusunda İşlenmeyi Bekliyor yazmali
     And Giris yap butonuna tiklanir
     And Sipariş başarıyla guncellendi yazisi dogrulanir ve ok tusuna basilir
+    And sayfa kapatilir....
