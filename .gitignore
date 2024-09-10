@@ -15,6 +15,7 @@ Report/
 *.iws
 *.iml
 *.ipr
+.idea
 
 
 ### Eclipse ###
