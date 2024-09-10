@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_08_2024_14_31_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_08_2024_14_31__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2024_15_23_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2024_15_23__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisOlusturmaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisOlusturmaStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +37,19 @@
     &quot;assignee&quot;: &quot;Beytcakir&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ProjectProcessApp/Tester-ProductProcess-TS.git&quot;,
-    &quot;accountId&quot;: &quot;db06c608-a697-49b4-9484-0d32dbd304b8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ProjectProcessApp/Tester-ProductProcess-TS",
+    "accountId": "3709ed44-aac9-4f6d-9433-d5a16e890891"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="300" />
+    </hideBySeverity>
+    <option name="proportion" value="0.47372812" />
     <option name="selectedTabId" value="CurrentFile" />
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -58,15 +63,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Cucumber Java.Feature: US02_siparisOlusturma.executor": "Run",
     "Cucumber Java.Feature: US2.executor": "Run",
     "Cucumber Java.Feature: jdbctesting.executor": "Run",
+    "Cucumber Java.Scenario: Amirlerin Ortak ekrani.executor": "Run",
+    "Cucumber Java.Scenario: Databaseden veri alma.executor": "Run",
+    "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test).executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "onur",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/beytc/Desktop/Tester-ProductProcess-TS01",
+    "last_opened_file_path": "C:/Users/cetin/Desktop/backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,15 +97,15 @@
       <recent name="tester_productprocess_ts.utilities.uiUtilities" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Runner">
-    <configuration name="Feature: anamenu" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Amirlerin Ortak ekrani">
+    <configuration name="Feature: US02_siparisOlusturma" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" />
       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: anamenu" />
+      <option name="SUGGESTED_NAME" value="Feature: US02_siparisOlusturma" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -108,15 +117,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: jdbctesting" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/database_features/jdbctesting.feature" />
       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^TC_02 \&quot;TALASLI IMALAT AMIRI\&quot; butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_02 \&quot;TALASLI IMALAT AMIRI\&quot; butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: jdbctesting" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -128,15 +136,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Amirlerin Ortak ekrani" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" />
       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^TC_05 \&quot;Polisaj amiri\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_05 \&quot;Polisaj amiri\&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir\. \(Positif Test\)$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+      <option name="NAME_FILTER" value="^Amirlerin Ortak ekrani$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Amirlerin Ortak ekrani$&quot;" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Scenario: Amirlerin Ortak ekrani" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Databaseden veri alma" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/database_features/jdbctesting.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^Databaseden veri alma$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Databaseden veri alma$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Databaseden veri alma" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Kullanici yeni siparis olusturur (Negatif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^Kullanici yeni siparis olusturur \(Negatif Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Kullanici yeni siparis olusturur \(Negatif Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Kullanici yeni siparis olusturur (Negatif Test)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -169,56 +218,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^TC_25 \&quot;Yonetim\&quot; sayfasina gecemez\. \(Negatif Test\)$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_25 \&quot;Yonetim\&quot; sayfasina gecemez\. \(Negatif Test\)$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tester-ProductProcess-TS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tester_productprocess_ts.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tester_productprocess_ts.runner" />
-      <option name="MAIN_CLASS_NAME" value="tester_productprocess_ts.runner.Runner" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Cucumber Java.Scenario: TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" />
-      <item itemvalue="Cucumber Java.Feature: anamenu" />
-      <item itemvalue="Cucumber Java.Scenario: TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
-      <item itemvalue="Cucumber Java.Scenario: TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
-      <item itemvalue="Cucumber Java.Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
-      <item itemvalue="JUnit.Runner" />
+      <item itemvalue="Cucumber Java.Feature: jdbctesting" />
+      <item itemvalue="Cucumber Java.Feature: US02_siparisOlusturma" />
+      <item itemvalue="Cucumber Java.Scenario: Amirlerin Ortak ekrani" />
+      <item itemvalue="Cucumber Java.Scenario: Databaseden veri alma" />
+      <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
-        <item itemvalue="Cucumber Java.Scenario: TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
-        <item itemvalue="Cucumber Java.Scenario: TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
-        <item itemvalue="Cucumber Java.Feature: anamenu" />
+        <item itemvalue="Cucumber Java.Scenario: Amirlerin Ortak ekrani" />
+        <item itemvalue="Cucumber Java.Feature: jdbctesting" />
+        <item itemvalue="Cucumber Java.Scenario: Databaseden veri alma" />
+        <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test)" />
+        <item itemvalue="Cucumber Java.Feature: US02_siparisOlusturma" />
       </list>
     </recent_temporary>
   </component>
@@ -378,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725950036169</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1725963544112</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725963544112</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,5 +432,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Tester_ProductProcess_TSyeni$Scenario__Amirlerin_Ortak_ekrani.ic" NAME="Scenario: Amirlerin Ortak ekrani Coverage Results" MODIFIED="1725979135634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
+    </SUITE>
   </component>
 </project>
