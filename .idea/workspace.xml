@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="&#10;new version">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisiGuncellemeStep.java" afterDir="false" />
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_08_2024_14_31_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_08_2024_14_31__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2024_15_23_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2024_15_23__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisGuncelleme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisGuncelleme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisGuncellemeDefs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisOlusturmaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisOlusturmaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisGuncelleme-Silme.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisGuncelleme-Silme.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +24,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="onur cetiner &lt;93998298+cetineronur@users.noreply.github.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -62,32 +55,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Cucumber Java.Feature: US2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: jdbctesting.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Verilen siparisi guncelleme.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;beyt&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/beytc/Desktop/Tester-ProductProcess-TS01&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Cucumber Java.Feature: US2.executor": "Run",
+    "Cucumber Java.Feature: jdbctesting.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/beytc/Desktop/Tester-ProductProcess-TS01",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TS" />
@@ -96,7 +88,26 @@
       <recent name="tester_productprocess_ts.utilities.uiUtilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verilen siparisi guncelleme">
+  <component name="RunManager" selected="JUnit.Runner">
+    <configuration name="Feature: anamenu" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: anamenu" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
@@ -178,26 +189,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verilen siparisi guncelleme" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisGuncelleme-Silme.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^Verilen siparisi guncelleme$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verilen siparisi guncelleme$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verilen siparisi guncelleme" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tester-ProductProcess-TS" />
       <extension name="coverage">
@@ -215,7 +206,7 @@
     </configuration>
     <list>
       <item itemvalue="Cucumber Java.Scenario: TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" />
-      <item itemvalue="Cucumber Java.Scenario: Verilen siparisi guncelleme" />
+      <item itemvalue="Cucumber Java.Feature: anamenu" />
       <item itemvalue="Cucumber Java.Scenario: TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
       <item itemvalue="Cucumber Java.Scenario: TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
       <item itemvalue="Cucumber Java.Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
@@ -223,11 +214,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Verilen siparisi guncelleme" />
         <item itemvalue="JUnit.Runner" />
         <item itemvalue="Cucumber Java.Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
         <item itemvalue="Cucumber Java.Scenario: TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
         <item itemvalue="Cucumber Java.Scenario: TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" />
+        <item itemvalue="Cucumber Java.Feature: anamenu" />
       </list>
     </recent_temporary>
   </component>
@@ -387,15 +378,7 @@
       <option name="project" value="LOCAL" />
       <updated>1725950036169</updated>
     </task>
-    <task id="LOCAL-00017" summary="&#10;new version">
-      <option name="closed" value="true" />
-      <created>1725963279188</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1725963279188</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,9 +405,7 @@
     <MESSAGE value="09.09.2024//" />
     <MESSAGE value="enyeni-09.09.2024" />
     <MESSAGE value="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <MESSAGE value="Merge pull request #40 from ProjectProcessApp/beyt&#10;&#10;Beyt" />
-    <MESSAGE value="&#10;new version" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;new version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
