@@ -11,45 +11,45 @@ public class siparisOlusturma {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath ="//a[contains(text(),'Sipariş Oluştur')]")
+    @FindBy(xpath = "//a[contains(text(),'Sipariş Oluştur')]")
     public WebElement siparisOlusturButonu;
 
-    @FindBy(xpath="//h3[contains(text(),'Sipariş Listesi')]")
+    @FindBy(xpath = "//h3[contains(text(),'Sipariş Listesi')]")
     public WebElement siparisListesi;
 
-    @FindBy(xpath="//div[@class='card-title h5']")
+    @FindBy(xpath = "//div[@class='card-title h5']")
     public WebElement yeniSiparis;
 
-    @FindBy(xpath="//input[@id='customerName']")
+    @FindBy(xpath = "//input[@id='customerName']")
     public WebElement musteriAdiBox;
 
-    @FindBy(xpath ="//input[@id='gasanNo']")
+    @FindBy(xpath = "//input[@id='gasanNo']")
     public WebElement gasanNoBox;
 
     @FindBy(xpath = "//input[@id='orderNumber']")
     public WebElement siparisNoBox;
 
-    @FindBy(xpath="//input[@id='deliveryDate']")
+    @FindBy(xpath = "//input[@id='deliveryDate']")
     public WebElement teslimTarihiBox;
 
-    @FindBy(xpath="//input[@id='orderType']")
+    @FindBy(xpath = "//input[@id='orderType']")
     public WebElement siparisTuruBox;
 
-    @FindBy(xpath="//input[@id='orderQuantity']")
+    @FindBy(xpath = "//input[@id='orderQuantity']")
     public WebElement siparisMiktariBox;
 
-    @FindBy(xpath="//input[@id='readyMilCount']")
+    @FindBy(xpath = "//input[@id='readyMilCount']")
     public WebElement hazirMilMiktariBox;
 
-    @FindBy(css="input#orderStatus[value='İşlenmeyi Bekliyor']")
+    @FindBy(css = "input#orderStatus[value='İşlenmeyi Bekliyor']")
     public WebElement siparisDurumuBox; //Box icindeki yazi dogrulanacak
 
-    @FindBy(xpath="//h2[@id='swal2-title']")
+    @FindBy(xpath = "//h2[@id='swal2-title']")
     public WebElement siparisBasariylaOlusturulduYazisi;
 
-    @FindBy(xpath="//div[contains(@class, 'swal2-actions')]//button[contains(@class, 'swal2-confirm')]")
+    @FindBy(xpath = "//div[contains(@class, 'swal2-actions')]//button[contains(@class, 'swal2-confirm')]")
     public WebElement oKbutonu;
 
-    @FindBy(xpath="//h2[@id='swal2-title']")
+    @FindBy(xpath = "//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
-
+}

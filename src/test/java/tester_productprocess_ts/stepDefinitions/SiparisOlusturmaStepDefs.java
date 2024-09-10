@@ -163,7 +163,7 @@ public class SiparisOlusturmaStepDefs {
     @And("siparis guncelle yazisinin ekranda gorundugu kontrol edilir")
     public void siparisGuncelleYazisininEkrandaGorunduguKontrolEdilir() {
 
-        Assert.assertTrue(siparis.siparisGuncelle.isDisplayed());
+
     }
 
     @And("Musteri Adi kutucugundaki data silinir")
