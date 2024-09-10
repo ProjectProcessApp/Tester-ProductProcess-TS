@@ -1,0 +1,624 @@
+Index: test-output/htmlReport/cucumber.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<testsuite name=\"Cucumber\" time=\"284.193\" tests=\"48\" skipped=\"0\" failures=\"0\" errors=\"0\">\r\n<testcase classname=\"US1\" name=\"TC_01 &quot;Anasayfa&quot; ya girilebilir olmalidir (Negativ Test)\" time=\"7.924\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nWhen Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir.passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" time=\"9.765\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed\r\nAnd Talasli Imalat Amiri Butonuna tiklanir..................................passed\r\nThen Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed\r\nAnd Talasli imalat amiri sifre kutucuguna gecerli bir \"data\" girilir........passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen Talasli Imalat Amirinin kendi sorumluluk sayfasina gectigi dogrulanir..passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.1\" time=\"5.494\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed\r\nAnd Talasli Imalat Amiri Butonuna tiklanir..................................passed\r\nThen Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed\r\nAnd sifre kutucuguna gecersiz bir \"\" girilir................................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.2\" time=\"3.853\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed\r\nAnd Talasli Imalat Amiri Butonuna tiklanir..................................passed\r\nThen Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed\r\nAnd sifre kutucuguna gecersiz bir \"Techpro\" girilir.........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.3\" time=\"5.319\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed\r\nAnd Talasli Imalat Amiri Butonuna tiklanir..................................passed\r\nThen Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed\r\nAnd sifre kutucuguna gecersiz bir \"123456\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.4\" time=\"4.593\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed\r\nAnd Talasli Imalat Amiri Butonuna tiklanir..................................passed\r\nThen Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed\r\nAnd sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" time=\"7.037\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed\r\nAnd Polisaj amiri butonuna tiklanir.........................................passed\r\nThen Polisaj amiri ekraninda oldugu dogrulanir..............................passed\r\nAnd Polisaj amiri sifre kutucuguna gecerli bir \"data\" girilir...............passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen Polisaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir.........passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_06 Manuel test\" time=\"0.002\">\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1\" time=\"6.015\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed\r\nAnd Polisaj amiri butonuna tiklanir.........................................passed\r\nThen Polisaj amiri ekraninda oldugu dogrulanir..............................passed\r\nAnd sifre kutucuguna gecersiz bir \"\" girilir................................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2\" time=\"4.757\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed\r\nAnd Polisaj amiri butonuna tiklanir.........................................passed\r\nThen Polisaj amiri ekraninda oldugu dogrulanir..............................passed\r\nAnd sifre kutucuguna gecersiz bir \"Techpro\" girilir.........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3\" time=\"3.983\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed\r\nAnd Polisaj amiri butonuna tiklanir.........................................passed\r\nThen Polisaj amiri ekraninda oldugu dogrulanir..............................passed\r\nAnd sifre kutucuguna gecersiz bir \"123456\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4\" time=\"3.683\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed\r\nAnd Polisaj amiri butonuna tiklanir.........................................passed\r\nThen Polisaj amiri ekraninda oldugu dogrulanir..............................passed\r\nAnd sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_8 &quot;Lift montaj amiri&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" time=\"6.042\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed\r\nAnd Lift montaj amiri butonuna tiklanir.....................................passed\r\nThen Lift montaj amiri ekraninda oldugu dogrulanir..........................passed\r\nAnd Lift montaj amiri sifre kutucuguna gecerli bir \"data\" girilir...........passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen Lift montaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir.....passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_9 Manuel Test\" time=\"0.002\">\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1\" time=\"6.502\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed\r\nAnd Lift montaj amiri butonuna tiklanir.....................................passed\r\nThen Lift montaj amiri ekraninda oldugu dogrulanir..........................passed\r\nAnd sifre kutucuguna gecersiz bir \"\" girilir................................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2\" time=\"3.33\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed\r\nAnd Lift montaj amiri butonuna tiklanir.....................................passed\r\nThen Lift montaj amiri ekraninda oldugu dogrulanir..........................passed\r\nAnd sifre kutucuguna gecersiz bir \"Techpro\" girilir.........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3\" time=\"4.522\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed\r\nAnd Lift montaj amiri butonuna tiklanir.....................................passed\r\nThen Lift montaj amiri ekraninda oldugu dogrulanir..........................passed\r\nAnd sifre kutucuguna gecersiz bir \"123456\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4\" time=\"4.16\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed\r\nAnd Lift montaj amiri butonuna tiklanir.....................................passed\r\nThen Lift montaj amiri ekraninda oldugu dogrulanir..........................passed\r\nAnd sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_11 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" time=\"6.447\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed\r\nAnd Bloklift Montaj Amiri butonuna tiklanir.................................passed\r\nThen Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed\r\nAnd Bloklift Montaj Amiri sifre kutucuguna gecerli bir \"data\" girilir.......passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen Bloklift Montaj Amirinin kendi sorumluluk sayfasina gectigi dogrulanir.passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_12 &quot;Bloklift Montaj Amiri&quot;butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\" time=\"0.001\">\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.1\" time=\"5.412\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed\r\nAnd Bloklift Montaj Amiri butonuna tiklanir.................................passed\r\nThen Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed\r\nAnd sifre kutucuguna gecersiz bir \"\" girilir................................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.2\" time=\"3.441\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed\r\nAnd Bloklift Montaj Amiri butonuna tiklanir.................................passed\r\nThen Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed\r\nAnd sifre kutucuguna gecersiz bir \"Techpro\" girilir.........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.3\" time=\"3.611\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed\r\nAnd Bloklift Montaj Amiri butonuna tiklanir.................................passed\r\nThen Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed\r\nAnd sifre kutucuguna gecersiz bir \"123456\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.4\" time=\"4.871\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed\r\nAnd Bloklift Montaj Amiri butonuna tiklanir.................................passed\r\nThen Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed\r\nAnd sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_14 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" time=\"7.09\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed\r\nAnd Boyama ve Paketleme Amiri butonuna tiklanir.............................passed\r\nThen Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed\r\nAnd Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir \"data\" girilir...passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gectigi dogrulanir.passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_15 Manuel Test\" time=\"0.002\">\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1\" time=\"5.429\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed\r\nAnd Boyama ve Paketleme Amiri butonuna tiklanir.............................passed\r\nThen Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed\r\nAnd sifre kutucuguna gecersiz bir \"\" girilir................................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2\" time=\"5.273\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed\r\nAnd Boyama ve Paketleme Amiri butonuna tiklanir.............................passed\r\nThen Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed\r\nAnd sifre kutucuguna gecersiz bir \"Techpro\" girilir.........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3\" time=\"5.146\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed\r\nAnd Boyama ve Paketleme Amiri butonuna tiklanir.............................passed\r\nThen Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed\r\nAnd sifre kutucuguna gecersiz bir \"123456\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4\" time=\"5.227\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed\r\nAnd Boyama ve Paketleme Amiri butonuna tiklanir.............................passed\r\nThen Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed\r\nAnd sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_17 &quot;Kalite Kontrol&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" time=\"8.924\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed\r\nAnd Kalite Kontrol butonuna tiklanir........................................passed\r\nThen Kalite Kontrol ekraninda oldugu dogrulanir.............................passed\r\nAnd Kalite Kontrol sifre kutucuguna gecerli bir \"data\" girilir..............passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen Kalite Kontrol sayfasina gectigi dogrulanir............................passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_18 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)\" time=\"0.002\">\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1\" time=\"5.676\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed\r\nAnd Kalite Kontrol butonuna tiklanir........................................passed\r\nThen Kalite Kontrol ekraninda oldugu dogrulanir.............................passed\r\nAnd sifre kutucuguna gecersiz bir \"\" girilir................................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2\" time=\"5.097\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed\r\nAnd Kalite Kontrol butonuna tiklanir........................................passed\r\nThen Kalite Kontrol ekraninda oldugu dogrulanir.............................passed\r\nAnd sifre kutucuguna gecersiz bir \"Techpro\" girilir.........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3\" time=\"5.209\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed\r\nAnd Kalite Kontrol butonuna tiklanir........................................passed\r\nThen Kalite Kontrol ekraninda oldugu dogrulanir.............................passed\r\nAnd sifre kutucuguna gecersiz bir \"123456\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4\" time=\"5.017\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed\r\nAnd Kalite Kontrol butonuna tiklanir........................................passed\r\nThen Kalite Kontrol ekraninda oldugu dogrulanir.............................passed\r\nAnd sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_20  &quot;Uretim Planlama &quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)\" time=\"8.6\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed\r\nAnd Uretim Planlama butonuna tiklanir.......................................passed\r\nThen Uretim Planlama ekraninda oldugu dogrulanir............................passed\r\nAnd Uretim Planlama sifre kutucuguna gecerli bir \"data\" girilir.............passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen Uretim Planlama sayfasina gectigi dogrulanir...........................passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_21 &quot;Uretim Planlama&quot;  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)\" time=\"0.001\">\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1\" time=\"5.438\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed\r\nAnd Uretim Planlama butonuna tiklanir.......................................passed\r\nThen Uretim Planlama ekraninda oldugu dogrulanir............................passed\r\nAnd sifre kutucuguna gecersiz bir \"\" girilir................................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2\" time=\"5.233\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed\r\nAnd Uretim Planlama butonuna tiklanir.......................................passed\r\nThen Uretim Planlama ekraninda oldugu dogrulanir............................passed\r\nAnd sifre kutucuguna gecersiz bir \"Techpro\" girilir.........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3\" time=\"5.01\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed\r\nAnd Uretim Planlama butonuna tiklanir.......................................passed\r\nThen Uretim Planlama ekraninda oldugu dogrulanir............................passed\r\nAnd sifre kutucuguna gecersiz bir \"123456\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4\" time=\"4.923\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed\r\nAnd Uretim Planlama butonuna tiklanir.......................................passed\r\nThen Uretim Planlama ekraninda oldugu dogrulanir............................passed\r\nAnd sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir..........................passed\r\nAnd Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed\r\nAnd Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd Giris yap butonuna tiklanir.............................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_23 &quot;Yonetim&quot; sayfasina gecer. (Positif Test)\" time=\"6.399\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Yonetim butonunun gorunur oldugu dogrulanir............................passed\r\nAnd Yonetim butonuna tiklanir...............................................passed\r\nThen Yonetim Sifre ekraninda oldugu dogrulanir..............................passed\r\nAnd yonetici sifre kutucuguna gecerli bir \"data\" girilir....................passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd yonetim Giris yap butonuna tiklanir.....................................passed\r\nThen yonetim sayfasina gectigi dogrulanir...................................passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)\" time=\"62.835\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Yonetim butonunun gorunur oldugu dogrulanir............................passed\r\nAnd Yonetim butonuna tiklanir...............................................passed\r\nThen Yonetim Sifre ekraninda oldugu dogrulanir..............................passed\r\nAnd yonetici sifre kutucuguna gecerli bir \"data\" girilir....................passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd yonetim Giris yap butonuna tiklanir.....................................passed\r\nThen yonetim sayfasina gectigi dogrulanir...................................passed\r\nAnd yonetici kullaniciya sifre atama butonuna tiklar........................passed\r\nAnd yonetici return back butonuna tiklar....................................passed\r\nAnd yonetici kullaniciya sifre atama ekranina gectigini dogrular............passed\r\nAnd yonetici kullanici secer, yeni sifre atar, guncelle butonunu tiklar ve guncellendigini kontrol eder.passed\r\nAnd Kullanici logout yapar..................................................passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.1\" time=\"4.399\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Yonetim butonunun gorunur oldugu dogrulanir............................passed\r\nAnd Yonetim butonuna tiklanir...............................................passed\r\nThen Yonetim Sifre ekraninda oldugu dogrulanir..............................passed\r\nAnd yonetici sifre kutucuguna gecersiz bir \"\" girilir.......................passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd yonetim Giris yap butonuna tiklanir.....................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Şifre alanı boş bırakılamaz\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.2\" time=\"4.002\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Yonetim butonunun gorunur oldugu dogrulanir............................passed\r\nAnd Yonetim butonuna tiklanir...............................................passed\r\nThen Yonetim Sifre ekraninda oldugu dogrulanir..............................passed\r\nAnd yonetici sifre kutucuguna gecersiz bir \"Techpro\" girilir................passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd yonetim Giris yap butonuna tiklanir.....................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.3\" time=\"4.282\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Yonetim butonunun gorunur oldugu dogrulanir............................passed\r\nAnd Yonetim butonuna tiklanir...............................................passed\r\nThen Yonetim Sifre ekraninda oldugu dogrulanir..............................passed\r\nAnd yonetici sifre kutucuguna gecersiz bir \"123456\" girilir.................passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd yonetim Giris yap butonuna tiklanir.....................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n<testcase classname=\"US1\" name=\"TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.4\" time=\"3.2\">\r\n<system-out><![CDATA[\r\nWhen Anasayfaya gidilir.....................................................passed\r\nThen Anasayfada oldugu dogrulanir...........................................passed\r\nThen Yonetim butonunun gorunur oldugu dogrulanir............................passed\r\nAnd Yonetim butonuna tiklanir...............................................passed\r\nThen Yonetim Sifre ekraninda oldugu dogrulanir..............................passed\r\nAnd yonetici sifre kutucuguna gecersiz bir \"?.¿0p9\" girilir.................passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed\r\nAnd Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed\r\nAnd yonetim Giris yap butonuna tiklanir.....................................passed\r\nThen uygun hata mesajinin goruntulendigi dogrulanir \"Girdiğiniz şifre eksik veya hatalı\".passed\r\n]]></system-out>\r\n</testcase>\r\n</testsuite>\r\n
+===================================================================
+diff --git a/test-output/htmlReport/cucumber.xml b/test-output/htmlReport/cucumber.xml
+--- a/test-output/htmlReport/cucumber.xml	
++++ b/test-output/htmlReport/cucumber.xml	
+@@ -1,609 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<testsuite name="Cucumber" time="284.193" tests="48" skipped="0" failures="0" errors="0">
+-<testcase classname="US1" name="TC_01 &quot;Anasayfa&quot; ya girilebilir olmalidir (Negativ Test)" time="7.924">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-When Ana giris ekraninda hicbir kullanici unvanina tiklamadan sifre giris ekranina erisememelidir.passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_02 &quot;TALASLI IMALAT AMIRI&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" time="9.765">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
+-And Talasli Imalat Amiri Butonuna tiklanir..................................passed
+-Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed
+-And Talasli imalat amiri sifre kutucuguna gecerli bir "data" girilir........passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then Talasli Imalat Amirinin kendi sorumluluk sayfasina gectigi dogrulanir..passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.1" time="5.494">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
+-And Talasli Imalat Amiri Butonuna tiklanir..................................passed
+-Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed
+-And sifre kutucuguna gecersiz bir "" girilir................................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.2" time="3.853">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
+-And Talasli Imalat Amiri Butonuna tiklanir..................................passed
+-Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed
+-And sifre kutucuguna gecersiz bir "Techpro" girilir.........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.3" time="5.319">
++<testsuite name="Cucumber" time="4.704" tests="1" skipped="0" failures="0" errors="0">
++<testcase classname="Database testing" name="Databaseden veri alma" time="4.186">
+ <system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
+-And Talasli Imalat Amiri Butonuna tiklanir..................................passed
+-Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed
+-And sifre kutucuguna gecersiz bir "123456" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_04 &quot;TALASLI IMALAT AMIRI&quot; gecersiz sifre denemesi. (Negatif Test) - Example #1.4" time="4.593">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
+-And Talasli Imalat Amiri Butonuna tiklanir..................................passed
+-Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed
+-And sifre kutucuguna gecersiz bir "?.¿0p9" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_05 &quot;Polisaj amiri&quot;  butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" time="7.037">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed
+-And Polisaj amiri butonuna tiklanir.........................................passed
+-Then Polisaj amiri ekraninda oldugu dogrulanir..............................passed
+-And Polisaj amiri sifre kutucuguna gecerli bir "data" girilir...............passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then Polisaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir.........passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_06 Manuel test" time="0.002">
+-</testcase>
+-<testcase classname="US1" name="TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1" time="6.015">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed
+-And Polisaj amiri butonuna tiklanir.........................................passed
+-Then Polisaj amiri ekraninda oldugu dogrulanir..............................passed
+-And sifre kutucuguna gecersiz bir "" girilir................................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2" time="4.757">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed
+-And Polisaj amiri butonuna tiklanir.........................................passed
+-Then Polisaj amiri ekraninda oldugu dogrulanir..............................passed
+-And sifre kutucuguna gecersiz bir "Techpro" girilir.........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3" time="3.983">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed
+-And Polisaj amiri butonuna tiklanir.........................................passed
+-Then Polisaj amiri ekraninda oldugu dogrulanir..............................passed
+-And sifre kutucuguna gecersiz bir "123456" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_7 &quot;Polisaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4" time="3.683">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Polisaj amiri butonunun gorunur oldugu dogrulanir......................passed
+-And Polisaj amiri butonuna tiklanir.........................................passed
+-Then Polisaj amiri ekraninda oldugu dogrulanir..............................passed
+-And sifre kutucuguna gecersiz bir "?.¿0p9" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_8 &quot;Lift montaj amiri&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" time="6.042">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed
+-And Lift montaj amiri butonuna tiklanir.....................................passed
+-Then Lift montaj amiri ekraninda oldugu dogrulanir..........................passed
+-And Lift montaj amiri sifre kutucuguna gecerli bir "data" girilir...........passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then Lift montaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir.....passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_9 Manuel Test" time="0.002">
+-</testcase>
+-<testcase classname="US1" name="TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1" time="6.502">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed
+-And Lift montaj amiri butonuna tiklanir.....................................passed
+-Then Lift montaj amiri ekraninda oldugu dogrulanir..........................passed
+-And sifre kutucuguna gecersiz bir "" girilir................................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2" time="3.33">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed
+-And Lift montaj amiri butonuna tiklanir.....................................passed
+-Then Lift montaj amiri ekraninda oldugu dogrulanir..........................passed
+-And sifre kutucuguna gecersiz bir "Techpro" girilir.........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3" time="4.522">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed
+-And Lift montaj amiri butonuna tiklanir.....................................passed
+-Then Lift montaj amiri ekraninda oldugu dogrulanir..........................passed
+-And sifre kutucuguna gecersiz bir "123456" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_10&quot; LIFT MONTAJ  AMIRI&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4" time="4.16">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed
+-And Lift montaj amiri butonuna tiklanir.....................................passed
+-Then Lift montaj amiri ekraninda oldugu dogrulanir..........................passed
+-And sifre kutucuguna gecersiz bir "?.¿0p9" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_11 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" time="6.447">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed
+-And Bloklift Montaj Amiri butonuna tiklanir.................................passed
+-Then Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed
+-And Bloklift Montaj Amiri sifre kutucuguna gecerli bir "data" girilir.......passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then Bloklift Montaj Amirinin kendi sorumluluk sayfasina gectigi dogrulanir.passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_12 &quot;Bloklift Montaj Amiri&quot;butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)" time="0.001">
+-</testcase>
+-<testcase classname="US1" name="TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.1" time="5.412">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed
+-And Bloklift Montaj Amiri butonuna tiklanir.................................passed
+-Then Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed
+-And sifre kutucuguna gecersiz bir "" girilir................................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.2" time="3.441">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed
+-And Bloklift Montaj Amiri butonuna tiklanir.................................passed
+-Then Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed
+-And sifre kutucuguna gecersiz bir "Techpro" girilir.........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.3" time="3.611">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed
+-And Bloklift Montaj Amiri butonuna tiklanir.................................passed
+-Then Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed
+-And sifre kutucuguna gecersiz bir "123456" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_13 &quot;Bloklift Montaj Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test) - Example #1.4" time="4.871">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir..............passed
+-And Bloklift Montaj Amiri butonuna tiklanir.................................passed
+-Then Bloklift Montaj Amiri ekraninda oldugu dogrulanir......................passed
+-And sifre kutucuguna gecersiz bir "?.¿0p9" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_14 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" time="7.09">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed
+-And Boyama ve Paketleme Amiri butonuna tiklanir.............................passed
+-Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed
+-And Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir "data" girilir...passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gectigi dogrulanir.passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_15 Manuel Test" time="0.002">
+-</testcase>
+-<testcase classname="US1" name="TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1" time="5.429">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed
+-And Boyama ve Paketleme Amiri butonuna tiklanir.............................passed
+-Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed
+-And sifre kutucuguna gecersiz bir "" girilir................................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2" time="5.273">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed
+-And Boyama ve Paketleme Amiri butonuna tiklanir.............................passed
+-Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed
+-And sifre kutucuguna gecersiz bir "Techpro" girilir.........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3" time="5.146">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed
+-And Boyama ve Paketleme Amiri butonuna tiklanir.............................passed
+-Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed
+-And sifre kutucuguna gecersiz bir "123456" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_16 &quot;Boyama ve Paketleme Amiri&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4" time="5.227">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed
+-And Boyama ve Paketleme Amiri butonuna tiklanir.............................passed
+-Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir..................passed
+-And sifre kutucuguna gecersiz bir "?.¿0p9" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_17 &quot;Kalite Kontrol&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" time="8.924">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed
+-And Kalite Kontrol butonuna tiklanir........................................passed
+-Then Kalite Kontrol ekraninda oldugu dogrulanir.............................passed
+-And Kalite Kontrol sifre kutucuguna gecerli bir "data" girilir..............passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then Kalite Kontrol sayfasina gectigi dogrulanir............................passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_18 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)" time="0.002">
+-</testcase>
+-<testcase classname="US1" name="TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1" time="5.676">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed
+-And Kalite Kontrol butonuna tiklanir........................................passed
+-Then Kalite Kontrol ekraninda oldugu dogrulanir.............................passed
+-And sifre kutucuguna gecersiz bir "" girilir................................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2" time="5.097">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed
+-And Kalite Kontrol butonuna tiklanir........................................passed
+-Then Kalite Kontrol ekraninda oldugu dogrulanir.............................passed
+-And sifre kutucuguna gecersiz bir "Techpro" girilir.........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3" time="5.209">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed
+-And Kalite Kontrol butonuna tiklanir........................................passed
+-Then Kalite Kontrol ekraninda oldugu dogrulanir.............................passed
+-And sifre kutucuguna gecersiz bir "123456" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_19 &quot;Kalite Kontrol&quot;  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4" time="5.017">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Kalite Kontrol butonunun gorunur oldugu dogrulanir.....................passed
+-And Kalite Kontrol butonuna tiklanir........................................passed
+-Then Kalite Kontrol ekraninda oldugu dogrulanir.............................passed
+-And sifre kutucuguna gecersiz bir "?.¿0p9" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_20  &quot;Uretim Planlama &quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test)" time="8.6">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed
+-And Uretim Planlama butonuna tiklanir.......................................passed
+-Then Uretim Planlama ekraninda oldugu dogrulanir............................passed
+-And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir.............passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then Uretim Planlama sayfasina gectigi dogrulanir...........................passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_21 &quot;Uretim Planlama&quot;  butonu Anasayfada gorulemezr veya tiklanamaz olmalidir. (Negatif Test)" time="0.001">
+-</testcase>
+-<testcase classname="US1" name="TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.1" time="5.438">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed
+-And Uretim Planlama butonuna tiklanir.......................................passed
+-Then Uretim Planlama ekraninda oldugu dogrulanir............................passed
+-And sifre kutucuguna gecersiz bir "" girilir................................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.2" time="5.233">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed
+-And Uretim Planlama butonuna tiklanir.......................................passed
+-Then Uretim Planlama ekraninda oldugu dogrulanir............................passed
+-And sifre kutucuguna gecersiz bir "Techpro" girilir.........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.3" time="5.01">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed
+-And Uretim Planlama butonuna tiklanir.......................................passed
+-Then Uretim Planlama ekraninda oldugu dogrulanir............................passed
+-And sifre kutucuguna gecersiz bir "123456" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_22 &quot;Uretim Planlama&quot; butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test) - Example #1.4" time="4.923">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed
+-And Uretim Planlama butonuna tiklanir.......................................passed
+-Then Uretim Planlama ekraninda oldugu dogrulanir............................passed
+-And sifre kutucuguna gecersiz bir "?.¿0p9" girilir..........................passed
+-And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+-And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And Giris yap butonuna tiklanir.............................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_23 &quot;Yonetim&quot; sayfasina gecer. (Positif Test)" time="6.399">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Yonetim butonunun gorunur oldugu dogrulanir............................passed
+-And Yonetim butonuna tiklanir...............................................passed
+-Then Yonetim Sifre ekraninda oldugu dogrulanir..............................passed
+-And yonetici sifre kutucuguna gecerli bir "data" girilir....................passed
+-And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed
+-And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And yonetim Giris yap butonuna tiklanir.....................................passed
+-Then yonetim sayfasina gectigi dogrulanir...................................passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" time="62.835">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Yonetim butonunun gorunur oldugu dogrulanir............................passed
+-And Yonetim butonuna tiklanir...............................................passed
+-Then Yonetim Sifre ekraninda oldugu dogrulanir..............................passed
+-And yonetici sifre kutucuguna gecerli bir "data" girilir....................passed
+-And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed
+-And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And yonetim Giris yap butonuna tiklanir.....................................passed
+-Then yonetim sayfasina gectigi dogrulanir...................................passed
+-And yonetici kullaniciya sifre atama butonuna tiklar........................passed
+-And yonetici return back butonuna tiklar....................................passed
+-And yonetici kullaniciya sifre atama ekranina gectigini dogrular............passed
+-And yonetici kullanici secer, yeni sifre atar, guncelle butonunu tiklar ve guncellendigini kontrol eder.passed
+-And Kullanici logout yapar..................................................passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.1" time="4.399">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Yonetim butonunun gorunur oldugu dogrulanir............................passed
+-And Yonetim butonuna tiklanir...............................................passed
+-Then Yonetim Sifre ekraninda oldugu dogrulanir..............................passed
+-And yonetici sifre kutucuguna gecersiz bir "" girilir.......................passed
+-And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed
+-And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And yonetim Giris yap butonuna tiklanir.....................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Şifre alanı boş bırakılamaz".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.2" time="4.002">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Yonetim butonunun gorunur oldugu dogrulanir............................passed
+-And Yonetim butonuna tiklanir...............................................passed
+-Then Yonetim Sifre ekraninda oldugu dogrulanir..............................passed
+-And yonetici sifre kutucuguna gecersiz bir "Techpro" girilir................passed
+-And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed
+-And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And yonetim Giris yap butonuna tiklanir.....................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.3" time="4.282">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Yonetim butonunun gorunur oldugu dogrulanir............................passed
+-And Yonetim butonuna tiklanir...............................................passed
+-Then Yonetim Sifre ekraninda oldugu dogrulanir..............................passed
+-And yonetici sifre kutucuguna gecersiz bir "123456" girilir.................passed
+-And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed
+-And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And yonetim Giris yap butonuna tiklanir.....................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
+-]]></system-out>
+-</testcase>
+-<testcase classname="US1" name="TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test) - Example #1.4" time="3.2">
+-<system-out><![CDATA[
+-When Anasayfaya gidilir.....................................................passed
+-Then Anasayfada oldugu dogrulanir...........................................passed
+-Then Yonetim butonunun gorunur oldugu dogrulanir............................passed
+-And Yonetim butonuna tiklanir...............................................passed
+-Then Yonetim Sifre ekraninda oldugu dogrulanir..............................passed
+-And yonetici sifre kutucuguna gecersiz bir "?.¿0p9" girilir.................passed
+-And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed
+-And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+-And yonetim Giris yap butonuna tiklanir.....................................passed
+-Then uygun hata mesajinin goruntulendigi dogrulanir "Girdiğiniz şifre eksik veya hatalı".passed
++Then Database baglanilir....................................................passed
++And "query" siparis sorgusu yapilir.........................................passed
++And "query" siparis guncellenir.............................................passed
++And "query" siparis silinebilir.............................................passed
+ ]]></system-out>
+ </testcase>
+ </testsuite>
