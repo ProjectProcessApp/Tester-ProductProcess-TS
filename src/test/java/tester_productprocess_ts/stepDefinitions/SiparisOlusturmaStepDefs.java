@@ -178,6 +178,7 @@ public class SiparisOlusturmaStepDefs {
         anamenu.logout.click();
     }
 
+
     @And("Database connection yapilir")
     public void databaseConnectionYapilir() throws SQLException {
         DbHelper.connection();

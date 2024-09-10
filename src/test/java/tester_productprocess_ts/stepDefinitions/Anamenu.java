@@ -18,6 +18,7 @@ import tester_productprocess_ts.utilities.uiUtilities.ConfigReader;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
 import tester_productprocess_ts.utilities.uiUtilities.ReusableMethods;
 
+import java.awt.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ import static org.junit.Assert.assertEquals;
 import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
 
 public class Anamenu {
+
 
     String header = "ANA SAYFA";
     tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();
@@ -80,7 +82,8 @@ public class Anamenu {
     public void girisYapButonunaTiklanir() throws InterruptedException {
         waitForVisibility(anamenu.girisButonu,10);
         waitFor(1000);
-        action.click(anamenu.girisButonu).perform();
+       // action.click(anamenu.girisButonu).perform();
+
 
     }
 

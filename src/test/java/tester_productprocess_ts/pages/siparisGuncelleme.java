@@ -56,4 +56,32 @@ public class siparisGuncelleme {
     @FindBy(css = "button[type='submit']")
     public WebElement girisButonu;
 
+    @FindBy(xpath ="//h1[contains(text(),'SİPARİŞİ GÜNCELLE')]")
+    public WebElement siparisiGuncelleBasligi;
+
+    @FindBy(xpath = "//div[contains(text(),'ÜRETİM PLANLAMA')]")
+    public WebElement uretimPlanlamaButonu;
+
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement uretimPlanmaPassword;
+
+    @FindBy(xpath = "//*[name()='path' and contains(@d,'M15.529 2.')]")
+    public WebElement guncellemeButonu;
+
+    @FindBy(xpath = "//input[@id='orderStatus']")
+    public WebElement islenmiyorBekliyorBox;
+
+    @FindBy(xpath = "//tbody/tr[1]/td[11]/button[1]")
+    public WebElement silButonu;
+
+    @FindBy(xpath = "//h2[@id='swal2-title']")
+    public WebElement siparisiSilmekIstediginizdenEminMisinizYazisi;
+
+    @FindBy(xpath = "//button[normalize-space()='Yes']")
+    public WebElement yesButonu;
+
+    @FindBy(xpath = "//h2[@id='swal2-title']")
+    public WebElement siparisBasariIleSilindYazisi;
+
+
 }
