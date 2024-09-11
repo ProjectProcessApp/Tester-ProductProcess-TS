@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
+import java.util.List;
+
 public class siparisOlusturma {
 
     public siparisOlusturma() {
@@ -52,4 +54,20 @@ public class siparisOlusturma {
 
     @FindBy(xpath = "//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
+
+    @FindBy(xpath = "//select[@id='orderType']")
+    public WebElement siparisTuruSelect;
+
+    @FindBy(xpath = "//tr/th")
+    public List<WebElement> columnName;
+
+    @FindBy(xpath = "//tbody[1]//tr[1]//td[10]")
+    public WebElement baslaButonu;
+
+    @FindBy(xpath = "//button[text()='Basla']")
+    public List<WebElement> baslaButonuList;
+
+    @FindBy(xpath = "//tbody[1]//tr")
+    public List<WebElement> satirSayisi;
+
 }
