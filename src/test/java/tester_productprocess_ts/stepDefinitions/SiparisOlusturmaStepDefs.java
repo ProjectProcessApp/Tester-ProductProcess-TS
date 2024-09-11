@@ -207,19 +207,20 @@ public class SiparisOlusturmaStepDefs {
     @And("Databasedeki veriler ve karsilastirilir")
     public void databasedekiVerilerVeKarsilastirilir() throws SQLException {
 
-        String query = "SELECT customer_name, delivery_date, gasan_no, order_date, order_number, " +
-                "order_quantity, order_type, ready_mil_count FROM t_order";
+        String query = "SELECT customer_name,gasan_no,order_number,order_date,delivery_date," +
+                "order_type,order_quantity,ready_mil_count FROM t_order";
+        List<List<Object>> dbResultList = DbHelper.getQueryResultList(query);
 
-        for (int i = 0; i < DbHelper.getQueryResultList(query).size(); i++) {
-            System.out.println(DbHelper.getQueryResultList(query).get(i));
-            String dbCustomerName = (String) DbHelper.getQueryResultList(query).get(i).get(0);
-            Object dbDeliveryDate = DbHelper.getQueryResultList(query).get(i).get(1);
-            String dbGasanNo = (String) DbHelper.getQueryResultList(query).get(i).get(2);
-            Object dbOrderDate = DbHelper.getQueryResultList(query).get(i).get(3);
-            String dbOrderNumber = (String) DbHelper.getQueryResultList(query).get(i).get(4);
-            int dbOrderQuantity = (int) DbHelper.getQueryResultList(query).get(i).get(5);
-            String dbOrderType = (String) DbHelper.getQueryResultList(query).get(i).get(6);
-            int dbReadyMilCount = (int) DbHelper.getQueryResultList(query).get(i).get(7);
+        for (int i = 0; i < dbResultList.size(); i++) {
+            System.out.println(dbResultList.get(i));
+            String dbCustomerName = (String) dbResultList.get(i).get(0);
+            Object dbDeliveryDate = dbResultList.get(i).get(4);
+            String dbGasanNo = (String) dbResultList.get(i).get(1);
+            Object dbOrderDate = dbResultList.get(i).get(3);
+            String dbOrderNumber = (String) dbResultList.get(i).get(2);
+            int dbOrderQuantity = (int) dbResultList.get(i).get(6);
+            String dbOrderType = (String) dbResultList.get(i).get(5);
+            int dbReadyMilCount = (int) dbResultList.get(i).get(7);
 
             // Satır verilerini saklamak için bir liste oluştur
             // Birinci satırı bul ve hücrelerini locate et
@@ -232,18 +233,21 @@ public class SiparisOlusturmaStepDefs {
             for (WebElement cell : firstRowCells) {
                 firstRowData.add(cell.getText());
             }
+                firstRowData.remove("İşlenmeyi Bekliyor");
+                firstRowData.remove("Basla");
+
             System.out.println(firstRowData);
             String webCustomerName = firstRowData.get(0);
             String webGasanNo = firstRowData.get(1);
             String webOrderNumber = firstRowData.get(2);
             Object webOrderDate = firstRowData.get(3);
-            String webDeliveryDate = firstRowData.get(4);
+            Object webDeliveryDate = firstRowData.get(4);
             String webOrderType = firstRowData.get(5);
             int webOrderQuantity = Integer.parseInt(firstRowData.get(6));
-            int webReadyMilCount = Integer.parseInt(firstRowData.get(8));
+            int webReadyMilCount = Integer.parseInt(firstRowData.get(7));
 
             // Validate the data
-            boolean isValid = dbCustomerName.contains(webCustomerName) &&
+            boolean isValid = dbCustomerName.equals(webCustomerName) &&
                     dbDeliveryDate.equals(webDeliveryDate) &&
                     dbGasanNo.contains(webGasanNo) &&
                     dbOrderDate.equals(webOrderDate) &&
@@ -253,6 +257,7 @@ public class SiparisOlusturmaStepDefs {
                     dbReadyMilCount == (webReadyMilCount);
 
             if (isValid) {
+                waitFor(1000);
                 System.out.println(i + 1 + ". satir Veritabani ile eslesiyor");
             } else {
                 System.out.println(i + 1 + ".satir Veritabani ile eslesmiyor");
