@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="11.09.2024 guncelleme01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/Anamenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisOlusturmaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/SiparisOlusturmaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/utilities/uiUtilities/DbHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/database_features/jdbctesting.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/database_features/jdbctesting.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +38,12 @@
     &quot;assignee&quot;: &quot;Beytcakir&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ProjectProcessApp/Tester-ProductProcess-TS",
-    "accountId": "3709ed44-aac9-4f6d-9433-d5a16e890891"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ProjectProcessApp/Tester-ProductProcess-TS&quot;,
+    &quot;accountId&quot;: &quot;3709ed44-aac9-4f6d-9433-d5a16e890891&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <hideBySeverity>
       <option value="300" />
@@ -69,6 +70,7 @@
     "Cucumber Java.Scenario: Amirlerin Ortak ekrani.executor": "Run",
     "Cucumber Java.Scenario: Databaseden veri alma.executor": "Run",
     "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: Verilen siparisi guncelleme.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -96,6 +98,18 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tester_productprocess_ts.utilities.uiUtilities" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Gradle Tasks" flag="true" />
+      <visibility group="Maven Goals" flag="true" />
+      <visibility group="Recent projects" flag="true" />
+      <visibility group="Run configurations" flag="true" />
+      <visibility group="com.intellij.ide.actions.runAnything.RunAnythingRunConfigurationProvider" flag="false" />
+      <visibility group="com.intellij.ide.actions.runAnything.activity.RunAnythingRecentProjectProvider" flag="false" />
+      <visibility group="org.jetbrains.idea.maven.execution.MavenRunAnythingProvider" flag="false" />
+      <visibility group="org.jetbrains.plugins.gradle.execution.GradleRunAnythingProvider" flag="false" />
+    </myKeys>
   </component>
   <component name="RunManager" selected="Cucumber Java.Scenario: Amirlerin Ortak ekrani">
     <configuration name="Feature: US02_siparisOlusturma" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
@@ -229,8 +243,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Scenario: Amirlerin Ortak ekrani" />
-        <item itemvalue="Cucumber Java.Feature: jdbctesting" />
         <item itemvalue="Cucumber Java.Scenario: Databaseden veri alma" />
+        <item itemvalue="Cucumber Java.Feature: jdbctesting" />
         <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test)" />
         <item itemvalue="Cucumber Java.Feature: US02_siparisOlusturma" />
       </list>
@@ -400,11 +414,29 @@
       <option name="project" value="LOCAL" />
       <updated>1725963544112</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="11.09.2024 guncelleme01">
+      <option name="closed" value="true" />
+      <created>1726037196513</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726037196513</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -427,7 +459,9 @@
     <MESSAGE value="09.09.2024//" />
     <MESSAGE value="enyeni-09.09.2024" />
     <MESSAGE value="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="siparisolusturma ve amirlerin ortak ekrani" />
+    <MESSAGE value="11.09.2024 guncelleme01" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.09.2024 guncelleme01" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

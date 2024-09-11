@@ -105,5 +105,14 @@ Feature: US2
       And Databasedeki veriler ve karsilastirilir
       Then Basla butonu varligi dogrulanir
       And Kullanici logout yapar
-
+      Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
+      And Boyama ve Paketleme Amiri butonuna tiklanir
+      Then Boyama ve Paketleme Amiri ekraninda oldugu dogrulanir
+      And Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir "data" girilir
+      And Giris yap butonuna tiklanir
+      Then Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gectigi dogrulanir
+      And Database connection yapilir
+      And Databasedeki veriler ve karsilastirilir
+      Then Basla butonu varligi dogrulanir
+      And Kullanici logout yapar
 

@@ -5,13 +5,15 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import tester_productprocess_ts.pages.Anamenu;
+import tester_productprocess_ts.pages.siparisOlusturma;
 import tester_productprocess_ts.utilities.uiUtilities.DbHelper;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.Duration;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -20,34 +22,37 @@ import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
 
 public class SiparisOlusturmaStepDefs {
 
-    static tester_productprocess_ts.pages.siparisOlusturma siparis = new tester_productprocess_ts.pages.siparisOlusturma();
+    static siparisOlusturma siparis = new siparisOlusturma();
 
-    tester_productprocess_ts.pages.Anamenu anamenu = new tester_productprocess_ts.pages.Anamenu();
+    Anamenu anamenu = new Anamenu();
 
-    Actions action=new Actions(Driver.getDriver());
+    Actions action = new Actions(Driver.getDriver());
 
     @Then("siparis Olustur butonunun ekranda gorundugu kontrol edilir")
     public void siparis_olustur_butonunun_ekranda_gorundugu_kontrol_edilir() {
         Assert.assertTrue(siparis.siparisOlusturButonu.isDisplayed());
     }
+
     @Then("Onceden siparis listesi olup olmadigi dogrulanir")
     public void onceden_siparis_listesi_olup_olmadigi_dogrulanir() {
-             waitFor(500);
-             String expected ="Sipariş Listesi";
-            String actual=siparis.siparisListesi.getText();
-            Assert.assertEquals(expected,actual);
+        waitFor(500);
+        String expected = "Sipariş Listesi";
+        String actual = siparis.siparisListesi.getText();
+        Assert.assertEquals(expected, actual);
     }
+
     @Then("siparis olustur butonuna tiklanir")
     public void siparis_olustur_butonuna_tiklanir() {
-             waitFor(1500);
-            siparis.siparisOlusturButonu.click();
+        waitFor(1500);
+        siparis.siparisOlusturButonu.click();
     }
+
     @Then("yeni siparis ekraninin geldigi dogrulanir")
     public void yeni_siparis_ekraninin_geldigi_dogrulanir() {
-            waitFor(1500);
-            String expected ="Yeni Siparis";
-            String actual=siparis.yeniSiparis.getText();
-            Assert.assertEquals(expected,actual);
+        waitFor(1500);
+        String expected = "Yeni Siparis";
+        String actual = siparis.yeniSiparis.getText();
+        Assert.assertEquals(expected, actual);
     }
 
     @Then("{string} musteri adina gecerli bir data girilir")
@@ -55,17 +60,20 @@ public class SiparisOlusturmaStepDefs {
         waitFor(1500);
         siparis.musteriAdiBox.sendKeys(string);
     }
+
     @Then("{string} Gasan Nosuna gecerli bir data girilir")
     public void gasan_nosuna_gecerli_bir_data_girilir(String string) {
         waitFor(1500);
         siparis.gasanNoBox.clear();
         siparis.gasanNoBox.sendKeys(string);
     }
+
     @Then("{string} Siparis Noya gecerli bir data girilir")
     public void siparis_noya_gecerli_bir_data_girilir(String string) {
         waitFor(1500);
         siparis.siparisNoBox.sendKeys(string);
     }
+
     @And("Teslim Tarihine gecerli bir data girilir")
     public void teslimTarihineGecerliBirDataGirilir() {
         waitFor(1000);
@@ -79,30 +87,34 @@ public class SiparisOlusturmaStepDefs {
     @Then("{string} Siparis turune gecerli bir data girilir")
     public void siparis_turune_gecerli_bir_data_girilir(String string) {
         waitFor(1500);
-        ddmValue(siparis.siparisTuruSelect,string);
+        ddmValue(siparis.siparisTuruSelect, string);
     }
+
     @Then("{string} Siparis miktarina gecerli bir data girilir")
     public void siparis_miktarina_gecerli_bir_data_girilir(String string) {
         waitFor(1500);
         siparis.siparisMiktariBox.sendKeys(string);
     }
+
     @Then("{string} Hazir mil miktarina gecerli bir data girilir")
     public void hazir_mil_miktarina_gecerli_bir_data_girilir(String string) {
         waitFor(1500);
         siparis.hazirMilMiktariBox.clear();
         siparis.hazirMilMiktariBox.sendKeys(string);
     }
+
     @Then("Siparis durumu kutusunda {string} yazmali")
     public void siparis_durumu_kutusunda_yazmali(String expected) {
         waitFor(1500);
-        String actual=siparis.siparisDurumuBox.getAttribute("value");
-        Assert.assertEquals(expected,actual);
+        String actual = siparis.siparisDurumuBox.getAttribute("value");
+        Assert.assertEquals(expected, actual);
     }
+
     @Then("{string} yazisi dogrulanir ve ok tusuna basilir")
     public void yazisi_dogrulanir_ve_ok_tusuna_basilir(String expected) {
         waitFor(1500);
-        String actual=siparis.siparisBasariylaOlusturulduYazisi.getText();
-        Assert.assertEquals(expected,actual);
+        String actual = siparis.siparisBasariylaOlusturulduYazisi.getText();
+        Assert.assertEquals(expected, actual);
         click(siparis.oKbutonu);
     }
 
@@ -112,18 +124,21 @@ public class SiparisOlusturmaStepDefs {
         siparis.musteriAdiBox.clear();
         siparis.musteriAdiBox.sendKeys(string);
     }
+
     @Then("{string} Gasan Nosuna gecersiz bir data girilir")
     public void gasan_nosuna_gecersiz_bir_data_girilir(String string) {
         waitFor(1000);
         siparis.gasanNoBox.clear();
         siparis.gasanNoBox.sendKeys(string);
     }
+
     @Then("{string} Siparis Noya gecersiz bir data girilir")
     public void siparis_noya_gecersiz_bir_data_girilir(String string) {
         waitFor(1000);
         siparis.siparisNoBox.clear();
         siparis.siparisNoBox.sendKeys(string);
     }
+
     @And("Teslim Tarihine gecersiz bir data girilir")
     public void teslimTarihineGecersizBirDataGirilir() {
         waitFor(1000);
@@ -133,17 +148,20 @@ public class SiparisOlusturmaStepDefs {
         waitFor(1000);
         siparis.teslimTarihiBox.sendKeys("2026");
     }
+
     @Then("{string} Siparis turune gecersiz bir data girilir")
     public void siparis_turune_gecersiz_bir_data_girilir(String string) {
         waitFor(1000);
-        ddmValue(siparis.siparisTuruSelect,string);
+        ddmValue(siparis.siparisTuruSelect, string);
     }
+
     @Then("{string} Siparis miktarina gecersiz bir data girilir")
     public void siparis_miktarina_gecersiz_bir_data_girilir(String string) {
         waitFor(1000);
         siparis.siparisMiktariBox.clear();
         siparis.siparisMiktariBox.sendKeys(string);
     }
+
     @Then("{string} Hazir mil miktarina gecersiz bir data girilir")
     public void hazir_mil_miktarina_gecersiz_bir_data_girilir(String string) {
         siparis.hazirMilMiktariBox.sendKeys(Keys.TAB);
@@ -151,6 +169,7 @@ public class SiparisOlusturmaStepDefs {
         siparis.hazirMilMiktariBox.clear();
         siparis.hazirMilMiktariBox.sendKeys(string);
     }
+
     @Then("Giris butonunun aktif olmadigi kontrol edilir")
     public void giris_butonunun_aktif_olmadigi_kontrol_edilir() {
         waitFor(1000);
@@ -172,39 +191,84 @@ public class SiparisOlusturmaStepDefs {
             }
         }
     }
+
     private void geriGitVeCikisYap() {
         Driver.getDriver().navigate().back();
         waitFor(3000);
         anamenu.logout.click();
     }
 
-
     @And("Database connection yapilir")
     public void databaseConnectionYapilir() throws SQLException {
-        DbHelper.connection();
+        Statement statement = DbHelper.connection();
+        System.out.println("Database e baglanildi");
     }
 
     @And("Databasedeki veriler ve karsilastirilir")
-    public void databasedekiVerilerVeKarsilastirilir() {
-        String query ="select * from t_order";
+    public void databasedekiVerilerVeKarsilastirilir() throws SQLException {
 
-        for (int i=0;i>=siparis.baslaButonuList.size();i++ ){
-            for (int j=0;i>7;i++) {
-                Assert.assertTrue(Driver.getDriver().findElement(By.xpath("(//tr[@class='eachRow']["+i+"])"))
-                        .getText().contains("DbHelper.getQueryResultList(query).get(i).get(j)"));
-                System.out.println("calisti");
+        String query = "SELECT customer_name, delivery_date, gasan_no, order_date, order_number, " +
+                "order_quantity, order_type, ready_mil_count FROM t_order";
+
+        for (int i = 0; i < DbHelper.getQueryResultList(query).size(); i++) {
+            System.out.println(DbHelper.getQueryResultList(query).get(i));
+            String dbCustomerName = (String) DbHelper.getQueryResultList(query).get(i).get(0);
+            Object dbDeliveryDate = DbHelper.getQueryResultList(query).get(i).get(1);
+            String dbGasanNo = (String) DbHelper.getQueryResultList(query).get(i).get(2);
+            Object dbOrderDate = DbHelper.getQueryResultList(query).get(i).get(3);
+            String dbOrderNumber = (String) DbHelper.getQueryResultList(query).get(i).get(4);
+            int dbOrderQuantity = (int) DbHelper.getQueryResultList(query).get(i).get(5);
+            String dbOrderType = (String) DbHelper.getQueryResultList(query).get(i).get(6);
+            int dbReadyMilCount = (int) DbHelper.getQueryResultList(query).get(i).get(7);
+
+            // Satır verilerini saklamak için bir liste oluştur
+            // Birinci satırı bul ve hücrelerini locate et
+            List<WebElement> firstRowCells = Driver.getDriver().findElements(By.xpath("//tr[@class='eachRow'][" + (i + 1) + "]//td"));
+
+            // Birinci satırdaki verileri saklamak için liste oluştur
+            List<String> firstRowData = new ArrayList<>();
+
+            // Her hücredeki metni al ve listeye ekle
+            for (WebElement cell : firstRowCells) {
+                firstRowData.add(cell.getText());
+            }
+            System.out.println(firstRowData);
+            String webCustomerName = firstRowData.get(0);
+            String webGasanNo = firstRowData.get(1);
+            String webOrderNumber = firstRowData.get(2);
+            Object webOrderDate = firstRowData.get(3);
+            String webDeliveryDate = firstRowData.get(4);
+            String webOrderType = firstRowData.get(5);
+            int webOrderQuantity = Integer.parseInt(firstRowData.get(6));
+            int webReadyMilCount = Integer.parseInt(firstRowData.get(8));
+
+            // Validate the data
+            boolean isValid = dbCustomerName.contains(webCustomerName) &&
+                    dbDeliveryDate.equals(webDeliveryDate) &&
+                    dbGasanNo.contains(webGasanNo) &&
+                    dbOrderDate.equals(webOrderDate) &&
+                    dbOrderNumber.contains(webOrderNumber) &&
+                    dbOrderQuantity == (webOrderQuantity) &&
+                    dbOrderType.contains(webOrderType) &&
+                    dbReadyMilCount == (webReadyMilCount);
+
+            if (isValid) {
+                System.out.println(i + 1 + ". satir Veritabani ile eslesiyor");
+            } else {
+                System.out.println(i + 1 + ".satir Veritabani ile eslesmiyor");
             }
         }
+        System.out.println("");
     }
 
     @Then("Basla butonu varligi dogrulanir")
     public void baslaButonuVarligiDogrulanir() {
         String baslaButonu = "Basla";
-       for (int i=0; i> siparis.baslaButonuList.size();i++) {
-           Assert.assertEquals(baslaButonu, siparis.baslaButonuList.get(i).getText());
-       }
-       DbHelper.closeConnection();
+        for (int i = 0; i < siparis.baslaButonuList.size(); i++) {
+            Assert.assertEquals(baslaButonu, siparis.baslaButonuList.get(i).getText());
+            System.out.println((i + 1) + ". Basla butonu gorunuyor");
+        }
+        System.out.println("");
+        DbHelper.closeConnection();
     }
-
-
 }
