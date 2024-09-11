@@ -82,7 +82,7 @@ public class Anamenu {
     public void girisYapButonunaTiklanir() throws InterruptedException {
         waitForVisibility(anamenu.girisButonu,10);
         waitFor(1000);
-       // action.click(anamenu.girisButonu).perform();
+        action.click(anamenu.girisButonu).perform();
 
 
     }

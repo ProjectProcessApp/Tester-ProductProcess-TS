@@ -18,9 +18,10 @@ public class DbHelper {
         System.out.println("Error: "+ exception.getMessage());
         System.out.println("Error Code : "+exception.getErrorCode());
     }
-    public static void connection() throws SQLException {
+    public static Statement connection() throws SQLException {
         connection= DriverManager.getConnection(dbUrl,userName,password);
         statement= connection.createStatement();
+        return statement;
     }
 
     public static void get(String query) throws SQLException {

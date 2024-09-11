@@ -67,7 +67,7 @@ public class siparisOlusturma {
     @FindBy(xpath = "//button[text()='Basla']")
     public List<WebElement> baslaButonuList;
 
-    @FindBy(xpath = "//tbody[1]//tr")
-    public List<WebElement> satirSayisi;
+    @FindBy(xpath = "//tr[@class='eachRow'][1]//td")
+    public List<WebElement> tabloHucreleri;
 
 }
