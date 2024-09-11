@@ -47,7 +47,8 @@ public class SiparisiGuncellemeStep {
 
     @And("Musteri Adi Kutucugundaki data silinir")
     public void musteriAdiKutucugundakiDataSilinir() {
-        clickWithJS(siparis.musteriAdiBox);
+      //  clickWithJS(siparis.musteriAdiBox);
+        waitFor(2000);
         siparis.musteriAdiBox.clear();
     }
 

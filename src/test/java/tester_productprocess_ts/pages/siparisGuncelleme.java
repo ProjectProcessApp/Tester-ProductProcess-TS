@@ -65,7 +65,7 @@ public class siparisGuncelleme {
     @FindBy(xpath = "//input[@id='password']")
     public WebElement uretimPlanmaPassword;
 
-    @FindBy(xpath = "//*[name()='path' and contains(@d,'M15.529 2.')]")
+    @FindBy(xpath = "//a[@class='btn-link text-info btn btn-warning' and @href='/dashboard/uretim/86']")
     public WebElement guncellemeButonu;
 
     @FindBy(xpath = "//input[@id='orderStatus']")
