@@ -4,6 +4,6 @@ Feature: Database testing
 
     Then Database baglanilir
     #And yeni siparis kaydi eklenir
-    #And butun kayitlar getirilir
+    And butun kayitlar getirilir
    # And "query" siparis guncellenir
-    And "query" siparis silinebilir
+    #And "query" siparis silinebilir
