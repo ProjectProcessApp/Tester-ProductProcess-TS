@@ -82,7 +82,7 @@ Feature: US1
 
   Scenario: TC_9 Manuel Test
 
-  Scenario Outline: TC_10" LIFT MONTAJ  AMIRI" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test)
+  Scenario Outline: TC_10" LIFT MONTAJ AMIRI" sayfasina gecersiz ve bos sifre giris denemesi . (Negatif Test)
 
     Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
     And Lift montaj amiri butonuna tiklanir
