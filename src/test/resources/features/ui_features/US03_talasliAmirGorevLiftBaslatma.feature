@@ -89,7 +89,7 @@ Feature: US03
       And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
       Then girilen adedin sag tarafta biten bolumune islendigi dogrulanir
-      Then sag taraftaki kalan bolumundeki rakam dogrulanir
+      Then Kalite kontrol sag taraftaki kalan bolumundeki rakam dogrulanir
 
 
 

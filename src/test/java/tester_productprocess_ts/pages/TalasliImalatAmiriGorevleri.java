@@ -30,17 +30,23 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath="//div/table/tbody/tr/td[text()='LIFT']")
     public WebElement liftSatirButton;
 
+    @FindBy (xpath="//tr[td[text()='LIFT']]//button[text()= 'Tekrar Başlat' or 'Başla']")
+    public List<WebElement> liftBaslaButton;
+
     @FindBy (xpath="//div/table/tbody/tr/td[text()='BLOKLIFT']")
     public WebElement blokliftSatirButton;
 
-    @FindBy (xpath="//tr[td[text()='PASLANMAZ']]//button[contains(@class, 'btn-primary')]")
+    @FindBy (xpath="//tr[td[text()='BLOKLIFT']]//button[text()= 'Tekrar Başlat' or 'Başla']")
+    public List<WebElement> blokliftBaslaButton;
+
+    @FindBy (xpath="//tr[td[text()='PASLANMAZ']]//button[text()= 'Tekrar Başlat' or 'Başla']")
     public WebElement paslanmazBaslaButton;
 
-    @FindBy (xpath="//tr[td[text()='BLOKLIFT']]//button[contains(@class, 'btn-primary')]")
-    public WebElement blokliftBaslaButton;
+    @FindBy (xpath="//div/table/tbody/tr/td[text()='DAMPER']")
+    public WebElement damperSatirButton;
 
-    @FindBy (xpath="//tr[td[text()='LIFT']]//button[(text()= 'Tekrar Başlat' or 'Başla')]")
-    public List<WebElement> liftBaslaButton;
+    @FindBy (xpath="//tr[td[text()='DAMPER']]//button[text()= 'Tekrar Başlat' or 'Başla']")
+    public List<WebElement> damperBaslaButton;
 
     @FindBy (xpath="//div/button[@data-operation-type='POLISAJ']")
     public WebElement polisajButton;
@@ -90,7 +96,7 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath="//tr[td[text()='BORU_KESME_HAVSA']]/td[3]")
     public WebElement boruKesmeHavsKalanText;
 
-    @FindBy (xpath="//div[@class='popup-inner']/h2")
+    @FindBy (xpath="//h2[text()='Üretilen Adedi Giriniz']")
     public WebElement uretilenAdetText;
 
     @FindBy (xpath="//input[@type='number']")

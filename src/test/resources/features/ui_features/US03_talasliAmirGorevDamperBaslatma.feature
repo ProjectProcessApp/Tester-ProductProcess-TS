@@ -58,6 +58,13 @@ Feature: US03
     And Ok butonuna tiklanir
     Then Damper Siparis turu girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir
+    Then Boru Kese Havsa Butonunun sari renk oldugu dogrulanir
+    And sag taraftaki Boru Kesme Havsa butonuna tiklanir
+    Then uretilen adedi giriniz yazisi dogrulanir
+    And uretilecek damper adet girilir
+    And onayla butonuna tiklanir
+    And Ok butonuna tiklanir
+    Then Boru Kese Havsa Butonunun yesil renk oldugu dogrulanir
     And Kullanici logout yapar
     And Polisaj amiri butonuna tiklanir
     Then Polisaj amiri ekraninda oldugu dogrulanir
@@ -71,8 +78,7 @@ Feature: US03
     And onayla butonuna tiklanir
     And Ok butonuna tiklanir
     Then Polisaj butonunun yesil renk oldugu dogrulanir
-    Then Damper Siparis turu girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir
-    Then Damper Siparis turu sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir
+    Then girilen adedin Polisaj biten bolumune islendigi dogrulanir
     Then Kullanici logout yapar
     And Kalite Kontrol butonuna tiklanir
     And Kalite Kontrol sifre kutucuguna gecerli bir "data" girilir
