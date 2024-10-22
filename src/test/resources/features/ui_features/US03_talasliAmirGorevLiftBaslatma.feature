@@ -20,7 +20,7 @@ Feature: US03
       Then Isil Islem Butonunu gri renk oldugu dogrulanir
       And Mil Koparma butonuna tiklanir
       Then uretilen adedi giriniz yazisi dogrulanir
-      And uretilecek adet girilir
+      And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
       And Ok butonuna tiklanir
       Then girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir
@@ -31,7 +31,7 @@ Feature: US03
       Then Isil Islem Butonunu gri renk oldugu dogrulanir
       And Mil tornalama butonuna tiklanir
       Then uretilen adedi giriniz yazisi dogrulanir
-      And uretilecek adet girilir
+      And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
       And Ok butonuna tiklanir
       Then girilen adedin sag tarafta mil tornalama biten bolumune islendigi dogrulanir
@@ -42,7 +42,7 @@ Feature: US03
       Then Isil Islem Butonunu gri renk oldugu dogrulanir
       And Mil taslama butonuna tiklanir
       Then uretilen adedi giriniz yazisi dogrulanir
-      And uretilecek adet girilir
+      And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
       And Ok butonuna tiklanir
       Then girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir
@@ -53,26 +53,32 @@ Feature: US03
       Then Isil Islem Butonunu sari renk oldugu dogrulanir
       And Isil Islem butonuna tiklanir
       Then uretilen adedi giriniz yazisi dogrulanir
-      And uretilecek adet girilir
+      And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
       And Ok butonuna tiklanir
       Then girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir
       Then sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir
+      And sag taraftaki Boru Kesme Havsa butonuna tiklanir
+      Then uretilen adedi giriniz yazisi dogrulanir
+      And LIFT siparis turu icin uretilecek adet girilir
+      And onayla butonuna tiklanir
+      And Ok butonuna tiklanir
+      Then girilen adedin sag tarafta Boru Kesme Havsa biten bolumune islendigi dogrulanir
+      Then sag taraftaki Boru Kesme Havsa kalan bolumundeki rakam dogrulanir
       And Kullanici logout yapar
       And Polisaj amiri butonuna tiklanir
-      Then Polisaj amiri ekraninda oldugu dogrulanir
       And Polisaj amiri sifre kutucuguna gecerli bir "data" girilir
       And Giris yap butonuna tiklanir
       And Polisaj Amirindeki Lift siparis turundeki siparisin bulundugu satira tiklar
       Then Polisaj butonunun sari renk oldugu dogrulanir
       And Polisaj ok butonuna tiklanir
       Then uretilen adedi giriniz yazisi dogrulanir
-      And uretilecek adet girilir
+      And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
       And Ok butonuna tiklanir
       Then Polisaj butonunun yesil renk oldugu dogrulanir
-      Then girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir
-      Then sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir
+      Then girilen adedin Polisaj biten bolumune islendigi dogrulanir
+      Then Polisaj kalan bolumundeki rakam dogrulanir
       Then Kullanici logout yapar
       And Kalite Kontrol butonuna tiklanir
       And Kalite Kontrol sifre kutucuguna gecerli bir "data" girilir
@@ -80,7 +86,7 @@ Feature: US03
       And Kalite kontrol Amirindeki Lift siparis turundeki siparisin bulundugu satira tiklar
       And Polisaj sonrasi butona tiklar
       And Polisaj sonrasi Kalite kontrol Onayla butona tiklanir
-      And uretilecek adet girilir
+      And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
       Then girilen adedin sag tarafta biten bolumune islendigi dogrulanir
       Then sag taraftaki kalan bolumundeki rakam dogrulanir

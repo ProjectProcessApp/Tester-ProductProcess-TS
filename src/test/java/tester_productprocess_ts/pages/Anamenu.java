@@ -15,7 +15,7 @@ public class Anamenu {
     @FindBy(xpath = "//div[@class='menuDiv']")
     public List<WebElement> menulinkleri;
 
-    @FindBy(xpath = "//h1[@class='page-header']")
+    @FindBy(xpath = "//h1[@class='page-header_page_header__pY9yF']")
     public WebElement AnasayfaHeader;
 
     @FindBy(xpath = "//h1[@class='page-header']")
@@ -51,7 +51,7 @@ public class Anamenu {
     @FindBy(xpath = "//div[text()='YÖNETİM']")
     public WebElement yonetim;
 
-    @FindBy(xpath = "//h1[@class='page-header']")
+    @FindBy(xpath = "//label[@for='user']")
     public WebElement amirBaslikYazisi;
 
     @FindBy(xpath = "//label[text()='POLİSAJ AMİRİ']")
@@ -66,13 +66,18 @@ public class Anamenu {
     @FindBy(css = "button[type='submit']")
     public WebElement girisButonu;
 
+    @FindBy(css = "button[type='submit']")
+    public WebElement kaydetButonu;
+
     @FindBy(xpath = "//h1[@class='page-header']")
     public WebElement amirHeader;
 
-    @FindBy(xpath = "//div[@class='page-header-container']//button[text()='Çıkış']")
+    @FindBy(xpath = "//div/button[text()='Çıkış']")
     public WebElement logout;
+
     @FindBy(xpath = "//body/div[3]")
     public WebElement girisSayfasiHerhangiBirYer;
+
     @FindBy(xpath = "//div[text()='Giriş']")
     public WebElement yonetimGirisButonu;
 
@@ -87,6 +92,7 @@ public class Anamenu {
 
     @FindBy(css = "div.page-header-container > div > button.btn.btn-primary")
     public WebElement returnback;
+
     @FindBy(id = "userSelect")
     public WebElement userSelectElement;
 
@@ -95,13 +101,16 @@ public class Anamenu {
 
     @FindBy(css = "button[type='submit']")
     public WebElement guncelle;
+
     @FindBy(xpath = "(//span[@class='input-group-text'])[1]")
     public WebElement sifreAtamaEkraniGoz;
 
     @FindBy(xpath = "(//span[@class='input-group-text'])[2]")
     public WebElement sifreAtamaEkraniTik;
+
     @FindBy(xpath = "//h2[@id='swal2-title' and text()='Şifre Güncellendi']")
     public WebElement sifreGuncellendiText;
+
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled' and text()='OK']")
     public WebElement guncellemaPopupOk;
 

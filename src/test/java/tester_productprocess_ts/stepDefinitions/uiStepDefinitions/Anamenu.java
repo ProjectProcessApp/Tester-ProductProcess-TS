@@ -42,6 +42,7 @@ public class Anamenu {
 
     @Then("Anasayfada oldugu dogrulanir")
     public void anasayfada_oldugu_dogrulanir() {
+        waitForVisibility(anamenu.AnasayfaHeader,10);
         String anasayfaHeaderText = anamenu.AnasayfaHeader.getText();
         String Header = "ANA SAYFA";
         assertEquals(header, anasayfaHeaderText);
@@ -71,7 +72,7 @@ public class Anamenu {
 
     @Then("Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir")
     public void talasliImalatAmiriSifreEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "ANA SAYFA";
+        String sifreTextActual = "TALAŞLI İMALAT AMİRİ";
        waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextActual,sifreTextresult );
@@ -80,11 +81,8 @@ public class Anamenu {
 
     @And("Giris yap butonuna tiklanir")
     public void girisYapButonunaTiklanir() throws InterruptedException {
-        waitForVisibility(anamenu.girisButonu,10);
+        clickWithJS(anamenu.girisButonu);
         waitFor(1000);
-        action.click(anamenu.girisButonu).perform();
-
-
     }
 
     @And("Talasli imalat amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -138,8 +136,7 @@ public class Anamenu {
 
     @And("Polisaj amiri butonuna tiklanir")
     public void polisajAmiriButonunaTiklanir() throws InterruptedException {
-        action.click(anamenu.polisajAmiri).perform();
-
+        clickWithJS(anamenu.polisajAmiri);
     }
 
     @Then("Polisaj amiri ekraninda oldugu dogrulanir")
@@ -149,11 +146,11 @@ public class Anamenu {
         waitForVisibility(anamenu.polisajAmiriSifreEkranText,10);
         String sifreTextresult = anamenu.polisajAmiriSifreEkranText.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-
     }
 
     @And("Polisaj amiri sifre kutucuguna gecerli bir {string} girilir")
     public void polisajAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
+       waitFor(2000);
         anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("PolisajAmiri"));
     }
 
@@ -312,18 +309,18 @@ public class Anamenu {
 
     @Then("Uretim Planlama butonunun gorunur oldugu dogrulanir")
     public void uretimPlanlamaButonununGorunurOlduguDogrulanir() throws InterruptedException {
-        action.scrollToElement(anamenu.menulinkleri.get(6)).perform();
+        action.scrollToElement(anamenu.uretimPlanlama).perform();
         anamenu.uretimPlanlama.isDisplayed();
     }
 
     @And("Uretim Planlama butonuna tiklanir")
     public void uretimPlanlamaButonunaTiklanir() throws InterruptedException {
-        clickWithJS(anamenu.menulinkleri.get(6));
+        clickWithJS(anamenu.uretimPlanlama);
     }
 
     @Then("Uretim Planlama ekraninda oldugu dogrulanir")
     public void uretimPlanlamaEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "ANA SAYFA";
+        String sifreTextActual = "ÜRETİM PLANLAMA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -399,9 +396,9 @@ public class Anamenu {
 
     @And("Kullanici logout yapar")
     public void kullaniciLogoutYapar() throws InterruptedException {
-        waitFor(2500);
-        action.click(anamenu.logout).perform();
-        waitFor(3000);
+         waitFor(2000);
+        clickWithJS(anamenu.logout);
+        waitForVisibility(anamenu.AnasayfaHeader,10);
     }
 
     @And("yonetici kullaniciya sifre atama butonuna tiklar")

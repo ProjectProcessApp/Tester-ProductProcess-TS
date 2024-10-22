@@ -28,6 +28,8 @@ public class SiparisOlusturmaStepDefs {
 
     Actions action = new Actions(Driver.getDriver());
 
+    static String siparisTuru="";
+
     @Then("siparis Olustur butonunun ekranda gorundugu kontrol edilir")
     public void siparis_olustur_butonunun_ekranda_gorundugu_kontrol_edilir() {
         Assert.assertTrue(siparis.siparisOlusturButonu.isDisplayed());
@@ -35,7 +37,7 @@ public class SiparisOlusturmaStepDefs {
 
     @Then("Onceden siparis listesi olup olmadigi dogrulanir")
     public void onceden_siparis_listesi_olup_olmadigi_dogrulanir() {
-        waitFor(500);
+        waitForVisibility(siparis.siparisListesi,10);
         String expected = "Sipariş Listesi";
         String actual = siparis.siparisListesi.getText();
         Assert.assertEquals(expected, actual);
@@ -43,13 +45,13 @@ public class SiparisOlusturmaStepDefs {
 
     @Then("siparis olustur butonuna tiklanir")
     public void siparis_olustur_butonuna_tiklanir() {
-        waitFor(1500);
+       waitForVisibility(siparis.siparisOlusturButonu,10);
         siparis.siparisOlusturButonu.click();
     }
 
     @Then("yeni siparis ekraninin geldigi dogrulanir")
     public void yeni_siparis_ekraninin_geldigi_dogrulanir() {
-        waitFor(1500);
+        waitForVisibility(siparis.yeniSiparis,10);
         String expected = "Yeni Siparis";
         String actual = siparis.yeniSiparis.getText();
         Assert.assertEquals(expected, actual);
@@ -57,62 +59,73 @@ public class SiparisOlusturmaStepDefs {
 
     @Then("{string} musteri adina gecerli bir data girilir")
     public void musteri_adina_gecerli_bir_data_girilir(String string) {
-        waitFor(1500);
+        waitForVisibility(siparis.musteriAdiBox,10);
         siparis.musteriAdiBox.sendKeys(string);
     }
 
     @Then("{string} Gasan Nosuna gecerli bir data girilir")
     public void gasan_nosuna_gecerli_bir_data_girilir(String string) {
-        waitFor(1500);
+        waitForVisibility(siparis.gasanNoBox,10);
         siparis.gasanNoBox.clear();
         siparis.gasanNoBox.sendKeys(string);
     }
 
     @Then("{string} Siparis Noya gecerli bir data girilir")
     public void siparis_noya_gecerli_bir_data_girilir(String string) {
-        waitFor(1500);
+        waitForVisibility(siparis.siparisNoBox,10);
         siparis.siparisNoBox.sendKeys(string);
     }
 
     @And("Teslim Tarihine gecerli bir data girilir")
     public void teslimTarihineGecerliBirDataGirilir() {
-        waitFor(1000);
+        waitForVisibility(siparis.teslimTarihiBox,10);
         siparis.teslimTarihiBox.sendKeys("10");
-        waitFor(1000);
         siparis.teslimTarihiBox.sendKeys("10");
-        waitFor(1000);
         siparis.teslimTarihiBox.sendKeys("2026");
     }
 
     @Then("{string} Siparis turune gecerli bir data girilir")
     public void siparis_turune_gecerli_bir_data_girilir(String string) {
-        waitFor(1500);
+        waitForVisibility(siparis.siparisTuruSelect,10);
         ddmValue(siparis.siparisTuruSelect, string);
+        siparisTuru=string;
     }
 
     @Then("{string} Siparis miktarina gecerli bir data girilir")
     public void siparis_miktarina_gecerli_bir_data_girilir(String string) {
-        waitFor(1500);
+        action.scrollToElement(siparis.siparisMiktariBox).perform();
         siparis.siparisMiktariBox.sendKeys(string);
     }
 
     @Then("{string} Hazir mil miktarina gecerli bir data girilir")
     public void hazir_mil_miktarina_gecerli_bir_data_girilir(String string) {
-        waitFor(1500);
-        siparis.hazirMilMiktariBox.clear();
-        siparis.hazirMilMiktariBox.sendKeys(string);
+        action.scrollToElement(siparis.hazirMilMiktariBox).perform();
+        waitForVisibility(siparis.hazirMilMiktariBox,10);
+        System.out.println(siparisTuru);
+        if (siparisTuru.equals("Lift")) {
+            siparis.hazirMilMiktariBox.clear();
+            siparis.hazirMilMiktariBox.sendKeys(string);
+        }
     }
 
     @Then("Siparis durumu kutusunda {string} yazmali")
     public void siparis_durumu_kutusunda_yazmali(String expected) {
-        waitFor(1500);
+        action.scrollToElement(siparis.siparisDurumuBox).perform();
+        waitForVisibility(siparis.siparisDurumuBox,10);
         String actual = siparis.siparisDurumuBox.getAttribute("value");
         Assert.assertEquals(expected, actual);
     }
 
+    @And("kaydet butonuna tiklanir")
+    public void kaydetButonunaTiklanir() {
+        action.scrollToElement(anamenu.kaydetButonu).perform();
+        waitForVisibility(anamenu.kaydetButonu,10);
+        anamenu.kaydetButonu.click();
+    }
+
     @Then("{string} yazisi dogrulanir ve ok tusuna basilir")
     public void yazisi_dogrulanir_ve_ok_tusuna_basilir(String expected) {
-        waitFor(1500);
+        waitForVisibility(siparis.siparisBasariylaOlusturulduYazisi,10);
         String actual = siparis.siparisBasariylaOlusturulduYazisi.getText();
         Assert.assertEquals(expected, actual);
         click(siparis.oKbutonu);
@@ -276,4 +289,6 @@ public class SiparisOlusturmaStepDefs {
         System.out.println("");
         DbHelper.closeConnection();
     }
+
+
 }

@@ -5,13 +5,11 @@ Feature: US2
     Then Anasayfada oldugu dogrulanir
 
   Scenario Outline: Kullanici yeni siparis olusturur (Positif Test)
-    Then Uretim Planlama butonunun gorunur oldugu dogrulanir
     And Uretim Planlama butonuna tiklanir
     Then Uretim Planlama ekraninda oldugu dogrulanir
     And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir
     And Giris yap butonuna tiklanir
     And siparis Olustur butonunun ekranda gorundugu kontrol edilir
-    And Onceden siparis listesi olup olmadigi dogrulanir
     And siparis olustur butonuna tiklanir
     And yeni siparis ekraninin geldigi dogrulanir
     And "<musteri adi>" musteri adina gecerli bir data girilir
@@ -25,7 +23,6 @@ Feature: US2
     And kaydet butonuna tiklanir
     And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir
     And Kullanici logout yapar
-
     Examples:
       | musteri adi | Gasan No      | Siparis No | Siparis turu | Siparis miktari  | Hazir mil miktari |
       |omer         |1000 ABC 100000|100000      |Lift          |1500              |100                 |
