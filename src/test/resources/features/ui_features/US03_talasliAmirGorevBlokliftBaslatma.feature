@@ -17,7 +17,7 @@ Feature: US03
     Then Isil Islem Butonunu gri renk oldugu dogrulanir
     And Mil taslama butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
-    And uretilecek adet girilir
+    And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
     And Ok butonuna tiklanir
     Then Bloklift siparis turu girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir
@@ -26,13 +26,19 @@ Feature: US03
     Then Isil Islem Butonunu sari renk oldugu dogrulanir
     And Isil Islem butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
-    And uretilecek adet girilir
+    And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
     And Ok butonuna tiklanir
     Then Bloklift girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir
     Then Bloklift sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir
     Then Mil Taslama Butonunu yesil renk oldugu dogrulanir
     Then Isil Islem Butonunu yesil renk oldugu dogrulanir
+    And sag taraftaki Boru Kesme Havsa butonuna tiklanir
+    Then uretilen adedi giriniz yazisi dogrulanir
+    And Bloklift uretilecek adet girilir
+    And onayla butonuna tiklanir
+    And Ok butonuna tiklanir
+    Then girilen adedin sag tarafta Boru Kesme Havsa biten bolumune islendigi dogrulanir
     And Kullanici logout yapar
     And Polisaj amiri butonuna tiklanir
     Then Polisaj amiri ekraninda oldugu dogrulanir
@@ -42,7 +48,7 @@ Feature: US03
     Then Polisaj butonunun sari renk oldugu dogrulanir
     And Polisaj ok butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
-    And uretilecek Bloklift adet girilir
+    And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
     And Ok butonuna tiklanir
     Then Polisaj butonunun yesil renk oldugu dogrulanir
@@ -55,7 +61,7 @@ Feature: US03
     And Kalite kontrol Amirindeki Bloklift siparis turundeki siparisin bulundugu satira tiklar
     And Bloklift Polisaj sonrasi butona tiklar
     And Polisaj sonrasi Kalite kontrol Onayla butona tiklanir
-    And uretilecek Bloklift adet girilir
+    And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
     Then Bloklift Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Bloklift Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir
