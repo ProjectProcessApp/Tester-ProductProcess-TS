@@ -18,7 +18,7 @@ public class GetRequest extends Authentication  {
         // Token'ı alıyoruz
          token = token();
         // Request URL oluşturma
-        String url = "http://localhost:8080/orders/getOrderById/88";
+        String url = "http://localhost:8080/orders/getOrderById/6";
         // API'den response alıyoruz ve durumu kontrol ediyoruz
         response = given()
                 .header("Authorization", "Bearer " + token) // Token'ı ekliyoruz
@@ -27,8 +27,7 @@ public class GetRequest extends Authentication  {
                 .then()
                 .statusCode(200) // 200 OK bekliyoruz
                 .extract().response(); // Response'u kaydediyoruz
-        //Assertion
-        // Yanıtı JSON formatında elde ediyoruz
+
         JSONObject actualData = new JSONObject(response.jsonPath().getMap("returnBody"));
         // Assert.assertEquals kullanarak her bir alanı karşılaştırıyoruz
         Data data = new Data();
@@ -50,22 +49,21 @@ public class GetRequest extends Authentication  {
         System.out.println("ID numarasi ile siparis, basari ile API den test edildi");
     }
     public void get02() {
-        // Token'ı alıyoruz
+
         token = token();
-        // Request URL oluşturma
-        String url = "http://localhost:8080/orders/getByOrderNumber/124453";
-        // API'den response alıyoruz ve durumu kontrol ediyoruz
+
+        String url = "http://localhost:8080/orders/getByOrderNumber/100002";
+
         response = given()
-                .header("Authorization", "Bearer " + token) // Token'ı ekliyoruz
+                .header("Authorization", "Bearer " + token)
                 .when()
-                .get(url) // İstekte bulunuyoruz
+                .get(url)
                 .then()
-                .statusCode(200) // 200 OK bekliyoruz
-                .extract().response(); // Response'u kaydediyoruz
-        //Assertion
-        // Yanıtı JSON formatında elde ediyoruz
+                .statusCode(200)
+                .extract().response();
+
         JsonPath actualData = response.jsonPath();
-        // Assert.assertEquals kullanarak her bir alanı karşılaştırıyoruz
+
         Data data = new Data();
         assertEquals(data.data86().getInt("id"), actualData.getInt("id"));
         assertEquals(data.data86().getString("customerName"), actualData.getString("customerName"));
@@ -88,28 +86,13 @@ public class GetRequest extends Authentication  {
         Data data = new Data();
         response = given()
                 .when()
-                .header("Authorization", "Bearer " + token)
+                .header("Authorization", "Bearer "+token)
                 .contentType(ContentType.JSON)
-                .body(data.post93().toString()) // data classindan post93 adli jsonobjeyi gonderiyoruz
+                .body(data.data86())
                 .post(url);
-
+        System.out.println(data.data86());
         JSONObject actualData = new JSONObject(response.jsonPath().getMap("returnBody"));
-
-        //apiden donmesi gereken datayi kaydediyoruz
-
-        JSONObject expectedData = new JSONObject();
-        expectedData.put("customerName", "Ozer");
-        expectedData.put("gasanNo", "9333 AB 123456");
-        expectedData.put("orderNumber", "933352");
-        expectedData.put("deliveryDate", "2024-10-10");
-        expectedData.put("orderType", "DAMPER");
-        expectedData.put("orderQuantity", 1000);
-        expectedData.put("orderStatus", "İşlenmeyi Bekliyor");
-        expectedData.put("readyMilCount", 200);
-
-        // Assert.assertEquals kullanarak her bir alanı karşılaştırıyoruz
-        //response.then().assertThat().contentType(ContentType.JSON).statusCode(200);
-
+        System.out.println(response.prettyPrint());
             assertEquals(data.post93().getString("customerName"), actualData.getString("customerName"));
             assertEquals(data.post93().getString("gasanNo"), actualData.getString("gasanNo"));
             assertEquals(data.post93().getString("orderNumber"), actualData.getString("orderNumber"));
@@ -119,7 +102,6 @@ public class GetRequest extends Authentication  {
             assertEquals(data.post93().getString("orderStatus"), actualData.getString("orderStatus"));
             assertEquals(data.post93().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
 
-        // "message" ve "httpStatus" alanlarını kontrol ediyoruz
         assertEquals("Sipariş oluşturuldu", response.jsonPath().getString("message"));
         assertEquals("CREATED", response.jsonPath().getString("httpStatus"));
 

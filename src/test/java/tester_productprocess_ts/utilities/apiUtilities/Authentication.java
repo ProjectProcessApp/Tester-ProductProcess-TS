@@ -23,7 +23,6 @@ public class Authentication  {
                 .when()
                 .post("/auth/login");
 
-        // Token'ı yanıt içinden alıp geri döndürüyoruz
         return token = response.jsonPath().getString("token");
 
     }
