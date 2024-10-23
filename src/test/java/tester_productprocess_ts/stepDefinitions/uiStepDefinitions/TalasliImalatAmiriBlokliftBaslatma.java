@@ -30,7 +30,6 @@ public class TalasliImalatAmiriBlokliftBaslatma {
         if (!talasligorev.blokliftBaslaButton.isEmpty() & !talasligorev.blokliftBaslaButton.getFirst().getText().equals("Durdur")) {
             clickWithJS(talasligorev.blokliftBaslaButton.getFirst());
             waitFor(3000);
-            //Driver.getDriver().navigate().refresh();
             waitForVisibility(talasligorev.blokliftSatirButton, 10);
             clickWithJS(talasligorev.blokliftSatirButton);
             waitFor(3000);

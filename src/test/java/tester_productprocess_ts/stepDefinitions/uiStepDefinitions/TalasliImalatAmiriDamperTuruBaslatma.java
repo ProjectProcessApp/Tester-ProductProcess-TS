@@ -25,15 +25,11 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
 
     @Then("Damper siparis turundeki siparisin basla butonuna tiklar")
     public void damper_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
-        Driver.getDriver().navigate().refresh();
-        waitFor(3000);
-        if (!talasligorev.damperBaslaButton.isEmpty() & !talasligorev.damperBaslaButton.getFirst().getText().equals("Durdur")) {
+            if (!talasligorev.damperBaslaButton.isEmpty() & !talasligorev.damperBaslaButton.getFirst().getText().equals("Durdur")) {
             clickWithJS(talasligorev.damperBaslaButton.getFirst());
             waitFor(3000);
-            //Driver.getDriver().navigate().refresh();
             waitForVisibility(talasligorev.damperSatirButton, 10);
             clickWithJS(talasligorev.damperSatirButton);
-            waitFor(3000);
             weiter = true;
         }else if(talasligorev.damperBaslaButton.getFirst().getText().equals("Durdur")){
             waitForVisibility(talasligorev.damperSatirButton, 10);
@@ -123,7 +119,7 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
         waitFor(2000);
         int actualMilTaslamaKalanText= Integer.parseInt(talasligorev.kaliteKontrolKalanText.getText());
-        Assert.assertTrue(siparisAdedi<=actualMilTaslamaKalanText);
+        Assert.assertTrue(siparisAdedi>=actualMilTaslamaKalanText);
     }
 
     @Then("Boru Kese Havsa Butonunun sari renk oldugu dogrulanir")

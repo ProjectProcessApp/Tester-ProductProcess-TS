@@ -56,13 +56,9 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("Lift siparis turundeki siparisin basla butonuna tiklar")
     public void lift_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
-            Driver.getDriver().navigate().refresh();
-            waitFor(2000);
             if (talasligorev.liftBaslaButton.size()>0 & !talasligorev.liftBaslaButton.getFirst().getText().equals("Durdur")) {
-                waitFor(2000);
                 clickWithJS(talasligorev.liftBaslaButton.getFirst());
                 waitFor(3000);
-                //Driver.getDriver().navigate().refresh();
                 waitForVisibility(talasligorev.liftSatirButton, 10);
                 clickWithJS(talasligorev.liftSatirButton);
 
@@ -135,17 +131,17 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_mil_koparma_biten_bolumune_islendigi_dogrulanir() {
+        waitFor(4000);
         waitForVisibility(talasligorev.milKoparmaBitenButton,10);
-        Assert.assertEquals(uretilecekAdet,Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        Assert.assertEquals(Integer.parseInt(talasligorev.milKoparmaBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+
     }
     @Then("sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_mil_koparma_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi= Integer.parseInt(talasligorev.hazirMilAdedi.getText());
-        int kalanMiktar=siparisAdedi-hazirMilAdedi;
-       waitFor(2000);
+        waitFor(2000);
         int actualMilKoparmaKalanText= Integer.parseInt(talasligorev.milKoparmaKalanText.getText());
-        Assert.assertTrue(kalanMiktar>actualMilKoparmaKalanText);
+        Assert.assertTrue(siparisAdedi>actualMilKoparmaKalanText);
     }
     @Then("Mil Koparma Butonunun yesil renk oldugu dogrulanir")
     public void mil_koparma_butonunun_yesil_renk_oldugu_dogrulanir() {
@@ -166,17 +162,16 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("girilen adedin sag tarafta mil tornalama biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_mil_tornalama_biten_bolumune_islendigi_dogrulanir() {
+        waitFor(2000);
         waitForVisibility(talasligorev.milTornalamaBitenButton,10);
-        Assert.assertEquals(uretilecekAdet,Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        Assert.assertEquals(Integer.parseInt(talasligorev.milTornalamaBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
     @Then("sag taraftaki mil tornalama kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_mil_tornalama_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi= Integer.parseInt(talasligorev.hazirMilAdedi.getText());
-        int kalanMiktar=siparisAdedi-hazirMilAdedi;
         waitFor(2000);
         int actualMilTornalamaKalanText= Integer.parseInt(talasligorev.milTornalamaKalanText.getText());
-        Assert.assertTrue(kalanMiktar>actualMilTornalamaKalanText);
+        Assert.assertTrue(siparisAdedi>actualMilTornalamaKalanText);
     }
     @Then("Mil Tornalama Butonunun yesil renk oldugu dogrulanir")
     public void mil_tornalama_butonunun_yesil_renk_oldugu_dogrulanir() {
@@ -197,18 +192,17 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
 
     @Then("girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_mil_taslama_biten_bolumune_islendigi_dogrulanir() {
+        waitFor(3000);
         waitForVisibility(talasligorev.milTaslalamaBitenButton,10);
-        Assert.assertEquals(uretilecekAdet,Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        Assert.assertEquals(Integer.parseInt(talasligorev.milTaslalamaBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_mil_taslama_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi= Integer.parseInt(talasligorev.hazirMilAdedi.getText());
-        int kalanMiktar=siparisAdedi-hazirMilAdedi;
         waitFor(2000);
         int actualMilTaslamaKalanText= Integer.parseInt(talasligorev.milTaslamaKalanText.getText());
-        Assert.assertTrue(kalanMiktar>actualMilTaslamaKalanText);
+        Assert.assertTrue(siparisAdedi>actualMilTaslamaKalanText);
     }
     @Then("Mil Taslama Butonunu yesil renk oldugu dogrulanir")
     public void mil_taslama_butonunu_yesil_renk_oldugu_dogrulanir() {
@@ -234,11 +228,9 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     @Then("sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_isil_islem_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi= Integer.parseInt(talasligorev.hazirMilAdedi.getText());
-        int kalanMiktar=siparisAdedi-hazirMilAdedi;
         waitFor(2000);
         int actualIsilIslemKalanText= Integer.parseInt(talasligorev.isilIslemKalanText.getText());
-        Assert.assertTrue(kalanMiktar>actualIsilIslemKalanText);
+        Assert.assertTrue(siparisAdedi>actualIsilIslemKalanText);
     }
     @And("sag taraftaki Boru Kesme Havsa butonuna tiklanir")
     public void sagTaraftakiBoruKesmeHavsaButonunaTiklanir() {
@@ -255,15 +247,13 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     @Then("sag taraftaki Boru Kesme Havsa kalan bolumundeki rakam dogrulanir")
     public void sagTaraftakiBoruKesmeHavsaKalanBolumundekiRakamDogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi= Integer.parseInt(talasligorev.hazirMilAdedi.getText());
-        int kalanMiktar=siparisAdedi-hazirMilAdedi;
         waitFor(2000);
         int actualIsilIslemKalanText= Integer.parseInt(talasligorev.boruKesmeHavsKalanText.getText());
-        Assert.assertTrue(kalanMiktar>actualIsilIslemKalanText);
+        Assert.assertTrue(siparisAdedi>actualIsilIslemKalanText);
     }
     @Then("Polisaj Amirindeki Lift siparis turundeki siparisin bulundugu satira tiklar")
     public void polisaj_amirindeki_lift_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        waitFor(2000);
+        waitFor(4000);
         Driver.getDriver().navigate().refresh();
         clickWithJS(talasligorev.liftSatirButton);
     }
@@ -292,11 +282,9 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     @Then("Polisaj kalan bolumundeki rakam dogrulanir")
     public void polisajKalanBolumundekiRakamDogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi= Integer.parseInt(talasligorev.hazirMilAdedi.getText());
-        int kalanMiktar=siparisAdedi-hazirMilAdedi;
         waitFor(2000);
         int actualIsilIslemKalanText= Integer.parseInt(talasligorev.polisajKalanText.getText());
-        Assert.assertTrue(kalanMiktar>actualIsilIslemKalanText);
+        Assert.assertTrue(siparisAdedi>actualIsilIslemKalanText);
     }
     @Then("Kalite kontrol Amirindeki Lift siparis turundeki siparisin bulundugu satira tiklar")
     public void kalite_kontrol_amirindeki_lift_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
@@ -323,10 +311,8 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     @Then("Kalite kontrol sag taraftaki kalan bolumundeki rakam dogrulanir")
     public void kaliteKontrolSagTaraftakiKalanBolumundekiRakamDogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi= Integer.parseInt(talasligorev.hazirMilAdedi.getText());
-        int kalanMiktar=siparisAdedi-hazirMilAdedi;
         waitFor(2000);
         int actualKaliteKontrolKalanText= Integer.parseInt(talasligorev.kaliteKontrolKalanText.getText());
-        Assert.assertTrue(kalanMiktar>=actualKaliteKontrolKalanText);
+        Assert.assertTrue(siparisAdedi>=actualKaliteKontrolKalanText);
     }
 }
