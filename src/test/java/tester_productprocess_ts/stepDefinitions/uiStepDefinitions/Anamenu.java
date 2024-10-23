@@ -59,15 +59,14 @@ public class Anamenu {
 
     @Then("Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir")
     public void talasli_imalat_amiri_butonu_gorunur_oldugu_dogrulanir() throws InterruptedException {
+        waitFor(2000);
         action.scrollToElement(anamenu.talasliImalatAmiri).perform();
         Assert.assertTrue(anamenu.talasliImalatAmiri.isDisplayed());
-
     }
 
     @Then("Talasli Imalat Amiri Butonuna tiklanir")
     public void talasli_imalat_amiri_butonuna_tiklanir() throws InterruptedException {
         action.scrollToElement(anamenu.talasliImalatAmiri).click(anamenu.talasliImalatAmiri).perform();
-
     }
 
     @Then("Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir")
@@ -320,6 +319,7 @@ public class Anamenu {
 
     @Then("Uretim Planlama ekraninda oldugu dogrulanir")
     public void uretimPlanlamaEkranindaOlduguDogrulanir() {
+        waitFor(2000);
         String sifreTextActual = "ÜRETİM PLANLAMA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
@@ -398,6 +398,7 @@ public class Anamenu {
     public void kullaniciLogoutYapar() throws InterruptedException {
          waitFor(2000);
         clickWithJS(anamenu.logout);
+        waitFor(2000);
         waitForVisibility(anamenu.AnasayfaHeader,10);
     }
 

@@ -40,7 +40,10 @@ public class TalasliImalatAmiriGorevleri {
     public List<WebElement> blokliftBaslaButton;
 
     @FindBy (xpath="//tr[td[text()='PASLANMAZ']]//button[text()= 'Tekrar Başlat' or 'Başla']")
-    public WebElement paslanmazBaslaButton;
+    public List<WebElement> paslanmazBaslaButton;
+
+    @FindBy (xpath="//div/table/tbody/tr/td[text()='PASLANMAZ']")
+    public WebElement paslanmazSatirButton;
 
     @FindBy (xpath="//div/table/tbody/tr/td[text()='DAMPER']")
     public WebElement damperSatirButton;
@@ -87,6 +90,15 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath="//tr[td[text()='ISIL_ISLEM']]/td[3]")
     public WebElement isilIslemKalanText;
 
+    @FindBy (xpath="//div/button[@data-operation-type='EZME']")
+    public WebElement ezmeButton;
+
+    @FindBy (xpath="//tr[td[text()='EZME']]/td/button")
+    public WebElement ezmeBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='EZME']]/td[3]")
+    public WebElement ezmeKalanText;
+
     @FindBy (xpath="//div/button[@data-operation-type='BORU_KESME_HAVSA']")
     public WebElement boruKesmeHavsaButton;
 
@@ -119,6 +131,12 @@ public class TalasliImalatAmiriGorevleri {
 
     @FindBy (xpath = "//tr/td[text()='Polisaj Sonrası']")
     public  WebElement polisajSonrasiSatirButton;
+
+    @FindBy (xpath = "//tr/td[text()='Mil Taşlama Sonrası']")
+    public  WebElement milTaslamaSonrasiSatirButton;
+
+    @FindBy (xpath = "//tr/td[text()='Ezme Sonrası']")
+    public  WebElement EzmeSonrasiSatirButton;
 
     @FindBy (xpath = "(//button[@name='approveCount'])[1]")
     public  WebElement kaliteKontrolOnaylaButton;

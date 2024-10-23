@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="11.09.2024 guncelleme01">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriPaslanmazTuruBaslatma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevPaslanmazBaslatma.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/TalasliImalatAmiriGorevleri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/TalasliImalatAmiriGorevleri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/Anamenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/SiparisOlusturmaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/SiparisOlusturmaStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriBlokliftBaslatma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriBlokliftBaslatma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriDamperTuruBaslatma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriDamperTuruBaslatma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriLiftTuruBaslatma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriLiftTuruBaslatma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevBlokliftBaslatma.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevBlokliftBaslatma.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevDamperBaslatma.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevDamperBaslatma.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevLiftBaslatma.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevLiftBaslatma.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +75,12 @@
     "Cucumber Java.Scenario: Amirlerin Ortak ekrani.executor": "Run",
     "Cucumber Java.Scenario: Databaseden veri alma.executor": "Run",
     "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test).executor": "Run",
     "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1).executor": "Run",
     "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir (1).executor": "Run",
     "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir.executor": "Run",
     "Cucumber Java.Scenario: Verilen siparisi guncelleme.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -118,7 +122,27 @@
       <visibility group="org.jetbrains.plugins.gradle.execution.GradleRunAnythingProvider" flag="false" />
     </myKeys>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1)">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir">
+    <configuration name="Scenario: Kullanici yeni siparis olusturur (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US02_siparisOlusturma.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^Kullanici yeni siparis olusturur \(Positif Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Kullanici yeni siparis olusturur \(Positif Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Kullanici yeni siparis olusturur (Positif Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
@@ -142,7 +166,7 @@
     </configuration>
     <configuration name="Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevBlokliftBaslatma.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevDamperBaslatma.feature" />
       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
@@ -162,7 +186,7 @@
     </configuration>
     <configuration name="Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevDamperBaslatma.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevBlokliftBaslatma.feature" />
       <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
@@ -200,52 +224,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US03_talasliAmirGorevPaslanmazBaslatma.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tester_productprocess_ts.stepDefinitions.apiStepDefinitions.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tester_productprocess_ts.stepDefinitions.apiStepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="tester_productprocess_ts.stepDefinitions.apiStepDefinitions.GetRequest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetRequest.get01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tester-ProductProcess-TS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tester_productprocess_ts.stepDefinitions.apiStepDefinitions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tester_productprocess_ts.stepDefinitions.apiStepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="tester_productprocess_ts.stepDefinitions.apiStepDefinitions.GetRequest" />
-      <option name="METHOD_NAME" value="get01" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Cucumber Java.Scenario: TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" />
+      <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test)" />
+      <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" />
       <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir" />
       <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1)" />
       <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" />
-      <item itemvalue="JUnit.GetRequest" />
-      <item itemvalue="JUnit.GetRequest.get01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" />
         <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1)" />
         <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir" />
         <item itemvalue="Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" />
-        <item itemvalue="JUnit.GetRequest.get01" />
-        <item itemvalue="JUnit.GetRequest" />
+        <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test)" />
       </list>
     </recent_temporary>
   </component>
@@ -461,22 +474,6 @@
     <MESSAGE value="siparisolusturma ve amirlerin ortak ekrani" />
     <MESSAGE value="11.09.2024 guncelleme01" />
     <option name="LAST_COMMIT_MESSAGE" value="11.09.2024 guncelleme01" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriBlokliftBaslatma.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/TalasliImalatAmiriBlokliftBaslatma.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
