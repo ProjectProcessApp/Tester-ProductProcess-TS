@@ -1,5 +1,4 @@
 Feature: US2
-
   Background:  Anasayfa ve dogrulama
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir

@@ -90,7 +90,7 @@ Feature: US03
     And onayla butonuna tiklanir
     Then Damper Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir
-
+    Then Kullanici logout yapar
 
 
 

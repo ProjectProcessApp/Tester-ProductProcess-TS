@@ -1,4 +1,4 @@
-package tester_productprocess_ts.stepDefinitions.uiStepDefinitions;
+package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03;
 
 import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
@@ -6,7 +6,6 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import tester_productprocess_ts.pages.Anamenu;
 import tester_productprocess_ts.pages.TalasliImalatAmiriGorevleri;
-import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
 import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
 import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.clickWithJS;

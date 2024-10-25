@@ -22,7 +22,6 @@ Feature: US03
       Then uretilen adedi giriniz yazisi dogrulanir
       And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
-      And Ok butonuna tiklanir
       Then girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir
       Then sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir
       Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -90,6 +89,8 @@ Feature: US03
       And onayla butonuna tiklanir
       Then girilen adedin sag tarafta biten bolumune islendigi dogrulanir
       Then Kalite kontrol sag taraftaki kalan bolumundeki rakam dogrulanir
+      Then Kullanici logout yapar
+
 
 
 

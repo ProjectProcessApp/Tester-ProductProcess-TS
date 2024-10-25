@@ -1,4 +1,4 @@
-package tester_productprocess_ts.stepDefinitions;
+package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -10,7 +10,6 @@ import tester_productprocess_ts.pages.siparisOlusturma;
 import tester_productprocess_ts.utilities.uiUtilities.DbHelper;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;

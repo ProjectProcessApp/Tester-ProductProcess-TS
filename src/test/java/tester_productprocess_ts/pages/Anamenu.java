@@ -21,7 +21,7 @@ public class Anamenu {
     @FindBy(xpath = "//h1[@class='page-header']")
     public WebElement girisHeader;
 
-    @FindBy(xpath = "//div[@style='height:50px']")
+    @FindBy(xpath = "//div[@style='height:25px']")
     public WebElement herhangibiryer;
 
     @FindBy(xpath = "//div[contains(text(), 'Girdiğiniz şifre eksik veya hatalı') or contains(text(), 'Şifre alanı boş bırakılamaz')]")
@@ -69,7 +69,7 @@ public class Anamenu {
     @FindBy(css = "button[type='submit']")
     public WebElement kaydetButonu;
 
-    @FindBy(xpath = "//h1[@class='page-header']")
+    @FindBy(xpath = "//h1[@class='page-header_page_header__pY9yF']")
     public WebElement amirHeader;
 
     @FindBy(xpath = "//div/button[text()='Çıkış']")

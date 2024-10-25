@@ -1,28 +1,17 @@
-package tester_productprocess_ts.stepDefinitions;
+package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01;
 
 
-import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import jdk.javadoc.doclet.Reporter;
-import org.apache.poi.ss.formula.functions.T;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import tester_productprocess_ts.utilities.uiUtilities.ConfigReader;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
-import tester_productprocess_ts.utilities.uiUtilities.ReusableMethods;
 
-import java.awt.*;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import static org.junit.Assert.assertEquals;
@@ -99,17 +88,15 @@ public class Anamenu {
     public void sifreGizlemeButonununSifreyiTekrarGorunurHaleGetirdigiKontrolEdllir() throws InterruptedException {
         waitForVisibility(anamenu.goz,10);
         anamenu.goz.click();
-
     }
 
     @Then("Talasli Imalat Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void talasliImalatAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
-        waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String talasliHeader = "GIRIŞ";
+        waitFor(1000);
+        String anasayfa = anamenu.amirHeader.getText();
+        String talasliHeader = "TALASLI IMALAT AMIRI";
         waitFor(1000);
         assertEquals(talasliHeader, anasayfa);
-
     }
 
     @And("sifre kutucuguna gecersiz bir {string} girilir")
@@ -130,7 +117,6 @@ public class Anamenu {
     public void polisajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.polisajAmiri).perform();
         anamenu.polisajAmiri.isDisplayed();
-
     }
 
     @And("Polisaj amiri butonuna tiklanir")
@@ -155,9 +141,9 @@ public class Anamenu {
 
     @Then("Polisaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void polisajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
-        waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String polisajHeader = "GIRIŞ";
+        waitFor(1000);
+        String anasayfa = anamenu.amirHeader.getText();
+        String polisajHeader = "POLISAJ AMIRI";
         assertEquals(polisajHeader, anasayfa);
 
     }
@@ -166,22 +152,19 @@ public class Anamenu {
     public void liftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.liftmontajAmiri).perform();
         Assert.assertTrue(anamenu.liftmontajAmiri.isDisplayed());
-
     }
 
     @And("Lift montaj amiri butonuna tiklanir")
     public void liftMontajAmiriButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.liftmontajAmiri).perform();
-
     }
 
     @Then("Lift montaj amiri ekraninda oldugu dogrulanir")
     public void liftMontajAmiriEkranindaOlduguDogrulanir() {
-        String sifreTextActual = "ANA SAYFA";
+        String sifreTextActual = "LİFT MONTAJ AMİRİ";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-
     }
 
     @And("Lift montaj amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -191,42 +174,35 @@ public class Anamenu {
 
     @Then("Lift montaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void liftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
-        waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String talasliHeader = "GIRIŞ";
+        waitForVisibility(anamenu.amirHeader,10);
+        String anasayfa = anamenu.amirHeader.getText();
+        String talasliHeader = "LIFT MONTAJ AMIRI";
         assertEquals(talasliHeader, anasayfa);
-
     }
 
     @Then("Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir")
     public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.blokliftMontajAmiri).perform();
         anamenu.blokliftMontajAmiri.isDisplayed();
-
     }
 
     @And("Bloklift Montaj Amiri butonuna tiklanir")
     public void blokliftMontajAmiriButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.blokliftMontajAmiri).perform();
-
     }
 
     @Then("Bloklift Montaj Amiri ekraninda oldugu dogrulanir")
     public void blokliftMontajAmiriEkranindaOlduguDogrulanir() {
-        waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String sifreTextActual = "ANA SAYFA";
+        String sifreTextActual = "BLOKLİFT MONTAJ AMİRİ";
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-
     }
 
     @Then("Bloklift Montaj Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void blokliftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
-        waitForVisibility(anamenu.amirBaslikYazisi,10);
-        String anasayfa = anamenu.amirBaslikYazisi.getText();
-        String blokliftHeader = "GIRIŞ";
+        String anasayfa = anamenu.AnasayfaHeader.getText();
+        String blokliftHeader = "BLOKLİFT MONTAJ AMİRİ";
         assertEquals(blokliftHeader, anasayfa);
-
     }
 
     @And("Bloklift Montaj Amiri sifre kutucuguna gecerli bir {string} girilir")
