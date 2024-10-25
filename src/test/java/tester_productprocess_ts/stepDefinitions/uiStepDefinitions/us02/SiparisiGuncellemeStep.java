@@ -1,12 +1,11 @@
-package tester_productprocess_ts.stepDefinitions;
+package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
 import tester_productprocess_ts.pages.siparisGuncelleme;
+import tester_productprocess_ts.pages.Anamenu;
 import tester_productprocess_ts.utilities.uiUtilities.ConfigReader;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
 
@@ -34,7 +33,7 @@ public class SiparisiGuncellemeStep {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         clickWithJS(siparis.uretimPlanlamaButonu);
         siparis.uretimPlanmaPassword.sendKeys(ConfigReader.getProperty("UretimPlanlama"));
-        clickWithJS(anamenu.anamenu.girisButonu);
+        clickWithJS(anamenu.girisButonu);
     }
 
 
@@ -126,7 +125,7 @@ public class SiparisiGuncellemeStep {
     public void siparisDurumuKutusundaİşlenmeyiBekliyorYazmali() {
 
         assert siparis.islenmiyorBekliyorBox.isDisplayed();
-        clickWithJS(anamenu.anamenu.girisButonu);
+        clickWithJS(anamenu.girisButonu);
     }
 
     @And("Sipariş başarıyla guncellendi yazisi dogrulanir ve ok tusuna basilir")

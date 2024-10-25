@@ -1,4 +1,4 @@
-package tester_productprocess_ts.stepDefinitions.uiStepDefinitions;
+package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -56,12 +56,11 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("Lift siparis turundeki siparisin basla butonuna tiklar")
     public void lift_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
-            if (talasligorev.liftBaslaButton.size()>0 & !talasligorev.liftBaslaButton.getFirst().getText().equals("Durdur")) {
+            if (!talasligorev.liftBaslaButton.isEmpty() & !talasligorev.liftBaslaButton.getFirst().getText().equals("Durdur")) {
                 clickWithJS(talasligorev.liftBaslaButton.getFirst());
                 waitFor(3000);
                 waitForVisibility(talasligorev.liftSatirButton, 10);
                 clickWithJS(talasligorev.liftSatirButton);
-
                 weiter = true;
             }else if(talasligorev.liftBaslaButton.getFirst().getText().equals("Durdur")){
             waitForVisibility(talasligorev.liftSatirButton, 10);
@@ -122,11 +121,12 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("onayla butonuna tiklanir")
     public void onayla_butonuna_tiklanir() {
-        waitForVisibility(talasligorev.onaylaButton,10);
-        talasligorev.onaylaButton.click();
+        waitFor(500);
+        clickWithJS(talasligorev.onaylaButton);
     }
     @Then("Ok butonuna tiklanir")
     public void ok_butonuna_tiklanir() {
+
         clickWithJS(anamenu.guncellemaPopupOk);
     }
     @Then("girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir")
@@ -300,6 +300,7 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
 
     @Then("Polisaj sonrasi Kalite kontrol Onayla butona tiklanir")
     public void polisaj_sonrasi_kalite_kontrol_onayla_butona_tiklanir() {
+        waitFor(2000);
         clickWithJS(talasligorev.kaliteKontrolOnaylaButton);
     }
     @Then("girilen adedin sag tarafta biten bolumune islendigi dogrulanir")

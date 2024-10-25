@@ -1,4 +1,4 @@
-package tester_productprocess_ts.stepDefinitions.uiStepDefinitions;
+package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;

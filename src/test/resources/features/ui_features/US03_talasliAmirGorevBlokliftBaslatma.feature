@@ -2,7 +2,7 @@ Feature: US03
   Background:  Anasayfa ve dogrulama
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir
-  Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir
+  Scenario: Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir
     Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
     And Talasli Imalat Amiri Butonuna tiklanir
     Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir
@@ -65,3 +65,4 @@ Feature: US03
     And onayla butonuna tiklanir
     Then Bloklift Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Bloklift Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir
+    Then Kullanici logout yapar

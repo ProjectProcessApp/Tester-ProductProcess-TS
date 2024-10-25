@@ -12,6 +12,7 @@ public class TalasliImalatAmiriGorevleri {
     public TalasliImalatAmiriGorevleri(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
     @FindBy (xpath = "/html/body/main/div[2]/table/tbody")
     public WebElement table;
 
@@ -23,6 +24,9 @@ public class TalasliImalatAmiriGorevleri {
 
     @FindBy (xpath="//tr[@class='talasli_table_body__Msmho']/td")
     public List<WebElement> hucre;
+
+    @FindBy (xpath="//tr[@class='boyama-paketleme_table_body__jVDL8']/td")
+    public List<WebElement> boyaPaketlemehucre;
 
     @FindBy (xpath="//thead/tr/th")
     public List<WebElement> tabloBasliklari;
@@ -56,6 +60,51 @@ public class TalasliImalatAmiriGorevleri {
 
     @FindBy (xpath="//div/button[@data-operation-type='MIL_KOPARMA']")
     public WebElement milKoparmaButton;
+
+    @FindBy (xpath = "//button[text()='BORU KAPAMA']")
+    public WebElement boruKapamaButon;
+
+    @FindBy (xpath="//tr[td[text()='BORU_KAPAMA']]/td/button")
+    public WebElement boruKapamaBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='BORU_KAPAMA']]/td[3]")
+    public WebElement boruKapamaKalanText;
+
+    @FindBy (xpath = "//button[text()='BORU KAYNAK']")
+    public WebElement boruKaynakButon;
+
+    @FindBy (xpath="//tr[td[text()='BORU_KAYNAK']]/td/button")
+    public WebElement boruKaynakBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='BORU_KAYNAK']]/td[3]")
+    public WebElement boruKaynakKalanText;
+
+    @FindBy (xpath = "//button[text()='LİFT MONTAJ']")
+    public WebElement liftMontajButon;
+
+    @FindBy (xpath="//tr[td[text()='LIFT_MONTAJ']]/td/button")
+    public WebElement liftMontajBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='LIFT_MONTAJ']]/td[3]")
+    public WebElement liftMontajKalanText;
+
+    @FindBy (xpath = "//button[text()='GAZ DOLUM']")
+    public WebElement gazDolumButon;
+
+    @FindBy (xpath="//tr[td[text()='GAZ_DOLUM']]/td/button")
+    public WebElement gazDolumBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='GAZ_DOLUM']]/td[3]")
+    public WebElement gazDolumKalanText;
+
+    @FindBy (xpath = "//button[text()='BAŞLIK TAKMA']")
+    public WebElement baslikTakmaButon;
+
+    @FindBy (xpath="//tr[td[text()='BASLIK_TAKMA']]/td/button")
+    public WebElement baslikTakmaBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='BASLIK_TAKMA']]/td[3]")
+    public WebElement baslikTakmaKalanText;
 
     @FindBy (xpath="//tr[td[text()='MIL_KOPARMA']]/td/button")
     public WebElement milKoparmaBitenButton;
@@ -132,6 +181,9 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath = "//tr/td[text()='Polisaj Sonrası']")
     public  WebElement polisajSonrasiSatirButton;
 
+    @FindBy (xpath = "//tr/td[text()='Montaj Sonrası']")
+    public  WebElement montajSonrasiSatirButton;
+
     @FindBy (xpath = "//tr/td[text()='Mil Taşlama Sonrası']")
     public  WebElement milTaslamaSonrasiSatirButton;
 
@@ -146,4 +198,42 @@ public class TalasliImalatAmiriGorevleri {
 
     @FindBy (xpath = "//div/table[2]/tbody/tr/td")
     public  WebElement kaliteKontrolKalanText;
+
+    @FindBy (xpath = "(//tr/td[3])[1]")
+    public  WebElement uretilenToplamMil;
+
+    @FindBy (xpath = "//tr[2]/td[3]")
+    public  WebElement uretilenToplamBoru;
+
+    @FindBy (xpath = "//button[text()='BOYA']")
+    public WebElement boyaButon;
+
+    @FindBy (xpath="//tr[td[text()='BOYA']]/td/button")
+    public WebElement boyaBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='BOYA']]/td[3]")
+    public WebElement boyaKalanText;
+
+    @FindBy (xpath = "//button[text()='PAKETLEME']")
+    public WebElement paketlemeButon;
+
+    @FindBy (xpath="//tr[td[text()='PAKETLEME']]/td/button")
+    public WebElement paketlemeBitenButton;
+
+    @FindBy (xpath="//tr[td[text()='PAKETLEME']]/td[3]")
+    public WebElement paketlemeKalanText;
+
+    @FindBy(xpath = "//tr[@class='boyama-paketleme_table_body__jVDL8']/td[3]")
+    public  List<WebElement> boyaPaketlemesiparisNo;
+
+    @FindBy (xpath = "//tr[td[text()='LIFT']]//button//div[@class='order-toolbar_inner_check__fDRhb']")
+    public  WebElement liftTamamlaButon;
+
+    @FindBy (xpath = "//table//tr[td[contains(text(), 'omer')] and td[contains(text(), 'LIFT')]]//td[contains(text(), 'Tamamlandı')]")
+    public WebElement liftTamamlandiText;
+
+    @FindBy (xpath = "//table//tr[td[contains(text(), 'omer')] and td[contains(text(), 'LIFT')]]//button[@class='btn-link btn btn-danger']")
+    public WebElement liftSiparisSil;
+
+
 }

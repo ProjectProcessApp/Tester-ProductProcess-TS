@@ -1,4 +1,4 @@
-package tester_productprocess_ts.stepDefinitions.uiStepDefinitions;
+package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03;
 
 import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
@@ -25,11 +25,8 @@ public class TalasliImalatAmiriBlokliftBaslatma {
 
     @Then("Bloklift siparis turundeki siparisin basla butonuna tiklar")
     public void bloklift_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
-        Driver.getDriver().navigate().refresh();
-        waitFor(3000);
         if (!talasligorev.blokliftBaslaButton.isEmpty() & !talasligorev.blokliftBaslaButton.getFirst().getText().equals("Durdur")) {
             clickWithJS(talasligorev.blokliftBaslaButton.getFirst());
-            waitFor(3000);
             waitForVisibility(talasligorev.blokliftSatirButton, 10);
             clickWithJS(talasligorev.blokliftSatirButton);
             waitFor(3000);
