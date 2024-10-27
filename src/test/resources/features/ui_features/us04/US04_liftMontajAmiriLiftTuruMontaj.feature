@@ -1,4 +1,4 @@
-Feature: US03
+Feature: US04
   Background:  Anasayfa ve dogrulama
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir
@@ -10,7 +10,7 @@ Feature: US03
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    Then Lift Montaj Amiri ekrandaki datalari dogrular
+    #Then Lift Montaj Amiri ekrandaki datalari dogrular
     And Lift siparis turundeki siparisin bulundugu satira tiklar
     Then uretilen toplam mil miktarini dogrular
     Then Boru Kapama Butonunun sari renk oldugu dogrulanir

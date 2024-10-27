@@ -81,7 +81,7 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
     }
     @Then("Paketleme butonunun sari renk oldugu dogrulanir")
     public void paketleme_butonunun_sari_renk_oldugu_dogrulanir() {
-        waitFor(4000);
+        waitFor(2000);
         String buttonRenk=talasligorev.paketlemeButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
@@ -141,6 +141,28 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
     public void liftSiparisiSilinir() {
         waitFor(1500);
         clickWithJS(talasligorev.liftSiparisSil);
+        waitFor(1000);
+        clickWithJS(talasligorev.onaylaButton);
+    }
+
+    @And("Paslanmaz turu icin nihai uretimi tamamla butonuna tiklanir")
+    public void paslanmazTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
+        waitFor(1500);
+        clickWithJS(talasligorev.paslanmazTamamlaButon);
+    }
+
+    @Then("Paslanmaz turu siparisin tamamlandi durumuna gectigi dogrulanir")
+    public void paslanmazTuruSiparisinTamamlandiDurumunaGectigiDogrulanir() {
+        waitFor(1500);
+        String expectedTamamlandiText="Tamamlandı";
+        String actualTamamlandiText=talasligorev.paslanmazTamamlandiText.getText();
+        Assert.assertEquals(expectedTamamlandiText,actualTamamlandiText);
+    }
+
+    @And("Paslanmaz siparisi silinir")
+    public void paslanmazSiparisiSilinir() {
+        waitFor(1500);
+        clickWithJS(talasligorev.paslanmazSiparisSil);
         waitFor(1000);
         clickWithJS(talasligorev.onaylaButton);
     }

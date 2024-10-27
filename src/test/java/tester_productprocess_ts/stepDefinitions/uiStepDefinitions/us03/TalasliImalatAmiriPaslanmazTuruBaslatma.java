@@ -28,7 +28,7 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
     public void paslanmaz_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
         if (!talasligorev.paslanmazBaslaButton.isEmpty() & !talasligorev.paslanmazBaslaButton.getFirst().getText().equals("Durdur")) {
             clickWithJS(talasligorev.paslanmazBaslaButton.getFirst());
-            waitFor(3000);
+            waitFor(2000);
             waitForVisibility(talasligorev.paslanmazSatirButton, 10);
             clickWithJS(talasligorev.paslanmazSatirButton);
             weiter = true;
@@ -53,8 +53,8 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
     @Then("Paslanmaz siparis turu icin uretilecek adet girilir")
     public void paslanmaz_siparis_turu_icin_uretilecek_adet_girilir() {
         waitForVisibility(talasligorev.uretilenAdetTextBox,10);
-        talasligorev.uretilenAdetTextBox.sendKeys("1500");
-        uretilecekAdet= 1500;
+        talasligorev.uretilenAdetTextBox.sendKeys("1000");
+        uretilecekAdet= 1000;
     }
     @Then("Ezme Butonunu sari renk oldugu dogrulanir")
     public void ezme_butonunu_sari_renk_oldugu_dogrulanir() {
@@ -64,8 +64,7 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
     }
     @Then("Kalite kontrol Amirindeki Paslanmaz siparis turundeki siparisin bulundugu satira tiklar")
     public void kalite_kontrol_amirindeki_paslanmaz_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        Driver.getDriver().navigate().refresh();
-        waitFor(3000);
+        waitFor(2000);
         clickWithJS(talasligorev.paslanmazSatirButton);
     }
 
@@ -97,7 +96,7 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
 
     @Then("Ezme Butonunu yesil renk oldugu dogrulanir")
     public void ezmeButonunuYesilRenkOlduguDogrulanir() {
-        waitFor(3000);
+        waitFor(2000);
         waitForVisibility(talasligorev.ezmeButton,10);
         String buttonRenk=talasligorev.ezmeButton.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);

@@ -22,7 +22,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And uretilecek damper adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Damper Siparis turu girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir
     Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -33,7 +32,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And uretilecek damper adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Damper Siparis turu girilen adedin sag tarafta mil tornalama biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki mil tornalama kalan bolumundeki rakam dogrulanir
     Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -44,7 +42,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And uretilecek damper adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Damper Siparis turu girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir
     Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -55,7 +52,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And uretilecek damper adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Damper Siparis turu girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir
     Then Boru Kese Havsa Butonunun sari renk oldugu dogrulanir
@@ -63,7 +59,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And uretilecek damper adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Boru Kese Havsa Butonunun yesil renk oldugu dogrulanir
     And Kullanici logout yapar
     And Polisaj amiri butonuna tiklanir
@@ -76,7 +71,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And uretilecek damper adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Polisaj butonunun yesil renk oldugu dogrulanir
     Then girilen adedin Polisaj biten bolumune islendigi dogrulanir
     Then Kullanici logout yapar

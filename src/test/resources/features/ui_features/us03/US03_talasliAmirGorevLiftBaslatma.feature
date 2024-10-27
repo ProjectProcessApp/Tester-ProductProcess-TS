@@ -32,7 +32,6 @@ Feature: US03
       Then uretilen adedi giriniz yazisi dogrulanir
       And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
-      And Ok butonuna tiklanir
       Then girilen adedin sag tarafta mil tornalama biten bolumune islendigi dogrulanir
       Then sag taraftaki mil tornalama kalan bolumundeki rakam dogrulanir
       Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -43,7 +42,6 @@ Feature: US03
       Then uretilen adedi giriniz yazisi dogrulanir
       And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
-      And Ok butonuna tiklanir
       Then girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir
       Then sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir
       Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -54,14 +52,12 @@ Feature: US03
       Then uretilen adedi giriniz yazisi dogrulanir
       And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
-      And Ok butonuna tiklanir
       Then girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir
       Then sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir
       And sag taraftaki Boru Kesme Havsa butonuna tiklanir
       Then uretilen adedi giriniz yazisi dogrulanir
       And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
-      And Ok butonuna tiklanir
       Then girilen adedin sag tarafta Boru Kesme Havsa biten bolumune islendigi dogrulanir
       Then sag taraftaki Boru Kesme Havsa kalan bolumundeki rakam dogrulanir
       And Kullanici logout yapar
@@ -74,7 +70,6 @@ Feature: US03
       Then uretilen adedi giriniz yazisi dogrulanir
       And LIFT siparis turu icin uretilecek adet girilir
       And onayla butonuna tiklanir
-      And Ok butonuna tiklanir
       Then Polisaj butonunun yesil renk oldugu dogrulanir
       Then girilen adedin Polisaj biten bolumune islendigi dogrulanir
       Then Polisaj kalan bolumundeki rakam dogrulanir

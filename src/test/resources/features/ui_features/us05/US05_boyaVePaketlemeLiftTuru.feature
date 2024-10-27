@@ -1,4 +1,4 @@
-Feature: US03
+Feature: US05
   Background:  Anasayfa ve dogrulama
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir
