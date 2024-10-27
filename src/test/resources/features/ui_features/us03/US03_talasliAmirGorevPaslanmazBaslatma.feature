@@ -21,7 +21,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Paslanmaz siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir
     Then sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir
     Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -32,7 +31,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Paslanmaz siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then girilen adedin sag tarafta mil tornalama biten bolumune islendigi dogrulanir
     Then sag taraftaki mil tornalama kalan bolumundeki rakam dogrulanir
     Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -43,7 +41,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Paslanmaz siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir
     Then sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir
     Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
@@ -54,7 +51,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Paslanmaz siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then girilen adedin sag tarafta Boru Kesme Havsa biten bolumune islendigi dogrulanir
     Then sag taraftaki Boru Kesme Havsa kalan bolumundeki rakam dogrulanir
     Then Kullanici logout yapar
@@ -66,7 +62,6 @@ Feature: US03
     And Polisaj sonrasi Kalite kontrol Onayla butona tiklanir
     And Paslanmaz siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Kullanici logout yapar
     Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
     And Talasli Imalat Amiri Butonuna tiklanir
@@ -80,7 +75,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Paslanmaz siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Mil Koparma Butonunun yesil renk oldugu dogrulanir
     Then Mil Tornalama Butonunun yesil renk oldugu dogrulanir
     Then Mil Taslama Butonunu yesil renk oldugu dogrulanir
@@ -96,7 +90,6 @@ Feature: US03
     And Polisaj sonrasi Kalite kontrol Onayla butona tiklanir
     And Paslanmaz siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Paslanmaz Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Paslanmaz Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir
     Then Kullanici logout yapar

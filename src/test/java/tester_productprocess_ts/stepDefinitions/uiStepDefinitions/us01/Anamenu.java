@@ -48,7 +48,7 @@ public class Anamenu {
 
     @Then("Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir")
     public void talasli_imalat_amiri_butonu_gorunur_oldugu_dogrulanir() throws InterruptedException {
-        waitFor(2000);
+        waitFor(1000);
         action.scrollToElement(anamenu.talasliImalatAmiri).perform();
         Assert.assertTrue(anamenu.talasliImalatAmiri.isDisplayed());
     }
@@ -81,7 +81,6 @@ public class Anamenu {
     @And("Sifre gizleme butonunun sifreyi gizledigi kontrol edllir")
     public void sifreGizlemeButonununSifreyiGizledigiKontrolEdllir() {
         anamenu.goz.click();
-
     }
 
     @And("Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir")
@@ -145,7 +144,6 @@ public class Anamenu {
         String anasayfa = anamenu.amirHeader.getText();
         String polisajHeader = "POLISAJ AMIRI";
         assertEquals(polisajHeader, anasayfa);
-
     }
 
     @Then("Lift montaj amiri butonunun gorunur oldugu dogrulanir")
@@ -214,13 +212,11 @@ public class Anamenu {
     public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.boyamaVePaketlemeAmiri).perform();
         anamenu.boyamaVePaketlemeAmiri.isDisplayed();
-
     }
 
     @And("Boyama ve Paketleme Amiri butonuna tiklanir")
     public void boyamaVePaketlemeAmiriButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.boyamaVePaketlemeAmiri).perform();
-
     }
 
     @And("Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir {string} girilir")
@@ -234,7 +230,6 @@ public class Anamenu {
        waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-
     }
 
     @Then("Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
@@ -250,13 +245,11 @@ public class Anamenu {
     public void kaliteKontrolButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.kaliteKontrolAmiri).perform();
         anamenu.kaliteKontrolAmiri.isDisplayed();
-
     }
 
     @And("Kalite Kontrol butonuna tiklanir")
     public void kaliteKontrolButonunaTiklanir() throws InterruptedException {
         action.click(anamenu.kaliteKontrolAmiri).perform();
-
     }
 
     @Then("Kalite Kontrol ekraninda oldugu dogrulanir")
@@ -265,7 +258,6 @@ public class Anamenu {
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextresult, sifreTextActual);
-
     }
 
     @Then("Kalite Kontrol sayfasina gectigi dogrulanir")
@@ -274,7 +266,6 @@ public class Anamenu {
         String anasayfa = anamenu.amirBaslikYazisi.getText();
         String blokliftHeader = "GIRIŞ";
         assertEquals(blokliftHeader, anasayfa);
-
     }
 
     @And("Kalite Kontrol sifre kutucuguna gecerli bir {string} girilir")
@@ -319,7 +310,6 @@ public class Anamenu {
     public void yonetimButonununGorunurOlduguDogrulanir() throws InterruptedException {
         action.scrollToElement(anamenu.menulinkleri.get(7)).perform();
         anamenu.yonetim.isDisplayed();
-
     }
 
     @And("Yonetim butonuna tiklanir")
@@ -372,9 +362,9 @@ public class Anamenu {
 
     @And("Kullanici logout yapar")
     public void kullaniciLogoutYapar() throws InterruptedException {
-         waitFor(2000);
+         waitFor(1000);
         clickWithJS(anamenu.logout);
-        waitFor(2000);
+        waitFor(1000);
         waitForVisibility(anamenu.AnasayfaHeader,10);
     }
 
@@ -403,7 +393,6 @@ public class Anamenu {
     public void yoneticiGuncelleButonunuTiklar() throws InterruptedException {
         waitForVisibility(anamenu.girisButonu,10);
         anamenu.girisButonu.click();
-
     }
 
     @And("yonetici kullanici secer, yeni sifre atar, guncelle butonunu tiklar ve guncellendigini kontrol eder")

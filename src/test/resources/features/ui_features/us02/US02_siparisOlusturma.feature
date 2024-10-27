@@ -27,7 +27,7 @@ Feature: US2
       |omer         |1000 ABC 100000|100000      |Lift          |1500              |100                 |
       |hasan        |1000 ABC 100001|100001      |Damper        |1000              |200                 |
       |alican       |1000 ABC 100002|100002      |Blok Lift     |1500              |1000                |
-      |ramo         |1000 ABC 100003|100003      |Paslanmaz     |1500              |10000               |
+      |ramo         |1000 ABC 100003|100003      |Paslanmaz     |1000              |10000               |
 
 
   Scenario Outline: Kullanici yeni siparis olusturur (Negatif Test)

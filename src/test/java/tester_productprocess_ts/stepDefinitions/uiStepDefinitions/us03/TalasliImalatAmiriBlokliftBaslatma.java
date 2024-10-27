@@ -29,7 +29,7 @@ public class TalasliImalatAmiriBlokliftBaslatma {
             clickWithJS(talasligorev.blokliftBaslaButton.getFirst());
             waitForVisibility(talasligorev.blokliftSatirButton, 10);
             clickWithJS(talasligorev.blokliftSatirButton);
-            waitFor(3000);
+            waitFor(2000);
             weiter = true;
         }else if(talasligorev.blokliftBaslaButton.getFirst().getText().equals("Durdur")){
             waitForVisibility(talasligorev.blokliftSatirButton, 10);

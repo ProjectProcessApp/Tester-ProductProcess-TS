@@ -26,7 +26,7 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
     public void damper_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
             if (!talasligorev.damperBaslaButton.isEmpty() & !talasligorev.damperBaslaButton.getFirst().getText().equals("Durdur")) {
             clickWithJS(talasligorev.damperBaslaButton.getFirst());
-            waitFor(3000);
+            waitFor(2000);
             waitForVisibility(talasligorev.damperSatirButton, 10);
             clickWithJS(talasligorev.damperSatirButton);
             weiter = true;
@@ -50,7 +50,7 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
     }
     @Then("Damper Siparis turu girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir")
     public void damper_siparis_turu_girilen_adedin_sag_tarafta_mil_koparma_biten_bolumune_islendigi_dogrulanir() {
-        waitFor(3000);
+        waitFor(2000);
         Assert.assertEquals(uretilecekAdet,Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
     @Then("Damper Siparis turu sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir")
@@ -130,7 +130,7 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
 
     @Then("Boru Kese Havsa Butonunun yesil renk oldugu dogrulanir")
     public void boruKeseHavsaButonununYesilRenkOlduguDogrulanir() {
-        waitFor(4000);
+        waitFor(2000);
         String buttonRenk=talasligorev.boruKesmeHavsaButton.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }

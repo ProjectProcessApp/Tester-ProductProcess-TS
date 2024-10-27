@@ -19,7 +19,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Bloklift siparis turu girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir
     Then Bloklift siparis turu sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir
     Then Mil Taslama Butonunu yesil renk oldugu dogrulanir
@@ -28,7 +27,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Bloklift girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir
     Then Bloklift sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir
     Then Mil Taslama Butonunu yesil renk oldugu dogrulanir
@@ -37,7 +35,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then girilen adedin sag tarafta Boru Kesme Havsa biten bolumune islendigi dogrulanir
     And Kullanici logout yapar
     And Polisaj amiri butonuna tiklanir
@@ -50,7 +47,6 @@ Feature: US03
     Then uretilen adedi giriniz yazisi dogrulanir
     And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
-    And Ok butonuna tiklanir
     Then Polisaj butonunun yesil renk oldugu dogrulanir
     Then Bloklift Siparis turu girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir
     Then Bloklift Siparis turu sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir
