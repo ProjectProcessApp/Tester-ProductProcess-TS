@@ -1,6 +1,6 @@
 Feature: Lift turu siparis EndtoEnd Test
 
-  Scenario Outline: Kullanici yeni siparis olusturur
+  Scenario Outline: Kullanici Lift turunde yeni siparis olusturur
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir
     And Uretim Planlama butonuna tiklanir

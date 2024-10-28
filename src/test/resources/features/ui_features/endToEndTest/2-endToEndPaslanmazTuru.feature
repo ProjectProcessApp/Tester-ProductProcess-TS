@@ -1,6 +1,6 @@
 Feature: Paslanmaz turu siparis EndtoEnd Test
 
-  Scenario Outline: Kullanici yeni siparis olusturur (Positif Test)
+  Scenario Outline: Kullanici Paslanmaz turunde yeni siparis olusturur
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir
     And Uretim Planlama butonuna tiklanir

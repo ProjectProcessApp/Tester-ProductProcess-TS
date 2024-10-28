@@ -97,7 +97,7 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("Isil Islem Butonunu gri renk oldugu dogrulanir")
     public void isil_islem_butonunu_gri_renk_oldugu_dogrulanir() {
-        waitForVisibility(talasligorev.isilIslemButton,10);
+        waitFor(1000);
         String buttonRenk=talasligorev.isilIslemButton.getCssValue("background-color");
         Assert.assertEquals(gri,buttonRenk);
 
@@ -181,12 +181,13 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("Mil Taslama Butonunu sari renk oldugu dogrulanir")
     public void mil_taslama_butonunu_sari_renk_oldugu_dogrulanir() {
-        waitForVisibility(talasligorev.milTaslamaButton,10);
+        waitFor(1500);
         String buttonRenk=talasligorev.milTaslamaButton.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
     @Then("Mil taslama butonuna tiklanir")
     public void mil_taslama_butonuna_tiklanir() {
+        waitFor(1000);
         clickWithJS(talasligorev.milTaslamaButton);
     }
 
