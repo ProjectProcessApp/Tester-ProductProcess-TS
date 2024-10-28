@@ -1,6 +1,6 @@
 Feature: Lift turu siparis EndtoEnd Test
 
-  Scenario Outline: Kullanici yeni siparis olusturur (Positif Test)
+  Scenario Outline: Kullanici yeni siparis olusturur
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir
     And Uretim Planlama butonuna tiklanir
@@ -23,7 +23,7 @@ Feature: Lift turu siparis EndtoEnd Test
     And Kullanici logout yapar
     Examples:
       | musteri adi | Gasan No      | Siparis No | Siparis turu | Siparis miktari  | Hazir mil miktari |
-      |omer         |1000 ABC 100000|100000      |Lift          |1500              |100                |
+      |omer         |2000 ABC 100000|200000      |Lift          |1500              |100                |
 
   Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir
     Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir

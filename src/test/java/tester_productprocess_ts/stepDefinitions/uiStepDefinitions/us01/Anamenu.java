@@ -286,7 +286,7 @@ public class Anamenu {
 
     @Then("Uretim Planlama ekraninda oldugu dogrulanir")
     public void uretimPlanlamaEkranindaOlduguDogrulanir() {
-        waitFor(2000);
+        waitFor(2500);
         String sifreTextActual = "ÜRETİM PLANLAMA";
         waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();

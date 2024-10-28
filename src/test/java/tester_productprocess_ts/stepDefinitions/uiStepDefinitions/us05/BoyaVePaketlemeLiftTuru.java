@@ -166,4 +166,26 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
         waitFor(1000);
         clickWithJS(talasligorev.onaylaButton);
     }
+
+    @And("Damper turu icin nihai uretimi tamamla butonuna tiklanir")
+    public void damperTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
+        waitFor(1500);
+        clickWithJS(talasligorev.damperTamamlaButon);
+    }
+
+    @Then("Damper turu siparisin tamamlandi durumuna gectigi dogrulanir")
+    public void damperTuruSiparisinTamamlandiDurumunaGectigiDogrulanir() {
+        waitFor(1500);
+        String expectedTamamlandiText="Tamamlandı";
+        String actualTamamlandiText=talasligorev.damperTamamlandiText.getText();
+        Assert.assertEquals(expectedTamamlandiText,actualTamamlandiText);
+    }
+
+    @And("Damper siparisi silinir")
+    public void damperSiparisiSilinir() {
+        waitFor(1500);
+        clickWithJS(talasligorev.damperSiparisSil);
+        waitFor(1000);
+        clickWithJS(talasligorev.onaylaButton);
+    }
 }
