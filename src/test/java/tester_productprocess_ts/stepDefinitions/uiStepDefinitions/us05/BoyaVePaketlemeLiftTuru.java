@@ -188,4 +188,26 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
         waitFor(1000);
         clickWithJS(talasligorev.onaylaButton);
     }
+
+    @And("Bloklift turu icin nihai uretimi tamamla butonuna tiklanir")
+    public void blokliftTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
+        waitFor(1500);
+        clickWithJS(talasligorev.blokliftTamamlaButon);
+    }
+
+    @Then("Bloklift turu siparisin tamamlandi durumuna gectigi dogrulanir")
+    public void blokliftTuruSiparisinTamamlandiDurumunaGectigiDogrulanir() {
+        waitFor(1500);
+        String expectedTamamlandiText="Tamamlandı";
+        String actualTamamlandiText=talasligorev.blokliftTamamlandiText.getText();
+        Assert.assertEquals(expectedTamamlandiText,actualTamamlandiText);
+    }
+
+    @And("Bloklift siparisi silinir")
+    public void blokliftSiparisiSilinir() {
+        waitFor(1500);
+        clickWithJS(talasligorev.blokliftSiparisSil);
+        waitFor(1000);
+        clickWithJS(talasligorev.onaylaButton);
+    }
 }

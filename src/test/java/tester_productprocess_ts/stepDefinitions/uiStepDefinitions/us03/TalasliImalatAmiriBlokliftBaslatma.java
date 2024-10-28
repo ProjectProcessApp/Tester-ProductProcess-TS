@@ -28,20 +28,21 @@ public class TalasliImalatAmiriBlokliftBaslatma {
         if (!talasligorev.blokliftBaslaButton.isEmpty() & !talasligorev.blokliftBaslaButton.getFirst().getText().equals("Durdur")) {
             clickWithJS(talasligorev.blokliftBaslaButton.getFirst());
             waitForVisibility(talasligorev.blokliftSatirButton, 10);
+            weiter = true;
             clickWithJS(talasligorev.blokliftSatirButton);
             waitFor(2000);
-            weiter = true;
         }else if(talasligorev.blokliftBaslaButton.getFirst().getText().equals("Durdur")){
             waitForVisibility(talasligorev.blokliftSatirButton, 10);
-            clickWithJS(talasligorev.blokliftSatirButton);
             weiter = true;
+            clickWithJS(talasligorev.blokliftSatirButton);
         }
     }
     @Then("Bloklift siparis turundeki siparisin bulundugu satira tiklar")
     public void bloklift_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        if(weiter=false)
+        if(!weiter)
             waitForVisibility(talasligorev.blokliftSatirButton,10);
         clickWithJS(talasligorev.blokliftSatirButton);
+        waitFor(1000);
     }
     @Then("Bloklift uretilecek adet girilir")
     public void bloklift_uretilecek_adet_girilir() {
