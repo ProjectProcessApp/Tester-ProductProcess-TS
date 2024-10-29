@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "rerun:TestOutput/failed_scenario.txt"//rerun plugini ile fail olan scenariolari burada belirtmis oludgumuz txt dosyasi icinde tutabiliriz
         },
         features = "src/test/resources/features",
-        glue = {"tester_productprocess_ts/stepDefinitions","hooks"},
+        glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},
         tags = "",
         dryRun = false,
         monochrome = false

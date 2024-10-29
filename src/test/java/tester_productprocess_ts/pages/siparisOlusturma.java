@@ -13,7 +13,7 @@ public class siparisOlusturma {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//a[contains(text(),'Sipariş Oluştur')]")
+    @FindBy(xpath = "//a[contains(text(),'Yeni Sipariş')]")
     public WebElement siparisOlusturButonu;
 
     @FindBy(xpath = "//h3[contains(text(),'Sipariş Listesi')]")
