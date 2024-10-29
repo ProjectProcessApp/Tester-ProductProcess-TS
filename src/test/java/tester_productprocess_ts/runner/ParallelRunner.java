@@ -17,8 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = {"tester_productprocess_ts/stepDefinitions","hooks"},
         tags = "",
-        dryRun = false,  //==> eger true secilirse scanariolari calistirmadan feature file daki
-        // eksik step defeinitonlarin olup olmadigini kontrol eder, ve browser'i calistirmaz
+        dryRun = false,
         monochrome = false
 )
 public class ParallelRunner {

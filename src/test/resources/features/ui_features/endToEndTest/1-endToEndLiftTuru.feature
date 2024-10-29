@@ -107,7 +107,6 @@ Feature: Lift turu siparis EndtoEnd Test
     Then girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Kalite kontrol sag taraftaki kalan bolumundeki rakam dogrulanir
     Then Kullanici logout yapar
-  Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir
     Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
     And Lift montaj amiri butonuna tiklanir
     And Lift montaj amiri sifre kutucuguna gecerli bir "data" girilir
