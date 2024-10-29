@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber1.xml",
                 "rerun:TestOutput/failed_scenario.txt"//rerun plugini ile fail olan scenariolari burada belirtmis oludgumuz txt dosyasi icinde tutabiliriz
         },
-        features = "src/test/resources/features/endToEndTest",
+        features = "src/test/resources/features",
         glue = {"tester_productprocess_ts/stepDefinitions","hooks"},
         tags = "",
         dryRun = false,
