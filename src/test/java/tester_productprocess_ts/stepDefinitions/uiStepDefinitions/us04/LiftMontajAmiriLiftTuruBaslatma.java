@@ -157,7 +157,7 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("Lift Montaj Butonunu yesil renk oldugu dogrulanir")
     public void lift_montaj_butonunu_yesil_renk_oldugu_dogrulanir() {
-        waitForVisibility(talasligorev.liftMontajButon,10);
+        waitFor(1500);
         String buttonRenk=talasligorev.liftMontajButon.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }

@@ -1,3 +1,4 @@
+@endtoend
 Feature: Lift turu siparis EndtoEnd Test
 
   Scenario Outline: Kullanici Lift turunde yeni siparis olusturur
