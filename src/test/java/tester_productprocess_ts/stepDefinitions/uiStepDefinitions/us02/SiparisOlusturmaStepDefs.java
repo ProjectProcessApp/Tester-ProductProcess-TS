@@ -127,6 +127,7 @@ public class SiparisOlusturmaStepDefs {
         waitForVisibility(siparis.siparisBasariylaOlusturulduYazisi,10);
         String actual = siparis.siparisBasariylaOlusturulduYazisi.getText();
         Assert.assertEquals(expected, actual);
+        waitFor(1500);
     }
 
     @Then("{string} musteri adina gecersiz bir data girilir")

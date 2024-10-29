@@ -58,7 +58,7 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     public void lift_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
             if (!talasligorev.liftBaslaButton.isEmpty() & !talasligorev.liftBaslaButton.getFirst().getText().equals("Durdur")) {
                 clickWithJS(talasligorev.liftBaslaButton.getFirst());
-                waitFor(2000);
+                waitFor(1000);
                 waitForVisibility(talasligorev.liftSatirButton, 10);
                 clickWithJS(talasligorev.liftSatirButton);
                 weiter = true;
@@ -123,12 +123,9 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     public void onayla_butonuna_tiklanir() {
         waitFor(500);
         clickWithJS(talasligorev.onaylaButton);
-        waitFor(1500);
+        waitFor(1000);
     }
-    @Then("Ok butonuna tiklanir")
-    public void ok_butonuna_tiklanir() {
-        clickWithJS(anamenu.guncellemaPopupOk);
-    }
+
     @Then("girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_mil_koparma_biten_bolumune_islendigi_dogrulanir() {
         waitFor(2000);
@@ -293,7 +290,7 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("Kalite kontrol Amirindeki Lift siparis turundeki siparisin bulundugu satira tiklar")
     public void kalite_kontrol_amirindeki_lift_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        waitFor(2000);
+        waitFor(1500);
         clickWithJS(talasligorev.liftSatirButton);
     }
     @Then("Polisaj sonrasi butona tiklar")
@@ -304,7 +301,7 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
 
     @Then("Polisaj sonrasi Kalite kontrol Onayla butona tiklanir")
     public void polisaj_sonrasi_kalite_kontrol_onayla_butona_tiklanir() {
-        waitFor(2000);
+        waitFor(1500);
         clickWithJS(talasligorev.kaliteKontrolOnaylaButton);
     }
     @Then("girilen adedin sag tarafta biten bolumune islendigi dogrulanir")

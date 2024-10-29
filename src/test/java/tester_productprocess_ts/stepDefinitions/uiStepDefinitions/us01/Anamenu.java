@@ -49,13 +49,13 @@ public class Anamenu {
     @Then("Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir")
     public void talasli_imalat_amiri_butonu_gorunur_oldugu_dogrulanir() throws InterruptedException {
         waitFor(1000);
-        action.scrollToElement(anamenu.talasliImalatAmiri).perform();
+        waitForVisibility(anamenu.talasliImalatAmiri,10);
         Assert.assertTrue(anamenu.talasliImalatAmiri.isDisplayed());
     }
 
     @Then("Talasli Imalat Amiri Butonuna tiklanir")
     public void talasli_imalat_amiri_butonuna_tiklanir() throws InterruptedException {
-        action.scrollToElement(anamenu.talasliImalatAmiri).click(anamenu.talasliImalatAmiri).perform();
+        clickWithJS(anamenu.talasliImalatAmiri);
     }
 
     @Then("Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir")
@@ -64,11 +64,11 @@ public class Anamenu {
        waitForVisibility(anamenu.amirBaslikYazisi,10);
         String sifreTextresult = anamenu.amirBaslikYazisi.getText();
         assertEquals(sifreTextActual,sifreTextresult );
-
     }
 
     @And("Giris yap butonuna tiklanir")
     public void girisYapButonunaTiklanir() throws InterruptedException {
+        waitForVisibility(anamenu.girisButonu,10);
         clickWithJS(anamenu.girisButonu);
         waitFor(1000);
     }
@@ -91,7 +91,7 @@ public class Anamenu {
 
     @Then("Talasli Imalat Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void talasliImalatAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
-        waitFor(1000);
+        waitForVisibility(anamenu.amirHeader,10);
         String anasayfa = anamenu.amirHeader.getText();
         String talasliHeader = "TALASLI IMALAT AMIRI";
         waitFor(1000);
@@ -114,12 +114,14 @@ public class Anamenu {
 
     @Then("Polisaj amiri butonunun gorunur oldugu dogrulanir")
     public void polisajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
-        action.scrollToElement(anamenu.polisajAmiri).perform();
+        waitForVisibility(anamenu.polisajAmiri,10);
         anamenu.polisajAmiri.isDisplayed();
     }
 
     @And("Polisaj amiri butonuna tiklanir")
     public void polisajAmiriButonunaTiklanir() throws InterruptedException {
+        waitFor(1000);
+        waitForVisibility(anamenu.polisajAmiri,10);
         clickWithJS(anamenu.polisajAmiri);
     }
 
@@ -134,7 +136,7 @@ public class Anamenu {
 
     @And("Polisaj amiri sifre kutucuguna gecerli bir {string} girilir")
     public void polisajAmiriSifreKutucugunaGecerliBirGirilir(String arg0) {
-       waitFor(2000);
+     waitForVisibility(anamenu.sifreKutusu,10);
         anamenu.sifreKutusu.sendKeys(ConfigReader.getProperty("PolisajAmiri"));
     }
 
@@ -148,13 +150,15 @@ public class Anamenu {
 
     @Then("Lift montaj amiri butonunun gorunur oldugu dogrulanir")
     public void liftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
-        action.scrollToElement(anamenu.liftmontajAmiri).perform();
+        waitFor(1000);
+      waitForVisibility(anamenu.liftmontajAmiri,10);
         Assert.assertTrue(anamenu.liftmontajAmiri.isDisplayed());
     }
 
     @And("Lift montaj amiri butonuna tiklanir")
     public void liftMontajAmiriButonunaTiklanir() throws InterruptedException {
-        action.click(anamenu.liftmontajAmiri).perform();
+        waitFor(1000);
+        clickWithJS(anamenu.liftmontajAmiri);
     }
 
     @Then("Lift montaj amiri ekraninda oldugu dogrulanir")
@@ -180,7 +184,7 @@ public class Anamenu {
 
     @Then("Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir")
     public void blokliftMontajAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
-        action.scrollToElement(anamenu.blokliftMontajAmiri).perform();
+        waitForVisibility(anamenu.blokliftMontajAmiri,10);
         anamenu.blokliftMontajAmiri.isDisplayed();
     }
 
@@ -210,6 +214,7 @@ public class Anamenu {
 
     @Then("Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir")
     public void boyamaVePaketlemeAmiriButonununGorunurOlduguDogrulanir() throws InterruptedException {
+        waitFor(1000);
         action.scrollToElement(anamenu.boyamaVePaketlemeAmiri).perform();
         anamenu.boyamaVePaketlemeAmiri.isDisplayed();
     }
@@ -249,6 +254,7 @@ public class Anamenu {
 
     @And("Kalite Kontrol butonuna tiklanir")
     public void kaliteKontrolButonunaTiklanir() throws InterruptedException {
+        waitFor(1000);
         action.click(anamenu.kaliteKontrolAmiri).perform();
     }
 
@@ -275,6 +281,7 @@ public class Anamenu {
 
     @Then("Uretim Planlama butonunun gorunur oldugu dogrulanir")
     public void uretimPlanlamaButonununGorunurOlduguDogrulanir() throws InterruptedException {
+        waitFor(1000);
         action.scrollToElement(anamenu.uretimPlanlama).perform();
         anamenu.uretimPlanlama.isDisplayed();
     }
@@ -364,8 +371,7 @@ public class Anamenu {
     public void kullaniciLogoutYapar() throws InterruptedException {
          waitFor(1000);
         clickWithJS(anamenu.logout);
-        waitFor(1000);
-        waitForVisibility(anamenu.AnasayfaHeader,10);
+        waitFor(2000);
     }
 
     @And("yonetici kullaniciya sifre atama butonuna tiklar")
