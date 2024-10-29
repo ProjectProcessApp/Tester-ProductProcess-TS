@@ -20,9 +20,9 @@ import java.io.IOException;
                 "rerun:Failed/failedScenarios.txt" // bu satirdaki kod kosulan testlerden hata verenlerin yeniden ReRunner classi tarafindan kosulmasini saglar
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
-        features = "src/test/resources/features",//features folder path
+        features = "src/test/resources/features/endToEndTest",//features folder path
         glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},   //stepdefinitions path
-        tags = "@US2",
+        tags = "",
         dryRun = false
 )
 public class Runner {
