@@ -31,7 +31,7 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("Boru Kapama Butonunun sari renk oldugu dogrulanir")
     public void boru_kapama_butonunun_sari_renk_oldugu_dogrulanir() {
-        waitFor(1500);
+        waitFor(2000);
         String buttonRenk=talasligorev.boruKapamaButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }

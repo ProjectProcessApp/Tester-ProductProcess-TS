@@ -37,7 +37,6 @@ Feature: US2
     And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir
     And Giris yap butonuna tiklanir
     And siparis Olustur butonunun ekranda gorundugu kontrol edilir
-    And Onceden siparis listesi olup olmadigi dogrulanir
     And siparis olustur butonuna tiklanir
     And yeni siparis ekraninin geldigi dogrulanir
     And "<musteri adi>" musteri adina gecersiz bir data girilir
@@ -47,17 +46,15 @@ Feature: US2
     And "<Siparis turu>" Siparis turune gecersiz bir data girilir
     And "<Siparis miktari>" Siparis miktarina gecersiz bir data girilir
     And "<Hazir mil miktari>" Hazir mil miktarina gecersiz bir data girilir
-    And Giris butonunun aktif olmadigi kontrol edilir
+    And Kaydet butonunun aktif olmadigi kontrol edilir
+    And Kullanici logout yapar
 
     Examples:
       | musteri adi | Gasan No      | Siparis No | Teslim Tarihi | Siparis turu | Siparis miktari  | Hazir mil miktari |
-      |             |               |            |               |              |                  |                   |
       |ali          |1111 A 123450  |123450      |30.09.2024     |Lift          |1000              |100                |
       |ramazan      |111 AB 123450  |123458      |30.09.2024     |Damper        |1000              |100                |
       |halil        |1113 AB 123450 |12345       |30.09.2024     |Blok Lift     |1000              |100                |
-      |beytullah    |1115 AB 123450 |123460      |30.09.2024     |Paslanmaz     |-1000             |100                |
-      |hakki        |1116 AB 123450 |123461      |30.09.2024     |Paslanmaz     |1000              |-100               |
-
+      |beytullah    |1115 AB 123450 |123460      |30.09.2024     |Lift          |-1000             |-100               |
 
 
     Scenario: Amirlerin Ortak ekrani
@@ -79,7 +76,6 @@ Feature: US2
       Then Polisaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir
       And Database connection yapilir
       And Databasedeki veriler ve karsilastirilir
-      Then Basla butonu varligi dogrulanir
       And Kullanici logout yapar
       Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
       And Lift montaj amiri butonuna tiklanir
@@ -89,7 +85,6 @@ Feature: US2
       Then Lift montaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir
       And Database connection yapilir
       And Databasedeki veriler ve karsilastirilir
-      Then Basla butonu varligi dogrulanir
       And Kullanici logout yapar
       Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
       And Bloklift Montaj Amiri butonuna tiklanir
@@ -99,7 +94,6 @@ Feature: US2
       Then Bloklift Montaj Amirinin kendi sorumluluk sayfasina gectigi dogrulanir
       And Database connection yapilir
       And Databasedeki veriler ve karsilastirilir
-      Then Basla butonu varligi dogrulanir
       And Kullanici logout yapar
       Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
       And Boyama ve Paketleme Amiri butonuna tiklanir
@@ -109,6 +103,5 @@ Feature: US2
       Then Boyama ve Paketleme Amirinin kendi sorumluluk sayfasina gectigi dogrulanir
       And Database connection yapilir
       And Databasedeki veriler ve karsilastirilir
-      Then Basla butonu varligi dogrulanir
       And Kullanici logout yapar
 

@@ -1,3 +1,4 @@
+@endtoend
 Feature: Damper turu siparis EndtoEnd Test
 
   Scenario Outline: Kullanici Damper turunde yeni siparis olusturur

@@ -111,7 +111,7 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
     }
     @Then("girilen adedin sag tarafta paketleme biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_paketleme_biten_bolumune_islendigi_dogrulanir() {
-        waitFor(1500);
+        waitFor(2500);
         waitForVisibility(talasligorev.boyaBitenButton,10);
         Assert.assertEquals(Integer.parseInt(talasligorev.paketlemeBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }

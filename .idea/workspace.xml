@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="11.09.2024 guncelleme01">
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="29.10.2024 guncelleme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/ParallelRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/ParallelRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us01/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us01/Anamenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us02/SiparisOlusturmaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us02/SiparisOlusturmaStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us04/LiftMontajAmiriLiftTuruBaslatma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us04/LiftMontajAmiriLiftTuruBaslatma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/1-endToEndLiftTuru.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/1-endToEndLiftTuru.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us05/BoyaVePaketlemeLiftTuru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us05/BoyaVePaketlemeLiftTuru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/2-endToEndPaslanmazTuru.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/2-endToEndPaslanmazTuru.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/3-endToEndDamperTuru.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/3-endToEndDamperTuru.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/4-endToEndBlokliftTuru.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/4-endToEndBlokliftTuru.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/us02/US02_siparisOlusturma.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/us02/US02_siparisOlusturma.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,25 +76,40 @@
     "Cucumber Java.Feature: 1-endToEndLiftTuru.executor": "Run",
     "Cucumber Java.Feature: 2-endToEndPaslanmazTuru.executor": "Run",
     "Cucumber Java.Feature: 3-endToEndDamperTuru.executor": "Run",
+    "Cucumber Java.Feature: 4-endToEndBlokliftTuru.executor": "Run",
     "Cucumber Java.Feature: US01_Anamenu.executor": "Run",
     "Cucumber Java.Feature: US02_siparisOlusturma.executor": "Run",
+    "Cucumber Java.Feature: US04_liftMontajAmiriPaslanmazTuruMontaj.executor": "Run",
     "Cucumber Java.Feature: US2.executor": "Run",
     "Cucumber Java.Feature: jdbctesting.executor": "Run",
     "Cucumber Java.Scenario: Amirlerin Ortak ekrani.executor": "Run",
-    "Cucumber Java.Scenario: Bloklift Montaj Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor": "Run",
-    "Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor": "Run",
-    "Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Bloklift Montaj Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir.executor": "Run",
     "Cucumber Java.Scenario: Databaseden veri alma.executor": "Run",
+    "Cucumber Java.Scenario: Kullanici Bloklift turunde yeni siparis olusturur.executor": "Run",
     "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test) (1).executor": "Run",
     "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test).executor": "Run",
-    "Cucumber Java.Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor": "Run",
-    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Lift Montaj Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: TC_11 \"Bloklift Montaj Amiri\" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_13 \"Bloklift Montaj Amiri\" butonu Anasayfada gorulemez veya tiklanamaz olmalidir.(Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_14 \"Boyama ve Paketleme Amiri\" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_16 \"Boyama ve Paketleme Amiri\" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_17 \"Kalite Kontrol\" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_19 \"Kalite Kontrol\"  butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_20  \"Uretim Planlama \" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_22 \"Uretim Planlama\" butonu Anasayfada gorulemez veya tiklanamaz olmalidir. (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_23 \"Yonetim\" sayfasina gecer. (Positif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_24 \"YONETIM\" sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test) (1).executor": "Run",
+    "Cucumber Java.Scenario: TC_25 \"Yonetim\" sayfasina gecemez. (Negatif Test).executor": "Run",
     "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1).executor": "Run",
     "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir (1).executor": "Run",
     "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor": "Run",
     "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir.executor": "Run",
     "Cucumber Java.Scenario: Verilen siparisi guncelleme.executor": "Run",
-    "JUnit.ParallelRunner.executor": "Run",
+    "JUnit.FailedRunner.executor": "Run",
     "JUnit.Runner.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -96,7 +117,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "onur",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/cetin/Desktop/backend",
+    "last_opened_file_path": "C:/Users/cetin/Desktop/java/Tester-ProductProcess-TSyeni",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -106,13 +127,20 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TS" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TSyeni\src\test\resources\features\ui_features\us05" />
+      <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TSyeni\src\test\resources\features\ui_features\us04" />
+      <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TSyeni\src\test\resources\features\ui_features\us03" />
+      <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TSyeni\src\test\resources\features\ui_features\us02" />
+      <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TSyeni\src\test\resources\features\ui_features\us01" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tester_productprocess_ts.utilities.uiUtilities" />
@@ -130,15 +158,15 @@
       <visibility group="org.jetbrains.plugins.gradle.execution.GradleRunAnythingProvider" flag="false" />
     </myKeys>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: 2-endToEndPaslanmazTuru">
-    <configuration name="Feature: 1-endToEndLiftTuru" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Amirlerin Ortak ekrani">
+    <configuration name="Feature: US02_siparisOlusturma" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/1-endToEndLiftTuru.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us04 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us05" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/us02/US02_siparisOlusturma.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: 1-endToEndLiftTuru" />
+      <option name="SUGGESTED_NAME" value="Feature: US02_siparisOlusturma" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -150,14 +178,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: 2-endToEndPaslanmazTuru" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Amirlerin Ortak ekrani" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/2-endToEndPaslanmazTuru.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us04 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us05" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/us02/US02_siparisOlusturma.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: 2-endToEndPaslanmazTuru" />
+      <option name="NAME_FILTER" value="^Amirlerin Ortak ekrani$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Amirlerin Ortak ekrani$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Amirlerin Ortak ekrani" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -169,16 +198,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
+    <configuration name="Scenario: Kullanici yeni siparis olusturur (Negatif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US05_boyaVePaketlemeLiftTuru.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us04 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us05" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/us02/US02_siparisOlusturma.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir$&quot;" />
+      <option name="NAME_FILTER" value="^Kullanici yeni siparis olusturur \(Negatif Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Kullanici yeni siparis olusturur \(Negatif Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Kullanici yeni siparis olusturur (Negatif Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Kullanici yeni siparis olusturur (Positif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/us02/US02_siparisOlusturma.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^Kullanici yeni siparis olusturur \(Positif Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Kullanici yeni siparis olusturur \(Positif Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Kullanici yeni siparis olusturur (Positif Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/anamenu.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Tester-ProductProcess-TS" />
+      <option name="NAME_FILTER" value="^TC_24 \&quot;YONETIM\&quot; sayfasina gecer ve kullanicilara sifre atar\. \(Pozitif Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_24 \&quot;YONETIM\&quot; sayfasina gecer ve kullanicilara sifre atar\. \(Pozitif Test\)$&quot;" />
       <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Scenario: Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -190,15 +259,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Kullanici Bloklift turunde yeni siparis olusturur" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/4-endToEndBlokliftTuru.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us04 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us05" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/us01/US01_Anamenu.feature" />
+      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^Kullanici Bloklift turunde yeni siparis olusturur$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Kullanici Bloklift turunde yeni siparis olusturur$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Kullanici Bloklift turunde yeni siparis olusturur" />
+      <option name="NAME_FILTER" value="^TC_25 \&quot;Yonetim\&quot; sayfasina gecemez\. \(Negatif Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_25 \&quot;Yonetim\&quot; sayfasina gecemez\. \(Negatif Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -206,77 +275,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/US04_liftMontajAmiriLiftTuruMontaj.feature" />
-      <option name="GLUE" value="tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us01 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02 tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03 tester_productprocess_ts.hooks tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us04" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Tester-ProductProcess-TS" />
-      <option name="NAME_FILTER" value="^Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir$&quot;" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParallelRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tester-ProductProcess-TS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tester_productprocess_ts.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tester_productprocess_ts.runner" />
-      <option name="MAIN_CLASS_NAME" value="tester_productprocess_ts.runner.ParallelRunner" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tester-ProductProcess-TS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tester_productprocess_ts.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tester_productprocess_ts.runner" />
-      <option name="MAIN_CLASS_NAME" value="tester_productprocess_ts.runner.Runner" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" />
-      <item itemvalue="Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" />
-      <item itemvalue="Cucumber Java.Scenario: Kullanici Bloklift turunde yeni siparis olusturur" />
-      <item itemvalue="Cucumber Java.Feature: 1-endToEndLiftTuru" />
-      <item itemvalue="Cucumber Java.Feature: 2-endToEndPaslanmazTuru" />
-      <item itemvalue="JUnit.ParallelRunner" />
-      <item itemvalue="JUnit.Runner" />
+      <item itemvalue="Cucumber Java.Scenario: TC_24 &quot;YONETIM&quot; sayfasina gecer ve kullanicilara sifre atar. (Pozitif Test)" />
+      <item itemvalue="Cucumber Java.Feature: US02_siparisOlusturma" />
+      <item itemvalue="Cucumber Java.Scenario: Amirlerin Ortak ekrani" />
+      <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test)" />
+      <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test)" />
+      <item itemvalue="Cucumber Java.Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: 2-endToEndPaslanmazTuru" />
-        <item itemvalue="JUnit.Runner" />
-        <item itemvalue="Cucumber Java.Feature: 1-endToEndLiftTuru" />
-        <item itemvalue="JUnit.ParallelRunner" />
-        <item itemvalue="Cucumber Java.Scenario: Kullanici Bloklift turunde yeni siparis olusturur" />
+        <item itemvalue="Cucumber Java.Scenario: Amirlerin Ortak ekrani" />
+        <item itemvalue="Cucumber Java.Feature: US02_siparisOlusturma" />
+        <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test)" />
+        <item itemvalue="Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test)" />
+        <item itemvalue="Cucumber Java.Scenario: TC_25 &quot;Yonetim&quot; sayfasina gecemez. (Negatif Test)" />
       </list>
     </recent_temporary>
   </component>
