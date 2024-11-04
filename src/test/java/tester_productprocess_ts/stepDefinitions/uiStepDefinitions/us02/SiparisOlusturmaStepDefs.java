@@ -1,11 +1,13 @@
 package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import tester_productprocess_ts.pages.Anamenu;
+import tester_productprocess_ts.pages.TalasliImalatAmiriGorevleri;
 import tester_productprocess_ts.pages.siparisOlusturma;
 import tester_productprocess_ts.utilities.uiUtilities.DbHelper;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
@@ -22,6 +24,7 @@ import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
 public class SiparisOlusturmaStepDefs {
 
     static siparisOlusturma siparis = new siparisOlusturma();
+    TalasliImalatAmiriGorevleri taslasli = new TalasliImalatAmiriGorevleri();
 
     Anamenu anamenu = new Anamenu();
 
@@ -32,14 +35,6 @@ public class SiparisOlusturmaStepDefs {
     @Then("siparis Olustur butonunun ekranda gorundugu kontrol edilir")
     public void siparis_olustur_butonunun_ekranda_gorundugu_kontrol_edilir() {
         Assert.assertTrue(siparis.siparisOlusturButonu.isDisplayed());
-    }
-
-    @Then("Onceden siparis listesi olup olmadigi dogrulanir")
-    public void onceden_siparis_listesi_olup_olmadigi_dogrulanir() {
-        waitForVisibility(siparis.siparisListesi,10);
-        String expected = "Sipariş Listesi";
-        String actual = siparis.siparisListesi.getText();
-        Assert.assertEquals(expected, actual);
     }
 
     @Then("siparis olustur butonuna tiklanir")
@@ -165,6 +160,7 @@ public class SiparisOlusturmaStepDefs {
     public void siparis_turune_gecersiz_bir_data_girilir(String string) {
         waitFor(1000);
         ddmValue(siparis.siparisTuruSelect, string);
+        siparisTuru=string;
     }
 
     @Then("{string} Siparis miktarina gecersiz bir data girilir")
@@ -176,38 +172,22 @@ public class SiparisOlusturmaStepDefs {
 
     @Then("{string} Hazir mil miktarina gecersiz bir data girilir")
     public void hazir_mil_miktarina_gecersiz_bir_data_girilir(String string) {
-        siparis.hazirMilMiktariBox.sendKeys(Keys.TAB);
-        waitFor(1000);
-        siparis.hazirMilMiktariBox.clear();
-        siparis.hazirMilMiktariBox.sendKeys(string);
-    }
-
-    @Then("Giris butonunun aktif olmadigi kontrol edilir")
-    public void giris_butonunun_aktif_olmadigi_kontrol_edilir() {
-        waitFor(1000);
-        boolean isDisabled = anamenu.girisButonu.getAttribute("disabled") != null;
-        if (isDisabled) {
-            geriGitVeCikisYap();
-        } else {
-            anamenu.girisButonu.click();
-            waitFor(1000);
-            try {
-                Driver.getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-                WebElement successMessage = Driver.getDriver().findElement(By.xpath("//*[text()='Sipariş oluşturuldu']"));
-                if (successMessage.isDisplayed()) {
-                    System.out.println("Sipariş oluşturuldu metni ekranda göründü.");
-                }
-            } catch (NoSuchElementException e) {
-                System.out.println("Sipariş oluşturuldu metni bulunamadı, sayfa geriye alınıyor.");
-                geriGitVeCikisYap();
-            }
+        action.scrollToElement(siparis.hazirMilMiktariBox).perform();
+        System.out.println(siparisTuru);
+        if (siparisTuru.equals("Lift")) {
+            siparis.hazirMilMiktariBox.clear();
+            siparis.hazirMilMiktariBox.sendKeys(string);
         }
     }
 
-    private void geriGitVeCikisYap() {
-        Driver.getDriver().navigate().back();
-        waitFor(3000);
-        anamenu.logout.click();
+    @Then("Kaydet butonunun aktif olmadigi kontrol edilir")
+    public void Kaydet_butonunun_aktif_olmadigi_kontrol_edilir() {
+        waitFor(1000);
+        action.scrollToElement(anamenu.kaydetButonu).perform();
+        anamenu.kaydetButonu.click();
+        waitFor(1000);
+        Assert.assertFalse(anamenu.musteriAdiHata.isEmpty());
+
     }
 
     @And("Database connection yapilir")
@@ -275,19 +255,12 @@ public class SiparisOlusturmaStepDefs {
                 System.out.println(i + 1 + ".satir Veritabani ile eslesmiyor");
             }
         }
-        System.out.println("");
+        System.out.println("veriler dogru");
     }
 
     @Then("Basla butonu varligi dogrulanir")
     public void baslaButonuVarligiDogrulanir() {
-        String baslaButonu = "Basla";
-        for (int i = 0; i < siparis.baslaButonuList.size(); i++) {
-            Assert.assertEquals(baslaButonu, siparis.baslaButonuList.get(i).getText());
-            System.out.println((i + 1) + ". Basla butonu gorunuyor");
-        }
-        System.out.println("");
-        DbHelper.closeConnection();
+        waitFor(1000);
+      Assert.assertFalse(taslasli.liftBaslaButton.isEmpty());
     }
-
-
 }

@@ -1,3 +1,4 @@
+@endtoend
 Feature: Paslanmaz turu siparis EndtoEnd Test
 
   Scenario Outline: Kullanici Paslanmaz turunde yeni siparis olusturur

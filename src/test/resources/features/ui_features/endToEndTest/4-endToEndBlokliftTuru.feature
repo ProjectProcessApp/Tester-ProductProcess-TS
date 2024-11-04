@@ -1,3 +1,4 @@
+@endtoend
 Feature: Bloklift turu siparis EndtoEnd Test
 
   Scenario Outline: Kullanici Bloklift turunde yeni siparis olusturur

@@ -27,6 +27,9 @@ public class Anamenu {
     @FindBy(xpath = "//div[contains(text(), 'Girdiğiniz şifre eksik veya hatalı') or contains(text(), 'Şifre alanı boş bırakılamaz')]")
     public WebElement ilkGirisHataMesaji;
 
+    @FindBy(xpath = "//div[text()='Müşteri adı en az 4 karakter olmalı' or text()='Gasan No formatı hatalı' or text()='Sipariş numarası 6 haneli olmalı' or text()='Sipariş adedi en az 1 olmalıdır' or text()='Hazır Mil Miktarı negatif olamaz']\n")
+    public List<WebElement> musteriAdiHata;
+
     @FindBy(xpath = "//div[contains(text(),'TALAŞLI İMALAT AMİRİ')]")
     public WebElement talasliImalatAmiri;
 
@@ -90,10 +93,10 @@ public class Anamenu {
     @FindBy(xpath = "//h1[text()='Şıfre Atama Ekranı']")
     public WebElement sifreAtamaEkraniText;
 
-    @FindBy(css = "div.page-header-container > div > button.btn.btn-primary")
+    @FindBy(xpath = "//button[text()='Geri']")
     public WebElement returnback;
 
-    @FindBy(id = "userSelect")
+    @FindBy(className = "select")
     public WebElement userSelectElement;
 
     @FindBy(id = "password")
