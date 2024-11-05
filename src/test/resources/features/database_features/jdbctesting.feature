@@ -2,8 +2,7 @@
 Feature: Database testing
   Scenario:Databaseden veri alma
 
-    Then Database baglanilir
-    #And yeni siparis kaydi eklenir
+    And yeni siparis kaydi eklenir
+    And siparis guncellenir
+    And siparis silinebilir
     And butun kayitlar getirilir
-   # And "query" siparis guncellenir
-    #And "query" siparis silinebilir

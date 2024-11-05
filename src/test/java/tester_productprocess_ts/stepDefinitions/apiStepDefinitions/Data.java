@@ -7,16 +7,16 @@ public class Data {
     public JSONObject data86(){
 
         JSONObject expectedData = new JSONObject();
-        expectedData.put("id", 6);
-        expectedData.put("customerName", "alican");
-        expectedData.put("gasanNo", "1000 ABC 100002");
-        expectedData.put("orderNumber", "100002");
-        expectedData.put("orderDate", "2024-10-21");
+        expectedData.put("id", 68);
+        expectedData.put("customerName", "omer");
+        expectedData.put("gasanNo", "2000 ABC 100000");
+        expectedData.put("orderNumber", "200000");
+        expectedData.put("orderDate", "2024-11-05");
         expectedData.put("deliveryDate", "2026-10-10");
-        expectedData.put("orderType", "BLOKLIFT");
+        expectedData.put("orderType", "LIFT");
         expectedData.put("orderQuantity", 1500);
         expectedData.put("orderStatus", "İşlenmeyi Bekliyor");
-        expectedData.put("readyMilCount", 0);
+        expectedData.put("readyMilCount", 100);
         return expectedData;
     }
 
@@ -55,7 +55,7 @@ public class Data {
         JSONObject expectedData = new JSONObject();
         expectedData.put("customerName", "Elif");
         expectedData.put("gasanNo", "0182 ZC 839048");
-        expectedData.put("orderNumber", "303096");
+        expectedData.put("orderNumber", "200005");
         expectedData.put("deliveryDate", "2025-09-16");
         expectedData.put("orderType", "LIFT");
         expectedData.put("orderQuantity", 1000);

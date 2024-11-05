@@ -70,7 +70,6 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("Lift siparis turundeki siparisin bulundugu satira tiklar")
     public void lift_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        if(weiter=false)
         waitForVisibility(talasligorev.liftSatirButton,10);
         clickWithJS(talasligorev.liftSatirButton);
     }

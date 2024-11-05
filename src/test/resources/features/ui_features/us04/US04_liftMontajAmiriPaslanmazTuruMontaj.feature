@@ -10,7 +10,7 @@ Feature: US04
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Lift Montaj Amiri ekrandaki datalari dogrular
+    Then Lift Montaj Amiri ekrandaki datalari dogrular
     And Paslanmaz siparis turundeki siparisin bulundugu satira tiklar
     Then Paslanmaz turunde uretilen toplam mil miktarini dogrular
     Then Boru Kapama Butonunun sari renk oldugu dogrulanir

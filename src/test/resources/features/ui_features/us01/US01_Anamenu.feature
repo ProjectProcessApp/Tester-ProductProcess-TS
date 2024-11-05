@@ -30,6 +30,7 @@ Feature: US1
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
 
     Examples:
       | data    | error_message                      |
@@ -61,6 +62,7 @@ Feature: US1
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
 
     Examples:
       | data    | error_message                      |
@@ -92,6 +94,7 @@ Feature: US1
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
 
     Examples:
       | data    | error_message                      |
@@ -125,6 +128,7 @@ Feature: US1
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
 
     Examples:
       | data    | error_message                      |
@@ -158,6 +162,8 @@ Feature: US1
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
+
     Examples:
       | data    | error_message                      |
       |         | Şifre alanı boş bırakılamaz        |
@@ -190,6 +196,8 @@ Feature: US1
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
+
     Examples:
       | data    | error_message                      |
       |         | Şifre alanı boş bırakılamaz        |
@@ -223,6 +231,8 @@ Feature: US1
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
+
     Examples:
       | data    | error_message                      |
       |         | Şifre alanı boş bırakılamaz        |
@@ -266,6 +276,7 @@ Feature: US1
     And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And yonetim Giris yap butonuna tiklanir
     Then uygun hata mesajinin goruntulendigi dogrulanir "<error_message>"
+    And Kullanici logout yapar
 
     Examples:
       | data    | error_message                      |

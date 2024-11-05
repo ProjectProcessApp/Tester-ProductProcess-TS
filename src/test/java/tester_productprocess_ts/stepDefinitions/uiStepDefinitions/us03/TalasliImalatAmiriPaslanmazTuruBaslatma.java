@@ -40,7 +40,6 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
     }
     @Then("Paslanmaz siparis turundeki siparisin bulundugu satira tiklar")
     public void paslanmaz_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        if(weiter=false)
             waitForVisibility(talasligorev.paslanmazSatirButton,10);
             clickWithJS(talasligorev.paslanmazSatirButton);
     }
@@ -91,6 +90,7 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
 
     @And("Ezme butonuna tiklanir")
     public void ezmeButonunaTiklanir() {
+        waitFor(1500);
         clickWithJS(talasligorev.ezmeButton);
     }
 
