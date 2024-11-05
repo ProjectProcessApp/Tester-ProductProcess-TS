@@ -4,31 +4,28 @@ import io.cucumber.java.en.And;
 
 public class GetRequest1 extends GetRequest {
 
-    @And("id numara ile siparis Apiden test edilir")
-    public void idNumaraIleSiparisApidenTestEdilir() {
-        get01();
+    @And("{int} id numarali siparis Api ile GET edilir")
+    public void idNumaraliSiparisApiIleGETEdilir(int arg0) {
+        get01(arg0);
     }
 
-    @And("ordernummer ile siparis API den test edilir")
-    public void ordernummerIleSiparisAPIDenTestEdilir() {
-        get02();
+    @And("{int} order numarali siparis API ile GET edilir")
+    public void orderNumaraliSiparisAPIIleGETEdilir(int arg0) {
+        get02(arg0);
     }
 
-
-    @And("bir siparis eklenir ve Apiden test edilir")
-    public void birSiparisEklenirVeApidenTestEdilir() {
-          post();
+    @And("bir siparis POST edilir ve Apiden test edilir")
+    public void birSiparisPOSTEdilirVeApidenTestEdilir() {
+        post();
     }
 
-    @And("idsi {int} olan siparis APIden guncellendi")
-    public void idsiOlanSiparisAPIdenGuncellendi(int arg0) {
+    @And("idsi {int} olan siparise PUT yapilir")
+    public void idsiOlanSiparisePUTYapilir(int arg0) {
         put(arg0);
     }
 
-    @And("{int} ordernummer siparis silinir ve apiden test edilir")
-    public void ordernummerSiparisSilinirVeApidenTestEdilir(int arg0) {
-          delete(arg0);
+    @And("{int} order numarali siparis DELETE edilir ve apiden test edilir")
+    public void orderNumaraliSiparisDELETEEdilirVeApidenTestEdilir(int arg0) {
+        delete(arg0);
     }
-
-
 }

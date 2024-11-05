@@ -91,10 +91,9 @@ public class Anamenu {
 
     @Then("Talasli Imalat Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void talasliImalatAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
-        waitForVisibility(anamenu.amirHeader,10);
+        waitFor(1500);
         String anasayfa = anamenu.amirHeader.getText();
         String talasliHeader = "TALASLI IMALAT AMIRI";
-        waitFor(1000);
         assertEquals(talasliHeader, anasayfa);
     }
 

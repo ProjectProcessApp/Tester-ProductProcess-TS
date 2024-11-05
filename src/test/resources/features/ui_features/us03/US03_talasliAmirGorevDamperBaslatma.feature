@@ -13,7 +13,6 @@ Feature: US03
     And Giris yap butonuna tiklanir
     Then Talasli Imalat Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin basla butonuna tiklar
-    And Damper siparis turundeki siparisin bulundugu satira tiklar
     Then Mil Koparma Butonunun sari renk oldugu dogrulanir
     Then Mil Tornalama Butonunun gri renk oldugu dogrulanir
     Then Mil Taslama Butonunu gri renk oldugu dogrulanir
@@ -85,9 +84,3 @@ Feature: US03
     Then Damper Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir
     Then Kullanici logout yapar
-
-
-
-
-
-

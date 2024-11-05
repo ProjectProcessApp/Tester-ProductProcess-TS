@@ -34,9 +34,8 @@ Feature: Bloklift turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Talasli Imalat Amiri ekrandaki datalari dogrular
+    Then Talasli Imalat Amiri ekrandaki datalari dogrular
     And Bloklift siparis turundeki siparisin basla butonuna tiklar
-    #And Bloklift siparis turundeki siparisin bulundugu satira tiklar
     Then Mil Taslama Butonunu sari renk oldugu dogrulanir
     Then Isil Islem Butonunu gri renk oldugu dogrulanir
     And Mil taslama butonuna tiklanir
@@ -147,7 +146,7 @@ Feature: Bloklift turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Boyama ve Paketleme Amiri ekrandaki datalari dogrular
+    Then Boyama ve Paketleme Amiri ekrandaki datalari dogrular
     And Bloklift siparis turundeki siparisin bulundugu satira tiklar
     Then sag taraftaki kalan bolumu dogrulanir
     Then Boya butonunun sari renk oldugu dogrulanir

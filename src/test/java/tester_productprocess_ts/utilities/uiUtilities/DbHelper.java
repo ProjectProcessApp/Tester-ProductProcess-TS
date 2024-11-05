@@ -91,7 +91,6 @@ public class DbHelper {
                 columns.add(rsmd.getColumnName(i));
             }
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return columns;
@@ -111,7 +110,6 @@ public class DbHelper {
                 rowList.add(row);
             }
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return rowList;

@@ -2,6 +2,7 @@ Feature: US03
   Background:  Anasayfa ve dogrulama
     When Anasayfaya gidilir
     Then Anasayfada oldugu dogrulanir
+
   Scenario: Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir
     Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
     And Talasli Imalat Amiri Butonuna tiklanir
@@ -12,7 +13,6 @@ Feature: US03
     And Giris yap butonuna tiklanir
     Then Talasli Imalat Amiri ekrandaki datalari dogrular
     And Bloklift siparis turundeki siparisin basla butonuna tiklar
-    And Bloklift siparis turundeki siparisin bulundugu satira tiklar
     Then Mil Taslama Butonunu sari renk oldugu dogrulanir
     Then Isil Islem Butonunu gri renk oldugu dogrulanir
     And Mil taslama butonuna tiklanir

@@ -24,6 +24,7 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
 
     @Then("Damper siparis turundeki siparisin basla butonuna tiklar")
     public void damper_siparis_turundeki_siparisin_basla_butonuna_tiklar() {
+        waitFor(1500);
             if (!talasligorev.damperBaslaButton.isEmpty() & !talasligorev.damperBaslaButton.getFirst().getText().equals("Durdur")) {
             clickWithJS(talasligorev.damperBaslaButton.getFirst());
             waitFor(2000);
@@ -38,7 +39,6 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
     }
     @Then("Damper siparis turundeki siparisin bulundugu satira tiklar")
     public void damper_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        if(weiter=false)
             waitForVisibility(talasligorev.damperSatirButton,10);
             clickWithJS(talasligorev.damperSatirButton);
     }

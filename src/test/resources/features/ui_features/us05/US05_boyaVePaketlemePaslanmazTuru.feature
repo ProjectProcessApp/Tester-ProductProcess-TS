@@ -10,7 +10,7 @@ Feature: US05
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Boyama ve Paketleme Amiri ekrandaki datalari dogrular
+    Then Boyama ve Paketleme Amiri ekrandaki datalari dogrular
     And Paslanmaz siparis turundeki siparisin bulundugu satira tiklar
     Then sag taraftaki kalan bolumu dogrulanir
     Then Boya butonunun sari renk oldugu dogrulanir

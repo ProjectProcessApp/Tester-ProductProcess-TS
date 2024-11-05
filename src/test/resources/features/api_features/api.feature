@@ -1,7 +1,8 @@
 Feature: Api Test
   Scenario:
-    And id numara ile siparis Apiden test edilir
-    And ordernummer ile siparis API den test edilir
-    And bir siparis eklenir ve Apiden test edilir
-    #And idsi 87 olan siparis APIden guncellendi
-    #And 921452 ordernummer siparis silinir ve apiden test edilir
+
+    And bir siparis POST edilir ve Apiden test edilir
+    #And 68 id numarali siparis Api ile GET edilir
+    And 933352 order numarali siparis API ile GET edilir
+    #And idsi 68 olan siparise PUT yapilir
+    And 933352 order numarali siparis DELETE edilir ve apiden test edilir

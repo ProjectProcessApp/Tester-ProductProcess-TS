@@ -34,9 +34,8 @@ Feature: Damper turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-   #Then Talasli Imalat Amiri ekrandaki datalari dogrular
+   Then Talasli Imalat Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin basla butonuna tiklar
-    And Damper siparis turundeki siparisin bulundugu satira tiklar
     Then Mil Koparma Butonunun sari renk oldugu dogrulanir
     Then Mil Tornalama Butonunun gri renk oldugu dogrulanir
     Then Mil Taslama Butonunu gri renk oldugu dogrulanir
@@ -201,7 +200,7 @@ Feature: Damper turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Boyama ve Paketleme Amiri ekrandaki datalari dogrular
+    Then Boyama ve Paketleme Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin bulundugu satira tiklar
     Then sag taraftaki kalan bolumu dogrulanir
     Then Boya butonunun sari renk oldugu dogrulanir

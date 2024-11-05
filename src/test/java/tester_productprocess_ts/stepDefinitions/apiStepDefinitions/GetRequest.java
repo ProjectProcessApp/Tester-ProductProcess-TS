@@ -5,20 +5,22 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import tester_productprocess_ts.utilities.apiUtilities.Authentication;
+
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class GetRequest extends Authentication  {
 
     Response response;
-
     String token="";
 
-    public void get01() {
+    public void get01(int arg0) {
         // Token'ı alıyoruz
          token = token();
         // Request URL oluşturma
-        String url = "http://localhost:8080/orders/getOrderById/6";
+        String url = "http://localhost:8080/orders/getOrderById/"+arg0;
         // API'den response alıyoruz ve durumu kontrol ediyoruz
         response = given()
                 .header("Authorization", "Bearer " + token) // Token'ı ekliyoruz
@@ -31,7 +33,6 @@ public class GetRequest extends Authentication  {
         JSONObject actualData = new JSONObject(response.jsonPath().getMap("returnBody"));
         // Assert.assertEquals kullanarak her bir alanı karşılaştırıyoruz
         Data data = new Data();
-            assertEquals(data.data86().getInt("id"), actualData.getInt("id"));
             assertEquals(data.data86().getString("customerName"), actualData.getString("customerName"));
             assertEquals(data.data86().getString("gasanNo"), actualData.getString("gasanNo"));
             assertEquals(data.data86().getString("orderNumber"), actualData.getString("orderNumber"));
@@ -46,13 +47,14 @@ public class GetRequest extends Authentication  {
         assertEquals("Sipariş bulundu", response.jsonPath().getString("message"));
         assertEquals("OK", response.jsonPath().getString("httpStatus"));
 
-        System.out.println("ID numarasi ile siparis, basari ile API den test edildi");
+        System.out.println(arg0+" ID numarali siparis, basari ile API den test edildi");
     }
-    public void get02() {
+
+    public void get02(int arg0) {
 
         token = token();
 
-        String url = "http://localhost:8080/orders/getByOrderNumber/100002";
+        String url = "http://localhost:8080/orders/getByOrderNumber/"+arg0;
 
         response = given()
                 .header("Authorization", "Bearer " + token)
@@ -65,18 +67,16 @@ public class GetRequest extends Authentication  {
         JsonPath actualData = response.jsonPath();
 
         Data data = new Data();
-        assertEquals(data.data86().getInt("id"), actualData.getInt("id"));
-        assertEquals(data.data86().getString("customerName"), actualData.getString("customerName"));
-        assertEquals(data.data86().getString("gasanNo"), actualData.getString("gasanNo"));
-        assertEquals(data.data86().getString("orderNumber"), actualData.getString("orderNumber"));
-        assertEquals(data.data86().getString("orderDate"), actualData.getString("orderDate"));
-        assertEquals(data.data86().getString("deliveryDate"), actualData.getString("deliveryDate"));
-        assertEquals(data.data86().getString("orderType"), actualData.getString("orderType"));
-        assertEquals(data.data86().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
-        assertEquals(data.data86().getString("orderStatus"), actualData.getString("orderStatus"));
-        assertEquals(data.data86().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
+        assertEquals(data.post93().getString("customerName"), actualData.getString("customerName"));
+        assertEquals(data.post93().getString("gasanNo"), actualData.getString("gasanNo"));
+        assertEquals(data.post93().getString("orderNumber"), actualData.getString("orderNumber"));
+        assertEquals(data.post93().getString("deliveryDate"), actualData.getString("deliveryDate"));
+        assertEquals(data.post93().getString("orderType"), actualData.getString("orderType"));
+        assertEquals(data.post93().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
+        assertEquals(data.post93().getString("orderStatus"), actualData.getString("orderStatus"));
+        assertEquals(data.post93().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
 
-        System.out.println("order numarasi ile siparis, basari ile API den test edildi");
+        System.out.println(arg0 +" order numarali siparis, basari ile API den test edildi");
     }
 
     public void post(){
@@ -86,43 +86,27 @@ public class GetRequest extends Authentication  {
         Data data = new Data();
         response = given()
                 .when()
-                .header("Authorization", "Bearer "+token)
+                .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.JSON)
-                .body(data.data86())
+                .body(data.post93().toString())
                 .post(url);
-        System.out.println(data.data86());
-        JSONObject actualData = new JSONObject(response.jsonPath().getMap("returnBody"));
-        System.out.println(response.prettyPrint());
-            assertEquals(data.post93().getString("customerName"), actualData.getString("customerName"));
-            assertEquals(data.post93().getString("gasanNo"), actualData.getString("gasanNo"));
-            assertEquals(data.post93().getString("orderNumber"), actualData.getString("orderNumber"));
-            assertEquals(data.post93().getString("deliveryDate"), actualData.getString("deliveryDate"));
-            assertEquals(data.post93().getString("orderType"), actualData.getString("orderType"));
-            assertEquals(data.post93().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
-            assertEquals(data.post93().getString("orderStatus"), actualData.getString("orderStatus"));
-            assertEquals(data.post93().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
+
+        // LinkedHashMap türünde dönen veriyi JSONObject'e çeviriyoruz
+        Map<String, Object> actualDataMap = response.jsonPath().getMap("returnBody");
+
+        assertEquals(data.post93().getString("customerName"), actualDataMap.get("customerName"));
+        assertEquals(data.post93().getString("gasanNo"), actualDataMap.get("gasanNo"));
+        assertEquals(data.post93().getString("orderNumber"), actualDataMap.get("orderNumber"));
+        assertEquals(data.post93().getString("deliveryDate"), actualDataMap.get("deliveryDate"));
+        assertEquals(data.post93().getString("orderType"), actualDataMap.get("orderType"));
+        assertEquals(data.post93().getInt("orderQuantity"), actualDataMap.get("orderQuantity"));
+        assertEquals(data.post93().getString("orderStatus"), actualDataMap.get("orderStatus"));
+        assertEquals(data.post93().getInt("readyMilCount"), actualDataMap.get("readyMilCount"));
 
         assertEquals("Sipariş oluşturuldu", response.jsonPath().getString("message"));
         assertEquals("CREATED", response.jsonPath().getString("httpStatus"));
 
         System.out.println("siparisin API araciligiyla eklendigi test edildi");
-
-    }
-
-    public void delete(int ordernummer){
-        token = token();
-        Data data = new Data();
-        RestAssured.baseURI = "http://localhost:8080/orders/deleteOrder/"+ordernummer+"";
-        response=given()
-                .when()
-                .header("Authorization", "Bearer " + token)
-                .contentType(ContentType.JSON)
-                .delete();
-
-        assertEquals("Sipariş silindi", response.jsonPath().getString("message"));
-        assertEquals("OK", response.jsonPath().getString("httpStatus"));
-
-        System.out.println(ordernummer+" numarali siparisin basari ile silindigi API den test edildi");
     }
 
     public void put(int id){
@@ -142,4 +126,23 @@ public class GetRequest extends Authentication  {
 
         System.out.println(id+" numarali kayidin basari ile guncellendigi API den test edildi");
     }
+
+
+    public void delete(int ordernummer){
+        token = token();
+        Data data = new Data();
+        RestAssured.baseURI = "http://localhost:8080/orders/deleteOrder/"+ordernummer;
+        response=given()
+                .when()
+                .header("Authorization", "Bearer " + token)
+                .contentType(ContentType.JSON)
+                .delete();
+
+        assertEquals("Sipariş silindi", response.jsonPath().getString("message"));
+        assertEquals("OK", response.jsonPath().getString("httpStatus"));
+
+        System.out.println(ordernummer+" numarali siparisin basari ile silindigi API den test edildi");
+    }
+
+
 }
