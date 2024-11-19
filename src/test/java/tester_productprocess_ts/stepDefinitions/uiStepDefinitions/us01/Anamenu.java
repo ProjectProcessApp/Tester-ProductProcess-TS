@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import tester_productprocess_ts.utilities.uiUtilities.ConfigReader;
@@ -93,13 +94,13 @@ public class Anamenu {
     public void talasliImalatAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitFor(1500);
         String anasayfa = anamenu.amirHeader.getText();
-        String talasliHeader = "TALASLI IMALAT AMIRI";
+        String talasliHeader = "TALAŞLI İMALAT AMİRİ";
         assertEquals(talasliHeader, anasayfa);
     }
 
     @And("sifre kutucuguna gecersiz bir {string} girilir")
     public void sifreKutucugunaGecersizBirGirilir(String arg0) throws InterruptedException {
-        waitFor(2000);
+        waitFor(1000);
         waitForVisibility(anamenu.sifreKutusu,10);
         anamenu.sifreKutusu.sendKeys(arg0);
     }
@@ -143,7 +144,7 @@ public class Anamenu {
     public void polisajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitFor(1000);
         String anasayfa = anamenu.amirHeader.getText();
-        String polisajHeader = "POLISAJ AMIRI";
+        String polisajHeader = "POLİSAJ AMİRİ";
         assertEquals(polisajHeader, anasayfa);
     }
 
@@ -177,7 +178,7 @@ public class Anamenu {
     public void liftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirHeader,10);
         String anasayfa = anamenu.amirHeader.getText();
-        String talasliHeader = "LIFT MONTAJ AMIRI";
+        String talasliHeader = "LİFT MONTAJ AMİRİ";
         assertEquals(talasliHeader, anasayfa);
     }
 
@@ -203,7 +204,7 @@ public class Anamenu {
     @Then("Bloklift Montaj Amirinin kendi sorumluluk sayfasina gectigi dogrulanir")
     public void blokliftMontajAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         String anasayfa = anamenu.AnasayfaHeader.getText();
-        String blokliftHeader = "BLOK LIFT AMIRI";
+        String blokliftHeader = "BLOK LİFT AMİRİ";
         assertEquals(blokliftHeader, anasayfa);
     }
 
@@ -241,9 +242,8 @@ public class Anamenu {
     public void boyamaVePaketlemeAmirininKendiSorumlulukSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirHeader,10);
         String anasayfa = anamenu.amirHeader.getText();
-        String blokliftHeader = "BOYA VE PAKETLEME AMIRI";
+        String blokliftHeader = "BOYA VE PAKETLEME AMİRİ";
         assertEquals(blokliftHeader, anasayfa);
-
     }
 
     @Then("Kalite Kontrol butonunun gorunur oldugu dogrulanir")
@@ -254,7 +254,7 @@ public class Anamenu {
 
     @And("Kalite Kontrol butonuna tiklanir")
     public void kaliteKontrolButonunaTiklanir() throws InterruptedException {
-        waitFor(1000);
+        waitFor(500);
         action.click(anamenu.kaliteKontrolAmiri).perform();
     }
 
@@ -270,7 +270,7 @@ public class Anamenu {
     public void kaliteKontrolSayfasinaGectigiDogrulanir() {
         waitForVisibility(anamenu.amirHeader,10);
         String anasayfa = anamenu.amirHeader.getText();
-        String blokliftHeader = "KALITE KONTROL AMIRI";
+        String blokliftHeader = "KALİTE KONTROL AMİRİ";
         assertEquals(blokliftHeader, anasayfa);
     }
 
@@ -281,14 +281,14 @@ public class Anamenu {
 
     @Then("Uretim Planlama butonunun gorunur oldugu dogrulanir")
     public void uretimPlanlamaButonununGorunurOlduguDogrulanir() throws InterruptedException {
-        waitFor(1000);
+        waitFor(500);
         action.scrollToElement(anamenu.uretimPlanlama).perform();
         anamenu.uretimPlanlama.isDisplayed();
     }
 
     @And("Uretim Planlama butonuna tiklanir")
     public void uretimPlanlamaButonunaTiklanir() throws InterruptedException {
-        waitFor(1000);
+        waitFor(500);
         clickWithJS(anamenu.uretimPlanlama);
     }
 
@@ -363,7 +363,7 @@ public class Anamenu {
     public void yonetimSayfasinaGectigiDogrulanir() {
         String anasayfa = anamenu.amirHeader.getText();
         waitFor(2000);
-        String yonetimHeader = "GIRIŞ";
+        String yonetimHeader = "GİRİŞ";
         assertEquals(yonetimHeader, anasayfa);
     }
 
@@ -381,7 +381,7 @@ public class Anamenu {
 
     @And("yonetici kullaniciya sifre atama ekranina gectigini dogrular")
     public void yoneticiKullaniciyaSifreAtamaEkraninaGectiginiDogrular() throws InterruptedException {
-        String sifreTextActual = "ŞIFRE ATAMA EKRANI";
+        String sifreTextActual = "ŞİFRE ATAMA EKRANI";
         waitForVisibility(anamenu.sifreAtamaEkraniText,10);
         String sifreTextresult = anamenu.sifreAtamaEkraniText.getText();
         assertEquals(sifreTextresult, sifreTextActual);
@@ -438,6 +438,48 @@ public class Anamenu {
             anamenu.sifreGuncellendiText.isDisplayed();
             waitFor(1000);
             anamenu.kullaniciyaSifreAtama.click();
+        }
+    }
+
+    @Then("siparis durumu tamamlanmis siparislerin gozukmedigi dogrulanir")
+    public void siparisDurumuTamamlanmisSiparislerinGozukmedigiDogrulanir() {
+        for (WebElement durum : anamenu.talasliAmirdurumSutunu) {
+            String durumText = durum.getText();
+            Assert.assertFalse(durumText.contains("Tamamlandı"));
+        }
+    }
+
+    @Then("Paslanmaz siparis turu listelenmedigi dogrulanir")
+    public void paslanmazSiparisTuruListelenmedigiDogrulanir() {
+        for (WebElement durum : anamenu.polisajAmirSiparisTuruSutunu) {
+            String durumText = durum.getText();
+            Assert.assertFalse(durumText.contains("PASLANMAZ"));
+        }
+    }
+
+    @Then("Bloklift ve Damper siparis turlerinin listelenmedigi dogrulanir")
+    public void blokliftVeDamperSiparisTurlerininListelenmedigiDogrulanir() {
+        for (WebElement durum : anamenu.liftMontajAmirSiparisTuruSutunu) {
+            String durumText = durum.getText();
+            Assert.assertFalse(durumText.contains("BLOKLIFT"));
+            Assert.assertFalse(durumText.contains("DAMPER"));
+        }
+    }
+
+    @Then("lift ve Paslanmaz siparis turlerinin listelenmedigi dogrulanir")
+    public void liftVePaslanmazSiparisTurlerininListelenmedigiDogrulanir() {
+        for (WebElement durum : anamenu.liftMontajAmirSiparisTuruSutunu) {
+            String durumText = durum.getText();
+            Assert.assertNotEquals("LIFT", durumText);
+            Assert.assertFalse(durumText.contains("PASLANMAZ"));
+        }
+    }
+
+    @Then("her turde siparisin listelendigi dogrulanir")
+    public void herTurdeSiparisinListelendigiDogrulanir() {
+        for (WebElement durum : anamenu.liftMontajAmirSiparisTuruSutunu) {
+            String durumText = durum.getText();
+            Assert.assertTrue(durumText.contains("Lift")||durumText.contains("Paslanmaz")||durumText.contains("Damper")||durumText.contains("Blok Lift"));
         }
     }
 }

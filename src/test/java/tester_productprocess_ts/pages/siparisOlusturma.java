@@ -31,7 +31,7 @@ public class siparisOlusturma {
     @FindBy(xpath = "//input[@id='orderNumber']")
     public WebElement siparisNoBox;
 
-    @FindBy(xpath = "//input[@id='deliveryDate']")
+    @FindBy(id = "deliveryDate")
     public WebElement teslimTarihiBox;
 
     @FindBy(xpath = "//input[@id='orderType']")

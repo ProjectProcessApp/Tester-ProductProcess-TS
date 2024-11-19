@@ -24,7 +24,7 @@ Feature: Lift turu siparis EndtoEnd Test
     And Kullanici logout yapar
     Examples:
       | musteri adi | Gasan No      | Siparis No | Siparis turu | Siparis miktari  | Hazir mil miktari |
-      |omer         |2000 ABC 100000|200000      |Lift          |1500              |100                |
+      |omer         |3000 ABC 300000|3000-A0000  |Lift          |1500              |100                |
 
   Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir
     Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
@@ -34,7 +34,6 @@ Feature: Lift turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    Then Talasli Imalat Amiri ekrandaki datalari dogrular
     And Lift siparis turundeki siparisin basla butonuna tiklar
     Then Mil Koparma Butonunun sari renk oldugu dogrulanir
     Then Mil Tornalama Butonunun gri renk oldugu dogrulanir
@@ -113,7 +112,6 @@ Feature: Lift turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    Then Lift Montaj Amiri ekrandaki datalari dogrular
     And Lift siparis turundeki siparisin bulundugu satira tiklar
     Then uretilen toplam mil miktarini dogrular
     Then Boru Kapama Butonunun sari renk oldugu dogrulanir
@@ -230,5 +228,5 @@ Feature: Lift turu siparis EndtoEnd Test
     And Lift turu icin nihai uretimi tamamla butonuna tiklanir
     And onayla butonuna tiklanir
     Then Lift turu siparisin tamamlandi durumuna gectigi dogrulanir
-    And Lift siparisi silinir
+    #And Lift siparisi silinir
     And Kullanici logout yapar

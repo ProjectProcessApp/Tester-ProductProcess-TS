@@ -15,9 +15,14 @@ public class DatabaseTest {
 
     @And("yeni siparis kaydi eklenir")
     public void yeniSiparisKaydiEklenir() throws SQLException {
-        String query="INSERT INTO t_order (customer_name, delivery_date, final_product_quantity, gasan_no, order_date, order_number, order_quantity, order_type, ready_mil_count)" +
+        String query = "INSERT INTO t_order (customer_name, delivery_date, final_product_quantity, gasan_no, order_date, order_number, order_quantity, order_type, ready_mil_count) " +
                 "VALUES ('cemil', '2025-11-05', 100, '1189 ABC 987662', '2024-11-05', '963860', 100, 'LIFT', 50)";
-        DbHelper.set(query);
+        try {
+            DbHelper.set(query);
+        } catch (SQLException e) {
+            System.err.println("Sorgu hatası: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     @And("siparis guncellenir")

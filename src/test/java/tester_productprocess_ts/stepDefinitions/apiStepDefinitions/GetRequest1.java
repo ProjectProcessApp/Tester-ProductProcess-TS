@@ -9,8 +9,8 @@ public class GetRequest1 extends GetRequest {
         get01(arg0);
     }
 
-    @And("{int} order numarali siparis API ile GET edilir")
-    public void orderNumaraliSiparisAPIIleGETEdilir(int arg0) {
+    @And("{long} order numarali siparis API ile GET edilir")
+    public void orderNumaraliSiparisAPIIleGETEdilir(long arg0) {
         get02(arg0);
     }
 
@@ -24,8 +24,8 @@ public class GetRequest1 extends GetRequest {
         put(arg0);
     }
 
-    @And("{int} order numarali siparis DELETE edilir ve apiden test edilir")
-    public void orderNumaraliSiparisDELETEEdilirVeApidenTestEdilir(int arg0) {
+    @And("{long} order numarali siparis DELETE edilir ve apiden test edilir")
+    public void orderNumaraliSiparisDELETEEdilirVeApidenTestEdilir(long arg0) {
         delete(arg0);
     }
 }

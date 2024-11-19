@@ -96,7 +96,7 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
 
     @Then("Ezme Butonunu yesil renk oldugu dogrulanir")
     public void ezmeButonunuYesilRenkOlduguDogrulanir() {
-        waitFor(2000);
+        waitFor(3000);
         waitForVisibility(talasligorev.ezmeButton,10);
         String buttonRenk=talasligorev.ezmeButton.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);

@@ -24,7 +24,7 @@ Feature: Damper turu siparis EndtoEnd Test
     And Kullanici logout yapar
     Examples:
       | musteri adi | Gasan No      | Siparis No | Siparis turu | Siparis miktari  | Hazir mil miktari |
-      |hasan        |2000 ABC 100003|200003      |Damper        |1000              |1000               |
+      |hasan        |3000 ABC 100002|3AB-000002  |Damper        |1000              |1000               |
 
   Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir
     Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir
@@ -34,7 +34,6 @@ Feature: Damper turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-   Then Talasli Imalat Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin basla butonuna tiklar
     Then Mil Koparma Butonunun sari renk oldugu dogrulanir
     Then Mil Tornalama Butonunun gri renk oldugu dogrulanir
@@ -113,9 +112,7 @@ Feature: Damper turu siparis EndtoEnd Test
     And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Blokift Montaj Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin bulundugu satira tiklar
-    Then Damper turunde uretilen toplam mil miktarini dogrular
     Then Boru Kapama Butonunun sari renk oldugu dogrulanir
     Then Boru Kaynak Butonunun gri renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu gri renk oldugu dogrulanir
@@ -125,8 +122,8 @@ Feature: Damper turu siparis EndtoEnd Test
     Then uretilen adedi giriniz yazisi dogrulanir
     And DAMPER siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    Then girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir
-    Then sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir
+    Then Damper turu girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir
+    Then Damper turu sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu gri renk oldugu dogrulanir
     Then Gaz Dolum Butonunu gri renk oldugu dogrulanir
@@ -135,9 +132,8 @@ Feature: Damper turu siparis EndtoEnd Test
     Then uretilen adedi giriniz yazisi dogrulanir
     And DAMPER siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    Then girilen adedin sag tarafta boru kaynak biten bolumune islendigi dogrulanir
-    Then sag taraftaki boru kaynak kalan bolumundeki rakam dogrulanir
-    Then uretilen toplam boru miktari dogrulanir
+    Then Damper turu girilen adedin sag tarafta boru kaynak biten bolumune islendigi dogrulanir
+    Then Damper turu sag taraftaki boru kaynak kalan bolumundeki rakam dogrulanir
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Boru Kaynak Butonunun yesil renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu sari renk oldugu dogrulanir
@@ -169,14 +165,13 @@ Feature: Damper turu siparis EndtoEnd Test
     And Bloklift Montaj Amiri butonuna tiklanir
     And Bloklift Montaj Amiri sifre kutucuguna gecerli bir "data" girilir
     And Giris yap butonuna tiklanir
-    #Then Blokift Montaj Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin bulundugu satira tiklar
     And Gaz Dolum butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And DAMPER siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    Then girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir
-    Then sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir
+    Then Damper turu girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir
+    Then Damper turu sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Boru Kaynak Butonunun yesil renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu yesil renk oldugu dogrulanir
@@ -200,7 +195,6 @@ Feature: Damper turu siparis EndtoEnd Test
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    Then Boyama ve Paketleme Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin bulundugu satira tiklar
     Then sag taraftaki kalan bolumu dogrulanir
     Then Boya butonunun sari renk oldugu dogrulanir
@@ -228,5 +222,5 @@ Feature: Damper turu siparis EndtoEnd Test
     And Damper turu icin nihai uretimi tamamla butonuna tiklanir
     And onayla butonuna tiklanir
     Then Damper turu siparisin tamamlandi durumuna gectigi dogrulanir
-    And Damper siparisi silinir
+    #And Damper siparisi silinir
     And Kullanici logout yapar

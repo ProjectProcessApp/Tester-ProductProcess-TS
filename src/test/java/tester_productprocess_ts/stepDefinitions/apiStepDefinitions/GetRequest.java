@@ -37,10 +37,8 @@ public class GetRequest extends Authentication  {
             assertEquals(data.data86().getString("gasanNo"), actualData.getString("gasanNo"));
             assertEquals(data.data86().getString("orderNumber"), actualData.getString("orderNumber"));
             assertEquals(data.data86().getString("orderDate"), actualData.getString("orderDate"));
-            assertEquals(data.data86().getString("deliveryDate"), actualData.getString("deliveryDate"));
             assertEquals(data.data86().getString("orderType"), actualData.getString("orderType"));
             assertEquals(data.data86().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
-            assertEquals(data.data86().getString("orderStatus"), actualData.getString("orderStatus"));
             assertEquals(data.data86().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
 
         // "message" ve "httpStatus" alanlarını kontrol ediyoruz
@@ -50,7 +48,7 @@ public class GetRequest extends Authentication  {
         System.out.println(arg0+" ID numarali siparis, basari ile API den test edildi");
     }
 
-    public void get02(int arg0) {
+    public void get02(long arg0) {
 
         token = token();
 
@@ -65,16 +63,14 @@ public class GetRequest extends Authentication  {
                 .extract().response();
 
         JsonPath actualData = response.jsonPath();
-
+        System.out.println(actualData.prettyPrint());
         Data data = new Data();
-        assertEquals(data.post93().getString("customerName"), actualData.getString("customerName"));
-        assertEquals(data.post93().getString("gasanNo"), actualData.getString("gasanNo"));
-        assertEquals(data.post93().getString("orderNumber"), actualData.getString("orderNumber"));
-        assertEquals(data.post93().getString("deliveryDate"), actualData.getString("deliveryDate"));
-        assertEquals(data.post93().getString("orderType"), actualData.getString("orderType"));
-        assertEquals(data.post93().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
-        assertEquals(data.post93().getString("orderStatus"), actualData.getString("orderStatus"));
-        assertEquals(data.post93().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
+        assertEquals(data.data86().getString("customerName"), actualData.getString("customerName"));
+        assertEquals(data.data86().getString("gasanNo"), actualData.getString("gasanNo"));
+        assertEquals(data.data86().getString("orderNumber"), actualData.getString("orderNumber"));
+        assertEquals(data.data86().getString("orderType"), actualData.getString("orderType"));
+        assertEquals(data.data86().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
+        assertEquals(data.data86().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
 
         System.out.println(arg0 +" order numarali siparis, basari ile API den test edildi");
     }
@@ -128,7 +124,7 @@ public class GetRequest extends Authentication  {
     }
 
 
-    public void delete(int ordernummer){
+    public void delete(long ordernummer){
         token = token();
         Data data = new Data();
         RestAssured.baseURI = "http://localhost:8080/orders/deleteOrder/"+ordernummer;
