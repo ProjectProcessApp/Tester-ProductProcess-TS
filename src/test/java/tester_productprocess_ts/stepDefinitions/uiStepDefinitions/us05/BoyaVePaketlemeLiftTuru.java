@@ -5,10 +5,13 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import tester_productprocess_ts.pages.Anamenu;
 import tester_productprocess_ts.pages.TalasliImalatAmiriGorevleri;
 import tester_productprocess_ts.utilities.apiUtilities.Authentication;
 import tester_productprocess_ts.utilities.uiUtilities.Driver;
+
+import javax.swing.*;
 import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
@@ -126,7 +129,9 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
     @And("Lift turu icin nihai uretimi tamamla butonuna tiklanir")
     public void liftTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
         waitFor(1500);
-        clickWithJS(talasligorev.liftTamamlaButon);
+        Actions action = new Actions(Driver.getDriver());
+        action.scrollToElement(talasligorev.liftTamamlaButon).click(talasligorev.liftTamamlaButon).perform();
+        //clickWithJS(talasligorev.liftTamamlaButon);
     }
 
     @Then("Lift turu siparisin tamamlandi durumuna gectigi dogrulanir")

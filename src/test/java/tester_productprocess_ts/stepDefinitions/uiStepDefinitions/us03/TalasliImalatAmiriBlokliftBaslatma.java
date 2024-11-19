@@ -1,5 +1,6 @@
 package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us03;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -59,7 +60,7 @@ public class TalasliImalatAmiriBlokliftBaslatma {
     @Then("Bloklift siparis turu sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir")
     public void bloklift_siparis_turu_sag_taraftaki_mil_taslama_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(2500);
         int kalan= Integer.parseInt(talasligorev.milTaslamaKalanText.getText());
         int biten = Integer.parseInt(talasligorev.milTaslalamaBitenButton.getText());
         Assert.assertTrue(kalan>=siparisAdedi-biten);
@@ -119,4 +120,79 @@ public class TalasliImalatAmiriBlokliftBaslatma {
         Assert.assertTrue(kalan>=siparisAdedi-biten);
     }
 
+    @Then("Bloklift Mil Taslama Butonunu sari renk oldugu dogrulanir")
+    public void blokliftMilTaslamaButonunuSariRenkOlduguDogrulanir() {
+        waitFor(1500);
+        String buttonRenk=talasligorev.milTaslamaButton1.getCssValue("background-color");
+        Assert.assertEquals(sari,buttonRenk);
+    }
+
+    @And("Bloklift Mil taslama butonuna tiklanir")
+    public void blokliftMilTaslamaButonunaTiklanir() {
+        waitFor(1000);
+        clickWithJS(talasligorev.milTaslamaButton1);
+    }
+
+    @Then("Bloklift Isil Islem Butonunu sari renk oldugu dogrulanir")
+    public void blokliftIsilIslemButonunuSariRenkOlduguDogrulanir() {
+        waitForVisibility(talasligorev.isilIslemButton1,10);
+        String buttonRenk=talasligorev.isilIslemButton1.getCssValue("background-color");
+        Assert.assertEquals(sari,buttonRenk);
+    }
+
+    @And("Bloklift Isil Islem butonuna tiklanir")
+    public void blokliftIsilIslemButonunaTiklanir() {
+        clickWithJS(talasligorev.isilIslemButton1);
+    }
+
+    @Then("Bloklift Isil Islem Butonunu gri renk oldugu dogrulanir")
+    public void blokliftIsilIslemButonunuGriRenkOlduguDogrulanir() {
+        waitFor(1000);
+        String buttonRenk=talasligorev.isilIslemButton1.getCssValue("background-color");
+        Assert.assertEquals(gri,buttonRenk);
+    }
+
+    @Then("Bloklift Mil Taslama Butonunu yesil renk oldugu dogrulanir")
+    public void blokliftMilTaslamaButonunuYesilRenkOlduguDogrulanir() {
+        waitForVisibility(talasligorev.milTaslamaButton1,10);
+        String buttonRenk=talasligorev.milTaslamaButton1.getCssValue("background-color");
+        Assert.assertEquals(yesil,buttonRenk);
+    }
+
+    @Then("Bloklift Isil Islem Butonunu yesil renk oldugu dogrulanir")
+    public void blokliftIsilIslemButonunuYesilRenkOlduguDogrulanir() {
+        waitForVisibility(talasligorev.isilIslemButton1,10);
+        String buttonRenk=talasligorev.isilIslemButton1.getCssValue("background-color");
+        Assert.assertEquals(yesil,buttonRenk);
+    }
+
+    @Then("Bloklift turu girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir")
+    public void blokliftTuruGirilenAdedinSagTaraftaBoruKapamaBitenBolumuneIslendigiDogrulanir() {
+        waitFor(2000);
+        waitForVisibility(talasligorev.boruKapamaBitenButton1,10);
+        org.testng.Assert.assertEquals(Integer.parseInt(talasligorev.boruKapamaBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+    }
+
+    @Then("Blok lift turu sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir")
+    public void blokLiftTuruSagTaraftakiBoruKapamaKalanBolumundekiRakamDogrulanir() {
+        int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
+        waitFor(2000);
+        int actualBoruKapamaKalanText= Integer.parseInt(talasligorev.boruKapamaKalanText1.getText());
+        org.testng.Assert.assertTrue(siparisAdedi>actualBoruKapamaKalanText);
+    }
+
+    @Then("Blok lift turu girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir")
+    public void blokLiftTuruGirilenAdedinSagTaraftaGazDolumBitenBolumuneIslendigiDogrulanir() {
+        waitFor(2000);
+        waitForVisibility(talasligorev.gazDolumBitenButton1,10);
+        org.testng.Assert.assertEquals(Integer.parseInt(talasligorev.gazDolumBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+    }
+
+    @Then("Blok lift turu sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir")
+    public void blokLiftTuruSagTaraftakiGazDolumKalanBolumundekiRakamDogrulanir() {
+        int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
+        waitFor(2000);
+        int actualGazDolumKalanText= Integer.parseInt(talasligorev.gazDolumKalanText1.getText());
+        org.testng.Assert.assertTrue(siparisAdedi>actualGazDolumKalanText);
+    }
 }
