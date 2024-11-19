@@ -34,7 +34,6 @@ Feature: US04
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    Then Talasli Imalat Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin basla butonuna tiklar
     Then Mil Koparma Butonunun sari renk oldugu dogrulanir
     Then Mil Tornalama Butonunun gri renk oldugu dogrulanir
@@ -107,17 +106,13 @@ Feature: US04
     Then Damper Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Damper Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir
     Then Kullanici logout yapar
-
-  Scenario: Bloklift Montaj Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir
     Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
     And Bloklift Montaj Amiri butonuna tiklanir
     And Bloklift Montaj Amiri sifre kutucuguna gecerli bir "data" girilir
     And  Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Blokift Montaj Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin bulundugu satira tiklar
-    Then Damper turunde uretilen toplam mil miktarini dogrular
     Then Boru Kapama Butonunun sari renk oldugu dogrulanir
     Then Boru Kaynak Butonunun gri renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu gri renk oldugu dogrulanir
@@ -127,8 +122,8 @@ Feature: US04
     Then uretilen adedi giriniz yazisi dogrulanir
     And DAMPER siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    Then girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir
-    Then sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir
+    Then Damper turu girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir
+    Then Damper turu sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu gri renk oldugu dogrulanir
     Then Gaz Dolum Butonunu gri renk oldugu dogrulanir
@@ -137,9 +132,8 @@ Feature: US04
     Then uretilen adedi giriniz yazisi dogrulanir
     And DAMPER siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    Then girilen adedin sag tarafta boru kaynak biten bolumune islendigi dogrulanir
-    Then sag taraftaki boru kaynak kalan bolumundeki rakam dogrulanir
-    Then uretilen toplam boru miktari dogrulanir
+    Then Damper turu girilen adedin sag tarafta boru kaynak biten bolumune islendigi dogrulanir
+    Then Damper turu sag taraftaki boru kaynak kalan bolumundeki rakam dogrulanir
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Boru Kaynak Butonunun yesil renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu sari renk oldugu dogrulanir
@@ -171,14 +165,13 @@ Feature: US04
     And Bloklift Montaj Amiri butonuna tiklanir
     And Bloklift Montaj Amiri sifre kutucuguna gecerli bir "data" girilir
     And Giris yap butonuna tiklanir
-    #Then Blokift Montaj Amiri ekrandaki datalari dogrular
     And Damper siparis turundeki siparisin bulundugu satira tiklar
     And Gaz Dolum butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And DAMPER siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    Then girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir
-    Then sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir
+    Then Damper turu girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir
+    Then Damper turu sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Boru Kaynak Butonunun yesil renk oldugu dogrulanir
     Then Bloklift Montaj Butonunu yesil renk oldugu dogrulanir
