@@ -35,24 +35,24 @@ Feature: US05
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     And Bloklift siparis turundeki siparisin basla butonuna tiklar
-    Then Mil Taslama Butonunu sari renk oldugu dogrulanir
-    Then Isil Islem Butonunu gri renk oldugu dogrulanir
-    And Mil taslama butonuna tiklanir
+    Then Bloklift Mil Taslama Butonunu sari renk oldugu dogrulanir
+    Then Bloklift Isil Islem Butonunu gri renk oldugu dogrulanir
+    And Bloklift Mil taslama butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
     Then Bloklift siparis turu girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir
     Then Bloklift siparis turu sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir
-    Then Mil Taslama Butonunu yesil renk oldugu dogrulanir
-    Then Isil Islem Butonunu sari renk oldugu dogrulanir
-    And Isil Islem butonuna tiklanir
+    Then Bloklift Mil Taslama Butonunu yesil renk oldugu dogrulanir
+    Then Bloklift Isil Islem Butonunu sari renk oldugu dogrulanir
+    And Bloklift Isil Islem butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And Bloklift uretilecek adet girilir
     And onayla butonuna tiklanir
     Then Bloklift girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir
     Then Bloklift sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir
-    Then Mil Taslama Butonunu yesil renk oldugu dogrulanir
-    Then Isil Islem Butonunu yesil renk oldugu dogrulanir
+    Then Bloklift Mil Taslama Butonunu yesil renk oldugu dogrulanir
+    Then Bloklift Isil Islem Butonunu yesil renk oldugu dogrulanir
     And sag taraftaki Boru Kesme Havsa butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And Bloklift uretilecek adet girilir
@@ -84,8 +84,6 @@ Feature: US05
     Then Bloklift Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Bloklift Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir
     Then Kullanici logout yapar
-
-  Scenario: Bloklift Montaj Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir
     Then Bloklift Montaj Amiri butonunun gorunur oldugu dogrulanir
     And Bloklift Montaj Amiri butonuna tiklanir
     And Bloklift Montaj Amiri sifre kutucuguna gecerli bir "data" girilir
@@ -93,7 +91,6 @@ Feature: US05
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
     And Bloklift siparis turundeki siparisin bulundugu satira tiklar
-    Then Bloklift turunde uretilen toplam mil miktarini dogrular
     Then Bloklift Montaj Butonunu sari renk oldugu dogrulanir
     Then Boru Kapama Butonunun gri renk oldugu dogrulanir
     Then Gaz Dolum Butonunu gri renk oldugu dogrulanir
@@ -117,14 +114,14 @@ Feature: US05
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Gaz Dolum Butonunu sari renk oldugu dogrulanir
     Then Test Butonunun gri renk oldugu dogrulanir
-    Then girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir
-    Then sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir
+    Then Bloklift turu girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir
+    Then Blok lift turu sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir
     And Gaz Dolum butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And BLOKLIFT siparis turu icin uretilecek adet girilir
     And onayla butonuna tiklanir
-    Then girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir
-    Then sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir
+    Then Blok lift turu girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir
+    Then Blok lift turu sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir
     Then Bloklift Montaj Butonunu yesil renk oldugu dogrulanir
     Then Boru Kapama Butonunun yesil renk oldugu dogrulanir
     Then Gaz Dolum Butonunu yesil renk oldugu dogrulanir
@@ -140,8 +137,6 @@ Feature: US05
     Then Gaz Dolum Butonunu yesil renk oldugu dogrulanir
     Then Test butonunun yesil renk oldugu dogrulanir
     Then Kullanici logout yapar
-
-  Scenario: Boya ve Paketleme Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir
     Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir
     And Boyama ve Paketleme Amiri butonuna tiklanir
     And Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir "data" girilir

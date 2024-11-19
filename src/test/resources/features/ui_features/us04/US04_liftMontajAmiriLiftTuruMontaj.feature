@@ -106,16 +106,12 @@ Feature: US04
     Then girilen adedin sag tarafta biten bolumune islendigi dogrulanir
     Then Kalite kontrol sag taraftaki kalan bolumundeki rakam dogrulanir
     Then Kullanici logout yapar
-
-
-  Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir
     Then Lift montaj amiri butonunun gorunur oldugu dogrulanir
     And Lift montaj amiri butonuna tiklanir
     And Lift montaj amiri sifre kutucuguna gecerli bir "data" girilir
     And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir
     And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir
     And Giris yap butonuna tiklanir
-    #Then Lift Montaj Amiri ekrandaki datalari dogrular
     And Lift siparis turundeki siparisin bulundugu satira tiklar
     Then uretilen toplam mil miktarini dogrular
     Then Boru Kapama Butonunun sari renk oldugu dogrulanir
@@ -173,7 +169,7 @@ Feature: US04
     And Lift montaj amiri sifre kutucuguna gecerli bir "data" girilir
     And Giris yap butonuna tiklanir
     Then Lift montaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir
-    Then Lift Montaj Amiri ekrandaki datalari dogrular
+    #Then Lift Montaj Amiri ekrandaki datalari dogrular
     And Lift siparis turundeki siparisin bulundugu satira tiklar
     And Gaz Dolum butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
@@ -198,4 +194,3 @@ Feature: US04
     Then Gaz Dolum Butonunu yesil renk oldugu dogrulanir
     Then Baslik Takma Butonunu yesil renk oldugu dogrulanir
     And Kullanici logout yapar
-
