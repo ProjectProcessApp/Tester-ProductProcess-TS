@@ -134,4 +134,49 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
         String buttonRenk=talasligorev.boruKesmeHavsaButton.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }
+
+    @Then("Damper turu girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir")
+    public void damperTuruGirilenAdedinSagTaraftaBoruKapamaBitenBolumuneIslendigiDogrulanir() {
+        waitFor(2000);
+        waitForVisibility(talasligorev.boruKapamaBitenButton1,10);
+        org.testng.Assert.assertEquals(Integer.parseInt(talasligorev.boruKapamaBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+    }
+
+    @Then("Damper turu sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir")
+    public void damperTuruSagTaraftakiBoruKapamaKalanBolumundekiRakamDogrulanir() {
+        int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
+        waitFor(2000);
+        int actualBoruKapamaKalanText= Integer.parseInt(talasligorev.boruKapamaKalanText1.getText());
+        org.testng.Assert.assertTrue(siparisAdedi>actualBoruKapamaKalanText);
+    }
+
+    @Then("Damper turu girilen adedin sag tarafta boru kaynak biten bolumune islendigi dogrulanir")
+    public void damperTuruGirilenAdedinSagTaraftaBoruKaynakBitenBolumuneIslendigiDogrulanir() {
+        waitFor(2000);
+        waitForVisibility(talasligorev.boruKaynakBitenButton1,10);
+        org.testng.Assert.assertEquals(Integer.parseInt(talasligorev.boruKaynakBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+    }
+
+    @Then("Damper turu sag taraftaki boru kaynak kalan bolumundeki rakam dogrulanir")
+    public void damperTuruSagTaraftakiBoruKaynakKalanBolumundekiRakamDogrulanir() {
+        int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
+        waitFor(2000);
+        int actualBoruKaynakKalanText= Integer.parseInt(talasligorev.boruKaynakKalanText1.getText());
+        org.testng.Assert.assertTrue(siparisAdedi>actualBoruKaynakKalanText);
+    }
+
+    @Then("Damper turu girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir")
+    public void damperTuruGirilenAdedinSagTaraftaGazDolumBitenBolumuneIslendigiDogrulanir() {
+        waitFor(2000);
+        waitForVisibility(talasligorev.gazDolumBitenButton1,10);
+        org.testng.Assert.assertEquals(Integer.parseInt(talasligorev.gazDolumBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+    }
+
+    @Then("Damper turu sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir")
+    public void damperTuruSagTaraftakiGazDolumKalanBolumundekiRakamDogrulanir() {
+        int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
+        waitFor(2000);
+        int actualGazDolumKalanText= Integer.parseInt(talasligorev.gazDolumKalanText1.getText());
+        org.testng.Assert.assertTrue(siparisAdedi>actualGazDolumKalanText);
+    }
 }

@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import tester_productprocess_ts.pages.Anamenu;
 import tester_productprocess_ts.pages.TalasliImalatAmiriGorevleri;
+import tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02.SiparisOlusturmaStepDefs;
 
 import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.*;
 
@@ -14,6 +15,8 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     String token="";
     TalasliImalatAmiriGorevleri talasligorev = new TalasliImalatAmiriGorevleri();
+
+    SiparisOlusturmaStepDefs hazirmil = new SiparisOlusturmaStepDefs();
     Anamenu anamenu = new Anamenu();
     Response response;
     JsonPath json;
@@ -31,7 +34,7 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("Boru Kapama Butonunun sari renk oldugu dogrulanir")
     public void boru_kapama_butonunun_sari_renk_oldugu_dogrulanir() {
-        waitFor(2000);
+        waitFor(1500);
         String buttonRenk=talasligorev.boruKapamaButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
@@ -87,7 +90,7 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("Boru Kapama Butonunun yesil renk oldugu dogrulanir")
     public void boru_kapama_butonunun_yesil_renk_oldugu_dogrulanir() {
-        waitForVisibility(talasligorev.boruKapamaButon,10);
+        waitFor(3500);
         String buttonRenk=talasligorev.boruKapamaButon.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }
@@ -241,7 +244,8 @@ public class LiftMontajAmiriLiftTuruBaslatma {
     public void uretilenToplamMilMiktariniDogrular() {
         waitFor(1500);
         int siparisAdedi = Integer.parseInt(talasligorev.siparisAdedi.getText());
-        int hazirMilAdedi=Integer.parseInt(talasligorev.hazirMilAdedi.getText());
+        int hazirMilAdedi=hazirmil.getHazirMil();
+        System.out.println(hazirMilAdedi);
         int expectedUretilenToplamMil=siparisAdedi+hazirMilAdedi;
         int actualUretilenToplamMil=Integer.parseInt(talasligorev.uretilenToplamMil.getText());
         Assert.assertEquals(expectedUretilenToplamMil,actualUretilenToplamMil);

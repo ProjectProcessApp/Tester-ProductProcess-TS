@@ -1,8 +1,10 @@
 package tester_productprocess_ts.stepDefinitions.uiStepDefinitions.us02;
 
 import com.github.javafaker.Faker;
+import groovy.lang.GString;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import lombok.Getter;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -32,7 +34,15 @@ public class SiparisOlusturmaStepDefs {
 
     static String siparisTuru="";
 
-    @Then("siparis Olustur butonunun ekranda gorundugu kontrol edilir")
+    @Getter
+    private static int hazirMil;
+
+    static Statement statement = null;
+
+    static int gun=10;
+    static int yil=2025;
+
+     @Then("siparis Olustur butonunun ekranda gorundugu kontrol edilir")
     public void siparis_olustur_butonunun_ekranda_gorundugu_kontrol_edilir() {
         Assert.assertTrue(siparis.siparisOlusturButonu.isDisplayed());
     }
@@ -46,7 +56,7 @@ public class SiparisOlusturmaStepDefs {
     @Then("yeni siparis ekraninin geldigi dogrulanir")
     public void yeni_siparis_ekraninin_geldigi_dogrulanir() {
         waitForVisibility(siparis.yeniSiparis,10);
-        String expected = "Yeni Siparis";
+        String expected = "Yeni Sipariş";
         String actual = siparis.yeniSiparis.getText();
         Assert.assertEquals(expected, actual);
     }
@@ -73,9 +83,14 @@ public class SiparisOlusturmaStepDefs {
     @And("Teslim Tarihine gecerli bir data girilir")
     public void teslimTarihineGecerliBirDataGirilir() {
         waitForVisibility(siparis.teslimTarihiBox,10);
+        waitFor(300);
+        String gun1=String.valueOf(gun);
+        String yil1=String.valueOf(yil);
+        siparis.teslimTarihiBox.sendKeys(gun1);
         siparis.teslimTarihiBox.sendKeys("10");
-        siparis.teslimTarihiBox.sendKeys("10");
-        siparis.teslimTarihiBox.sendKeys("2026");
+        siparis.teslimTarihiBox.sendKeys(yil1);
+        gun++;
+        yil++;
     }
 
     @Then("{string} Siparis turune gecerli bir data girilir")
@@ -99,7 +114,12 @@ public class SiparisOlusturmaStepDefs {
         if (siparisTuru.equals("Lift")) {
             siparis.hazirMilMiktariBox.clear();
             siparis.hazirMilMiktariBox.sendKeys(string);
+            hazirMil= Integer.parseInt(string);
         }
+    }
+
+    public void setHazirMil(int hazirMil) {
+        this.hazirMil = hazirMil;
     }
 
     @Then("Siparis durumu kutusunda {string} yazmali")
@@ -127,45 +147,47 @@ public class SiparisOlusturmaStepDefs {
 
     @Then("{string} musteri adina gecersiz bir data girilir")
     public void musteri_adina_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(400);
         siparis.musteriAdiBox.clear();
         siparis.musteriAdiBox.sendKeys(string);
     }
 
     @Then("{string} Gasan Nosuna gecersiz bir data girilir")
     public void gasan_nosuna_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(400);
         siparis.gasanNoBox.clear();
         siparis.gasanNoBox.sendKeys(string);
     }
 
     @Then("{string} Siparis Noya gecersiz bir data girilir")
     public void siparis_noya_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(400);
         siparis.siparisNoBox.clear();
         siparis.siparisNoBox.sendKeys(string);
     }
 
     @And("Teslim Tarihine gecersiz bir data girilir")
     public void teslimTarihineGecersizBirDataGirilir() {
-        waitFor(1000);
-        siparis.teslimTarihiBox.sendKeys("5");
-        waitFor(1000);
-        siparis.teslimTarihiBox.sendKeys("11");
-        waitFor(1000);
-        siparis.teslimTarihiBox.sendKeys("2026");
+        waitForVisibility(siparis.teslimTarihiBox,10);
+        String gun1=String.valueOf(gun);
+        String yil1=String.valueOf(yil);
+        siparis.teslimTarihiBox.sendKeys(gun1);
+        siparis.teslimTarihiBox.sendKeys("10");
+        siparis.teslimTarihiBox.sendKeys(yil1);
+        gun++;
+        yil++;
     }
 
     @Then("{string} Siparis turune gecersiz bir data girilir")
     public void siparis_turune_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(400);
         ddmValue(siparis.siparisTuruSelect, string);
         siparisTuru=string;
     }
 
     @Then("{string} Siparis miktarina gecersiz bir data girilir")
     public void siparis_miktarina_gecersiz_bir_data_girilir(String string) {
-        waitFor(1000);
+        waitFor(400);
         siparis.siparisMiktariBox.clear();
         siparis.siparisMiktariBox.sendKeys(string);
     }
@@ -182,17 +204,17 @@ public class SiparisOlusturmaStepDefs {
 
     @Then("Kaydet butonunun aktif olmadigi kontrol edilir")
     public void Kaydet_butonunun_aktif_olmadigi_kontrol_edilir() {
-        waitFor(1000);
+        waitFor(400);
         action.scrollToElement(anamenu.kaydetButonu).perform();
         anamenu.kaydetButonu.click();
-        waitFor(1000);
+        waitFor(600);
         Assert.assertFalse(anamenu.musteriAdiHata.isEmpty());
 
     }
 
     @And("Database connection yapilir")
     public void databaseConnectionYapilir() throws SQLException {
-        Statement statement = DbHelper.connection();
+      statement = DbHelper.connection();
         System.out.println("Database e baglanildi");
     }
 
@@ -216,7 +238,7 @@ public class SiparisOlusturmaStepDefs {
 
             // Satır verilerini saklamak için bir liste oluştur
             // Birinci satırı bul ve hücrelerini locate et
-            List<WebElement> firstRowCells = Driver.getDriver().findElements(By.xpath("//tr[@class='eachRow'][" + (i + 1) + "]//td"));
+            List<WebElement> firstRowCells = Driver.getDriver().findElements(By.xpath("//table/tbody/tr[" + (i + 1) + "]//td"));
 
             // Birinci satırdaki verileri saklamak için liste oluştur
             List<String> firstRowData = new ArrayList<>();
@@ -261,6 +283,6 @@ public class SiparisOlusturmaStepDefs {
     @Then("Basla butonu varligi dogrulanir")
     public void baslaButonuVarligiDogrulanir() {
         waitFor(1000);
-      Assert.assertFalse(taslasli.liftBaslaButton.isEmpty());
+        Assert.assertFalse(taslasli.baslaButton.isEmpty());
     }
 }

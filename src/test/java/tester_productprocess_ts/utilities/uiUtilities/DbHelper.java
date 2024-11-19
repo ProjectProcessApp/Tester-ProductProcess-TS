@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DbHelper {
-    private static String userName ="user";
-    private static String password ="1234";
-    private static String dbUrl="jdbc:postgresql://localhost:5432/stajProje";
+    private static final String userName ="user";
+    private static final String password ="1234";
+    private static final String dbUrl="jdbc:postgresql://localhost:5432/stajProje";
 
     static Statement statement = null;
     static ResultSet resultSet;
@@ -18,9 +18,13 @@ public class DbHelper {
         System.out.println("Error: "+ exception.getMessage());
         System.out.println("Error Code : "+exception.getErrorCode());
     }
+
     public static Statement connection() throws SQLException {
-        connection= DriverManager.getConnection(dbUrl,userName,password);
-        statement= connection.createStatement();
+        ReusableMethods.waitFor(5000);
+        if (connection == null || connection.isClosed()) {
+            connection = DriverManager.getConnection(dbUrl, userName, password);
+        }
+        statement = connection.createStatement();
         return statement;
     }
 
@@ -40,19 +44,23 @@ public class DbHelper {
             connection.close();
         }
     }
+
     public static void set(String query) throws SQLException {
-       try{
-           connection= DriverManager.getConnection(dbUrl,userName,password);
-           statement= connection.createStatement();
-           statement.executeUpdate(query);
-           System.out.println("Kayit eklendi");
-       }catch (SQLException exception) {
-           showErrorMessage(exception);
-       }
-       finally {
-           connection.close();
-       }
+        try {
+            if (connection == null || connection.isClosed()) {
+                connection = DriverManager.getConnection(dbUrl, userName, password);
+            }
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+            System.out.println("Kayit eklendi");
+        } catch (SQLException exception) {
+            showErrorMessage(exception);
+        } finally {
+            // Connection close işlemi yapılabilir, ancak her zaman yapılmaması önerilir, çünkü connection'ı tekrar kullanabilirsiniz.
+            // closeConnection();
+        }
     }
+
     public static void update(String query) throws SQLException {
         try{
             connection= DriverManager.getConnection(dbUrl,userName,password);
@@ -66,6 +74,7 @@ public class DbHelper {
             closeConnection();
         }
     }
+
     public static void delete(String query) throws SQLException {
         try{
             connection= DriverManager.getConnection(dbUrl,userName,password);
@@ -114,6 +123,7 @@ public class DbHelper {
         }
         return rowList;
     }
+
     public static void closeConnection() {
         try {
             if (resultSet != null) {

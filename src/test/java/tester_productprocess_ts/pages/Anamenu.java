@@ -15,6 +15,15 @@ public class Anamenu {
     @FindBy(xpath = "//div[@class='menuDiv']")
     public List<WebElement> menulinkleri;
 
+    @FindBy(xpath = "//table//tr/td[count(//table//th[text()='Durumu']/preceding-sibling::th)+1]")
+    public List<WebElement> talasliAmirdurumSutunu;
+
+    @FindBy(xpath = "//table//tr/td[count(//table//th[text()='Sipariş Türü']/preceding-sibling::th)+1]")
+    public List<WebElement> polisajAmirSiparisTuruSutunu;
+
+    @FindBy(xpath = "//table//tr/td[count(//table//th[text()='Sipariş Türü']/preceding-sibling::th)+1]")
+    public List<WebElement> liftMontajAmirSiparisTuruSutunu;
+
     @FindBy(xpath = "//h1[@class='page-header_page_header__pY9yF']")
     public WebElement AnasayfaHeader;
 
@@ -27,7 +36,7 @@ public class Anamenu {
     @FindBy(xpath = "//div[contains(text(), 'Girdiğiniz şifre eksik veya hatalı') or contains(text(), 'Şifre alanı boş bırakılamaz')]")
     public WebElement ilkGirisHataMesaji;
 
-    @FindBy(xpath = "//div[text()='Müşteri adı en az 4 karakter olmalı' or text()='Gasan No formatı hatalı' or text()='Sipariş numarası 6 haneli olmalı' or text()='Sipariş adedi en az 1 olmalıdır' or text()='Hazır Mil Miktarı negatif olamaz']\n")
+    @FindBy(xpath = "//div[text()='Müşteri adı en az 4 karakter olmalı' or text()='Gasan No formatı hatalı' or text()='Sipariş numarası 6 haneli olmalı' or text()='Sipariş adedi en az 1 olmalıdır' or text()='Hazır Mil Miktarı negatif olamaz' or text()='Sipariş numarası 10 haneli olmal' or text()='Geçersiz sipariş numarası formatı']")
     public List<WebElement> musteriAdiHata;
 
     @FindBy(xpath = "//div[contains(text(),'TALAŞLI İMALAT AMİRİ')]")
@@ -90,7 +99,7 @@ public class Anamenu {
     @FindBy(xpath = "//a[text()='Kulanıcıya Şifre Atama']")
     public WebElement kullaniciyaSifreAtama;
 
-    @FindBy(xpath = "//h1[text()='Şıfre Atama Ekranı']")
+    @FindBy(xpath = "//h1[text()='Şİfre Atama Ekranı']")
     public WebElement sifreAtamaEkraniText;
 
     @FindBy(xpath = "//button[text()='Geri']")

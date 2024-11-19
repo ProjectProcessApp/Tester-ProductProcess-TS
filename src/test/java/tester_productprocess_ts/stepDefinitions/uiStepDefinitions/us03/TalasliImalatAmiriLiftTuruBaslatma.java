@@ -59,13 +59,10 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
             if (!talasligorev.liftBaslaButton.isEmpty() & !talasligorev.liftBaslaButton.getFirst().getText().equals("Durdur")) {
                 clickWithJS(talasligorev.liftBaslaButton.getFirst());
                 waitFor(1000);
-                waitForVisibility(talasligorev.liftSatirButton, 10);
                 clickWithJS(talasligorev.liftSatirButton);
-                weiter = true;
             }else if(talasligorev.liftBaslaButton.getFirst().getText().equals("Durdur")){
             waitForVisibility(talasligorev.liftSatirButton, 10);
             clickWithJS(talasligorev.liftSatirButton);
-            weiter = true;
             }
     }
     @Then("Lift siparis turundeki siparisin bulundugu satira tiklar")
@@ -99,11 +96,11 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
         waitFor(1000);
         String buttonRenk=talasligorev.isilIslemButton.getCssValue("background-color");
         Assert.assertEquals(gri,buttonRenk);
-
     }
     @Then("Mil Koparma butonuna tiklanir")
     public void mil_koparma_butonuna_tiklanir() {
         waitForVisibility(talasligorev.milKoparmaButton,10);
+        waitFor(1500);
         talasligorev.milKoparmaButton.click();
     }
     @Then("uretilen adedi giriniz yazisi dogrulanir")
@@ -242,7 +239,7 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
 
     @Then("girilen adedin sag tarafta Boru Kesme Havsa biten bolumune islendigi dogrulanir")
     public void girilenAdedinSagTaraftaBoruKesmeHavsaBitenBolumuneIslendigiDogrulanir() {
-        waitFor(2000);
+        waitFor(3000);
         Assert.assertEquals(Integer.parseInt(talasligorev.boruKesmeHavsaBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
@@ -270,7 +267,7 @@ public class TalasliImalatAmiriLiftTuruBaslatma extends Authentication {
     }
     @Then("Polisaj butonunun yesil renk oldugu dogrulanir")
     public void polisaj_butonunun_yesil_renk_oldugu_dogrulanir() {
-         waitFor(2500);
+         waitFor(3500);
         String buttonRenk=talasligorev.polisajButton.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }

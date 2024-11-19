@@ -14,14 +14,14 @@ import java.io.IOException;
         plugin = {
                 "pretty",//raporlarin daha ikunakli olmasi icin
                 "html:target/default-cucumber-reports.html",
-                "json:target/json-reports/cucumber.json",  //plugin ekledikten sonra bunu cucumber report için ekle
-                "junit:test-output/htmlReport/cucumber.xml", //xml report için
+                "json:target/json-reports/cucumber.json",
+                "junit:test-output/htmlReport/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                "rerun:Failed/failedScenarios.txt" // bu satirdaki kod kosulan testlerden hata verenlerin yeniden ReRunner classi tarafindan kosulmasini saglar
+                "rerun:Failed/failedScenarios.txt"
         },
-        monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
-        features = "src/test/resources/features",//features folder path
-        glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},   //stepdefinitions path
+        monochrome = true,
+        features = "src/test/resources/features",
+        glue = {"tester_productprocess_ts/stepDefinitions","tester_productprocess_ts/hooks"},
         tags = "@endtoend",
         dryRun = false
 )
