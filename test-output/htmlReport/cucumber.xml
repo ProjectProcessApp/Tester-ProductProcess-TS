@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="864.318" tests="8" skipped="0" failures="0" errors="0">
-<testcase classname="Lift turu siparis EndtoEnd Test" name="Kullanici Lift turunde yeni siparis olusturur - Example #1.1" time="15.359">
+<testsuite name="Cucumber" time="866.453" tests="8" skipped="0" failures="0" errors="0">
+<testcase classname="Lift turu siparis EndtoEnd Test" name="Kullanici Lift turunde yeni siparis olusturur - Example #1.1" time="20.447">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -24,7 +24,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Lift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" time="217.076">
+<testcase classname="Lift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" time="216.278">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
@@ -138,7 +138,7 @@ And Lift turu icin nihai uretimi tamamla butonuna tiklanir..................pass
 Then Lift turu siparisin tamamlandi durumuna gectigi dogrulanir.............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Kullanici Paslanmaz turunde yeni siparis olusturur - Example #1.1" time="12.379">
+<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Kullanici Paslanmaz turunde yeni siparis olusturur - Example #1.1" time="12.302">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -162,7 +162,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" time="219.028">
+<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" time="218.276">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
@@ -272,7 +272,7 @@ And Paslanmaz turu icin nihai uretimi tamamla butonuna tiklanir.............pass
 Then Paslanmaz turu siparisin tamamlandi durumuna gectigi dogrulanir........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Damper turu siparis EndtoEnd Test" name="Kullanici Damper turunde yeni siparis olusturur - Example #1.1" time="12.129">
+<testcase classname="Damper turu siparis EndtoEnd Test" name="Kullanici Damper turunde yeni siparis olusturur - Example #1.1" time="12.25">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -296,7 +296,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Damper turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir" time="211.488">
+<testcase classname="Damper turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir" time="210.402">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
@@ -409,7 +409,7 @@ And Damper turu icin nihai uretimi tamamla butonuna tiklanir................pass
 Then Damper turu siparisin tamamlandi durumuna gectigi dogrulanir...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Kullanici Bloklift turunde yeni siparis olusturur - Example #1.1" time="12.174">
+<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Kullanici Bloklift turunde yeni siparis olusturur - Example #1.1" time="12.42">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -433,7 +433,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir" time="163.707">
+<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir" time="163.175">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
