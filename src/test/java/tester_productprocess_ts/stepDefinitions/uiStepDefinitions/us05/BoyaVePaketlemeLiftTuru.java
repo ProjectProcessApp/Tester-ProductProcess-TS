@@ -20,7 +20,6 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
 
     String token="";
     TalasliImalatAmiriGorevleri talasligorev = new TalasliImalatAmiriGorevleri();
-    Anamenu anamenu = new Anamenu();
     Response response;
     String sari ="rgba(255, 255, 0, 1)";
     String gri ="rgba(180, 177, 177, 1)";
@@ -61,74 +60,74 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
     }
     @Then("Boya butonunun sari renk oldugu dogrulanir")
     public void boya_butonunun_sari_renk_oldugu_dogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.boyaButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
     @Then("Paketleme butonunun gri renk oldugu dogrulanir")
     public void paketleme_butonunun_gri_renk_oldugu_dogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.paketlemeButon.getCssValue("background-color");
         Assert.assertEquals(gri,buttonRenk);
     }
     @Then("Boya butonuna tiklanir")
     public void boya_butonuna_tiklanir() {
-        waitFor(1500);
+        waitFor(1000);
         clickWithJS(talasligorev.boyaButon);
     }
     @Then("Boya butonunun yesil renk oldugu dogrulanir")
     public void boya_butonunun_yesil_renk_oldugu_dogrulanir() {
-        waitFor(2000);
+        waitFor(1000);
         String buttonRenk=talasligorev.boyaButon.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }
     @Then("Paketleme butonunun sari renk oldugu dogrulanir")
     public void paketleme_butonunun_sari_renk_oldugu_dogrulanir() {
-        waitFor(2000);
+        waitFor(1000);
         String buttonRenk=talasligorev.paketlemeButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
     @Then("girilen adedin sag tarafta boya biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_boya_biten_bolumune_islendigi_dogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         waitForVisibility(talasligorev.boyaBitenButton,10);
         Assert.assertEquals(Integer.parseInt(talasligorev.boyaBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
     @Then("sag taraftaki boya kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_boya_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1000);
         int actualBoyaKalanText= Integer.parseInt(talasligorev.boyaKalanText.getText());
         Assert.assertTrue(siparisAdedi>actualBoyaKalanText);
     }
     @Then("Paketleme butonuna tiklanir")
     public void paketleme_butonuna_tiklanir() {
-       waitFor(1500);
+       waitFor(1000);
        clickWithJS(talasligorev.paketlemeButon);
     }
     @Then("Paketleme butonunun yesil renk oldugu dogrulanir")
     public void paketleme_butonunun_yesil_renk_oldugu_dogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.paketlemeButon.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }
     @Then("girilen adedin sag tarafta paketleme biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_paketleme_biten_bolumune_islendigi_dogrulanir() {
-        waitFor(2500);
+        waitFor(1000);
         waitForVisibility(talasligorev.boyaBitenButton,10);
         Assert.assertEquals(Integer.parseInt(talasligorev.paketlemeBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
     @Then("sag taraftaki paketleme kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_paketleme_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1000);
         int actualPaketlemeKalanText= Integer.parseInt(talasligorev.paketlemeKalanText.getText());
         Assert.assertTrue(siparisAdedi>actualPaketlemeKalanText);
     }
 
     @And("Lift turu icin nihai uretimi tamamla butonuna tiklanir")
     public void liftTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
-        waitFor(1500);
+        waitFor(1000);
         Actions action = new Actions(Driver.getDriver());
         action.scrollToElement(talasligorev.liftTamamlaButon).click(talasligorev.liftTamamlaButon).perform();
         //clickWithJS(talasligorev.liftTamamlaButon);
@@ -136,7 +135,7 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
 
     @Then("Lift turu siparisin tamamlandi durumuna gectigi dogrulanir")
     public void liftTuruSiparisinTamamlandiDurumunaGectigiDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String expectedTamamlandiText="Tamamlandı";
         String actualTamamlandiText=talasligorev.liftTamamlandiText.getText();
         Assert.assertEquals(expectedTamamlandiText,actualTamamlandiText);
@@ -152,13 +151,13 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
 
     @And("Paslanmaz turu icin nihai uretimi tamamla butonuna tiklanir")
     public void paslanmazTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
-        waitFor(1500);
+        waitFor(500);
         clickWithJS(talasligorev.paslanmazTamamlaButon);
     }
 
     @Then("Paslanmaz turu siparisin tamamlandi durumuna gectigi dogrulanir")
     public void paslanmazTuruSiparisinTamamlandiDurumunaGectigiDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String expectedTamamlandiText="Tamamlandı";
         String actualTamamlandiText=talasligorev.paslanmazTamamlandiText.getText();
         Assert.assertEquals(expectedTamamlandiText,actualTamamlandiText);
@@ -174,13 +173,13 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
 
     @And("Damper turu icin nihai uretimi tamamla butonuna tiklanir")
     public void damperTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
-        waitFor(1500);
+        waitFor(1000);
         clickWithJS(talasligorev.damperTamamlaButon);
     }
 
     @Then("Damper turu siparisin tamamlandi durumuna gectigi dogrulanir")
     public void damperTuruSiparisinTamamlandiDurumunaGectigiDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String expectedTamamlandiText="Tamamlandı";
         String actualTamamlandiText=talasligorev.damperTamamlandiText.getText();
         Assert.assertEquals(expectedTamamlandiText,actualTamamlandiText);
@@ -188,7 +187,7 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
 
     @And("Damper siparisi silinir")
     public void damperSiparisiSilinir() {
-        waitFor(1500);
+        waitFor(1000);
         clickWithJS(talasligorev.damperSiparisSil);
         waitFor(1000);
         clickWithJS(talasligorev.onaylaButton);
@@ -196,13 +195,13 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
 
     @And("Bloklift turu icin nihai uretimi tamamla butonuna tiklanir")
     public void blokliftTuruIcinNihaiUretimiTamamlaButonunaTiklanir() {
-        waitFor(1500);
+        waitFor(1000);
         clickWithJS(talasligorev.blokliftTamamlaButon);
     }
 
     @Then("Bloklift turu siparisin tamamlandi durumuna gectigi dogrulanir")
     public void blokliftTuruSiparisinTamamlandiDurumunaGectigiDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String expectedTamamlandiText="Tamamlandı";
         String actualTamamlandiText=talasligorev.blokliftTamamlandiText.getText();
         Assert.assertEquals(expectedTamamlandiText,actualTamamlandiText);
@@ -214,5 +213,12 @@ public class BoyaVePaketlemeLiftTuru extends Authentication {
         clickWithJS(talasligorev.blokliftSiparisSil);
         waitFor(1000);
         clickWithJS(talasligorev.onaylaButton);
+    }
+
+    @And("Lift turu icin nihai uretimi diger tamamla butonuna tiklanir")
+    public void liftTuruIcinNihaiUretimiDigerTamamlaButonunaTiklanir() {
+        waitFor(1000);
+        Actions action = new Actions(Driver.getDriver());
+        action.scrollToElement(talasligorev.liftTamamladigerButon).click(talasligorev.liftTamamladigerButon).perform();
     }
 }

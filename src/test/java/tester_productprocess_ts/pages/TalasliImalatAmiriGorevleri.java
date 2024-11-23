@@ -238,8 +238,26 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath = "(//button[@name='approveCount'])[1]")
     public  WebElement kaliteKontrolOnaylaButton;
 
+    @FindBy (xpath = "//button/span[text()='Hurda']")
+    public  WebElement kaliteKontrolHurdaButton;
+
+    @FindBy (xpath = "//button/span[text()='Mil Taşlamaya Geri Gidecek']")
+    public  WebElement kaliteKontrolMilTaslamaButton;
+
+    @FindBy (xpath = "//button/span[text()='Isıl İşleme Geri Gidecek']")
+    public  WebElement kaliteKontrolIsilIslemButton;
+
     @FindBy (xpath = "(//button[@name='approveCount'])[2]")
-    public  WebElement kaliteKontrolBitenButton;
+    public  WebElement kaliteKontrolOnaylandiBitenButton;
+
+    @FindBy (xpath = "(//button[@name='scrapCount'])[2]")
+    public  WebElement kaliteKontrolHurdaBitenButton;
+
+    @FindBy (xpath = "(//button[@name='returnedToMilTaslama'])[2]")
+    public  WebElement kaliteKontrolMilTaslamaBitenButton;
+
+    @FindBy (xpath = "(//button[@name='returnedToMilTaslama'])[2]")
+    public  WebElement kaliteKontrolIsilIslemBitenButton;
 
     @FindBy (xpath = "//div/table[2]/tbody/tr/td")
     public  WebElement kaliteKontrolKalanText;
@@ -273,6 +291,9 @@ public class TalasliImalatAmiriGorevleri {
 
     @FindBy (xpath = "//table//tr[td[contains(text(), 'omer')] and td[contains(text(), 'Lift')]]//button//div[@class='order-toolbar_inner_check__fDRhb']")
     public  WebElement liftTamamlaButon;
+
+    @FindBy (xpath = "//table//tr[td[contains(text(), 'omer')] and td[contains(text(), 'Lift')] and td[contains(text(), 'İşlenmekte')]]//button//div[@class='order-toolbar_inner_check__fDRhb']")
+    public  WebElement liftTamamladigerButon;
 
     @FindBy (xpath = "//table//tr[td[contains(text(), 'omer')] and td[contains(text(), 'Lift')]]//td[contains(text(), 'Tamamlandı')]")
     public WebElement liftTamamlandiText;

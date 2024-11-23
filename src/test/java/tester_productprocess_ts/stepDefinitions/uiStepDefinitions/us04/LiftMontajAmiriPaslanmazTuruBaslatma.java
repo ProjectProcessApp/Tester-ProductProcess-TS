@@ -13,20 +13,12 @@ import static tester_productprocess_ts.utilities.uiUtilities.ReusableMethods.wai
 
 public class LiftMontajAmiriPaslanmazTuruBaslatma {
 
-    String token="";
     TalasliImalatAmiriGorevleri talasligorev = new TalasliImalatAmiriGorevleri();
-    Anamenu anamenu = new Anamenu();
-    Response response;
-    JsonPath json;
-    Boolean weiter = false;
-    String sari ="rgba(255, 255, 0, 1)";
-    String gri ="rgba(180, 177, 177, 1)";
-    String yesil="rgba(0, 128, 0, 1)";
     int uretilecekAdet;
 
     @Then("Paslanmaz turunde uretilen toplam mil miktarini dogrular")
     public void paslanmazTurundeUretilenToplamMilMiktariniDogrular() {
-        waitFor(1500);
+        waitFor(1000);
         int siparisAdedi = Integer.parseInt(talasligorev.siparisAdedi.getText());
         int actualUretilenToplamMil=Integer.parseInt(talasligorev.uretilenToplamMil.getText());
         Assert.assertEquals(siparisAdedi,actualUretilenToplamMil);

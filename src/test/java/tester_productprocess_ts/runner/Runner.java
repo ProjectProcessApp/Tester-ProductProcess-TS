@@ -26,5 +26,4 @@ import java.io.IOException;
         dryRun = false
 )
 public class Runner {
-
 }

@@ -63,7 +63,7 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
     }
     @Then("Kalite kontrol Amirindeki Paslanmaz siparis turundeki siparisin bulundugu satira tiklar")
     public void kalite_kontrol_amirindeki_paslanmaz_siparis_turundeki_siparisin_bulundugu_satira_tiklar() {
-        waitFor(2000);
+        waitFor(1500);
         clickWithJS(talasligorev.paslanmazSatirButton);
     }
 
@@ -74,29 +74,29 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
 
     @Then("Paslanmaz Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir")
     public void paslanmazSiparisTuruGirilenAdedinSagTaraftaBitenBolumuneIslendigiDogrulanir() {
-        waitFor(2000);
-        waitForVisibility(talasligorev.kaliteKontrolBitenButton,10);
-        Assert.assertEquals(Integer.parseInt(talasligorev.kaliteKontrolBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        waitFor(1500);
+        waitForVisibility(talasligorev.kaliteKontrolOnaylandiBitenButton,10);
+        Assert.assertEquals(Integer.parseInt(talasligorev.kaliteKontrolOnaylandiBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("Paslanmaz Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir")
     public void paslanmazSiparisTuruSagTaraftakiKalanBolumundekiRakamDogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1500);
         int kalan= Integer.parseInt(talasligorev.kaliteKontrolKalanText.getText());
-        int biten = Integer.parseInt(talasligorev.kaliteKontrolBitenButton.getText());
+        int biten = Integer.parseInt(talasligorev.kaliteKontrolOnaylandiBitenButton.getText());
         Assert.assertTrue(kalan>=siparisAdedi-biten);
     }
 
     @And("Ezme butonuna tiklanir")
     public void ezmeButonunaTiklanir() {
-        waitFor(1500);
+        waitFor(500);
         clickWithJS(talasligorev.ezmeButton);
     }
 
     @Then("Ezme Butonunu yesil renk oldugu dogrulanir")
     public void ezmeButonunuYesilRenkOlduguDogrulanir() {
-        waitFor(3000);
+        waitFor(500);
         waitForVisibility(talasligorev.ezmeButton,10);
         String buttonRenk=talasligorev.ezmeButton.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
@@ -111,7 +111,7 @@ public class TalasliImalatAmiriPaslanmazTuruBaslatma {
     @Then("sag taraftaki ezme kalan bolumundeki rakam dogrulanir")
     public void sagTaraftakiEzmeKalanBolumundekiRakamDogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1000);
         int kalan= Integer.parseInt(talasligorev.ezmeKalanText.getText());
         int biten = Integer.parseInt(talasligorev.ezmeBitenButton.getText());
         Assert.assertTrue(kalan>=siparisAdedi-biten);
