@@ -34,14 +34,14 @@ public class BlokliftMontajAmiriDamperTuruBaslatma {
 
     @Then("Bloklift Montaj Butonunu gri renk oldugu dogrulanir")
     public void blokliftMontajButonunuGriRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.blokliftMontajButon.getCssValue("background-color");
         Assert.assertEquals(gri,buttonRenk);
     }
 
     @Then("Test Butonunun gri renk oldugu dogrulanir")
     public void testButonununGriRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.testButon.getCssValue("background-color");
         Assert.assertEquals(gri,buttonRenk);
     }
@@ -55,40 +55,40 @@ public class BlokliftMontajAmiriDamperTuruBaslatma {
 
     @Then("Bloklift Montaj Butonunu sari renk oldugu dogrulanir")
     public void blokliftMontajButonunuSariRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.blokliftMontajButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
 
     @And("Bloklift Montaj butonuna tiklanir")
     public void blokliftMontajButonunaTiklanir() {
-        waitFor(1500);
+        waitFor(1000);
         clickWithJS(talasligorev.blokliftMontajButon);
     }
 
     @Then("Bloklift Montaj Butonunu yesil renk oldugu dogrulanir")
     public void blokliftMontajButonunuYesilRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.blokliftMontajButon.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }
 
     @Then("Test Butonunun sari renk oldugu dogrulanir")
     public void testButonununSariRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.testButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
 
     @And("Test butonuna tiklanir")
     public void testButonunaTiklanir() {
-        waitFor(1500);
+        waitFor(500);
         clickWithJS(talasligorev.testButon);
     }
 
     @Then("girilen adedin sag tarafta test biten bolumune islendigi dogrulanir")
     public void girilenAdedinSagTaraftaTestBitenBolumuneIslendigiDogrulanir() {
-        waitFor(2000);
+        waitFor(1500);
         waitForVisibility(talasligorev.testBitenButton,10);
         Assert.assertEquals(Integer.parseInt(talasligorev.testBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
@@ -96,28 +96,28 @@ public class BlokliftMontajAmiriDamperTuruBaslatma {
     @Then("sag taraftaki test kalan bolumundeki rakam dogrulanir")
     public void sagTaraftakiTestKalanBolumundekiRakamDogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1500);
         int actualBaslikTakmaKalanText= Integer.parseInt(talasligorev.testKalanText.getText());
         Assert.assertTrue(siparisAdedi>actualBaslikTakmaKalanText);
     }
 
     @Then("Test butonunun yesil renk oldugu dogrulanir")
     public void testButonununYesilRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.testButon.getCssValue("background-color");
         Assert.assertEquals(yesil,buttonRenk);
     }
 
     @Then("girilen adedin sag tarafta bloklift montaj biten bolumune islendigi dogrulanir")
     public void girilenAdedinSagTaraftaBlokliftMontajBitenBolumuneIslendigiDogrulanir() {
-        waitFor(2000);
+        waitFor(1500);
         Assert.assertEquals(Integer.parseInt(talasligorev.blokliftMontajBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("sag taraftaki bloklift montaj kalan bolumundeki rakam dogrulanir")
     public void sagTaraftakiBlokliftMontajKalanBolumundekiRakamDogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1500);
         int actualLiftMontajKalanText= Integer.parseInt(talasligorev.blokliftMontajKalanText.getText());
         Assert.assertTrue(siparisAdedi>actualLiftMontajKalanText);
     }

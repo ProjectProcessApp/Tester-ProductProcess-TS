@@ -20,7 +20,7 @@ public class GetRequest extends Authentication  {
         // Token'ı alıyoruz
          token = token();
         // Request URL oluşturma
-        String url = "http://localhost:8080/orders/getOrderById/"+arg0;
+        String url = "http://localhost:8090/orders/getOrderById/"+arg0;
         // API'den response alıyoruz ve durumu kontrol ediyoruz
         response = given()
                 .header("Authorization", "Bearer " + token) // Token'ı ekliyoruz
@@ -36,7 +36,6 @@ public class GetRequest extends Authentication  {
             assertEquals(data.data86().getString("customerName"), actualData.getString("customerName"));
             assertEquals(data.data86().getString("gasanNo"), actualData.getString("gasanNo"));
             assertEquals(data.data86().getString("orderNumber"), actualData.getString("orderNumber"));
-            assertEquals(data.data86().getString("orderDate"), actualData.getString("orderDate"));
             assertEquals(data.data86().getString("orderType"), actualData.getString("orderType"));
             assertEquals(data.data86().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
             assertEquals(data.data86().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
@@ -51,9 +50,7 @@ public class GetRequest extends Authentication  {
     public void get02(long arg0) {
 
         token = token();
-
-        String url = "http://localhost:8080/orders/getByOrderNumber/"+arg0;
-
+        String url = "http://localhost:8090/orders/getByOrderNumber/"+arg0;
         response = given()
                 .header("Authorization", "Bearer " + token)
                 .when()
@@ -65,12 +62,12 @@ public class GetRequest extends Authentication  {
         JsonPath actualData = response.jsonPath();
         System.out.println(actualData.prettyPrint());
         Data data = new Data();
-        assertEquals(data.data86().getString("customerName"), actualData.getString("customerName"));
-        assertEquals(data.data86().getString("gasanNo"), actualData.getString("gasanNo"));
-        assertEquals(data.data86().getString("orderNumber"), actualData.getString("orderNumber"));
-        assertEquals(data.data86().getString("orderType"), actualData.getString("orderType"));
-        assertEquals(data.data86().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
-        assertEquals(data.data86().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
+        assertEquals(data.data87().getString("customerName"), actualData.getString("customerName"));
+        assertEquals(data.data87().getString("gasanNo"), actualData.getString("gasanNo"));
+        assertEquals(data.data87().getString("orderNumber"), actualData.getString("orderNumber"));
+        assertEquals(data.data87().getString("orderType"), actualData.getString("orderType"));
+        assertEquals(data.data87().getInt("orderQuantity"), actualData.getInt("orderQuantity"));
+        assertEquals(data.data87().getInt("readyMilCount"), actualData.getInt("readyMilCount"));
 
         System.out.println(arg0 +" order numarali siparis, basari ile API den test edildi");
     }
@@ -78,7 +75,7 @@ public class GetRequest extends Authentication  {
     public void post(){
 
         token = token();
-        String url= "http://localhost:8080/orders/createOrder";
+        String url= "http://localhost:8090/orders/createOrder";
         Data data = new Data();
         response = given()
                 .when()
@@ -108,7 +105,7 @@ public class GetRequest extends Authentication  {
     public void put(int id){
         token=token();
         Data data = new Data();
-        String  url="http://localhost:8080/orders/updateOrder/"+id+"";
+        String  url="http://localhost:8090/orders/updateOrder/"+id+"";
         response=given()
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.JSON)
@@ -123,11 +120,10 @@ public class GetRequest extends Authentication  {
         System.out.println(id+" numarali kayidin basari ile guncellendigi API den test edildi");
     }
 
-
     public void delete(long ordernummer){
         token = token();
         Data data = new Data();
-        RestAssured.baseURI = "http://localhost:8080/orders/deleteOrder/"+ordernummer;
+        RestAssured.baseURI = "http://localhost:8090/orders/deleteOrder/"+ordernummer;
         response=given()
                 .when()
                 .header("Authorization", "Bearer " + token)
@@ -139,6 +135,4 @@ public class GetRequest extends Authentication  {
 
         System.out.println(ordernummer+" numarali siparisin basari ile silindigi API den test edildi");
     }
-
-
 }

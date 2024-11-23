@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="866.453" tests="8" skipped="0" failures="0" errors="0">
-<testcase classname="Lift turu siparis EndtoEnd Test" name="Kullanici Lift turunde yeni siparis olusturur - Example #1.1" time="20.447">
+<testsuite name="Cucumber" time="746.367" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="Lift turu siparis EndtoEnd Test" name="Kullanici Lift turunde yeni siparis olusturur - Example #1.1" time="18.429">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -24,7 +24,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Lift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" time="216.278">
+<testcase classname="Lift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir" time="129.754">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
@@ -138,7 +138,7 @@ And Lift turu icin nihai uretimi tamamla butonuna tiklanir..................pass
 Then Lift turu siparisin tamamlandi durumuna gectigi dogrulanir.............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Kullanici Paslanmaz turunde yeni siparis olusturur - Example #1.1" time="12.302">
+<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Kullanici Paslanmaz turunde yeni siparis olusturur - Example #1.1" time="9.481">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -162,7 +162,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" time="218.276">
+<testcase classname="Paslanmaz turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir" time="134.662">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
@@ -272,7 +272,7 @@ And Paslanmaz turu icin nihai uretimi tamamla butonuna tiklanir.............pass
 Then Paslanmaz turu siparisin tamamlandi durumuna gectigi dogrulanir........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Damper turu siparis EndtoEnd Test" name="Kullanici Damper turunde yeni siparis olusturur - Example #1.1" time="12.25">
+<testcase classname="Damper turu siparis EndtoEnd Test" name="Kullanici Damper turunde yeni siparis olusturur - Example #1.1" time="9.659">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -296,7 +296,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Damper turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir" time="210.402">
+<testcase classname="Damper turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir" time="139.958">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
@@ -409,7 +409,7 @@ And Damper turu icin nihai uretimi tamamla butonuna tiklanir................pass
 Then Damper turu siparisin tamamlandi durumuna gectigi dogrulanir...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Kullanici Bloklift turunde yeni siparis olusturur - Example #1.1" time="12.42">
+<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Kullanici Bloklift turunde yeni siparis olusturur - Example #1.1" time="9.33">
 <system-out><![CDATA[
 When Anasayfaya gidilir.....................................................passed
 Then Anasayfada oldugu dogrulanir...........................................passed
@@ -433,7 +433,7 @@ And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............pa
 And Kullanici logout yapar..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir" time="163.175">
+<testcase classname="Bloklift turu siparis EndtoEnd Test" name="Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir" time="108.871">
 <system-out><![CDATA[
 Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
 And Talasli Imalat Amiri Butonuna tiklanir..................................passed
@@ -527,6 +527,179 @@ And Uretim Planlama butonuna tiklanir.......................................pass
 And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir.............passed
 And Bloklift turu icin nihai uretimi tamamla butonuna tiklanir..............passed
 Then Bloklift turu siparisin tamamlandi durumuna gectigi dogrulanir.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir ve Hurdaya, mil taslamaya ve isil isleme geri gonderebilir" name="Kullanici Lift turunde yeni siparis olusturur - Example #1.1" time="9.485">
+<system-out><![CDATA[
+When Anasayfaya gidilir.....................................................passed
+Then Anasayfada oldugu dogrulanir...........................................passed
+And Uretim Planlama butonuna tiklanir.......................................passed
+Then Uretim Planlama ekraninda oldugu dogrulanir............................passed
+And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir.............passed
+And Giris yap butonuna tiklanir.............................................passed
+And siparis Olustur butonunun ekranda gorundugu kontrol edilir..............passed
+And siparis olustur butonuna tiklanir.......................................passed
+And yeni siparis ekraninin geldigi dogrulanir...............................passed
+And "omer" musteri adina gecerli bir data girilir...........................passed
+And "3000 ABC 300004" Gasan Nosuna gecerli bir data girilir.................passed
+And "3000-A0004" Siparis Noya gecerli bir data girilir......................passed
+And Teslim Tarihine gecerli bir data girilir................................passed
+And "Lift" Siparis turune gecerli bir data girilir..........................passed
+And "1500" Siparis miktarina gecerli bir data girilir.......................passed
+And "100" Hazir mil miktarina gecerli bir data girilir......................passed
+And Siparis durumu kutusunda "İşlenmeyi Bekliyor" yazmali...................passed
+And kaydet butonuna tiklanir................................................passed
+And "Sipariş oluşturuldu" yazisi dogrulanir ve ok tusuna basilir............passed
+And Kullanici logout yapar..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir ve Hurdaya, mil taslamaya ve isil isleme geri gonderebilir" name="Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir ve Hurdaya, mil taslamaya ve isil isleme geri gonderebilir" time="176.118">
+<system-out><![CDATA[
+Then Talasli Imalat Amiri Butonu gorunur oldugu dogrulanir..................passed
+And Talasli Imalat Amiri Butonuna tiklanir..................................passed
+Then Talasli Imalat Amiri Sifre ekraninda oldugu dogrulanir.................passed
+And Talasli imalat amiri sifre kutucuguna gecerli bir "data" girilir........passed
+And Sifre gizleme butonunun sifreyi gizledigi kontrol edllir................passed
+And Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+And Giris yap butonuna tiklanir.............................................passed
+And Lift siparis turundeki siparisin basla butonuna tiklar..................passed
+Then Mil Koparma Butonunun sari renk oldugu dogrulanir......................passed
+Then Mil Tornalama Butonunun gri renk oldugu dogrulanir.....................passed
+Then Mil Taslama Butonunu gri renk oldugu dogrulanir........................passed
+Then Isil Islem Butonunu gri renk oldugu dogrulanir.........................passed
+And Mil Koparma butonuna tiklanir...........................................passed
+Then uretilen adedi giriniz yazisi dogrulanir...............................passed
+And LIFT siparis turu icin uretilecek adet girilir..........................passed
+And onayla butonuna tiklanir................................................passed
+Then girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir...........passed
+Then Mil Koparma Butonunun yesil renk oldugu dogrulanir.....................passed
+Then Mil Tornalama Butonunun sari renk oldugu dogrulanir....................passed
+And Mil tornalama butonuna tiklanir.........................................passed
+Then girilen adedin sag tarafta mil tornalama biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki mil tornalama kalan bolumundeki rakam dogrulanir.........passed
+Then Mil Tornalama Butonunun yesil renk oldugu dogrulanir...................passed
+Then Mil Taslama Butonunu sari renk oldugu dogrulanir.......................passed
+And Mil taslama butonuna tiklanir...........................................passed
+Then girilen adedin sag tarafta mil taslama biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir...........passed
+Then Mil Taslama Butonunu yesil renk oldugu dogrulanir......................passed
+Then Isil Islem Butonunu sari renk oldugu dogrulanir........................passed
+And Isil Islem butonuna tiklanir............................................passed
+Then girilen adedin sag tarafta Isil Islem biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir............passed
+And sag taraftaki Boru Kesme Havsa butonuna tiklanir........................passed
+Then girilen adedin sag tarafta Boru Kesme Havsa biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki Boru Kesme Havsa kalan bolumundeki rakam dogrulanir......passed
+And Kullanici logout yapar..................................................passed
+And Polisaj amiri butonuna tiklanir.........................................passed
+And Polisaj amiri sifre kutucuguna gecerli bir "data" girilir...............passed
+And Polisaj Amirindeki Lift siparis turundeki siparisin bulundugu satira tiklar.passed
+Then Polisaj butonunun sari renk oldugu dogrulanir..........................passed
+And Polisaj ok butonuna tiklanir............................................passed
+Then Polisaj butonunun yesil renk oldugu dogrulanir.........................passed
+Then girilen adedin Polisaj biten bolumune islendigi dogrulanir.............passed
+Then Polisaj kalan bolumundeki rakam dogrulanir.............................passed
+Then Kullanici logout yapar.................................................passed
+And Kalite Kontrol butonuna tiklanir........................................passed
+And Kalite Kontrol sifre kutucuguna gecerli bir "data" girilir..............passed
+And Kalite kontrol Amirindeki Lift siparis turundeki siparisin bulundugu satira tiklar.passed
+And Polisaj sonrasi butona tiklar...........................................passed
+And Polisaj sonrasi Kalite kontrol Onayla butona tiklanir...................passed
+And LIFT siparis turu icin onaylanacak adet girilir.........................passed
+Then girilen adedin sag tarafta onaylandi biten bolumune islendigi dogrulanir.passed
+Then Kalite kontrol sag taraftaki kalan bolumundeki rakam dogrulanir........passed
+And Polisaj sonrasi Kalite kontrol Hurda butonuna tiklanir..................passed
+And LIFT siparis turu icin Hurda adedi girilir..............................passed
+Then girilen adedin sag tarafta Hurda biten bolumune islendigi dogrulanir...passed
+And Polisaj sonrasi Kalite kontrol Mil taslamaya geri gidecek butonuna tiklanir.passed
+And LIFT siparis turu icin Mil Taslama adedi girilir........................passed
+Then girilen adedin sag tarafta Mil Taslama biten bolumune islendigi dogrulanir.passed
+And Polisaj sonrasi Kalite kontrol isil isleme geri gidecek butonuna tiklanir.passed
+And LIFT siparis turu icin isil islem adedi girilir.........................passed
+Then girilen adedin sag tarafta isil islem biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki kalite kontrolden gelen mil taslama kalan bolumundeki rakam dogrulanir.passed
+Then sag taraftaki kalite kontrolden gelen isil islem kalan bolumundeki rakam dogrulanir.passed
+Then girilen adedin sag tarafta kalite kontrolden gelenlerle mil taslama biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki kalite kontrolden gelenlerle mil taslama kalan bolumundeki rakam dogrulanir.passed
+Then sag taraftaki mil taslamadan sonra isil islem kalan bolumundeki rakam dogrulanir.passed
+And LIFT siparis turu icin  mil taslamadan sonra isil islem adedi girilir...passed
+Then girilen adedin sag tarafta isil islemden sonra Isil Islem biten bolumune islendigi dogrulanir.passed
+Then Polisaj biten dogrulanir...............................................passed
+Then Polisaj isil islem ve mil taslamadan gelen kalan bolumundeki rakam dogrulanir.passed
+Then kalan miktar girilir...................................................passed
+Then Polisaj son kalan bolumundeki rakam dogrulanir.........................passed
+And LIFT siparis turu icin Kalite Kontrol Amiri kalan bolumundeki rakam girilir.passed
+Then girilen adedin sag tarafta hurda dusuldukten sonra biten bolumune islendigi dogrulanir.passed
+Then Lift montaj amiri butonunun gorunur oldugu dogrulanir..................passed
+And Lift montaj amiri butonuna tiklanir.....................................passed
+And Lift montaj amiri sifre kutucuguna gecerli bir "data" girilir...........passed
+And Lift siparis turundeki siparisin bulundugu satira tiklar................passed
+Then Hurda dusuldukten sonra uretilen toplam mil miktarini dogrular.........passed
+Then Boru Kapama Butonunun sari renk oldugu dogrulanir......................passed
+Then Boru Kaynak Butonunun gri renk oldugu dogrulanir.......................passed
+Then Lift Montaj Butonunu gri renk oldugu dogrulanir........................passed
+Then Gaz Dolum Butonunu gri renk oldugu dogrulanir..........................passed
+Then Baslik Takma Butonunu gri renk oldugu dogrulanir.......................passed
+And Boru Kapama butonuna tiklanir...........................................passed
+Then girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir...........passed
+Then Boru Kapama Butonunun yesil renk oldugu dogrulanir.....................passed
+And Boru Kaynak butonuna tiklanir...........................................passed
+Then girilen adedin sag tarafta boru kaynak biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki boru kaynak kalan bolumundeki rakam dogrulanir...........passed
+Then uretilen toplam boru miktari dogrulanir................................passed
+Then Boru Kaynak Butonunun yesil renk oldugu dogrulanir.....................passed
+Then Lift Montaj Butonunu sari renk oldugu dogrulanir.......................passed
+And Lift Montaj butonuna tiklanir...........................................passed
+Then girilen adedin sag tarafta lift montaj biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki lift montaj kalan bolumundeki rakam dogrulanir...........passed
+Then Lift Montaj Butonunu yesil renk oldugu dogrulanir......................passed
+And Montaj sonrasi satir butonuna tiklar....................................passed
+And Montaj sonrasi Kalite kontrol Onayla butona tiklanir....................passed
+Then girilen adedin sag tarafta biten bolumune islendigi dogrulanir.........passed
+Then Lift montaj amiri ekraninda oldugu dogrulanir..........................passed
+Then Lift montaj amirinin kendi sorumluluk sayfasina gectigi dogrulanir.....passed
+And Gaz Dolum butonuna tiklanir.............................................passed
+Then girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir.............passed
+Then Gaz Dolum Butonunu yesil renk oldugu dogrulanir........................passed
+Then Baslik Takma Butonunu sari renk oldugu dogrulanir......................passed
+And Baslik Takma butonuna tiklanir..........................................passed
+Then girilen adedin sag tarafta baslik takma biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki baslik takma kalan bolumundeki rakam dogrulanir..........passed
+Then Baslik Takma Butonunu yesil renk oldugu dogrulanir.....................passed
+Then Boyama ve Paketleme Amiri butonunun gorunur oldugu dogrulanir..........passed
+And Boyama ve Paketleme Amiri butonuna tiklanir.............................passed
+And Boyama ve Paketleme Amiri sifre kutucuguna gecerli bir "data" girilir...passed
+Then sag taraftaki kalan bolumu dogrulanir..................................passed
+Then Boya butonunun sari renk oldugu dogrulanir.............................passed
+Then Paketleme butonunun gri renk oldugu dogrulanir.........................passed
+And Boya butonuna tiklanir..................................................passed
+And uretilen adedi giriniz yazisi dogrulanir................................passed
+Then Boya butonunun yesil renk oldugu dogrulanir............................passed
+Then Paketleme butonunun sari renk oldugu dogrulanir........................passed
+Then girilen adedin sag tarafta boya biten bolumune islendigi dogrulanir....passed
+Then sag taraftaki boya kalan bolumundeki rakam dogrulanir..................passed
+And Paketleme butonuna tiklanir.............................................passed
+Then girilen adedin sag tarafta paketleme biten bolumune islendigi dogrulanir.passed
+Then sag taraftaki paketleme kalan bolumundeki rakam dogrulanir.............passed
+Then Uretim Planlama butonunun gorunur oldugu dogrulanir....................passed
+And Uretim Planlama butonuna tiklanir.......................................passed
+And Uretim Planlama sifre kutucuguna gecerli bir "data" girilir.............passed
+And Lift turu icin nihai uretimi diger tamamla butonuna tiklanir............passed
+Then Lift turu siparisin tamamlandi durumuna gectigi dogrulanir.............passed
+Then Yonetim butonunun gorunur oldugu dogrulanir............................passed
+And Yonetim butonuna tiklanir...............................................passed
+Then Yonetim Sifre ekraninda oldugu dogrulanir..............................passed
+And yonetici sifre kutucuguna gecerli bir "data" girilir....................passed
+And Yonetici Sifre gizleme butonunun sifreyi gizledigi kontrol edllir.......passed
+And Yonetici Sifre gizleme butonunun sifreyi tekrar gorunur hale getirdigi kontrol edllir.passed
+And yonetim Giris yap butonuna tiklanir.....................................passed
+Then yonetim sayfasina gectigi dogrulanir...................................passed
+And musteri isleri goruntule tiklanir.......................................passed
+And siparis bulundugu satira tiklanir.......................................passed
+Then Kalite kontrolden gonderilen Hurda sayisi dogrulanir...................passed
 ]]></system-out>
 </testcase>
 </testsuite>

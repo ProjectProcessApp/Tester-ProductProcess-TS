@@ -26,7 +26,7 @@ public class BlokliftMontajAmiriBlokliftTuruBaslatma {
 
     @Then("Bloklift turunde uretilen toplam mil miktarini dogrular")
     public void blokliftTurundeUretilenToplamMilMiktariniDogrular() {
-        waitFor(1500);
+        waitFor(1000);
         int siparisAdedi = Integer.parseInt(talasligorev.siparisAdedi.getText());
         int actualUretilenToplamMil=Integer.parseInt(talasligorev.uretilenToplamMil.getText());
         Assert.assertEquals(siparisAdedi,actualUretilenToplamMil);
@@ -34,7 +34,7 @@ public class BlokliftMontajAmiriBlokliftTuruBaslatma {
 
     @Then("Boru Kapama Butonunun gri renk oldugu dogrulanir")
     public void boruKapamaButonununGriRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.boruKapamaButon.getCssValue("background-color");
         Assert.assertEquals(gri,buttonRenk);
     }
@@ -48,7 +48,7 @@ public class BlokliftMontajAmiriBlokliftTuruBaslatma {
 
     @Then("Gaz Dolum Butonunu sari renk oldugu dogrulanir")
     public void gazDolumButonunuSariRenkOlduguDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         String buttonRenk=talasligorev.gazDolumButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }

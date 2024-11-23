@@ -10,10 +10,10 @@ public class Data {
         expectedData.put("id", 1);
         expectedData.put("customerName", "omer");
         expectedData.put("gasanNo", "3000 ABC 300000");
-        expectedData.put("orderNumber", "3000000000");
+        expectedData.put("orderNumber", "3000-A0000");
         expectedData.put("orderDate", "2024-11-13");
         expectedData.put("deliveryDate", "2026-10-10");
-        expectedData.put("orderType", "LIFT");
+        expectedData.put("orderType", "Lift");
         expectedData.put("orderQuantity", 1500);
         expectedData.put("orderStatus", "İşlenmeyi Bekliyor");
         expectedData.put("readyMilCount", 100);
@@ -24,15 +24,15 @@ public class Data {
 
         JSONObject expectedData = new JSONObject();
         expectedData.put("id", 87);
-        expectedData.put("customerName", "hasan");
-        expectedData.put("gasanNo", "1111 AB 123456");
-        expectedData.put("orderNumber", "123452");
+        expectedData.put("customerName", "alican");
+        expectedData.put("gasanNo", "3000 ABC 100003");
+        expectedData.put("orderNumber", "3000000003");
         expectedData.put("orderDate", "2024-09-10");
         expectedData.put("deliveryDate", "2024-10-10");
-        expectedData.put("orderType", "DAMPER");
-        expectedData.put("orderQuantity", 1000);
+        expectedData.put("orderType", "Blok Lift");
+        expectedData.put("orderQuantity", 1500);
         expectedData.put("orderStatus", "İşlenmeyi Bekliyor");
-        expectedData.put("readyMilCount", 200);
+        expectedData.put("readyMilCount", 0);
         return expectedData;
     }
 
@@ -43,8 +43,8 @@ public class Data {
         expectedData.put("gasanNo", "9333 AB 123456");
         expectedData.put("orderNumber", "933352");
         expectedData.put("deliveryDate", "2026-10-10");
-        expectedData.put("orderType", "LIFT");
-        expectedData.put("orderQuantity", 1000);
+        expectedData.put("orderType", "Lift");
+        expectedData.put("orderQuantity", 1500);
         expectedData.put("orderStatus", "İşlenmeyi Bekliyor");
         expectedData.put("readyMilCount", 200);
         return expectedData;
@@ -55,10 +55,10 @@ public class Data {
         JSONObject expectedData = new JSONObject();
         expectedData.put("customerName", "Elif");
         expectedData.put("gasanNo", "0182 ZC 839048");
-        expectedData.put("orderNumber", "200005abcd");
-        expectedData.put("deliveryDate", "2025-09-16");
-        expectedData.put("orderType", "LIFT");
-        expectedData.put("orderQuantity", 1000);
+        expectedData.put("orderNumber", "2000051236");
+        expectedData.put("deliveryDate", "2027-09-16");
+        expectedData.put("orderType", "Lift");
+        expectedData.put("orderQuantity", 1500);
         expectedData.put("orderStatus", "İşlenmeyi Bekliyor");
         expectedData.put("readyMilCount", 200);
         return expectedData;

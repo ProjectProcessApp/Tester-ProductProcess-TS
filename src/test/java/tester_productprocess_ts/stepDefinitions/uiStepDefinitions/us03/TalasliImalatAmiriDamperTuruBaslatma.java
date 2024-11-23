@@ -50,13 +50,13 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
     }
     @Then("Damper Siparis turu girilen adedin sag tarafta mil koparma biten bolumune islendigi dogrulanir")
     public void damper_siparis_turu_girilen_adedin_sag_tarafta_mil_koparma_biten_bolumune_islendigi_dogrulanir() {
-        waitFor(2000);
+        waitFor(1500);
         Assert.assertEquals(uretilecekAdet,Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
     @Then("Damper Siparis turu sag taraftaki mil koparma kalan bolumundeki rakam dogrulanir")
     public void damper_siparis_turu_sag_taraftaki_mil_koparma_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1500);
         int kalan= Integer.parseInt(talasligorev.milKoparmaKalanText.getText());
         int biten = Integer.parseInt(talasligorev.milKoparmaBitenButton.getText());
         Assert.assertTrue(kalan>=siparisAdedi-biten);
@@ -82,7 +82,7 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
     @Then("Damper Siparis turu sag taraftaki mil taslama kalan bolumundeki rakam dogrulanir")
     public void damper_siparis_turu_sag_taraftaki_mil_taslama_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1000);
         int kalan= Integer.parseInt(talasligorev.milTaslamaKalanText.getText());
         int biten = Integer.parseInt(talasligorev.milTaslalamaBitenButton.getText());
         Assert.assertTrue(kalan>=siparisAdedi-biten);
@@ -95,7 +95,7 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
     @Then("Damper Siparis turu sag taraftaki Isil Islem kalan bolumundeki rakam dogrulanir")
     public void damper_siparis_turu_sag_taraftaki_isil_islem_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1000);
         int kalan= Integer.parseInt(talasligorev.isilIslemKalanText.getText());
         int biten = Integer.parseInt(talasligorev.isilIslemBitenButton.getText());
         Assert.assertTrue(kalan>=siparisAdedi-biten);
@@ -110,13 +110,13 @@ public class TalasliImalatAmiriDamperTuruBaslatma {
     }
     @Then("Damper Siparis turu girilen adedin sag tarafta biten bolumune islendigi dogrulanir")
     public void damper_siparis_turu_girilen_adedin_sag_tarafta_biten_bolumune_islendigi_dogrulanir() {
-        waitForVisibility(talasligorev.kaliteKontrolBitenButton,10);
+        waitForVisibility(talasligorev.kaliteKontrolOnaylandiBitenButton,10);
         Assert.assertEquals(uretilecekAdet,Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
     @Then("Damper Siparis turu sag taraftaki kalan bolumundeki rakam dogrulanir")
     public void damper_siparis_turu_sag_taraftaki_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
-        waitFor(2000);
+        waitFor(1000);
         int actualMilTaslamaKalanText= Integer.parseInt(talasligorev.kaliteKontrolKalanText.getText());
         Assert.assertTrue(siparisAdedi>=actualMilTaslamaKalanText);
     }

@@ -36,7 +36,7 @@ public class Anamenu {
     @FindBy(xpath = "//div[contains(text(), 'Girdiğiniz şifre eksik veya hatalı') or contains(text(), 'Şifre alanı boş bırakılamaz')]")
     public WebElement ilkGirisHataMesaji;
 
-    @FindBy(xpath = "//div[text()='Müşteri adı en az 4 karakter olmalı' or text()='Gasan No formatı hatalı' or text()='Sipariş numarası 6 haneli olmalı' or text()='Sipariş adedi en az 1 olmalıdır' or text()='Hazır Mil Miktarı negatif olamaz' or text()='Sipariş numarası 10 haneli olmal' or text()='Geçersiz sipariş numarası formatı']")
+    @FindBy(xpath = "//div[text()='Müşteri adı en az 4 karakter olmalı' or text()='Gasan No formatı hatalı' or text()='Sipariş numarası 6 haneli olmalı' or text()='Sipariş adedi en az 1 olmalıdır' or text()='Hazır Mil Miktarı negatif olamaz' or text()='Sipariş numarası 10 haneli olmalı' or text()='Geçersiz sipariş numarası formatı']")
     public List<WebElement> musteriAdiHata;
 
     @FindBy(xpath = "//div[contains(text(),'TALAŞLI İMALAT AMİRİ')]")
@@ -98,6 +98,18 @@ public class Anamenu {
 
     @FindBy(xpath = "//a[text()='Kulanıcıya Şifre Atama']")
     public WebElement kullaniciyaSifreAtama;
+
+    @FindBy(xpath = "//a[text()='Müşteri İşleri Görüntüle']")
+    public WebElement musteriIsleriGoruntule;
+
+    @FindBy(xpath = "//tbody/tr[1]")
+    public WebElement musteriIsleriMusteriSatirButon;
+
+    @FindBy(xpath = "//h2[@class= 'customer-page_h2__0n4Xk']")
+    public WebElement hurdaSayisi;
+
+    @FindBy(xpath = "//tr[@class='other-orders_table_body__HOtS_ undefined']/td[text()='3000 ABC 300004']")
+    public WebElement omer2;
 
     @FindBy(xpath = "//h1[text()='Şİfre Atama Ekranı']")
     public WebElement sifreAtamaEkraniText;
