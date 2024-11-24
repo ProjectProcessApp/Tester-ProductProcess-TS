@@ -481,5 +481,10 @@ public class Anamenu {
             Assert.assertTrue(durumText.contains("Lift")||durumText.contains("Paslanmaz")||durumText.contains("Damper")||durumText.contains("Blok Lift"));
         }
     }
+
+    @And("Kullanici sayfayi kapatir")
+    public void kullaniciSayfayiKapatir() {
+        Driver.getDriver().quit();
+    }
 }
 
