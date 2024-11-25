@@ -95,6 +95,7 @@ Feature: Bloklift turu siparis EndtoEnd Test
     Then Boru Kapama Butonunun gri renk oldugu dogrulanir
     Then Gaz Dolum Butonunu gri renk oldugu dogrulanir
     Then Test Butonunun gri renk oldugu dogrulanir
+    Then uretilen toplam boru miktari dogrulanir
     And Bloklift Montaj butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And BLOKLIFT siparis turu icin uretilecek adet girilir
@@ -105,7 +106,6 @@ Feature: Bloklift turu siparis EndtoEnd Test
     Then Boru Kapama Butonunun sari renk oldugu dogrulanir
     Then Gaz Dolum Butonunu gri renk oldugu dogrulanir
     Then Test Butonunun gri renk oldugu dogrulanir
-    Then uretilen toplam boru miktari dogrulanir
     And Boru Kapama butonuna tiklanir
     Then uretilen adedi giriniz yazisi dogrulanir
     And BLOKLIFT siparis turu icin uretilecek adet girilir
