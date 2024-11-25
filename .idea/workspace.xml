@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="19.11.2024 guncelleme3">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Failed/failedScenarios.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/apiStepDefinitions/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/apiStepDefinitions/GetRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us01/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us01/Anamenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/6-apiTest_databaseTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/6-apiTest_databaseTest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/htmlReport/cucumber.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,71 +60,72 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Cucumber Java.Feature: 1-endToEndLiftTuru (1).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: 1-endToEndLiftTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: 2-endToEndPaslanmazTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: 3-endToEndDamperTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: 4-endToEndBlokliftTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: 6-apiTest_databaseTest.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US01_Anamenu.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US02_siparisOlusturma.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US03_talasliAmirGorevBlokliftBaslatma.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US03_talasliAmirGorevDamperBaslatma.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US03_talasliAmirGorevLiftBaslatma.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US03_talasliAmirGorevPaslanmazBaslatma.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US04_blokliftMontajAmiriBlokliftTuruMontaj.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US04_blokliftMontajAmiriDamperTuruMontaj.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US04_liftMontajAmiriLiftTuruMontaj.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US04_liftMontajAmiriPaslanmazTuruMontaj.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US05_boyaVePaketlemeBlokliftTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US05_boyaVePaketlemeDamperTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US05_boyaVePaketlemeLiftTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US05_boyaVePaketlemePaslanmazTuru.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: US2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: jdbctesting.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Amirlerin Ortak ekrani.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Bloklift Montaj Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Databaseden veri alma.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: TC_02 \&quot;TALASLI IMALAT AMIRI\&quot; butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: TC_04 \&quot;TALASLI IMALAT AMIRI\&quot; gecersiz sifre denemesi. (Negatif Test).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: TC_25 \&quot;Yonetim\&quot; sayfasina gecemez. (Negatif Test).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Verilen siparisi guncelleme.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ParallelRunner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Runner.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;onur&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cetin/Desktop/backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Cucumber Java.Feature: 1-endToEndLiftTuru (1).executor": "Run",
+    "Cucumber Java.Feature: 1-endToEndLiftTuru.executor": "Run",
+    "Cucumber Java.Feature: 2-endToEndPaslanmazTuru.executor": "Run",
+    "Cucumber Java.Feature: 3-endToEndDamperTuru.executor": "Run",
+    "Cucumber Java.Feature: 4-endToEndBlokliftTuru.executor": "Run",
+    "Cucumber Java.Feature: 6-apiTest_databaseTest.executor": "Run",
+    "Cucumber Java.Feature: US01_Anamenu.executor": "Run",
+    "Cucumber Java.Feature: US02_siparisOlusturma.executor": "Run",
+    "Cucumber Java.Feature: US03_talasliAmirGorevBlokliftBaslatma.executor": "Run",
+    "Cucumber Java.Feature: US03_talasliAmirGorevDamperBaslatma.executor": "Run",
+    "Cucumber Java.Feature: US03_talasliAmirGorevLiftBaslatma.executor": "Run",
+    "Cucumber Java.Feature: US03_talasliAmirGorevPaslanmazBaslatma.executor": "Run",
+    "Cucumber Java.Feature: US04_blokliftMontajAmiriBlokliftTuruMontaj.executor": "Run",
+    "Cucumber Java.Feature: US04_blokliftMontajAmiriDamperTuruMontaj.executor": "Run",
+    "Cucumber Java.Feature: US04_liftMontajAmiriLiftTuruMontaj.executor": "Run",
+    "Cucumber Java.Feature: US04_liftMontajAmiriPaslanmazTuruMontaj.executor": "Run",
+    "Cucumber Java.Feature: US05_boyaVePaketlemeBlokliftTuru.executor": "Run",
+    "Cucumber Java.Feature: US05_boyaVePaketlemeDamperTuru.executor": "Run",
+    "Cucumber Java.Feature: US05_boyaVePaketlemeLiftTuru.executor": "Run",
+    "Cucumber Java.Feature: US05_boyaVePaketlemePaslanmazTuru.executor": "Run",
+    "Cucumber Java.Feature: US2.executor": "Run",
+    "Cucumber Java.Feature: jdbctesting.executor": "Run",
+    "Cucumber Java.Scenario: .executor": "Run",
+    "Cucumber Java.Scenario: Amirlerin Ortak ekrani.executor": "Run",
+    "Cucumber Java.Scenario: Bloklift Montaj Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Boya ve Paketleme Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Databaseden veri alma.executor": "Run",
+    "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: Kullanici yeni siparis olusturur (Positif Test).executor": "Run",
+    "Cucumber Java.Scenario: Lift Montaj Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: TC_02 \"TALASLI IMALAT AMIRI\" butonu Anasayfada gorunur ve tiklanir olmalidir. (Positif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_04 \"TALASLI IMALAT AMIRI\" gecersiz sifre denemesi. (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: TC_25 \"Yonetim\" sayfasina gecemez. (Negatif Test).executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen BLOKLIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir (1).executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen DAMPER siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen LIFT siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Talasli Imalat Amiri kendine gelen PASLANMAZ siparis turundeki gorevi baslatir.executor": "Run",
+    "Cucumber Java.Scenario: Verilen siparisi guncelleme.executor": "Run",
+    "JUnit.ParallelRunner.executor": "Run",
+    "JUnit.Runner.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "onur",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/cetin/Desktop/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cetin\Desktop\java\Tester-ProductProcess-TS" />
