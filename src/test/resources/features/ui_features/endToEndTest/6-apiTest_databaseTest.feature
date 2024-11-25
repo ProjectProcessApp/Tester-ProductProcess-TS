@@ -1,5 +1,5 @@
 @endtoend
-Feature: Api Test ve Database Test
+Feature: Api ve Database Test
 
   Scenario:Api Test
 
@@ -8,7 +8,7 @@ Feature: Api Test ve Database Test
     And 3000000003 order numarali siparis API ile GET edilir
     And 933352 order numarali siparis DELETE edilir ve apiden test edilir
 
-  Scenario:Databased Test
+  Scenario:Database Test
 
     #And yeni siparis kaydi eklenir
     #And siparis guncellenir
