@@ -82,15 +82,15 @@ public class LiftMontajAmiriLiftTuruBaslatma {
     @Then("girilen adedin sag tarafta boru kapama biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_boru_kapama_biten_bolumune_islendigi_dogrulanir() {
         waitFor(1000);
-        waitForVisibility(talasligorev.boruKapamaBitenButton,10);
-        Assert.assertEquals(Integer.parseInt(talasligorev.boruKapamaBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        waitForVisibility(talasligorev.boruKapamaBitenButton1,10);
+        Assert.assertEquals(Integer.parseInt(talasligorev.boruKapamaBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("sag taraftaki boru kapama kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_boru_kapama_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
         waitFor(1000);
-        int actualBoruKapamaKalanText= Integer.parseInt(talasligorev.boruKapamaKalanText.getText());
+        int actualBoruKapamaKalanText= Integer.parseInt(talasligorev.boruKapamaKalanText1.getText());
         Assert.assertTrue(siparisAdedi>actualBoruKapamaKalanText);
     }
 
@@ -103,29 +103,29 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("Boru Kaynak Butonunun sari renk oldugu dogrulanir")
     public void boru_kaynak_butonunun_sari_renk_oldugu_dogrulanir() {
-        waitFor(1000);
+        waitFor(500);
         String buttonRenk=talasligorev.boruKaynakButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
 
     @Then("Boru Kaynak butonuna tiklanir")
     public void boru_kaynak_butonuna_tiklanir() {
-        waitFor(1000);
+        waitFor(500);
         clickWithJS(talasligorev.boruKaynakButon);
     }
 
     @Then("girilen adedin sag tarafta boru kaynak biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_boru_kaynak_biten_bolumune_islendigi_dogrulanir() {
         waitFor(1000);
-        waitForVisibility(talasligorev.boruKaynakBitenButton,10);
-        Assert.assertEquals(Integer.parseInt(talasligorev.boruKaynakBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        waitForVisibility(talasligorev.boruKaynakBitenButton1,10);
+        Assert.assertEquals(Integer.parseInt(talasligorev.boruKaynakBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("sag taraftaki boru kaynak kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_boru_kaynak_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
         waitFor(1000);
-        int actualBoruKaynakKalanText= Integer.parseInt(talasligorev.boruKaynakKalanText.getText());
+        int actualBoruKaynakKalanText= Integer.parseInt(talasligorev.boruKaynakKalanText1.getText());
         Assert.assertTrue(siparisAdedi>actualBoruKaynakKalanText);
     }
 
@@ -138,29 +138,29 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("Lift Montaj Butonunu sari renk oldugu dogrulanir")
     public void lift_montaj_butonunu_sari_renk_oldugu_dogrulanir() {
-       waitFor(1000);
+       waitFor(500);
         String buttonRenk=talasligorev.liftMontajButon.getCssValue("background-color");
         Assert.assertEquals(sari,buttonRenk);
     }
 
     @Then("Lift Montaj butonuna tiklanir")
     public void lift_montaj_butonuna_tiklanir() {
-        waitFor(1000);
+        waitFor(500);
         clickWithJS(talasligorev.liftMontajButon);
     }
 
     @Then("girilen adedin sag tarafta lift montaj biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_lift_montaj_biten_bolumune_islendigi_dogrulanir() {
         waitFor(1000);
-        waitForVisibility(talasligorev.liftMontajBitenButton,10);
-        Assert.assertEquals(Integer.parseInt(talasligorev.liftMontajBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        waitForVisibility(talasligorev.liftMontajBitenButton1,10);
+        Assert.assertEquals(Integer.parseInt(talasligorev.liftMontajBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("sag taraftaki lift montaj kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_lift_montaj_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
         waitFor(1000);
-        int actualLiftMontajKalanText= Integer.parseInt(talasligorev.liftMontajKalanText.getText());
+        int actualLiftMontajKalanText= Integer.parseInt(talasligorev.liftMontajKalanText1.getText());
         Assert.assertTrue(siparisAdedi>actualLiftMontajKalanText);
     }
 
@@ -192,15 +192,15 @@ public class LiftMontajAmiriLiftTuruBaslatma {
     @Then("girilen adedin sag tarafta gaz dolum biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_gaz_dolum_biten_bolumune_islendigi_dogrulanir() {
         waitFor(1000);
-        waitForVisibility(talasligorev.gazDolumBitenButton,10);
-        Assert.assertEquals(Integer.parseInt(talasligorev.gazDolumBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        waitForVisibility(talasligorev.gazDolumBitenButton1,10);
+        Assert.assertEquals(Integer.parseInt(talasligorev.gazDolumBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("sag taraftaki gaz dolum kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_gaz_dolum_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
         waitFor(1000);
-        int actualGazDolumKalanText= Integer.parseInt(talasligorev.gazDolumKalanText.getText());
+        int actualGazDolumKalanText= Integer.parseInt(talasligorev.gazDolumKalanText1.getText());
         Assert.assertTrue(siparisAdedi>actualGazDolumKalanText);
     }
 
@@ -226,16 +226,16 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("girilen adedin sag tarafta baslik takma biten bolumune islendigi dogrulanir")
     public void girilen_adedin_sag_tarafta_baslik_takma_biten_bolumune_islendigi_dogrulanir() {
-        waitFor(1500);
-        waitForVisibility(talasligorev.baslikTakmaBitenButton,10);
-        Assert.assertEquals(Integer.parseInt(talasligorev.baslikTakmaBitenButton.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
+        waitFor(1000);
+        waitForVisibility(talasligorev.baslikTakmaBitenButton1,10);
+        Assert.assertEquals(Integer.parseInt(talasligorev.baslikTakmaBitenButton1.getText()),Integer.parseInt(talasligorev.siparisAdedi.getText()));
     }
 
     @Then("sag taraftaki baslik takma kalan bolumundeki rakam dogrulanir")
     public void sag_taraftaki_baslik_takma_kalan_bolumundeki_rakam_dogrulanir() {
         int siparisAdedi= Integer.parseInt(talasligorev.siparisAdedi.getText());
         waitFor(1000);
-        int actualBaslikTakmaKalanText= Integer.parseInt(talasligorev.baslikTakmaKalanText.getText());
+        int actualBaslikTakmaKalanText= Integer.parseInt(talasligorev.baslikTakmaKalanText1.getText());
         Assert.assertTrue(siparisAdedi>actualBaslikTakmaKalanText);
     }
 
@@ -292,7 +292,7 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("girilen adedin sag tarafta Hurda biten bolumune islendigi dogrulanir")
     public void girilenAdedinSagTaraftaHurdaBitenBolumuneIslendigiDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         Assert.assertEquals(Integer.parseInt(talasligorev.kaliteKontrolHurdaBitenButton.getText()),hurdaAdet);
     }
 
@@ -336,7 +336,7 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("sag taraftaki kalite kontrolden gelen mil taslama kalan bolumundeki rakam dogrulanir")
     public void sagTaraftakiKaliteKontroldenGelenMilTaslamaKalanBolumundekiRakamDogrulanir() {
-        waitFor(1500);
+        waitFor(1000);
         int actualMilTaslamaKalanText= Integer.parseInt(talasligorev.milTaslamaKalanText.getText());
         Assert.assertEquals(milTaslamaAdet,actualMilTaslamaKalanText);
     }
@@ -435,7 +435,7 @@ public class LiftMontajAmiriLiftTuruBaslatma {
 
     @Then("Hurda dusuldukten sonra uretilen toplam mil miktarini dogrular")
     public void hurdaDusulduktenSonraUretilenToplamMilMiktariniDogrular() {
-        waitFor(1500);
+        waitFor(1000);
         int siparisAdedi = Integer.parseInt(talasligorev.siparisAdedi.getText());
         int hazirMilAdedi=hazirmil.getHazirMil();
         int expectedUretilenToplamMil=siparisAdedi+hazirMilAdedi-hurdaAdet;
