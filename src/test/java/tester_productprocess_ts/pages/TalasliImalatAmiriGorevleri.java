@@ -100,8 +100,14 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath="//tr[td[text()='LIFT_MONTAJ']]/td/button")
     public WebElement liftMontajBitenButton;
 
+    @FindBy (xpath="//tr[td[text()='Lift Montaj']]/td/button")
+    public WebElement liftMontajBitenButton1;
+
     @FindBy (xpath="//tr[td[text()='LIFT_MONTAJ']]/td[3]")
     public WebElement liftMontajKalanText;
+
+    @FindBy (xpath="//tr[td[text()='Lift Montaj']]/td[3]")
+    public WebElement liftMontajKalanText1;
 
     @FindBy (xpath = "//button[text()='BLOK LİFT MONTAJ']")
     public WebElement blokliftMontajButon;
@@ -142,8 +148,14 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath="//tr[td[text()='BASLIK_TAKMA']]/td/button")
     public WebElement baslikTakmaBitenButton;
 
+    @FindBy (xpath="//tr[td[text()='Başlık Takma']]/td/button")
+    public WebElement baslikTakmaBitenButton1;
+
     @FindBy (xpath="//tr[td[text()='BASLIK_TAKMA']]/td[3]")
     public WebElement baslikTakmaKalanText;
+
+    @FindBy (xpath="//tr[td[text()='Başlık Takma']]/td[3]")
+    public WebElement baslikTakmaKalanText1;
 
     @FindBy (xpath="//tr[td[text()='Mil Koparma']]/td/button")
     public WebElement milKoparmaBitenButton;
