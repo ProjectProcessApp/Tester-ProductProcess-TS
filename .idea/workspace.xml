@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="28.11.2024 guncelleme">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9ef528b4-b89c-4a52-82fb-4cf778920377" name="Changes" comment="19.11.2024 guncelleme3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report/PdfReport/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Report/PdfReport/ExtentPdf.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report/SparkReport/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/Report/SparkReport/Spark.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/Anamenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/TalasliImalatAmiriGorevleri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/TalasliImalatAmiriGorevleri.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us04/LiftMontajAmiriLiftTuruBaslatma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/stepDefinitions/uiStepDefinitions/us04/LiftMontajAmiriLiftTuruBaslatma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/htmlReport/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/htmlReport/cucumber.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisGuncelleme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisGuncelleme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tester_productprocess_ts/pages/siparisOlusturma.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +150,7 @@
       <visibility group="org.jetbrains.plugins.gradle.execution.GradleRunAnythingProvider" flag="false" />
     </myKeys>
   </component>
-  <component name="RunManager" selected="JUnit.Runner">
+  <component name="RunManager" selected="Cucumber Java.Feature: 5-endToEndLiftHurdaGeriGonderme">
     <configuration name="Feature: 3-endToEndDamperTuru" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui_features/endToEndTest/3-endToEndDamperTuru.feature" />
@@ -298,9 +295,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: 5-endToEndLiftHurdaGeriGonderme" />
         <item itemvalue="JUnit.Runner" />
         <item itemvalue="Cucumber Java.Feature: 6-apiTest_databaseTest" />
-        <item itemvalue="Cucumber Java.Feature: 5-endToEndLiftHurdaGeriGonderme" />
         <item itemvalue="Cucumber Java.Feature: 4-endToEndBlokliftTuru" />
         <item itemvalue="Cucumber Java.Feature: 3-endToEndDamperTuru" />
       </list>
@@ -478,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726037196513</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="28.11.2024 guncelleme">
+      <option name="closed" value="true" />
+      <created>1732822753292</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732822753292</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,8 +522,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/beyt' into beyt&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="siparisolusturma ve amirlerin ortak ekrani" />
     <MESSAGE value="11.09.2024 guncelleme01" />
-    <MESSAGE value="28.11.2024 guncelleme" />
-    <option name="LAST_COMMIT_MESSAGE" value="28.11.2024 guncelleme" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.09.2024 guncelleme01" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
