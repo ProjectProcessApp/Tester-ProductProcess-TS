@@ -12,9 +12,6 @@ public class Anamenu {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//div[@class='menuDiv']")
-    public List<WebElement> menulinkleri;
-
     @FindBy(xpath = "//table//tr/td[count(//table//th[text()='Durumu']/preceding-sibling::th)+1]")
     public List<WebElement> talasliAmirdurumSutunu;
 
@@ -26,9 +23,6 @@ public class Anamenu {
 
     @FindBy(xpath = "//h1[@class='page-header_page_header__pY9yF']")
     public WebElement AnasayfaHeader;
-
-    @FindBy(xpath = "//h1[@class='page-header']")
-    public WebElement girisHeader;
 
     @FindBy(xpath = "//div[@style='height:25px']")
     public WebElement herhangibiryer;
@@ -87,9 +81,6 @@ public class Anamenu {
     @FindBy(xpath = "//div/button[text()='Çıkış']")
     public WebElement logout;
 
-    @FindBy(xpath = "//body/div[3]")
-    public WebElement girisSayfasiHerhangiBirYer;
-
     @FindBy(xpath = "//div[text()='Giriş']")
     public WebElement yonetimGirisButonu;
 
@@ -134,9 +125,5 @@ public class Anamenu {
 
     @FindBy(xpath = "//h2[@id='swal2-title' and text()='Şifre Güncellendi']")
     public WebElement sifreGuncellendiText;
-
-    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled' and text()='OK']")
-    public WebElement guncellemaPopupOk;
-
 
 }

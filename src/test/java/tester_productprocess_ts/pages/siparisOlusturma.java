@@ -15,10 +15,6 @@ public class siparisOlusturma {
 
     @FindBy(xpath = "//a[contains(text(),'Yeni Sipariş')]")
     public WebElement siparisOlusturButonu;
-
-    @FindBy(xpath = "//h3[contains(text(),'Sipariş Listesi')]")
-    public WebElement siparisListesi;
-
     @FindBy(xpath = "//div[@class='card-title h5']")
     public WebElement yeniSiparis;
 
@@ -34,9 +30,6 @@ public class siparisOlusturma {
     @FindBy(id = "deliveryDate")
     public WebElement teslimTarihiBox;
 
-    @FindBy(xpath = "//input[@id='orderType']")
-    public WebElement siparisTuruBox;
-
     @FindBy(xpath = "//input[@id='orderQuantity']")
     public WebElement siparisMiktariBox;
 
@@ -49,17 +42,11 @@ public class siparisOlusturma {
     @FindBy(xpath = "//h2[@id='swal2-title']")
     public WebElement siparisBasariylaOlusturulduYazisi;
 
-    @FindBy(xpath = "//div[contains(@class, 'swal2-actions')]//button[contains(@class, 'swal2-confirm')]")
-    public WebElement oKbutonu;
-
     @FindBy(xpath = "//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
 
     @FindBy(xpath = "//select[@id='orderType']")
     public WebElement siparisTuruSelect;
-
-    @FindBy(xpath = "//tr/th")
-    public List<WebElement> columnName;
 
     @FindBy(xpath = "//tbody[1]//tr[1]//td[10]")
     public WebElement baslaButonu;

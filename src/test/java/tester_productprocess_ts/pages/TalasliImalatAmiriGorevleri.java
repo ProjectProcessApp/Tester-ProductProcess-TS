@@ -13,9 +13,6 @@ public class TalasliImalatAmiriGorevleri {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy (xpath = "/html/body/main/div[2]/table/tbody")
-    public WebElement table;
-
     @FindBy (xpath="//tr[@class='talasli_table_body__Msmho']/td[1]")
     public List<WebElement> siparisNo;
 
@@ -67,14 +64,8 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath = "//button[text()='BORU KAPAMA']")
     public WebElement boruKapamaButon;
 
-    @FindBy (xpath="//tr[td[text()='BORU_KAPAMA']]/td/button")
-    public WebElement boruKapamaBitenButton;
-
     @FindBy (xpath="//tr[td[text()='Boru Kapama']]/td/button")
     public WebElement boruKapamaBitenButton1;
-
-    @FindBy (xpath="//tr[td[text()='BORU_KAPAMA']]/td[3]")
-    public WebElement boruKapamaKalanText;
 
     @FindBy (xpath="//tr[td[text()='Boru Kapama']]/td[3]")
     public WebElement boruKapamaKalanText1;
@@ -82,14 +73,8 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath = "//button[text()='BORU KAYNAK']")
     public WebElement boruKaynakButon;
 
-    @FindBy (xpath="//tr[td[text()='BORU_KAYNAK']]/td/button")
-    public WebElement boruKaynakBitenButton;
-
     @FindBy (xpath="//tr[td[text()='Boru Kaynak']]/td/button")
     public WebElement boruKaynakBitenButton1;
-
-    @FindBy (xpath="//tr[td[text()='BORU_KAYNAK']]/td[3]")
-    public WebElement boruKaynakKalanText;
 
     @FindBy (xpath="//tr[td[text()='Boru Kaynak']]/td[3]")
     public WebElement boruKaynakKalanText1;
@@ -97,14 +82,8 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath = "//button[text()='LİFT MONTAJ']")
     public WebElement liftMontajButon;
 
-    @FindBy (xpath="//tr[td[text()='LIFT_MONTAJ']]/td/button")
-    public WebElement liftMontajBitenButton;
-
     @FindBy (xpath="//tr[td[text()='Lift Montaj']]/td/button")
     public WebElement liftMontajBitenButton1;
-
-    @FindBy (xpath="//tr[td[text()='LIFT_MONTAJ']]/td[3]")
-    public WebElement liftMontajKalanText;
 
     @FindBy (xpath="//tr[td[text()='Lift Montaj']]/td[3]")
     public WebElement liftMontajKalanText1;
@@ -130,14 +109,8 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath = "//button[text()='GAZ DOLUM']")
     public WebElement gazDolumButon;
 
-    @FindBy (xpath="//tr[td[text()='GAZ_DOLUM']]/td/button")
-    public WebElement gazDolumBitenButton;
-
     @FindBy (xpath="//tr[td[text()='Gaz Dolum']]/td/button")
     public WebElement gazDolumBitenButton1;
-
-    @FindBy (xpath="//tr[td[text()='GAZ_DOLUM']]/td[3]")
-    public WebElement gazDolumKalanText;
 
     @FindBy (xpath="//tr[td[text()='Gaz Dolum']]/td[3]")
     public WebElement gazDolumKalanText1;
@@ -145,14 +118,8 @@ public class TalasliImalatAmiriGorevleri {
     @FindBy (xpath = "//button[text()='BAŞLIK TAKMA']")
     public WebElement baslikTakmaButon;
 
-    @FindBy (xpath="//tr[td[text()='BASLIK_TAKMA']]/td/button")
-    public WebElement baslikTakmaBitenButton;
-
     @FindBy (xpath="//tr[td[text()='Başlık Takma']]/td/button")
     public WebElement baslikTakmaBitenButton1;
-
-    @FindBy (xpath="//tr[td[text()='BASLIK_TAKMA']]/td[3]")
-    public WebElement baslikTakmaKalanText;
 
     @FindBy (xpath="//tr[td[text()='Başlık Takma']]/td[3]")
     public WebElement baslikTakmaKalanText1;

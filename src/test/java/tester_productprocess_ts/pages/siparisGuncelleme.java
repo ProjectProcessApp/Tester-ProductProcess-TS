@@ -11,15 +11,6 @@ public class siparisGuncelleme {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath ="//a[contains(text(),'Sipariş Oluştur')]")
-    public WebElement siparisOlusturButonu;
-
-    @FindBy(xpath="//h3[contains(text(),'Sipariş Listesi')]")
-    public WebElement siparisListesi;
-
-    @FindBy(xpath="//div[@class='card-title h5']")
-    public WebElement yeniSiparis;
-
     @FindBy(xpath="//input[@id='customerName']")
     public WebElement musteriAdiBox;
 
@@ -28,9 +19,6 @@ public class siparisGuncelleme {
 
     @FindBy(xpath = "//input[@id='orderNumber']")
     public WebElement siparisNoBox;
-
-    @FindBy(xpath="//input[@id='deliveryDate']")
-    public WebElement teslimTarihiBox;
 
     @FindBy(xpath="//input[@id='orderType']")
     public WebElement siparisTuruBox;
@@ -41,23 +29,11 @@ public class siparisGuncelleme {
     @FindBy(xpath="//input[@id='readyMilCount']")
     public WebElement hazirMilMiktariBox;
 
-    @FindBy(css="input#orderStatus[value='İşlenmeyi Bekliyor']")
-    public WebElement siparisDurumuBox; //Box icindeki yazi dogrulanacak
-
-    @FindBy(xpath="//h2[@id='swal2-title']")
-    public WebElement siparisBasariylaOlusturulduYazisi;
-
     @FindBy(xpath="//div[contains(@class, 'swal2-actions')]//button[contains(@class, 'swal2-confirm')]")
     public WebElement oKbutonu;
 
     @FindBy(xpath="//h2[@id='swal2-title']")
     public WebElement siparisBasariylaGuncellendiYazisi;
-
-    @FindBy(css = "button[type='submit']")
-    public WebElement girisButonu;
-
-    @FindBy(xpath ="//h1[contains(text(),'SİPARİŞİ GÜNCELLE')]")
-    public WebElement siparisiGuncelleBasligi;
 
     @FindBy(xpath = "//div[contains(text(),'ÜRETİM PLANLAMA')]")
     public WebElement uretimPlanlamaButonu;
@@ -82,6 +58,5 @@ public class siparisGuncelleme {
 
     @FindBy(xpath = "//h2[@id='swal2-title']")
     public WebElement siparisBasariIleSilindYazisi;
-
 
 }
